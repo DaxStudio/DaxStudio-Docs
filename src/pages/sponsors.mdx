@@ -1,0 +1,39 @@
+---
+layout: page
+title: Sponsors
+---
+import styles from './sponsors.module.css';
+
+export const SponsorRow = ({children, image, link}) => (
+<tr>
+    <td width="150px" style={{'content-alignment': 'center'}}>
+        <a href={link} ><img src={image}/></a> 
+    </td>
+    <td width="85%">
+        <strong>{children}</strong><br/> <a href={link} >{link}</a> 
+    </td>
+</tr>
+);
+
+# Sponsors
+
+:::info
+You can sponsor the on going development of DAX Studio via Github Sponsors using the button below
+:::
+
+<iframe src="https://github.com/sponsors/DaxStudio/card" title="Sponsor DaxStudio" height="225" width="600" ></iframe>
+
+## Gold Sponsors
+
+<table width="100%">
+<SponsorRow image="https://avatars.githubusercontent.com/u/31683734?s=120&v=4" link="https://www.sqlbi.com">SQLBI</SponsorRow>
+<SponsorRow image="https://avatars.githubusercontent.com/u/30911111?s=96&v=4" link="https://tabulareditor.com">Tabular Editor</SponsorRow>
+</table>
+
+
+
+## Bronze Sponsors
+
+<table width="100%">
+<SponsorRow image="https://avatars.githubusercontent.com/u/86407855?s=96&v=4" link="https://accessanalytic.com.au/">Access Analytic</SponsorRow>
+</table>

@@ -1,0 +1,8 @@
+{
+  "label": "Troubleshooting",
+  "position": 99,
+  "link": {
+    "type": "generated-index",
+    "description": "Tips for troubleshooting issues with DAX Studio"
+  }
+}
