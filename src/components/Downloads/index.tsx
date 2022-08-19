@@ -67,8 +67,7 @@ export function Installer() {
 return ( <div className={clsx("main-explain-area jumbotron center md-12")}>
   <div className={clsx("centered")}>
   {/* style="padding-bottom:10px" */}
-    <div >Download the latest release of DAX Studio here:</div>
-  
+    
     <a href={rel.browser_download_url}>
       <div className="button button--lg button--success"> 
         <h3><span><FontAwesomeIcon icon={solid('download')} />&nbsp; {rel.download_name}</span></h3>
@@ -93,8 +92,8 @@ export function Portable() {
 //<!-- Portable Version download link -->
 const rel = getRelease().portable;
 return (
-  <div className="centered md-12">
-<br/>
+  <div className="centered">
+
 
 <a href={rel.browser_download_url}>
       <div className="button button--lg button--secondary"> 
@@ -103,11 +102,11 @@ return (
       </div>
     </a>
 
-    <a href={rel.browser_download_url}>
+    {/* <a href={rel.browser_download_url}>
       
         <div><span><i className="fa fa-download"></i>&nbsp; {rel.download_name} (portable)</span></div>
       
-    </a>
+    </a> */}
     {/* {% assign download_count_1 = portable.download_count %}
     {% assign download_size_1 = portable.size %} */}
     <div className="download-info">

@@ -75,13 +75,13 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/downloads', label: 'Downloads', position: 'left'},
-          {href: 'https://github.com/daxstudio/daxstudio/discussions', label:'Discussions',position:'left'  },
-          {href: 'https://github.com/daxstudio/daxstudio/issues', label:'Issues / Requests',position:'left'  },
+          {to: '/blog', label: 'Blog', position: 'left'},
+          {href: 'https://github.com/daxstudio/daxstudio/discussions', label:'Discussions',position:'right'  },
+          {href: 'https://github.com/daxstudio/daxstudio/issues', label:'Issues / Requests',position:'right'  },
           {
-            href: 'https://github.com/daxstudio/daxstudio',
-            label: 'GitHub',
+            to: '/Sponsors',
+            label: 'Sponsor',
             position: 'right',
           },
         ],
@@ -93,8 +93,12 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Tutorials',
+                to: '/docs/category/tutorials',
+              },
+              {
+                label: 'Features',
+                to: '/docs/features/intro',
               },
             ],
           },
@@ -102,29 +106,25 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Discussions',
+                href: 'https://github.com/daxstudio/daxstudio/discussions',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
+                label: 'Issues & Feature Requests',
+                href: 'https://github.com/daxstudio/daxstudio/issues',
+              }
             ],
           },
           {
-            title: 'More',
+            title: 'Support',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Contributing',
+                to: '/contributing',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Sponsors',
+                to: '/sponsors',
               },
             ],
           },

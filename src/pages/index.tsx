@@ -40,6 +40,8 @@ export default function Home(): JSX.Element {
         <div className={clsx(styles.heroBanner)}>
           <div className='row justify-content-md-center'>
           {/* <div className="{styles.buttons}"> */}
+          <div className='container'><div className='row'><div className='col'> Download the latest release of DAX Studio here:<br/><br/></div></div></div>
+
           <div className='col col--2'/>
             <div className='col '> <Installer/></div> 
             <div className='col '><Portable/></div>

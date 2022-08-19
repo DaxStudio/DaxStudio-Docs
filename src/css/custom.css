@@ -16,11 +16,12 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-badge-background-color: gray;
+
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #059bff;
+  --ifm-color-primary: #055e99;
   --ifm-color-primary-dark: #008cea;
   --ifm-color-primary-darker: #0085dd;
   --ifm-color-primary-darkest: #006db6;

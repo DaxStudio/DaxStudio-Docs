@@ -8,4 +8,6 @@ You are running an older version of DAX Studio, updating to the latest version b
 
 However if the problem re-occurs please consider logging a bug [here](https://github.com/daxstudio/daxstudio/issues/new) 
 
-> Sometimes the automatic crash reporting does not provide enough information for us to properly identify and fix and issue and we need more information about the steps leading up to a crash
+:::tip
+Sometimes the automatic crash reporting does not provide enough information for us to properly identify and fix and issue and we need more information about the steps leading up to a crash
+:::

@@ -31,6 +31,15 @@ module.exports = async function myPlugin(context, options) {
         exact: true,
       });
 
+      addRoute({
+        path: '/downloads',
+        component: '@site/src/components/download-list.tsx',
+        modules: {
+          releases: releasesJsonPath,
+        },
+        exact: true,
+      });
+
     },
     /* other lifecycle API */
   };
