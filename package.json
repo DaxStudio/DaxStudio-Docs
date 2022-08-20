@@ -28,7 +28,6 @@
     "clsx": "^1.2.1",
     "marked": "^4.0.18",
     "moment": "^2.29.4",
-    "momentjs": "^2.0.0",
     "node-fetch": "^3.2.9",
     "prism-react-renderer": "^1.3.5",
     "react": "^17.0.2",

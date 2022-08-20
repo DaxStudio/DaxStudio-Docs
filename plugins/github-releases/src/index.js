@@ -1,6 +1,6 @@
 module.exports = async function myPlugin(context, options) {
 
-  const Axios = require('Axios');
+  const Axios = require('axios');
   const marked = require('marked');
   
   return {
