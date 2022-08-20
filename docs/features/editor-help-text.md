@@ -6,4 +6,4 @@ For people that are new to writing DAX queries it can be tricky to know how to g
 
 ![](editor-help-text.png)
 
-There is a link that will take you to a [tutorial](/tutorials/writing-dax-queries) which illustrates some different types of DAX queries or you can turn on the [Query Builder](../query-builder) for a drag/drop query building experience.
+There is a link that will take you to a [tutorial](/docs/tutorials/writing-dax-queries) which illustrates some different types of DAX queries or you can turn on the [Query Builder](/docs/features/query-builder) for a drag/drop query building experience.

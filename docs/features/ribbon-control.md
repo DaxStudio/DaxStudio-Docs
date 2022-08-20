@@ -26,8 +26,8 @@ The ribbon in DAX Studio is split into a number of functional groups
 - **Merge XML** - will look for a parameters XML block and merge the values into the current query text
 
 ## Find
-- **Find** - will [find](../find-replace) the specified text in the query
-- **Replace** - will allow [replacing](../find-replace) of specified text values
+- **Find** - will [find](/docs/features/find-replace) the specified text in the query
+- **Replace** - will allow [replacing](/docs/features/find-replace) of specified text values
 
 ## Traces
 - **Query Plan** - turns on the display of query plan information (requires admin rights on the data source)
@@ -40,5 +40,5 @@ The ribbon in DAX Studio is split into a number of functional groups
 - **Internal** - displays information on storage engine internal events 
 - "Right Layout/Bottom Layout* - Controls where the timing details pane appears
 ## Connect
-- **Connect** - opens a [connection dialog](../connection-dialog) so that the user can change the connection for the current query window
+- **Connect** - opens a [connection dialog](/docs/features/connection-dialog) so that the user can change the connection for the current query window
 - **Refresh Metadata** - will update the metadata of the currently selected model

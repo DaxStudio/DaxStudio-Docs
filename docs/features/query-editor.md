@@ -12,7 +12,7 @@ As of v2.4.4 the Syntax highlighting is now dynamic and discovers new keywords a
 ### Code Completion support
 ![](Query-Editor_Intellisense.png)
 
-The editor can display auto-complete information for [functions, tables and columns](../intellisense-support)
+The editor can display auto-complete information for [functions, tables and columns](/docs/features/intellisense-support)
 
 ### Function Insight Tooltips
 ![](Query-Editor_FunctionTooltips.png)

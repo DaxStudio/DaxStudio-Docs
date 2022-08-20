@@ -4,7 +4,7 @@ title: Dependency Checks
 
 :::info
 
- The functionality of the script below has been wrapped up in a small program called [DAX Studio Checker](daxstudio-checker) which is installed as part of DAX Studio. It has some extended functionality which can check for configuration mismatches. It covers all the items in the legacy script below and more.
+ The functionality of the script below has been wrapped up in a small program called [DAX Studio Checker](../daxstudio-checker) which is installed as part of DAX Studio. It has some extended functionality which can check for configuration mismatches. It covers all the items in the legacy script below and more.
 
 :::
 

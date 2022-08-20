@@ -16,7 +16,7 @@ export default function ChangeLog(): JSX.Element {
       description="Description will go into a meta tag in <head />">
 <h2>Change Log</h2>
       <main>
-        <ChangeLog />
+        {/* <ChangeLog /> */}
       </main>
     </Layout>
   );

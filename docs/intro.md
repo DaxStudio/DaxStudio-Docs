@@ -6,7 +6,7 @@ sidebar_position: 1
 
 The documentation is a great place to start learning about DAX Studio
 
-If this is your first time using DAX Studio the [tutorials](/docs/tutorials) are a great place to get started
+If this is your first time using DAX Studio the [tutorials](/docs/category/tutorials/) are a great place to get started
 
 If you want to understand the different options you have when installing DAX Studio those are documented [here](/docs/installation/index)
 

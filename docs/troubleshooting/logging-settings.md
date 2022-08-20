@@ -13,7 +13,7 @@ Logs are stored in the ```%LOCALAPPDATA%\DaxStudio\log``` folder. You can either
 
 ![](Help-About.png)
 
-> **Note:** the following sections are included for completeness, but holding the ```SHIFT``` key at startup and the functionality now available in [DAX Studio Checker](daxstudio-checker) supercedes the need to manually enable logging or check dependencies
+> **Note:** the following sections are included for completeness, but holding the ```SHIFT``` key at startup and the functionality now available in [DAX Studio Checker](../daxstudio-checker) supercedes the need to manually enable logging or check dependencies
 
 
 
@@ -49,7 +49,7 @@ To capture a detailed application log perform the following steps:
 _Same as above except the config file is called Daxstudio.**dll**.config_
 
 :::info
- The start-up *fusion* logging detailed below can now be more easily enabled and disabled using the [DAX Studio Checker](daxstudio-checker) tool
+ The start-up *fusion* logging detailed below can now be more easily enabled and disabled using the [DAX Studio Checker](../daxstudio-checker) tool
 :::
 
 ## Start up Logging
