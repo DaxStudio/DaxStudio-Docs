@@ -10,7 +10,7 @@ It has a number of advanced capabilities including:
 As of v2.4.4 the Syntax highlighting is now dynamic and discovers new keywords and functions from the currently connected data source. This is particularly important for PowerBI where new functionality is regularly released.
 
 ### Code Completion support
-![](Query-Editor_intellisense.png)
+![](Query-Editor_Intellisense.png)
 
 The editor can display auto-complete information for [functions, tables and columns](../intellisense-support)
 
