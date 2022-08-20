@@ -16,9 +16,10 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'daxstudio', // Usually your GitHub org/user name.
-  projectName: 'daxstudio', // Usually your repo name.
-
+  organizationName: 'DaxStudio', // Usually your GitHub org/user name.
+  projectName: 'DaxStudio-Docs', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
+  
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
