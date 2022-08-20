@@ -36,7 +36,7 @@ export default function Home(): JSX.Element {
                             ))}
                         </div>
                         <br/>
-                        <div>See <a href='full'> here</a> for the full changelog.</div>
+                        <div>See <a href='/changelog/full'> here</a> for the full changelog.</div>
                     </div>
                     
                 </section>
