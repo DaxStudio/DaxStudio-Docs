@@ -5,6 +5,7 @@ import styles from './styles.module.css';
 import {usePluginData} from '@docusaurus/useGlobalData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
+import UpdateDownloads from '@site/src/components/UpdateDownloads'
 
 interface ReleaseItem  {
 //    url: string;
@@ -22,6 +23,8 @@ interface Release  {
     installer: ReleaseItem;
     portable: ReleaseItem;
 }
+
+
 
 const units = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
    
@@ -64,6 +67,9 @@ function  getRelease(): Release {
 
 export function Installer() {
   const rel = getRelease().installer;
+  const handleOnFocus = () => {
+    console.log('onFocus event was handled');
+  }
 return ( <div className={clsx("main-explain-area jumbotron center md-12")}>
   <div className={clsx("centered")}>
   {/* style="padding-bottom:10px" */}
@@ -80,11 +86,13 @@ return ( <div className={clsx("main-explain-area jumbotron center md-12")}>
     <FontAwesomeIcon icon={solid('floppy-disk')} />
       <span>&nbsp;Size: {niceBytes(rel.download_size)} | </span>
       <i className="fa fa-calendar" title="release date"></i><span>&nbsp;{moment(rel.created_at).format('DD-MMM-YYYY')}</span>
-      &nbsp;|&nbsp;downloads:&nbsp;<span id="download_cnt" className='badge badge-info'>n/a</span> 
+      <UpdateDownloads type="exe"/>
     </div>
     
   </div>
+  
 </div>
+
 );
 }
 
@@ -112,7 +120,7 @@ return (
     <div className="download-info">
       <i className="fa fa-download" title="downloads"></i> <span>Size: {niceBytes(rel.download_size)}  | </span>
       <i className="fa fa-calendar" title="release date"></i>&nbsp;<span>{moment(rel.created_at).format('DD-MMM-YYYY')}</span>
-      &nbsp;|&nbsp;downloads:&nbsp;<span id="download_cnt_zip" className='badge badge-info'>n/a</span> 
+      <UpdateDownloads type="zip"/> 
     </div>
   </div>
 );
@@ -127,3 +135,4 @@ export default function Downloads(): JSX.Element {
      </section>
    );
 }
+

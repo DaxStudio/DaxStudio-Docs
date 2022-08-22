@@ -17,11 +17,26 @@ export const SponsorRow = ({children, image, link}) => (
 
 # Sponsors
 
-:::info
-You can sponsor the on going development of DAX Studio via Github Sponsors using the button below
-:::
+You can support the on going development of DAX Studio through private donations or public sponsorship. Use the button below, the billing is managed by Github Sponsors.
 
-<iframe src="https://github.com/sponsors/DaxStudio/card" title="Sponsor DaxStudio" height="225" width="600" ></iframe>
+<div className="container">
+  <div className="row">
+        <div className="col" style={{"text-align":"center"}}>
+            <a href="https://github.com/sponsors/DaxStudio?o=esc">
+                <div className="button button--lg button--secondary"> 
+                    <i className="fa fa-heart-circle-plus" style={{margin: "5px", color: "salmon"}}/>Sponsor
+                    <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_node_modules-@docusaurus-theme-classic-lib-theme-Icon-ExternalLink-styles-module"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<br/>
+<br/>
+
+:::info
+You can choose to either support DAX Studio on an ongoing **Monthly** basis or you can make a **One-time** donation. And you can choose to use one of the pre-defined tiers or enter a custom amount.
+:::
 
 ## Gold Sponsors
 
@@ -29,8 +44,6 @@ You can sponsor the on going development of DAX Studio via Github Sponsors using
 <SponsorRow image="https://avatars.githubusercontent.com/u/31683734?s=120&v=4" link="https://www.sqlbi.com">SQLBI</SponsorRow>
 <SponsorRow image="https://avatars.githubusercontent.com/u/30911111?s=96&v=4" link="https://tabulareditor.com">Tabular Editor</SponsorRow>
 </table>
-
-
 
 ## Bronze Sponsors
 

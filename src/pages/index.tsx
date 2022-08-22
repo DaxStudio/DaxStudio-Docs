@@ -56,12 +56,6 @@ export default function Home(): JSX.Element {
       <main>
         <HomepageFeatures />
       </main>
-      <Helmet>
-      <script
-          src="/js/index-downloads.js"
-          async
-        ></script>
-      </Helmet>
     </Layout>
   );
 }
