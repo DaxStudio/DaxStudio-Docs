@@ -6,7 +6,7 @@ interface UpdateDownloadsProps
 }
 
 class UpdateDownloads extends React.Component<UpdateDownloadsProps> {
-    handleOnFocus() { console.log("hello from updateDownloads");}
+    //handleOnFocus() { console.log("hello from updateDownloads");}
     render() {
         const {type} = this.props;
 
@@ -33,7 +33,7 @@ class UpdateDownloads extends React.Component<UpdateDownloadsProps> {
             var today: Date = new Date();
             var lastRefresh:Date = new Date(release.refreshDate);
             hoursSinceDownloadRefresh = Math.round(Math.abs(today.getTime() - lastRefresh.getTime())/36e5);
-            console.log("hours since last download cnt refresh: " + hoursSinceDownloadRefresh);
+            //console.log("hours since last download cnt refresh: " + hoursSinceDownloadRefresh);
         } 
         
         // we only refresh the download count if it's older than 1 hour to try
@@ -48,7 +48,7 @@ class UpdateDownloads extends React.Component<UpdateDownloadsProps> {
             request.open('GET', 'https://api.github.com/repos/daxstudio/daxstudio/releases/latest', true);
             
             request.onload = () => {
-                console.log('json request onload');
+                //console.log('json request onload');
                 if (request.readyState === 4 && request.status === 200) {
                     var data = JSON.parse(request.responseText);
                     data.assets.forEach(function(asset){
@@ -67,9 +67,8 @@ class UpdateDownloads extends React.Component<UpdateDownloadsProps> {
                             localStorage.release = JSON.stringify(localData);
                         }
                         
-                        console.log('downloads: ' + data.assets[0].download_count);
+                        //console.log('downloads: ' + data.assets[0].download_count);
                         install_cnt =  type == 'zip' ? localData.downloadCntZip : localData.downloadCnt ;
-                        //portable_cnt.innerText = localData.downloadCntZip.toString() ;
 
                     });
         

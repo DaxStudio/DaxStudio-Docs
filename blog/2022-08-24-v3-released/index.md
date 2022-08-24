@@ -25,6 +25,11 @@ With the help of the amazing Daniele at SQLBI we now have a clean, modern update
 
 ![](modern-ui.png)
 
+A couple of important changes worth noting are:
+* document tabs have been moved to the bottom
+* Metadata, Functions and DMV tabs have been moved to the top of their area
+* the tabs for Results, Logs, Traces have been move to the top of their area
+
 ## New Ribbon options
 
 In addition to being able to collapse the ribbon there is now also an option to show a simplified view
