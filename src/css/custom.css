@@ -30,3 +30,37 @@
   --ifm-color-primary-lightest: #53baff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Announcement Bar */
+div[class^='announcementBar'] {
+  background-color: #CCCCCC;
+  height: 30px;
+  /* color: var(--ifm-font-color-base); */
+}
+
+button[class^='announcementBarClose'] {
+  margin: 0;
+  padding: 0;
+  
+  height: 34px;
+  /* color: var(--ifm-font-color-base); */
+}
+
+
+div[class^='announcementBarContent'] a {
+  color: var(--ifm-link-color);
+  text-decoration: inherit;
+}
+
+div[class^='announcementBarContent'] a:hover {
+  color: var(--ifm-link-color);
+  text-decoration: underline;
+}
+
+.check {
+  color: #1a9473;
+}
+
+.cross {
+  color: salmon;
+}

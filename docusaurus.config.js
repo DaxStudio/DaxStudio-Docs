@@ -38,15 +38,15 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/daxstudio/daxstudio-docs/tree/main/packages/create-docusaurus/templates/shared/',
+          //editUrl:
+          //  'https://github.com/daxstudio/daxstudio-docs/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/daxstudio/daxstudio-docs/tree/main/packages/create-docusaurus/templates/shared/',
+          //editUrl:
+          //  'https://github.com/daxstudio/daxstudio-docs/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -69,7 +69,7 @@ const config = {
           src: 'img/daxstudio-logo-light.svg',
           srcDark: 'img/daxstudio-logo-dark.svg',
         },
-
+        
         items: [
           {
             type: 'doc',
@@ -87,6 +87,14 @@ const config = {
             position: 'right',
           },
         ],
+      },
+      announcementBar: {
+        id: 'support_us',
+        content:
+          'If you would like to support the development of DAX Studio check out the <a target="_blank" rel="noopener noreferrer" href="/contributing">contributing</a> page',
+        // backgroundColor: '--color--primary',
+         textColor: '#091E42',
+        isCloseable: true,
       },
       footer: {
         style: 'dark',
