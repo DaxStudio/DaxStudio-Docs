@@ -77,7 +77,7 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          // {to: '/downloads', label: 'Downloads', position: 'left'},
+          {to: '/downloads', label: 'Downloads', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {href: 'https://github.com/daxstudio/daxstudio/discussions', label:'Discussions',position:'right'  },
           {href: 'https://github.com/daxstudio/daxstudio/issues', label:'Issues / Requests',position:'right'  },

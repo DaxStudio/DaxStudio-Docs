@@ -1,4 +1,5 @@
 import React from 'react'
+import Axios from 'axios'
 
 interface UpdateDownloadsProps
 {
@@ -28,7 +29,6 @@ class UpdateDownloads extends React.Component<UpdateDownloadsProps> {
             //console.log('returning download cnt from cache');
 
             install_cnt =  type == 'zip' ?release.downloadCntZip.toLocaleString() :release.downloadCnt.toLocaleString() ;
-            //portable_cnt =  release.downloadCntZip.toLocaleString() ;
 
             var today: Date = new Date();
             var lastRefresh:Date = new Date(release.refreshDate);
@@ -41,47 +41,37 @@ class UpdateDownloads extends React.Component<UpdateDownloadsProps> {
         if (!release || hoursSinceDownloadRefresh > 1 || !release.downloadCnt)
         {
 
-            var request = new XMLHttpRequest();
+            //var request = new XMLHttpRequest();
             var zipCnt = 0;
             var exeCnt = 0;
 
-            request.open('GET', 'https://api.github.com/repos/daxstudio/daxstudio/releases/latest', true);
-            
-            request.onload = () => {
-                //console.log('json request onload');
-                if (request.readyState === 4 && request.status === 200) {
-                    var data = JSON.parse(request.responseText);
-                    data.assets.forEach(function(asset){
-                        if (asset.name.endsWith(".zip")) {zipCnt = asset.download_count}
-                        if (asset.name.endsWith(".exe")) {exeCnt = asset.download_count}    
+            const releases = Axios.get('https://api.github.com/repos/daxstudio/daxstudio/releases/latest');
+            releases.then((response) => {
 
-                        var localData = {
-                            refreshDate: new Date(),
-                            downloadCnt: exeCnt,
-                            downloadCntZip: zipCnt,
-                            tagName: data.tag_name
-                        }
-                
-                        if (typeof(Storage) !== "undefined") {
-                            
-                            localStorage.release = JSON.stringify(localData);
-                        }
+                //console.log(response.data);
+                var data = response.data;
+                data.assets.forEach(function(asset){
+                    if (asset.name.endsWith(".zip")) {zipCnt = asset.download_count}
+                    if (asset.name.endsWith(".exe")) {exeCnt = asset.download_count}    
+
+                    var localData = {
+                        refreshDate: new Date(),
+                        downloadCnt: exeCnt,
+                        downloadCntZip: zipCnt,
+                        tagName: data.tag_name
+                    }
+            
+                    if (typeof(Storage) !== "undefined") {
                         
-                        //console.log('downloads: ' + data.assets[0].download_count);
-                        install_cnt =  type == 'zip' ? localData.downloadCntZip : localData.downloadCnt ;
+                        localStorage.release = JSON.stringify(localData);
+                    }
+                    
+                    //console.log('downloads: ' + data.assets[0].download_count);
+                    install_cnt =  type == 'zip' ? localData.downloadCntZip : localData.downloadCnt ;
 
-                    });
-        
-                } else {
-                    //Error
-                }
-            };
-            
-            request.onerror = (err) => {
-                this.setState({error: err})
-            };
-            
-            request.send();
+                });
+   
+            });
 
         }
         return (

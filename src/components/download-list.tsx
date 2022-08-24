@@ -57,8 +57,11 @@ function Release({tag_name, assets}) {
   );
 }
 
-export default function DownloadsComponent({releases}) {
-  const data = usePluginData('docusaurus-plugin-github-releases');
+export default function DownloadsComponent() {
+  
+  const data: any = usePluginData('docusaurus-plugin-github-releases');
+  const releases = data.all_releases;
+
   //console.log(data);
   releases.shift();
   return <div>
