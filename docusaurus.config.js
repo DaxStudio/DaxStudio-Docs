@@ -148,6 +148,28 @@ const config = {
     }),
   plugins:[
     './plugins/github-releases/src',
+
+    ['@docusaurus/plugin-client-redirects',
+      {
+
+        // redirects: [
+        //   // /docs/oldDoc -> /docs/newDoc
+        //   {
+        //     to: '/docs/tutorials/writing-dax-queries',
+        //     from: '/tutorials/writing-dax-queries',
+        //   },
+        //],
+        // createRedirects(existingPath) {
+        //   if (existingPath.includes('/docs/')) {
+        //     // Redirect from /docs/team/X to /community/X and /docs/support/X to /community/X
+        //     return [
+        //       existingPath.replace('/docs/', '/documentation/'),
+        //     ];
+        //   }
+        //   return undefined; // Return a falsy value: no redirect created
+        // },
+      },
+    ]
   ],
   scripts: [
     {
