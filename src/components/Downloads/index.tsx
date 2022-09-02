@@ -83,9 +83,10 @@ return ( <div className={clsx("main-explain-area jumbotron center md-12")}>
     {/* {% assign download_count = download_count %}
     {% assign download_size = size %} */}
     <div className="download-info">
-    <FontAwesomeIcon icon={solid('floppy-disk')} />
+    <FontAwesomeIcon icon={solid('floppy-disk')} width="16" height="16" />
       <span>&nbsp;Size: {niceBytes(rel.download_size)} | </span>
-      <i className="fa fa-calendar" title="release date"></i><span>&nbsp;{moment(rel.created_at).format('DD-MMM-YYYY')}</span>
+      <FontAwesomeIcon icon={regular('calendar-days')} width="16" height="16" />
+      <span>&nbsp;{moment(rel.created_at).format('DD-MMM-YYYY')}</span>
       <UpdateDownloads type="exe"/>
     </div>
     
@@ -118,8 +119,8 @@ return (
     {/* {% assign download_count_1 = portable.download_count %}
     {% assign download_size_1 = portable.size %} */}
     <div className="download-info">
-      <i className="fa fa-download" title="downloads"></i> <span>Size: {niceBytes(rel.download_size)}  | </span>
-      <i className="fa fa-calendar" title="release date"></i>&nbsp;<span>{moment(rel.created_at).format('DD-MMM-YYYY')}</span>
+      <FontAwesomeIcon icon={solid('floppy-disk')} width="16" height="16"/> <span>Size: {niceBytes(rel.download_size)}  | </span>
+      <FontAwesomeIcon icon={regular('calendar-days')} width="16" height="16" />&nbsp;<span>{moment(rel.created_at).format('DD-MMM-YYYY')}</span>
       <UpdateDownloads type="zip"/> 
     </div>
   </div>
