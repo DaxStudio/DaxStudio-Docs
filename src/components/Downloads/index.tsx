@@ -76,7 +76,7 @@ return ( <div className={clsx("main-explain-area jumbotron center md-12")}>
     
     <a href={rel.browser_download_url}>
       <div className="button button--lg button--success"> 
-        <h3><span><FontAwesomeIcon icon={solid('download')} />&nbsp; {rel.download_name}</span></h3>
+        <h3><span><FontAwesomeIcon icon={solid('download')} width="20px" height="20px" />&nbsp; {rel.download_name}</span></h3>
         <div>(installer)</div>
       </div>
     </a>
@@ -105,7 +105,7 @@ return (
 
 <a href={rel.browser_download_url}>
       <div className="button button--lg button--secondary"> 
-        <h3><span><FontAwesomeIcon icon={solid('download')} />&nbsp; {rel.download_name}</span></h3>
+        <h3><span><FontAwesomeIcon icon={solid('download')}  width="20px" height="20px" />&nbsp; {rel.download_name}</span></h3>
         <div>(portable)</div>
       </div>
     </a>
