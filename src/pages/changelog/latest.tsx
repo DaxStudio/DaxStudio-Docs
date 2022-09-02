@@ -30,7 +30,9 @@ export default function Home(): JSX.Element {
                 <section >
                     <div className="container">
                         <div className="row">
-                            <h1>Full Change Log</h1>
+                            <h1>Latest Change Log</h1>
+                        </div>
+                        <div className='row'>
                             {releases.map((props, idx) => (
                                 <Release key={idx} {...props} />
                             ))}

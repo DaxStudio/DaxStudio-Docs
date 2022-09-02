@@ -28,9 +28,13 @@ export default function Home(): JSX.Element {
         <Layout>
             <main>
                 <section >
+                
                     <div className="container">
+                        <div className='row'>
+                    <h1>Full Change Log</h1> 
+                    </div>   
                         <div className="row">
-                            <h1>Full Change Log</h1>
+                            
                             {releases.map((props, idx) => (
                                 <Release key={idx} {...props} />
                             ))}
