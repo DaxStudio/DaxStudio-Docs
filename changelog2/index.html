@@ -17,12 +17,37 @@
 
 
 <script src="https://kit.fontawesome.com/bb44c52cf7.js" crossorigin="anonymous" awync></script><title data-rh="true">DAX Studio</title><meta data-rh="true" property="og:title" content="DAX Studio"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://daxstudio.org/changelog2/"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://daxstudio.org/changelog2/"><link data-rh="true" rel="alternate" href="https://daxstudio.org/changelog2/" hreflang="en"><link data-rh="true" rel="alternate" href="https://daxstudio.org/changelog2/" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.6dbd5e9b.css">
-<link rel="preload" href="/assets/js/runtime~main.96d65047.js" as="script">
-<link rel="preload" href="/assets/js/main.068f3e37.js" as="script">
+<link rel="preload" href="/assets/js/runtime~main.90f3d085.js" as="script">
+<link rel="preload" href="/assets/js/main.89a5a74c.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus">
-<div><div>The lastest release is: <!-- -->v3.0.0</div><div><div><h1>v3.0.0</h1><div><h2 id="new--enhanced">New / Enhanced</h2>
+<div><div>The lastest release is: <!-- -->v3.0.1</div><div><div><h1>v3.0.1</h1><div><h2 id="updates">Updates</h2>
+<ul>
+<li>Added query information button to traces</li>
+<li>Updated Query History icons</li>
+<li>#949 Exposed Theme/Mode setting in Options</li>
+<li>Added MPARAMETER keyword to syntax highlighting</li>
+</ul>
+<h2 id="fixes">Fixes</h2>
+<ul>
+<li>Fixed #891 Error exporting to static Excel file</li>
+<li>Fixed #889 crash when dragging trace windows </li>
+<li>Fixed #886 incorrect link to tutorial in Getting Started dialog</li>
+<li>Fixed #894 Define and Expand sometimes producing incorrect output</li>
+<li>Fixed #924 username blank in All Queries trace</li>
+<li>Fixed #930 increased default code completion window width</li>
+<li>Fixed #931 automatically select all text in find/replace dialog</li>
+<li>Fixed #906 improved waterfall layout in Server Timings</li>
+<li>Fixed setting focus in the editor when changing tabs</li>
+<li>Fixed file icon registration</li>
+<li>Improved error handling around shutdown operations </li>
+<li>Added extra hotkey validation rules</li>
+<li>Fixed #916 added retry logic to all clipboard operations</li>
+<li>Improved Power BI filename detection for non-English cultures</li>
+<li>Removed unused dependencies and reduced installer/portable file size</li>
+</ul>
+</div></div></div><div><div><h1>v3.0.0</h1><div><h2 id="new--enhanced">New / Enhanced</h2>
 <ul>
 <li>New modern skin</li>
 <li>Dark/Light Mode support</li>
@@ -532,43 +557,8 @@
 <li>Fixed a crash when opening a file after closing all other windows (related to the issue above)</li>
 <li>Attempted to fix a random crash when clicking on various tabs - this appear so to be related to <a href="https://github.com/xceedsoftware/wpftoolkit/issues/1354">this issue</a> in AvalonDock 3.4 so we&#39;ve rolled back to AvalonDock 3.3</li>
 </ul>
-</div></div></div><div><div><h1>2.8.0</h1><div><h2 id="new-features">New Features:</h2>
-<ul>
-<li><strong>Filter Dump Measure</strong> – right-clicking a table in the metadata pane can generate a measure that returns a string describing the active filter context in a table or in all the tables. The DAX measure generated should be copied in a Tabular model to display the filter context in a report tooltip for debugging purposes.</li>
-<li><strong>Define All Measures</strong> – right-clicking a table in the metadata pane can generate the definition of all the measures defined in a table or in all the tables.</li>
-<li><strong>Parameter UI</strong> - if your query contains <code>@parameters</code> you will be prompted for the parameter values</li>
-<li><strong>Auto-Save</strong> - if DAX Studio was not shutdown cleanly it will offer to recover the files that were open</li>
-<li><strong>Goto Line</strong> - ctrl+G lets you jump to a specified line number</li>
-<li>Updated Data Provider libraries for connecting to Azure AS, PowerBI.com and Power BI Desktop</li>
-<li>Support for Power BI Aggregation events in ServerTimings and AllQueries traces</li>
-<li><strong>Digitally Signed</strong> - the installer, Excel Addin and Standalone executable are all now digitally signed</li>
-<li>Option to zoom results grid with query text (useful for when presenting)</li>
-<li>Optimized tracing of Direct Query for newer engine sources (which now support filtering these trace events by session id)</li>
-<li>Added links to dax.guide into function tooltips in code completion window</li>
-<li>Option to set results grid font size</li>
-<li>Added hotkey Ctrl-Shift-N to open a new query with the same connection as the current window</li>
-</ul>
-<h2 id="fixes">Fixes:</h2>
-<ul>
-<li>connecting to PowerPivot models with a single quote characters (&#39;) in the file name</li>
-<li>defaulting Find/Replace text from the current selected text in the editor</li>
-<li>added VAR &amp; RETURN to the code completion keywords</li>
-<li>fixed default file format to use UTF-8 (but you an still open both UCS2 or UTF-8 files)</li>
-<li>fix for mis-reported line numbers for errors with DaxFormatter.com</li>
-<li>fix to properly increment file names when exporting multiple resultsets to csv</li>
-<li>numerous stability fixes as a result of reported issues and crash reports including:<ul>
-<li>fixed the formatting of the file name when saving multiple query results to a file in a single batch</li>
-<li>fixed crash when resizing DAX Studio to a very narrow width</li>
-<li>fixed crash when dragging metadata to editor while intellisense window was open</li>
-<li>fixed crash when querying a table with the ^ character in a column name</li>
-<li>fixed crash when clicking save when no document is open</li>
-<li>fixed occassional crashes when copying &amp; pasting (work around for .Net issue)</li>
-<li>fixed numerous crashes when clicking ribbon buttons after closing all query windows</li>
-</ul>
-</li>
-</ul>
 </div></div></div></div></div>
-<script src="/assets/js/runtime~main.96d65047.js"></script>
-<script src="/assets/js/main.068f3e37.js"></script>
+<script src="/assets/js/runtime~main.90f3d085.js"></script>
+<script src="/assets/js/main.89a5a74c.js"></script>
 </body>
 </html>
