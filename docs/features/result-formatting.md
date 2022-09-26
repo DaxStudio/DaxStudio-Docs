@@ -28,5 +28,5 @@ In the following Example the column names in the query have been edited so that 
 ![](format-names-dont-match.png)
 
 :::tip
-if you build your queries using the [Query Builder](./query-builder) then queries that are generated should have the correct formatting applied
+if you build your queries using the [Query Builder](../query-builder) then queries that are generated should have the correct formatting applied
 :::
