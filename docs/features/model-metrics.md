@@ -14,6 +14,10 @@ The metrics features can be found on the **Advanced** tab in the DAX Studio ribb
 
 ![](model-metrics-menu.png)
 
+## View Metrics
+
+When you choose the **View Metrics** option a window is displayed with the following tabs
+
 ### Table Metrics
 
 This is the default view as it shows the most important and most actionable information. It shows the table information, but also lets you expand the tables to see the information on the columns for that table. By default this view is sorted to show the tables/columns that use the most memory first.
@@ -32,14 +36,24 @@ This tab shows information about the relationships in your model
 
 ![](relationship-metrics.png)
 
-## Partitions
+### Partitions
 
 By default every table has at least 1 partition. For large models in AzureAS, SSAS on-prem or Power BI with incremental processing enabled you will often have tables with multiple partitions. This view shows information about those partitions.
 
 ![](partition-metrics.png)
 
-## Summary
+### Summary
 
 This view shows you the total memory usage information for your model as well as information about the compatibility mode, when it was last process and when this analysis was run.
 
 ![](summary-metrics.png)
+
+## Required Permissions
+
+The View Metrics feature needs to run queries against both the data and DMV queries against the model metadata. The end user that is viewing or exporting the metrics needs to have read/write access to the data model in order to execute these queries.
+
+| Environment | Minimum Permissions | 
+| --- | --- | 
+| Power BI Desktop / SSDT / Power Pivot | n/a - user has full permissions by default |
+| Power BI Premium (XMLA Endpoint) | Contributor | 
+| Azure AS / SSAS | Database Admin | 
