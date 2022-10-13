@@ -25,7 +25,7 @@ So you can run `EVALUATE Customer` to output all the rows in the customer table
 
 But you don't just have to use a table name, you can use any function that returns a table. To get a distinct list of all the values in a column you can use the [VALUES](https://dax.guide/values) function which returns a table with a single row with all the unique values from the specified column.
 
-```
+```dax
 EVALUATE
 VALUES ( Customer[City] )
 ```
@@ -34,14 +34,14 @@ VALUES ( Customer[City] )
 
 Or if you don't want every row in the table you could use the [CALCULATETABLE](https://dax.guide/calculatetable) function to only return rows that meet a given criteria.
 
-```
+```dax
 EVALUATE
 CALCULATETABLE ( Customer, Customer[City] = "Redmond" )
 ```
 
 You can even combine the [VALUES](https://dax.guide/values) and [CALCULATETABLE](https://dax.guide/calculatetable) functions to get a list of all Cities that have a first character of "R"
 
-```
+```dax
 EVALUATE
 CALCULATETABLE ( VALUES ( Customer[City] ), LEFT ( Customer[City], 1 ) = "R" )
 ```
@@ -50,7 +50,7 @@ CALCULATETABLE ( VALUES ( Customer[City] ), LEFT ( Customer[City], 1 ) = "R" )
 
 If we continue on with the previous example you will see that the results come back in a random order. If we want our query to sort the results we can add an optional `ORDER BY` clause to the end of the query. So if we wanted to sort the results by the city name we would do the following:
 
-```
+```dax
 EVALUATE
 CALCULATETABLE ( VALUES ( Customer[City] ), LEFT ( Customer[City], 1 ) = "R" )
 ORDER BY Customer[City]
@@ -65,7 +65,7 @@ To add a calculation to your query like measures and variables you would use the
 
 To define a new measure in your query which sums the value of the existing `Sales[Sales Amount]` column you would write the following:
 
-```
+```dax
 DEFINE
     MEASURE Sales[My Sales Amount] =
         SUM ( Sales[Sales Amount] )
@@ -75,7 +75,7 @@ ADDCOLUMNS ( VALUES ( 'Date'[Month] ), "My Sales Amount", [My Sales Amount] )
 
 To define multiple measures you can add multiple blocks of `MEASURE <table>[<measure name>] = <expression>`
 
-```
+```dax
 DEFINE
     MEASURE Sales[My Sales Amount] =
         SUM ( Sales[Sales Amount] )
@@ -96,21 +96,21 @@ ADDCOLUMNS (
 
 Sometimes you may just want to return the result of a measure. But measures return a single scalar value not a table, so if you try to write the following it will produce a syntax error
 
-```
+```dax
 EVALUATE
 SUM ( Sales[Sales Amount] )
 ```
 
 We can fix this by using the table constructor syntax and wrapping the measure in curly braces `{ }`
 
-```
+```dax
 EVALUATE
 { SUM ( Sales[Sales Amount] ) }
 ```
 
 For older versions of the tabular engine which do not support the table constructor syntax we can use the [ROW](https://dax.guide/row) function
 
-```
+```dax
 EVALUATE
 ROW ( "Sales Amount", [Sales Amount] )
 ```
@@ -118,7 +118,7 @@ ROW ( "Sales Amount", [Sales Amount] )
 
 You can also mix this with the `DEFINE` clause to create a measure expression and then return a single value
 
-```
+```dax
 DEFINE
     MEASURE Sales[Total Sales] =
         SUM ( Sales[Sales Amount] )
@@ -132,7 +132,7 @@ The easiest way to generate a query using columns from multiple tables is to use
 
 > **NOTE:** It is _**strongly**_ recommended to always use a measure or expression of some sort with the `SUMMARIZECOLUMNS` function if you don't do this the function will generate a large crossjoin of all possible combinations of every value in the specified columns which is not normally useful
 
-```
+```dax
 EVALUATE
 SUMMARIZECOLUMNS (
     Product[Color],
@@ -149,7 +149,7 @@ DAX queries also allow for the return of multiple recordsets within a given batc
 
 So you can execute the following: 
 
-```
+```dax
 EVALUATE
 Customer
 EVALUATE
@@ -162,7 +162,7 @@ And you will get 2 tabs returned in DAX Studio, one with the contents of the **C
 
 But note that within a single batch, although you can have multiple `EVALUATE` statements you can only have a single `DEFINE` statement. So you would need to declare all your calculations in that one block.
 
-```
+```dax
 DEFINE
     MEASURE Sales[Total Sales] =
         SUM ( Sales[Sales Amount] )
@@ -182,14 +182,14 @@ One of the unique features that DAX Studio has is the [support for parameterized
 
 To add a parameter to a DAX query you can start with a query that includes a filter such as the following:
 
-```
+```dax
 EVALUATE
 FILTER ( 'Product', 'Product'[Color] = "Red" )
 ```
 
 And then replace the reference to `"Red"` with a parameter called `@Color` 
 
-```
+```dax
 EVALUATE
 FILTER ( 'Product', 'Product'[Color] = @Color )
 ```

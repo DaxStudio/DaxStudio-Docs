@@ -9,7 +9,7 @@ As of v2.8.0 you can now execute a query that contains parameter references dire
 
 So if you run a query like the following in DAX Studio:
 
-```
+```dax
 EVALUATE
 FILTER('Product', 'Product'[Color] = @color)
 ```
