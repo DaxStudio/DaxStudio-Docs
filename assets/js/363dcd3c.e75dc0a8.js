@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdaxstudio_docusaurus=self.webpackChunkdaxstudio_docusaurus||[]).push([[9673],{1033:(u,t,e)=>{e.r(t),e.d(t,{default:()=>c});var s=e(16550),a=e(67294);function c(){return a.createElement(s.l_,{to:"/docs/tutorials/getting-connected"})}}}]);
