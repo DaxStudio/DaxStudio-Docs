@@ -45,7 +45,9 @@ If you click "run" on a query that has an XMLA parameter block underneath it DAX
 
 ![](parameter-xmla.png)
 
-> **Note:** If you define a parameter block you need to make sure to include all of the referenced parameters as DAX Studio will not check to see that all parameters are included. Any parameters that are not given a value in the parameter block will be treated as if an empty string was passed in as the filter value.
+:::tip
+ If you define a parameter block you need to make sure to include all of the referenced parameters as DAX Studio will not check to see that all parameters are included. Any parameters that are not given a value in the parameter block will be treated as if an empty string was passed in as the filter value.
+:::
 
 ## Merge Parameters
 

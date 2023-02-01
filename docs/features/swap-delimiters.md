@@ -2,7 +2,13 @@
 title: Swap Delimiters
 ---
 
-> **Note:** In the Options there is a setting to select a default delimiter style 
+:::tip
+In the Options there is a setting to select a default delimiter style 
+:::
+
+:::tip
+If you have turned on the **debug commas** option the **swap delimiters** button will move to the **Advanced** tab
+:::
 
 In Excel and Power BI DAX supports 2 styles of delimiters:
 - US 

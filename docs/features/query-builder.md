@@ -30,7 +30,9 @@ Clicking the **New** button in the top right corner will open the measure editor
 
 In addition to creating new measures you can use the pencil icon next to an existing measure to override the expression for that measure. 
 
-> **Note:** DAX Studio does not make any changes to your model, if you look at the generated query with the **Edit Query** option you will see that it is just generating a `DEFINE` block with the updated measure expression. If you want to put any of the expressions you have altered back into your data model you need to copy/paste them manually.
+:::info
+ DAX Studio does not make any changes to your model, if you look at the generated query with the **Edit Query** option you will see that it is just generating a `DEFINE` block with the updated measure expression. If you want to put any of the expressions you have altered back into your data model you need to copy/paste them manually.
+:::
 
 ## Running your query
 
