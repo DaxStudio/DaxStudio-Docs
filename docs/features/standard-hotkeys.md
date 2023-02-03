@@ -20,4 +20,9 @@ In addition to the user definable hotkeys documented [here](/docs/features/optio
 | Ctrl + + | Move current line up |
 | Ctrl + - | Move current line down |
 | F3 | Find Next (repeats previous find command) |
-| Alt+Shift+ arrows| Box selection - allows for selecting characters across multiple lines |
+| Alt + Up/Down | Extend cursor vertically so you can type on multiple lines at once |
+| Alt+Shift + arrows| Box selection - allows for selecting characters across multiple lines |
+
+The Alt + arrow multi-line editing allows for operations like those below
+
+![](multi-line-editting.gif)
