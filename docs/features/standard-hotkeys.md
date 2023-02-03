@@ -25,4 +25,4 @@ In addition to the user definable hotkeys documented [here](/docs/features/optio
 
 The Alt + arrow multi-line editing allows for operations like those below
 
-![](multi-line-editting.gif)
+![](multi-line-editing.gif)
