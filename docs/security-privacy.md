@@ -47,3 +47,8 @@ System administrators may choose to turn all these web requests off at install t
 
 ## Application Security
 DAX Studio does not require any elevated privileges on the Windows machine in which it is installed, neither does it access any restricted resources on the machine. One exception from this rule, is if using the DAX Studio installer file (.exe), in which case the executable and support files required by the tool, are by default copied to the Program Files folder, which typically requires elevated permission. Both the DAX Studio binary files as well as the installer file, have been signed with a code signing certificate issued to SQL BI Inc, which is your guarantee that the code has not been tampered with by any 3rd party.
+
+## Application data
+DAX Studio stores config settings in the registry under HKEY_CURRENT_USER\SOFTWARE\DaxStudio when it is installed using the setup program.
+The only exception to this is for an "All Users" install (requiring admin rights) when also the setting to block all internet access is chosen: in that case, the configuration is written to HKEY_LOCAL_MACHINE\SOFTWARE\DaxStudio (which requires admin rights to change).
+The portable version that does not require an installation stores the configuration in a settings.json file created in the same folder as daxstudio.exe and any non-default settings are stored there.
