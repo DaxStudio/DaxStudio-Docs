@@ -12,17 +12,21 @@ The "All Users" vs "Current User" is the first option you see when you run the i
 
 Where ever possible we recommend using the default **All Users** install option as it gives the richest user experience. It is also the safer option as the executables are installed under the Program Files folder by default where it is much harder for them to be affected by viruses or malware.
 
-|                                                  | All Users | Current User | Portable |
-|--------------------------------------------------|-----------|--------------|----------|
-|Requires Admin rights to install                  | <Yes />   | <No />       | <No />   | 
-|Requires Admin rights to run                      | <No />    | <No />       | <No />   | 
-|Available for all users on the current machine    | <Yes />   | <No />       | <No />   | 
-|Excel Add-in available                            | <Yes />   | <Yes />      | <No />   | 
-|Power BI External Tools integration               | <Yes />   | <No />       | <No />   | 
-|Can be run from a USB drive or shared folder _(1)_| <No />    | <No />       | <Yes />  | 
+|                                                      | All Users | Current User | Portable |
+|------------------------------------------------------|-----------|--------------|----------|
+|Requires Admin rights to install                      | <Yes />   | <No />       | <No />   | 
+|Requires Admin rights to run                          | <No />    | <No />       | <No />   | 
+|Available for all users on the current machine        | <Yes />   | <No />       | <No />   | 
+|Excel Add-in available  **_(2)_**                     | <Yes />   | <Yes />      | <No />   | 
+|Power BI External Tools integration                   | <Yes />   | <No />       | <No />   | 
+|Can be run from a USB drive or shared folder **_(1)_**| <No />    | <No />       | <Yes />  | 
 
 :::caution
- _(1)_ the current user will require full read/write access to this folder, you should **never** copy the portable version to a folder that requires admin rights (like *Program Files*) as this will prevent the program from running (as it assumes it has read/write access to local folder)
+**(1)** the current user will require full read/write access to this folder, you should **never** copy the portable version to a folder that requires admin rights (like *Program Files*) as this will prevent the program from running (as it assumes it has read/write access to local folder)
+:::
+
+:::caution
+**(2)** Installing the Excel Addin by double-clicking on the .vsto file is not supported. It will not register the addin correctly with Excel and the addin will not function correctly. You **must** use the installer if you want to use the Excel Addin
 :::
 
 :::tip
