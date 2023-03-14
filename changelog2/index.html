@@ -16,12 +16,56 @@
 
 
 <script src="https://kit.fontawesome.com/bb44c52cf7.js" crossorigin="anonymous" awync></script><link rel="stylesheet" href="/assets/css/styles.f913e69e.css">
-<link rel="preload" href="/assets/js/runtime~main.7e5f3845.js" as="script">
-<link rel="preload" href="/assets/js/main.e900ce3c.js" as="script">
+<link rel="preload" href="/assets/js/runtime~main.120b6a49.js" as="script">
+<link rel="preload" href="/assets/js/main.6ac7a823.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus">
-<div><div>The lastest release is: <!-- -->v3.0.5</div><div><div><h1>v3.0.5</h1><div><h2 id="fixes">Fixes</h2>
+<div><div>The lastest release is: <!-- -->v3.0.6</div><div><div><h1>v3.0.6</h1><div><h2 id="new-features">New Features</h2>
+<ul>
+<li>#861 adding SHA256 hashes for downloads</li>
+<li>#866 added copy with/without headers option for query results</li>
+<li>#973 Added Duplicate option to tab right-click menu</li>
+<li>#1016 open a .dax file by dragging it onto DAX Studio</li>
+<li>#1031 adding encoding option for custom CSV output</li>
+<li>#1051 added Formatted File as an output option</li>
+<li>added json option when outputting to a file</li>
+<li>FE Benchmarks</li>
+<li>Updated Timeline/Waterfall visualization in Server Timings</li>
+<li>xmSQL / DirectQuery formatting improvements</li>
+<li>moved preview and vertipaq analyzer settings from the advanced to the standard options page</li>
+</ul>
+<h2 id="fixes">Fixes</h2>
+<ul>
+<li>#1062 fix vertipaq analyzer showing <unknown> in summary pane for AAS / PBIP</unknown></li>
+<li>#1060 enabling Shift+Enter to be used as a custom hotkey</li>
+<li>#1052 disabled re-ordering of columns in vertipaq analyzer</li>
+<li>#1036 fix location of desktop shortcut file for Current User installs</li>
+<li>#1030 QueryBuilder measures missing table references when loading from file</li>
+<li>#1029 QueryBuilder IN filters not loading from file correctly</li>
+<li>#1026 improving VertiPaq Analyzer tooltips</li>
+<li>#1025 fixing spelling / capitalization errors</li>
+<li>#968 Tool Window incorrectly docking</li>
+<li>#967 permission error on non-admin install</li>
+<li>#979 improved color contrast in dark mode</li>
+<li>#994 adjusted measure icon position when vertical scrollbars are always displayed</li>
+<li>#997 adding support for measure filters in Query Builder</li>
+<li>#999 fixed display of columns with open parenthesis as first character</li>
+<li>#951 moved Swap Delimiters / Debug Commas to advanced</li>
+<li>fixed metadata display for multi-dimensional models</li>
+<li>skip showing crash dialog if app is shutting down</li>
+<li>Improved generation of Define Measure and Define Dependent Measures</li>
+<li>Fixed crash in BindableFocusBehaviour and AutomationPeer</li>
+<li>fixed cell alignment in View Metrics columns tab</li>
+<li>Fixed crash on update flag click event</li>
+<li>Fixed crash when browsing for a folder during CSV data export</li>
+<li>improvements for FE duration calculation</li>
+<li>added default file name when exporting bim from vpax</li>
+<li>fixed the hidden table icon</li>
+<li>fixed Excel tracing </li>
+<li>fixed invalid button states after failed connection attempt</li>
+</ul>
+</div></div></div><div><div><h1>v3.0.5</h1><div><h2 id="fixes">Fixes</h2>
 <ul>
 <li>#965 Permissions error when installing for Current User</li>
 <li>Fixed colors on Getting Started dialog</li>
@@ -515,34 +559,8 @@
 <li>Metadata loading performance has been improved by upto 6x</li>
 </ul>
 </div></div></div><div><div><h1>2.9.1</h1><div><p>Fixing #184 where Display Folders were not displaying in Power BI Desktop</p>
-</div></div></div><div><div><h1>2.9.0</h1><div><h3 id="new-features">New Features</h3>
-<ul>
-<li>Import Power BI Performance Data</li>
-<li>Support for Display Folders in the Metadata pane #127</li>
-<li>Added options to enable/disable the automatic metadata refresh by connection type (local/network/cloud) #182</li>
-<li>Option to hide hidden objects in the metadata pane #167 <em>(can also be toggled from right-click menu)</em></li>
-<li>PowerBI auto-date template and variation tables (as these can&#39;t be directly queried)</li>
-<li>Option for metdata search to be pinned open #151</li>
-<li>Option to increase width of intellisense window #152</li>
-<li>Adding show referenced objects option on metadata right-click (thanks @DaveStabilify) #144</li>
-<li>Option for setting &#39;Clear Cache and Run&#39; as the default run style #86</li>
-</ul>
-<h3 id="bug-fixes">Bug Fixes</h3>
-<ul>
-<li>Fixes #175 - Handling of quotes in csv export</li>
-<li>Fixes #177 - Scrollbars not displayed in recent files list</li>
-<li>Fixes #180 - error when tracing connections using Roles=</li>
-<li>Fixed a bug where changing connections did not always update the selected database</li>
-<li>Fixed issues with crash recovery of unsaved changes</li>
-</ul>
-<h3 id="internals">Internals</h3>
-<ul>
-<li>Refactored unit tests and ADOTabular dll to allow unit tests to be run automatically during appveyor builds</li>
-<li>Adding Database Name column to all traces to work with the new Power BI XMLA endpoint </li>
-<li>Updating AMO/ADOMD library references</li>
-</ul>
 </div></div></div></div></div>
-<script src="/assets/js/runtime~main.7e5f3845.js"></script>
-<script src="/assets/js/main.e900ce3c.js"></script>
+<script src="/assets/js/runtime~main.120b6a49.js"></script>
+<script src="/assets/js/main.6ac7a823.js"></script>
 </body>
 </html>
