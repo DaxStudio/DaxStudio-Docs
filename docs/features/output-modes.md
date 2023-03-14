@@ -25,6 +25,9 @@ Datetimes can be particularly problematic as the different regional formats mean
 The file output is designed to work as a way of getting accurate data out of the Power BI data model. It is not designed as an alternative to building a report. If you have specific formatting requirements one option would be to copy your query to a paginated report and apply your required formatting there. Using the Excel output is another option as that file format has richer capabilities in terms of data types and formatting on top of the raw data.
 :::
 
+### Formatted File
+Results can be sent directly to a file, but unlike the **File** mode above the Formatted File option uses the same formatting logic that is applied to the **Grid** output.
+
 ### Clipboard
 Results will be sent to the Windows clipboard in a csv data format suitable for pasting into an application like Excel.
 
