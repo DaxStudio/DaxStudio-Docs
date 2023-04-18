@@ -12,9 +12,11 @@ Today we are happy to announce the release of version 3.0.7 of DAX Studio
 
 ## Metadata loading improvements
 
-DAX Studio uses an asynchronous, lazy loading strategy to populate the metadata which has worked reasonably well over the years, but we occassionaly see some strange errors due to multiple threads attempting to use the same connection. This sort of issue is extremely hard to isolate and there are actually a number of small tweaks in the previous verion (3.0.6) which were meant to help avoid these issues, but there was also one minor improvement to the formatting of query results which made this worse. There are a number of similar error messages that are a symptom of this issue including <Issue id="1076"/> _xmlReader in use_ errors.
+DAX Studio uses an asynchronous, lazy loading strategy to populate the metadata which has worked reasonably well over the years, but we occassionaly see some strange errors due about reader objects being already in use (such as those in issue <Issue id="1076"/> ) or responses containing unexpected data. There are actually a number of small tweaks in the previous verion (3.0.6) which were meant to help avoid these issues, but there was also one minor improvement to the formatting of query results which made this worse.
 
-Starting with this version we now internally use a separate connection object for metadata and running queries so this should prevent this issue entirely.
+This sort of issue was extremely hard to isolate because I rarely saw it myself and it was very hard to come up with consistent scenarios to reproduce the issue. And if you cannot reproduce an issue you can make changes, but you don't know if you've fixed the problem or if you've just been lucky. It turns out that with some help from some log files from users I was able to isolate and reproduce this issue and confirm that it was a multi-threading bug. 
+
+Starting with this version we now internally use a separate connection object for metadata and running queries so this should prevent this issue entirely going forward.
 
 ## Delete entries from the recent server list
 
