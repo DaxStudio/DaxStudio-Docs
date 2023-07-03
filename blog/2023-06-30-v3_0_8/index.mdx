@@ -14,12 +14,18 @@ Today we are happy to announce the release of version 3.0.8 of DAX Studio which 
 If you are testing out the new Fabric Direct Lake mode you should upgrade to this version as it improves the performance of the metadata loading.
 :::
 
-## Fixes
+# Updates
+ * Improved metadata refresh against Fabric Direct Lake models
+ * Include dynamic format string in Define Measure
+ * Added winget publishing to release pipeline
+ * Fixed <Issue id="1130"/> added hierarchy support to Query Builder
+ * Fixed <Issue id="1135"/> allows for dragging entire tables to Query Builder
+
+# Fixes
  * Fixed <Issue id="1099"/> Rendering issues in View Metrics
  * Fixed <Issue id="1104"/> assembly signing in automated build process
  * Fixed <Issue id="1105"/> bracket highlighting for CallbackDataID in Server Timings
  * Fixed <Issue id="1111"/> prevented multiple trace windows when opening files
-
  * Fixed <Issue id="1119"/> Query Builder not saving if user has read-only access
  * Fixed <Issue id="1120"/> clear any previous errors at the start of Server Timings trace
  * Fixed <Issue id="1123"/> corrected spelling of Power Pivot
@@ -28,14 +34,7 @@ If you are testing out the new Fabric Direct Lake mode you should upgrade to thi
  * Fixed <Issue id="1136"/> error when using data export to SQL and column name has square brackets 
  * Fixed crash in hierarchy tooltip
  * Fixed crash reports
- * Improved autosave clean up
+ * Improved autosave clean-up
  * Fixed display of database name when connected to PBI Desktop
- * improved autosave cleanup
  * Fixed bug in expand measures
 
-## Improvements
- * improved metadata refresh against Fabric Direct Lake models
- * include dynamic format string in Define Measure
- * added winget publishing to release pipeline
- * Fixed <Issue id="1130"/> added hierarchy support to Query Builder
- * Fixed <Issue id="1135"/> allows for dragging entire tables to Query Builder
