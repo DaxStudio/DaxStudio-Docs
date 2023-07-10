@@ -39,14 +39,24 @@ export default function Home(): JSX.Element {
       <div className='container'>
         <div className={clsx(styles.heroBanner)}>
           <div className='row justify-content-md-center'>
-          {/* <div className="{styles.buttons}"> */}
-          <div className='container'><div className='row'><div className='col'> Download the latest release of DAX Studio here:<br/><br/></div></div></div>
 
-          <div className='col col--2'/>
+            <div className='container'>
+              <div className='row'>
+                <div className='col'> Download the latest release of DAX Studio here:<br/><br/></div>
+              </div>
+            </div>
+
+            <div className='col col--2'/>
             <div className='col '> <Installer/></div> 
             <div className='col '><Portable/></div>
             <div className='col col--2'/>
-          {/* </div> */}
+
+            <div className='col col--2'/>
+            
+            <div className='col '><br/><i> DAX Studio can also be installed using the following package managers: [<a href="/docs/installation/chocolatey">chocolatey</a> | <a href='/docs/installation/winget'>winget</a>]</i></div> 
+            
+            <div className='col col--2'/>
+
           </div>
           <br/>
           <div className='container'>The details of the new features and fixes included in this release are available in the <a href="/changelog/latest">changelog</a></div>
