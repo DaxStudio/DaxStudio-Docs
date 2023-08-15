@@ -4,10 +4,19 @@
         <title>DAX Studio Blog</title>
         <link>https://daxstudio.org/blog</link>
         <description>DAX Studio Blog</description>
-        <lastBuildDate>Fri, 30 Jun 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 16 Aug 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[v3.0.9 Release]]></title>
+            <link>https://daxstudio.org/blog/v3_0_9-release</link>
+            <guid>https://daxstudio.org/blog/v3_0_9-release</guid>
+            <pubDate>Wed, 16 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Today we are happy to announce the release of version 3.0.9 of DAX Studio which includes the following fixes and Updates]]></description>
+            <content:encoded><![CDATA[<p>Today we are happy to announce the release of version 3.0.9 of DAX Studio which includes the following fixes and Updates</p><div class="theme-admonition theme-admonition-info alert alert--info admonition_LlT9"><div class="admonitionHeading_tbUL"><span class="admonitionIcon_kALy"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_S0QG"><p>If you are testing DAX Optimizer you should update to this release as it includes  .</p></div></div><h1>Indent based code Folding</h1><p>This new preview feature enables the ability to collapse sections of a query based on the indenting levels</p><p><img loading="lazy" src="/assets/images/indent-code-folding-formatted-86f28a9c2e62a18bb06a3b3aef1e40bf.png" width="697" height="270" class="img_ev3q"></p><p>You can read more about this preview feature <a href="/docs/features/indent-code-folding/">here</a> </p><h1>Updates</h1><ul><li>Updated Vertipaq Analyzer libraries to work with DAX Optimizer</li><li>Preview - <a href="/docs/features/indent-code-folding/">Indent Based Code Folding</a> </li></ul><h1>Fixes</h1><ul><li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1159" target="_blank" rel="noopener noreferrer">#<!-- -->1159</a> Saved Server Timings not loading</li><li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1155" target="_blank" rel="noopener noreferrer">#<!-- -->1155</a> add escaping to find references</li><li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1154" target="_blank" rel="noopener noreferrer">#<!-- -->1154</a> define measure in calculation groups</li><li>Fix &lt;<a href="https://github.com/daxstudio/daxstudio/issues/1152" target="_blank" rel="noopener noreferrer">#<!-- -->1152</a> typo in Query Builder</li><li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1146" target="_blank" rel="noopener noreferrer">#<!-- -->1146</a> Sorting by Translated Names</li><li>Improved DQ formatting</li></ul>]]></content:encoded>
+            <category>daxstudio</category>
+        </item>
         <item>
             <title><![CDATA[v3.0.8 Release]]></title>
             <link>https://daxstudio.org/blog/v3_0_8-release</link>
