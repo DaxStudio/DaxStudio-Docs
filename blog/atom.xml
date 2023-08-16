@@ -8,6 +8,19 @@
     <subtitle>DAX Studio Blog</subtitle>
     <icon>https://daxstudio.org/img/favicon.ico</icon>
     <entry>
+        <title type="html"><![CDATA[v3.0.10 Release]]></title>
+        <id>https://daxstudio.org/blog/v3_0_10-release</id>
+        <link href="https://daxstudio.org/blog/v3_0_10-release"/>
+        <updated>2023-08-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Today we are happy to announce the release of version 3.0.10 of DAX Studio which includes the following fix.]]></summary>
+        <content type="html"><![CDATA[<p>Today we are happy to announce the release of version 3.0.10 of DAX Studio which includes the following fix.</p><h1>Fixes</h1><ul><li>Fix crash dialog that appears when connecting or changing tabs when the <a href="/docs/features/indent-code-folding/">Indent Based Folding</a> preview feature is NOT enabled</li></ul>]]></content>
+        <author>
+            <name>Darren Gosbell</name>
+            <uri>https://github.com/dgosbell</uri>
+        </author>
+        <category label="daxstudio" term="daxstudio"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[v3.0.9 Release]]></title>
         <id>https://daxstudio.org/blog/v3_0_9-release</id>
         <link href="https://daxstudio.org/blog/v3_0_9-release"/>

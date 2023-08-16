@@ -9,6 +9,15 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
+            <title><![CDATA[v3.0.10 Release]]></title>
+            <link>https://daxstudio.org/blog/v3_0_10-release</link>
+            <guid>https://daxstudio.org/blog/v3_0_10-release</guid>
+            <pubDate>Wed, 16 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Today we are happy to announce the release of version 3.0.10 of DAX Studio which includes the following fix.]]></description>
+            <content:encoded><![CDATA[<p>Today we are happy to announce the release of version 3.0.10 of DAX Studio which includes the following fix.</p><h1>Fixes</h1><ul><li>Fix crash dialog that appears when connecting or changing tabs when the <a href="/docs/features/indent-code-folding/">Indent Based Folding</a> preview feature is NOT enabled</li></ul>]]></content:encoded>
+            <category>daxstudio</category>
+        </item>
+        <item>
             <title><![CDATA[v3.0.9 Release]]></title>
             <link>https://daxstudio.org/blog/v3_0_9-release</link>
             <guid>https://daxstudio.org/blog/v3_0_9-release</guid>
