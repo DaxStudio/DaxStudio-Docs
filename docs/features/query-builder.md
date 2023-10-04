@@ -40,9 +40,21 @@ Once you have constructed the query with the desired output columns and filters 
 
 ![](run-query.png)
 
+## Run Styles
+
+If you have both text in the edit window and selections in the Query Builder you choose whether to run the Query Builder or the text in edit window using the run style drop down.
+
+![](run-styles.png)
+
+:::info
+DAX Studio attempts to automatically select the correct run mode for you based on the item you last edited. And if you either just have text in the edit window and no selections in the Query Builder or if you only have selections in the Query Builder and no text in the edit window then DAX Studio will automatically switch the run mode
+:::
+
 ## Editing your query
 
-Or you can use the **Edit Query** button to send the generated query to the edit window where you can customize it further or copy it to another application.
+Or you can use the **Update** button to send the generated query to the edit window where you can customize it further or copy it to another application.
+
+If you turn on the **Auto Update** option the query builder will automatically update the text in the query window as you make changes in the query builder.
 
 ![](edit-query.png)
 

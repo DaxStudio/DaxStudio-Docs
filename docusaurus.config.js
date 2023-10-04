@@ -195,13 +195,13 @@ const config = {
       },
     ]
   ],
-  scripts: [
-    {
-    src: "https://kit.fontawesome.com/bb44c52cf7.js", 
-    crossorigin: "anonymous",
-    awync: true,
-    }
-  ],
+  //scripts: [
+  //  {
+  //  src: "https://kit.fontawesome.com/bb44c52cf7.js", 
+  //  crossorigin: "anonymous",
+  //  async: true,
+  //  }
+  //],
 };
 
 module.exports = config;

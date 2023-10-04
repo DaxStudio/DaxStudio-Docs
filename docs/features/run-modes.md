@@ -2,10 +2,14 @@
 title: Run Modes
 ---
 
-![run modes](run-modes.png)
+![run modes](run-styles.png)
 
 ### Run Query
 This is the default mode. It will execute the selected query and sent the results to the selected [output](../output-modes)
 
-### Clear Cache and Run
-In this mode before the query is run a clear cache command is sent to make sure that the query runs on a cold cache. This is most often used when performance tuning and saves having to remember to manually click the Clear Cache button before running a query
+### Run Query Builder
+If you have selections in the query builder this mode will generate and execute a query using the contents of the [Query Builder](../query-builder)
+
+:::info
+DAX Studio attempts to automatically select the correct run mode for you based on the item you last edited. And if you either just have text in the edit window and no selections in the Query Builder or if you only have selections in the Query Builder and no text in the edit window then DAX Studio will automatically switch the run mode
+:::
