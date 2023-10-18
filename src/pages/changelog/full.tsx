@@ -12,7 +12,7 @@ function fixGithubIssueLinks(oldHTML) {
 
 function Release({tag_name, body}) {
     return (
-      <div >
+      <div className='row' >
         <div className="">
           <h2 className={styles.version}>{tag_name}</h2>
           <div dangerouslySetInnerHTML={{__html: fixGithubIssueLinks( marked.parse(body))}}></div>
@@ -29,17 +29,17 @@ export default function Home(): JSX.Element {
             <main>
                 <section >
                 
-                    <div className="container">
-                        <div className='row'>
+                <div className="container">
+                    <div className='row'> 
                     <h1>Full Change Log</h1> 
-                    </div>   
-                        <div className="row">
+                    </div>
+                        
                             
                             {releases.map((props, idx) => (
                                 <Release key={idx} {...props} />
                             ))}
-                        </div>
-                    </div>
+                </div>
+                    
                 </section>
             </main>
         </Layout>
