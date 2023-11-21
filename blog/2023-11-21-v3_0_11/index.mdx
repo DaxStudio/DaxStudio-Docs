@@ -1,0 +1,28 @@
+---
+slug: v3_0_10-release
+title: v3.0.10 Release
+authors: [dgosbell]
+tags: [daxstudio]
+---
+import Issue from '@site/src/components/Github-Issue';
+
+# DAX Studio version 3.0.11
+
+Today we are happy to announce the release of version 3.0.11 of DAX Studio which includes the following fix.
+
+## Updates
+* Improved Query Folding logic
+* updated vpax libraries
+* fixed <Issue id="1189"/> no longer counting RowNumber as user column in vertipaq analyzer
+
+## Fixes
+* fixed <Issue id="1200"/> "An item with the same key has already been added" error when connecting to Power BI 
+* fixed <Issue id="1188"/> error when testing roles on SSAS
+* fixed bug in status bar for powerpivot connections
+* fixed <Issue id="1180"/> detection of multiple parameters on one line
+* fixed <Issue id="1178"/> Query Builder new measure showing permissions issue
+* fixed <Issue id="1172"/> vertipaq analyzer summary always shows unknown.pbix
+* fixed <Issue id="1171"/> error when loading perf data
+* Fixed Query Folding crashes with certain regional settings
+* fixed <Issue id="1170"/> cancelling closing DAX Studio also cancels closing open documents
+* fixed <Issue id="1169"/> error when opening files with Query Builder open
