@@ -13,12 +13,33 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.c43c915f.css">
-<link rel="preload" href="/assets/js/runtime~main.4c882e3d.js" as="script">
-<link rel="preload" href="/assets/js/main.b591f8a0.js" as="script">
+<link rel="preload" href="/assets/js/runtime~main.57077880.js" as="script">
+<link rel="preload" href="/assets/js/main.60e3c37a.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}return t}()||function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus">
-<div><div>The lastest release is: <!-- -->v3.0.10</div><div><div><h1>v3.0.10</h1><div><h1 id="fixes">Fixes</h1>
+<div><div>The lastest release is: <!-- -->v3.0.11</div><div><div><h1>v3.0.11</h1><div><h2 id="updates">Updates</h2>
+<ul>
+<li>Improved Query Folding logic</li>
+<li>updated vpax libraries</li>
+<li>fixed #1189 no longer counting RowNumber as user column in vertipaq analyzer</li>
+<li>updated vpax libraries</li>
+<li>updated TOM / ADOMD libraries</li>
+</ul>
+<h2 id="fixes">Fixes</h2>
+<ul>
+<li>fixed #1200 &quot;An item with the same key has already been added&quot; error when connecting to Power BI </li>
+<li>fixed #1188 error when testing roles on SSAS</li>
+<li>fixed bug in status bar for powerpivot connections</li>
+<li>fixed #1180 detection of multiple parameters on one line</li>
+<li>fixed #1178 Query Builder new measure showing permissions issue</li>
+<li>fixed #1172 vertipaq analyzer summary always shows unknown.pbix</li>
+<li>fixed #1171 error when loading perf data</li>
+<li>Fixed Query Folding crashes with certain regional settings</li>
+<li>fixed #1170 cancelling closing DAX Studio also cancels closing open documents</li>
+<li>fixed #1169 error when opening files with Query Builder open</li>
+</ul>
+</div></div></div><div><div><h1>v3.0.10</h1><div><h1 id="fixes">Fixes</h1>
 <ul>
 <li>Fix crash dialog that appears when connecting or changing tabs when the <a href="/docs/features/indent-code-folding">Indent Based Folding</a> preview feature is <strong>NOT</strong> enabled</li>
 </ul>
@@ -526,39 +547,8 @@
 </div></div></div><div><div><h1>2.10.1</h1><div><ul>
 <li>Fixes a bug with Publish DAX Functions</li>
 </ul>
-</div></div></div><div><div><h1>2.10.0</h1><div><h2 id="new-features">New Features</h2>
-<ul>
-<li>#200 Added Database tooltip to show language &amp; compatibility level </li>
-<li>#195 Added option for using tabs vs spaces for indenting code</li>
-<li>#188 Added settings to the Options window for a custom delimiter setting when exporting to a file.</li>
-<li>Added Summary page to the Vertipaq Analyzer view</li>
-<li>#228 Show an icon if a table is marked as a date table</li>
-<li>Added buttons to the help ribbon for posting bugs and feature requests</li>
-<li>Added tooltip to functions</li>
-<li>#257 Added search box for DMV&#39;s and Functions</li>
-<li>Added RI Violations information to Vertipaq Analyzer view</li>
-<li>#181 Added custom key bindings (as a Preview feature)</li>
-</ul>
-<h2 id="fixes">Fixes</h2>
-<ul>
-<li>#251 fixed Startup crash &quot;String not recognized as a valid datetime&quot; after changing windows date format </li>
-<li>#224 Server Timings and Query Plan traces now work with the EffectiveUsername connection string parameter</li>
-<li>#237 fixed population of UserName field in traces</li>
-<li>#223 Export Wizard now replaces characters that are not legal in file names with underscores</li>
-<li>#222 UTF-8 csv exports no longer include BOM characters</li>
-<li>#218 Vertipaq Analyzer - fixed an issue trying to export a model with a multiple of 50 +1 columns</li>
-<li>#238 Vertipaq Analyzer - fixed Column Header name for Data Type column</li>
-<li>Vertipaq Analyzer - fixed not showing any output for certain models #235 #231 #218</li>
-<li>#213 fixed a bug that was not allowing &quot;DEFINE MEASURE&quot; to work with KPIs</li>
-<li>#241 fixed File - New creating 2 blank windows (thanks @Mankarse)</li>
-<li>#226 removed OnDragEnter debug message</li>
-<li>#255 clicking &quot;swap delimiters&quot; clears the undo stack</li>
-<li>Format button was not respecting the delimiter setting in the Options page</li>
-<li>#254 Data Export wizard now excludes tables with no columns (as there is no data to export anyway)</li>
-<li>Fixed the location and name of the diagnostics log files</li>
-</ul>
 </div></div></div></div></div>
-<script src="/assets/js/runtime~main.4c882e3d.js"></script>
-<script src="/assets/js/main.b591f8a0.js"></script>
+<script src="/assets/js/runtime~main.57077880.js"></script>
+<script src="/assets/js/main.60e3c37a.js"></script>
 </body>
 </html>
