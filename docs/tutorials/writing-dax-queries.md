@@ -23,7 +23,7 @@ So you can run `EVALUATE Customer` to output all the rows in the customer table
 
 ![](./evaluate-customer.png)
 
-But you don't just have to use a table name, you can use any function that returns a table. To get a distinct list of all the values in a column you can use the [VALUES](https://dax.guide/values) function which returns a table with a single row with all the unique values from the specified column.
+But you don't just have to use a table name, you can use any function that returns a table. To get a distinct list of all the values in a column you can use the [VALUES](https://dax.guide/values) function which returns a table with a single column with all the unique values from the specified column.
 
 ```dax
 EVALUATE
