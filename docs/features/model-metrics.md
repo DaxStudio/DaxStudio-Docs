@@ -16,6 +16,18 @@ The metrics features can be found on the **Advanced** tab in the DAX Studio ribb
 
 ![](model-metrics-menu.png)
 
+## Metric Options Dialog
+
+This dialog allows you to override the default statistic scanning behaviour for the current operation.
+
+![](metric-options-dialog.png)
+
+| Option | Default | Description |
+|:---|:---|:---|
+| Read Statistics from data | true | Scan the data to retrieve accurate statistics about columns, tables and relationships.|
+| Read Statistics from Direct Query data | false | Include Direct Query tables in statistics collection. This is a lot more expensive than reading statistics from in-memory columns and is not recommended. |
+| Direct Lake scan statistics from Data option | ResidentOnly | **ResidentOnly** only scans columns that are already loaded into memory <br/>**Referenced** scans columns that are already <br/>resident and columns referenced in measures or relationships<br/>**Full** scans all columns, forcing them into memory (not recommended for large models)|
+
 ## View Metrics
 
 When you choose the **View Metrics** option a window is displayed with the following tabs

@@ -1,0 +1,35 @@
+---
+slug: v3_1_0-release
+title: v3.1.0 Release
+authors: [dgosbell]
+tags: [daxstudio]
+---
+import Issue from '@site/src/components/Github-Issue';
+
+# DAX Studio version 3.1.0
+
+Today we are happy to announce the release of version 3.1.0 of DAX Studio which includes the following fix.
+
+## New Features
+* Added [Capture Diagnostics](/docs/features/capture-diagnostics)
+* Added [Evaluate and Log trace](/docs/features/traces/evaluateandlog-trace)
+* Added [Database dialog](/docs/features/database-dialog) when connecting
+* Added [command line](/docs/features/command-line) support
+* Added [Vertipaq Analyzer Options](/docs/features/vertipaq-analyzer-options)
+
+## Updates
+* #1204 made listview selected row color lighter to improve the contrast
+* #1124 Improved labelling of the zoom level
+* Added storage mode column to the Partitions tab in View Metrics
+* updated TOM, ADOMD and other 3rd party dependencies
+
+## Fixes
+* Fixed a crash trying to show fonts in the option dialog
+* Fixed #1213 Formatted file export not applying formatting
+* Fixed loading of AggregateRewrite events in saved Server Timings
+* Fixed occassional crash when using publish functions
+* Fixed #1228 Query Builder not respecting delimiter setting
+* Fixed #1179 reconnect active traces on connection retries
+* Fixed an issue in QueryBuilder when loading a saved query containing a hierarchy
+* Fixed an issue in QueryBuilder when trying to filter on a query scoped measure
+* Fixed an issue where the Ribbon buttons get stuck in a disabled state after an error while a trace is active
