@@ -10,26 +10,46 @@ import Issue from '@site/src/components/Github-Issue';
 
 Today we are happy to announce the release of version 3.1.0 of DAX Studio which includes the following fix.
 
+## Highlights
+
+### DSCMD - DAX Studio command line utility
+DAX Studio is now shipping with a new utility called `dscmd.exe` this tool is a command line utility so you can run a subset of common operations from a command line.
+This means that you can schedule tasks or run them as part of automated build pipelines.
+
+### Capture Diagnostics
+This feature provides an easy way to capture Server Timings, Query Plan and Model Metrics with a single click. 
+This works for a single query in the editor or you can run this over the current set of queries in an All Queries trace or from imported Power BI Performance data. 
+If you are using the All Queries or Performance Data option only queries matching the filter conditions are captured so you can do things like only capture diagnostics
+for queries that run longer than 100ms.
+
+### Database dialog
+
+
+
 ## New Features
 * Added [Capture Diagnostics](/docs/features/capture-diagnostics)
 * Added [Evaluate and Log trace](/docs/features/traces/evaluateandlog-trace)
 * Added [Database dialog](/docs/features/database-dialog) when connecting
 * Added [command line](/docs/features/command-line) support
-* Added [Vertipaq Analyzer Options](/docs/features/vertipaq-analyzer-options)
+* Added Model Metrics / Vertipaq Analyzer [Options dialog](/docs/features/model-metrics/#metric-options-dialog)
+* Added support for [obfuscated](/docs/features/model-metrics/#obfuscated-vertipaq-analyzer-files) model metrics
+* Added support to Server Timings for the new [ExecutionMetrics event](https://powerbi.microsoft.com/en-in/blog/new-executionmetrics-event-in-azure-log-analytics-for-power-bi-semantic-models/)
 
-## Updates
-* #1204 made listview selected row color lighter to improve the contrast
-* #1124 Improved labelling of the zoom level
+## Improvements
+* <Issue id="1204" /> made listview selected row color lighter to improve the contrast
+* <Issue id="1124" /> Improved labelling of the zoom level
 * Added storage mode column to the Partitions tab in View Metrics
 * updated TOM, ADOMD and other 3rd party dependencies
+* Fixed the images for the Server Timings event type filters
 
 ## Fixes
 * Fixed a crash trying to show fonts in the option dialog
-* Fixed #1213 Formatted file export not applying formatting
+* Fixed <Issue id="1213" /> Formatted file export not applying formatting
 * Fixed loading of AggregateRewrite events in saved Server Timings
 * Fixed occassional crash when using publish functions
-* Fixed #1228 Query Builder not respecting delimiter setting
-* Fixed #1179 reconnect active traces on connection retries
+* Fixed <Issue id="1228" /> Query Builder not respecting delimiter setting
+* Fixed <<Issue id="1179" /> reconnect active traces on connection retries
 * Fixed an issue in QueryBuilder when loading a saved query containing a hierarchy
 * Fixed an issue in QueryBuilder when trying to filter on a query scoped measure
 * Fixed an issue where the Ribbon buttons get stuck in a disabled state after an error while a trace is active
+* Fixed <Issue id="1262 /> ViewAs not working with "Other User" option against the Power BI Service

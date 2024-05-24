@@ -14,7 +14,10 @@ Arguments are indicated by angled brackets and are required
 ## \[Options] 
 Are indicated by square brackets and are not required in all circumstances. But there are scenarios where certain combinations of options must be used. 
 
-For example if you use the --connectionString option to connect to tabular model you cannot also use the --server or --database options. And if you use the --database option you must also use the --server option. 
+For example if you use the `--connectionString` option to connect to tabular model<br/> 
+you **cannot** also use the `--server` or `--database` options.
+
+And if you use the `--database` option you **must** also use the `--server` option. 
 
 :::info
 Using an invalid combination of options should generate a meaningful error message explaining what the problem is

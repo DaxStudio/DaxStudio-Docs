@@ -1,0 +1,9 @@
+{
+	"label": "Commands",
+	"position": 1,
+	"link": {
+	  "type": "generated-index",
+	  "description": "The following are the different commands supported by `dscmd.exe`",
+	  "slug": "features/command-line/commands"
+	}
+  }
