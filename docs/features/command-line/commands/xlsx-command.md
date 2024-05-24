@@ -38,9 +38,5 @@ dscmd xlsx c:\temp\myquery.xlsx -s localhost\tab19 -d "Adventure Works DW" -q "E
 ```
 
 ```
-dscmd xlsx c:\temp\myquery.xlsx -s localhost\tab19 -d "Adventure Works DW" -q "EVALUATE 'product'"
-```
-
-```
 dscmd xlsx c:\temp\myquery.xlsx -c "Data Source=localhost\tab19;initial catalog=Adventure Works DW" -q "EVALUATE 'product'"
 ```

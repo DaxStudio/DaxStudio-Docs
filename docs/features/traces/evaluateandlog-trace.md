@@ -8,6 +8,9 @@ This trace captures the output from the `EVALUATEANDLOG()` function
 The `EVALUATEANDLOG()` function only works in models hosted in **Power BI Desktop** if a model is hosted in the Power BI service this function will not produce any output.
 :::
 
+
+
+
 ## Further Reading
 
 The following series of blog articles are from one of the senior developers who built the EVALUATEANDLOG() function and are an excellent source of detailed information about this function.
