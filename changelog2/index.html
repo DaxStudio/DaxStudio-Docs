@@ -12,13 +12,48 @@
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-GK4BT4EGQ9",{})</script>
 
 
-<link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.c43c915f.css">
-<link rel="preload" href="/assets/js/runtime~main.7a9d2b1d.js" as="script">
-<link rel="preload" href="/assets/js/main.4f8cf80d.js" as="script">
+<link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.e6fefb81.css">
+<link rel="preload" href="/assets/js/runtime~main.70f0a971.js" as="script">
+<link rel="preload" href="/assets/js/main.459222ed.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}return t}()||function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus">
-<div><div>The lastest release is: <!-- -->v3.0.11</div><div><div><h1>v3.0.11</h1><div><h2 id="updates">Updates</h2>
+<div><div>The lastest release is: <!-- -->v3.1.0</div><div><div><h1>v3.1.0</h1><div><h2 id="new-features">New Features</h2>
+<ul>
+<li>Added <a href="https://daxstudio.org/docs/features/capture-diagnostics">Capture Diagnostics</a></li>
+<li>Added <a href="https://daxstudio.org/docs/features/traces/evaluateandlog-trace">Evaluate and Log trace</a></li>
+<li>Added <a href="https://daxstudio.org/docs/features/database-dialog">Database dialog</a> when connecting</li>
+<li>Added <a href="https://daxstudio.org/docs/features/command-line">command line</a> support</li>
+<li>Added Model Metrics / Vertipaq Analyzer <a href="https://daxstudio.org/docs/features/model-metrics/#metric-options-dialog">Options dialog</a></li>
+<li>Added support for <a href="https://daxstudio.org/docs/features/model-metrics/#obfuscated-vertipaq-analyzer-files">obfuscated</a> model metrics</li>
+<li>Added support to Server Timings for the new <a href="https://daxstudio.org/docs/features/traces/server-timings-trace/#execution-metrics-events">ExecutionMetrics event</a></li>
+</ul>
+<h2 id="improvements">Improvements</h2>
+<ul>
+<li>#1204 made listview selected row color lighter to improve the contrast</li>
+<li>#1124 Improved labelling of the zoom level</li>
+<li>#1241 Added &quot;learn more&quot; link to connection dialog </li>
+<li>Added storage mode column to the Partitions tab in View Metrics</li>
+<li>updated TOM, ADOMD and other 3rd party dependencies</li>
+<li>Fixed the images for the Server Timings event type filters</li>
+<li>Moved <a href="https://daxstudio.org/docs/features/server-fe-benchmark/">Server FE Benchmark</a> out of preview status</li>
+</ul>
+<h2 id="fixes">Fixes</h2>
+<ul>
+<li>Fixed a crash trying to show fonts in the option dialog</li>
+<li>Fixed #1213 Formatted file export not applying formatting</li>
+<li>Fixed loading of AggregateRewrite events in saved Server Timings</li>
+<li>Fixed occasional crash when using publish functions</li>
+<li>Fixed #1228 Query Builder not respecting delimiter setting</li>
+<li>Fixed #1179 reconnect active traces on connection retries</li>
+<li>Fixed an issue in QueryBuilder when loading a saved query containing a hierarchy</li>
+<li>Fixed an issue in QueryBuilder when trying to filter on a query scoped measure</li>
+<li>Fixed an issue where the Ribbon buttons get stuck in a disabled state after an error while a trace is active</li>
+<li>Fixed #1262 ViewAs not working with &quot;Other User&quot; option against the Power BI Service</li>
+<li>Fixed #1264 Status bar timer stopped too early</li>
+<li>Fixed #1268 where the View As dialog did not work properly with a large number of roles</li>
+</ul>
+</div></div></div><div><div><h1>v3.0.11</h1><div><h2 id="updates">Updates</h2>
 <ul>
 <li>Improved Query Folding logic</li>
 <li>updated vpax libraries</li>
@@ -544,11 +579,8 @@
 <li>moved checking for schema changes on activating DAX Studio to a background thread to prevent the UI freezing for slow connections (AAS) or if there are active commit locks.</li>
 <li>fixed an issue preventing diagnostic logging from working with the Excel addin</li>
 </ul>
-</div></div></div><div><div><h1>2.10.1</h1><div><ul>
-<li>Fixes a bug with Publish DAX Functions</li>
-</ul>
 </div></div></div></div></div>
-<script src="/assets/js/runtime~main.7a9d2b1d.js"></script>
-<script src="/assets/js/main.4f8cf80d.js"></script>
+<script src="/assets/js/runtime~main.70f0a971.js"></script>
+<script src="/assets/js/main.459222ed.js"></script>
 </body>
 </html>
