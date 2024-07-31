@@ -23,8 +23,8 @@ DSCMD EXPORT SQL <OutputFolder> [OPTIONS]
 | -h, --help | displays the help for the EXPORT SQL command|
 | -s, --server &lt;SERVER> | the name of the server to connect to |
 | -d, --database &lt;DATABASE> | The name of the tabular database to export from |
-| -u, --userid &lt;USERID> | The username to use for AzureAD authentication |
-| -p, --password &lt;PASSWORD> | The password to use for AzureAD authentication |
+| -u, --userid &lt;USERID> | The username to use for AzureAD authentication (see [Authentication](../../authentication) for more details)  |
+| -p, --password &lt;PASSWORD> | The password to use for AzureAD authentication (see [Authentication](../../authentication) for more details)  |
 | -c, --connectionstring &lt;CONNECTIONSTRING> | The connection string for the data source |
 | -t, --tables &lt;TABLES> | A list of tables to be exported, if this option is not specified all the tables in the model are exported |
 | -e, --schema $lt;SCHEMA> | The schema in which the destination tables belong (defaults to 'dbo') |
