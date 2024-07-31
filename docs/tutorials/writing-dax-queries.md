@@ -1,5 +1,6 @@
 ---
 title: Writing DAX Queries
+sidebar_position: 2
 ---
 
 DAX Queries have quite a simple structure. Microsoft describes the query syntax in their documentation [here](https://docs.microsoft.com/en-us/dax/dax-queries). But in this guide we are going to take a very practical, example based approach. 

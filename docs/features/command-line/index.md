@@ -3,6 +3,8 @@ title: DSCMD - DAX Studio Command Line
 ---
 This section documents the DAX Studio command line utility dscmd.exe
 
+![](./dscmd.png)
+
 ## Syntax
 The different [commands](commands) all use the same [syntax](syntax) conventions.
 

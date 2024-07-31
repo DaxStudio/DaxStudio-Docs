@@ -23,3 +23,20 @@ This button causes an extra tab to be displayed which shows the total time the s
 | SE Cache | this is the number of Storage Engine cache hits |
 
 You may also wonder what that “SQL like” query is that captured by the scan event when running a query against an import mode model. This is called xmSQL and is textual representation of the requests that the Formula Engine sent to the Storage Engine. There is no way of executing these queries, they are merely a textual representation of the requests sent to the Storage Engine to enable people to understand what operations the storage engine was performing. When your data model is in Direct Query mode you will see a generic T-SQL query which may be transformed into a more data source specific query before it is executed against the actual data source.
+
+### Execution Metrics events
+
+Some data sources like the XMLA endpoint for the Fabric / Power BI service can now emit ExecutionMetrics events. These events output a collection of metrics that can vary based on the type of event. For query events like those captured by server timings these events show information about the query execution such as. 
+
+* Number of rows processed for queries and refresh.
+* Time a request got delayed due to capacity throttling.
+* Time to establish a connection to data source.
+* Approximate memory and CPU consumption.
+
+These events were announced in the following [blog post](https://powerbi.microsoft.com/en-in/blog/new-executionmetrics-event-in-azure-log-analytics-for-power-bi-semantic-models/)
+
+:::note
+As of July 2024 only the XMLA endpoint on the Fabric / Power BI cloud service exposes these events
+:::
+
+![](server-timings-executionmetrics.png)

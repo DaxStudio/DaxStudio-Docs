@@ -1,5 +1,6 @@
 ---
 title: Getting Connected
+sidebar_position: 1
 ---
 
 There are a number of different connection options in DAX Studio the following guid will run through all the different data sources that you can connect to.
