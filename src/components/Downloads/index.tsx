@@ -70,18 +70,14 @@ export function Installer() {
   const handleOnFocus = () => {
     console.log('onFocus event was handled');
   }
-return ( <div className={clsx("main-explain-area jumbotron center md-12")}>
-  <div className={clsx("centered")}>
-  {/* style="padding-bottom:10px" */}
-    
+return (
+    <div className="float-end" >
     <a href={rel.browser_download_url}>
-      <div className="button button--lg button--success"> 
+      <div className="button button--lg button--success float-right"> 
         <h3><span><FontAwesomeIcon icon={solid('download')} width="20px" height="20px" />&nbsp; {rel.download_name}</span></h3>
         <div>(installer)</div>
       </div>
     </a>
-    {/* {% assign download_count = download_count %}
-    {% assign download_size = size %} */}
     <div className="download-info">
     <FontAwesomeIcon icon={solid('floppy-disk')} width="16" height="16" />
       <span>&nbsp;Size: {niceBytes(rel.download_size)} | </span>
@@ -91,8 +87,6 @@ return ( <div className={clsx("main-explain-area jumbotron center md-12")}>
     </div>
     
   </div>
-  
-</div>
 
 );
 }
@@ -101,23 +95,14 @@ export function Portable() {
 //<!-- Portable Version download link -->
 const rel = getRelease().portable;
 return (
-  <div className="centered">
-
-
-<a href={rel.browser_download_url}>
+  <div>
+     <a href={rel.browser_download_url}>
       <div className="button button--lg button--secondary"> 
         <h3><span><FontAwesomeIcon icon={solid('download')}  width="20px" height="20px" />&nbsp; {rel.download_name}</span></h3>
         <div>(portable)</div>
       </div>
     </a>
 
-    {/* <a href={rel.browser_download_url}>
-      
-        <div><span><i className="fa fa-download"></i>&nbsp; {rel.download_name} (portable)</span></div>
-      
-    </a> */}
-    {/* {% assign download_count_1 = portable.download_count %}
-    {% assign download_size_1 = portable.size %} */}
     <div className="download-info">
       <FontAwesomeIcon icon={solid('floppy-disk')} width="16" height="16"/> <span>Size: {niceBytes(rel.download_size)}  | </span>
       <FontAwesomeIcon icon={regular('calendar-days')} width="16" height="16" />&nbsp;<span>{moment(rel.created_at).format('DD-MMM-YYYY')}</span>
