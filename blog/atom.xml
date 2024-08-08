@@ -2,11 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daxstudio.org/blog</id>
     <title>DAX Studio Blog</title>
-    <updated>2024-07-29T00:00:00.000Z</updated>
+    <updated>2024-08-07T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://daxstudio.org/blog"/>
     <subtitle>DAX Studio Blog</subtitle>
     <icon>https://daxstudio.org/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[v3.2.0 Release]]></title>
+        <id>https://daxstudio.org/blog/v3_2_0-release</id>
+        <link href="https://daxstudio.org/blog/v3_2_0-release"/>
+        <updated>2024-08-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Today we are happy to announce the release of version 3.1.0 of DAX Studio which includes the following new features and fixes.]]></summary>
+        <content type="html"><![CDATA[<p>Today we are happy to announce the release of version 3.1.0 of DAX Studio which includes the following new features and fixes.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="updates--new-features">Updates / New Features<a href="#updates--new-features" class="hash-link" aria-label="Direct link to Updates / New Features" title="Direct link to Updates / New Features">​</a></h2><ul><li>Improving "Smart Paste"</li><li><a href="https://github.com/daxstudio/daxstudio/issues/1288" target="_blank" rel="noopener noreferrer">#<!-- -->1288</a> Added Support for View Metrics StatsColumnBatchSize</li><li>Added sorting to ViewAs roles</li><li>Fixed styling so trace command bars are not blurred</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="fixes">Fixes<a href="#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes">​</a></h2><ul><li>Fix caturing server timing events when Auto ClearCache is active against powerbi:// endpoints</li><li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1284" target="_blank" rel="noopener noreferrer">#<!-- -->1284</a> dscmd CSV command not working with --connectionstring option</li><li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1283" target="_blank" rel="noopener noreferrer">#<!-- -->1283</a> dscmd export command --tables option parsing</li><li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1282" target="_blank" rel="noopener noreferrer">#<!-- -->1282</a> QueryBuilder measure renaming not working</li><li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1289" target="_blank" rel="noopener noreferrer">#<!-- -->1289</a> dscmd CSV command error when exporting some queries</li><li>Fix sizing of status bar server name tooltip</li></ul>]]></content>
+        <author>
+            <name>Darren Gosbell</name>
+            <uri>https://github.com/dgosbell</uri>
+        </author>
+        <category label="daxstudio" term="daxstudio"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[v3.1.0 Release]]></title>
         <id>https://daxstudio.org/blog/v3_1_0-release</id>
