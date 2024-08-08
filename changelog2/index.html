@@ -13,12 +13,28 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.e6fefb81.css">
-<link rel="preload" href="/assets/js/runtime~main.f3326770.js" as="script">
-<link rel="preload" href="/assets/js/main.0a77fc01.js" as="script">
+<link rel="preload" href="/assets/js/runtime~main.b4914d11.js" as="script">
+<link rel="preload" href="/assets/js/main.d9f778f8.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}return t}()||function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus">
-<div><div>The lastest release is: <!-- -->v3.1.1</div><div><div><h1>v3.1.1</h1><div><p>This is a minor fix to the <a href="https://daxstudio.org/blog/v3_1_0-release/">v3.1.0 release</a></p>
+<div><div>The lastest release is: <!-- -->v3.2.0</div><div><div><h1>v3.2.0</h1><div><h2 id="updates">Updates</h2>
+<ul>
+<li>Improving <a href="https://daxstudio.org/docs/features/smart-paste/">Smart Paste</a></li>
+<li>#1288 Added Support for <a href="https://daxstudio.org/docs/features/model-metrics/#metric-options-dialog">View Metrics StatsColumnBatchSize</a></li>
+<li>Added sorting to ViewAs roles</li>
+<li>Fixed styling so trace command bars are not blurred</li>
+</ul>
+<h2 id="fixes">Fixes</h2>
+<ul>
+<li>Fix caturing server timing events when Auto ClearCache is active against powerbi:// endpoints</li>
+<li>Fix #1284 dscmd CSV command not working with --connectionstring option</li>
+<li>Fix #1283 dscmd export command --tables option parsing</li>
+<li>Fix #1282 QueryBuilder measure renaming not working</li>
+<li>Fix #1289 dscmd CSV command error when exporting some queries</li>
+<li>Fix sizing of status bar server name tooltip</li>
+</ul>
+</div></div></div><div><div><h1>v3.1.1</h1><div><p>This is a minor fix to the <a href="https://daxstudio.org/blog/v3_1_0-release/">v3.1.0 release</a></p>
 <h2 id="fixes">Fixes</h2>
 <ul>
 <li>Fixed #1279 error sending results to static Excel output</li>
@@ -528,47 +544,8 @@
 <li>#352 hierarchies in display folders not expanding</li>
 <li>#357 leading/trailing comments missing when doing &quot;define measure&quot;</li>
 </ul>
-</div></div></div><div><div><h1>v2.11.0</h1><div><h2 id="new-features">New Features</h2>
-<ul>
-<li>(Preview) Query Builder</li>
-<li>(Preview) Query Benchmark</li>
-<li>#314 Added Quick Access buttons for New, New (with current connection) &amp; Save </li>
-<li>#277 Added Export button to all trace outputs</li>
-<li>Added full filename tooltip to tabs (thanks @dmarkle) </li>
-<li>Promoted View Metrics (Vertipaq Analyzer) from preview status to general availability </li>
-<li>Promoted Export Data feature from preview status to general availability</li>
-<li>Documentation Updates:<ul>
-<li>Added license page </li>
-<li>including a section on SmartScreen issues in Win10 (thanks to Gilbert at <a href="https://fourmoo.com">fourmoo.com</a> )</li>
-</ul>
-</li>
-<li>Updated syntax highlighting to align with DaxFormatter.com </li>
-<li>Added a note in the Database tooltip that the Database Id can be copied using a right-click </li>
-<li>Added formatting to shorten asazure: and powerbi: server names in the status bar so that the key information is visible</li>
-<li>Added a partitions tab to the Model Metrics views</li>
-<li>Added a sample of any missing keys to the relationships tab in the Model Metrics (these keys are not saved for privacy reasons when exporting to a vpax file)</li>
-</ul>
-<h2 id="fixes">Fixes</h2>
-<ul>
-<li>fixed cancelling of exports to SQL Server</li>
-<li>improved keyboard navigation by adding IsDefault/IsCancel properties to dialog buttons (thanks @dmarkle)</li>
-<li>fixed an issue with intellisense not re-enabling after reconnecting (thanks @dmarkle) </li>
-<li>fixed an issue with Query History pane not updating the &quot;Current&quot; Database filter when changing databases</li>
-<li>disabled external tools when connected to PowerPivot </li>
-<li>#290 updated all URL references to use https (thanks @warthurton)</li>
-<li>#291 fixed issue connecting from Excel 2010</li>
-<li>#301 refined the code completion to prevent it overwriting code when editing in the middle of an expression</li>
-<li>#302 disabled column re-ordering in Metrics view</li>
-<li>#303 fixed an issue with the metadata pane when connecting to a model with dynamic format strings defined in calculation groups</li>
-<li>#308 removed backtick characters in column names with spaces where using the Static Excel output</li>
-<li>#320 fixed server not found error when exporting vpax file for PowerPivot models </li>
-<li>#325 fixed error when attempting to connect to PowerPivot files stored on OneDrive</li>
-<li>#329 fixed incorrect database name shown when launched from the Excel addin and not connected to PowerPivot</li>
-<li>#330 fixed the status message getting stuck after writing output to a file destination</li>
-<li>#339 fixed a bug that reported an assembly load error when Cancelling a query</li>
-</ul>
 </div></div></div></div></div>
-<script src="/assets/js/runtime~main.f3326770.js"></script>
-<script src="/assets/js/main.0a77fc01.js"></script>
+<script src="/assets/js/runtime~main.b4914d11.js"></script>
+<script src="/assets/js/main.d9f778f8.js"></script>
 </body>
 </html>
