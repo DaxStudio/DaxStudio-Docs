@@ -35,6 +35,7 @@ This dialog allows you to override the default statistic scanning behaviour for 
 | Read Statistics from data | true | Scan the data to retrieve accurate statistics about columns, tables and relationships.|
 | Read Statistics from Direct Query data | false | Include Direct Query tables in statistics collection. This is a lot more expensive than reading statistics from in-memory columns and is not recommended. |
 | Direct Lake scan statistics from Data option | ResidentOnly | **ResidentOnly** only scans columns that are already loaded into memory <br/>**Referenced** scans columns that are already <br/>resident and columns referenced in measures or relationships<br/>**Full** scans all columns, forcing them into memory (not recommended for large models)|
+| Statistics Column Batch Size | 50 | When reading statistics from the data this sets the number of columns to be scanned in a single query. In some scenarios like scanning Direct Lake models where the total size of the data is larger than the memory limit of your capacity you may need to reduce the batch size, specially if attempting to do a **Full** scan |
 
 ## View Metrics
 
