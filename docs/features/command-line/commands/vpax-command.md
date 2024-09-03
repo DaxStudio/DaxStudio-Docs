@@ -29,6 +29,7 @@ DSCMD VPAX <OutputFile> [OPTIONS]
 | -t, --excludeTom | Setting this flag will exclude a .bim file inside the vpax file (which just contains additional metadata) |
 | -r, --donotreadstatsfromdata | Setting this flag will prevent the standard distinctcount queries that read the statistics from the data model |
 | -q, --readstatsfromdirectquery | Setting this flag will force the execution of distinctcount queries that read the statistics from the data model (which is normally suppressed for Direct Query models) |
+| -b, --StatsColumnBatchSize &lt;VALUE>| The number of columns to include in each batch of the column statistics queries |
 
 
 ## Examples

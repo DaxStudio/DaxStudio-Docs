@@ -30,7 +30,7 @@ DSCMD EXPORT SQL <OutputFolder> [OPTIONS]
 | -e, --schema &lt;SCHEMA> | The schema in which the destination tables belong (defaults to 'dbo') |
 | -r, --recreate-tables | Will drop and re-create the target tables |
 
-## -t --tables Option
+### -t --tables Option
 This option is a comma separate list of table names
 
 :::info

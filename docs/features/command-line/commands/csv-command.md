@@ -28,7 +28,21 @@ DSCMD CSV <OutputFile> [OPTIONS]
 | -c, --connectionstring &lt;CONNECTIONSTRING> | The connection string for the data source |
 | -f, --file &lt;FILE> | A file containing a DAX query to be executed. Could be a text file or .dax or .daxx |
 | -q, --query &lt;QUERY> | A string with the DAX query to be executed |
-| -t, --filetype | Can be one of the following values { UTF8CSV, UNICODECSV, JSON, TAB } if omitted the file extension is used <ul><li>.csv - UFT-8 csv file is generated</li><li>.txt - tab delimited file is generated</li><li>.json - a json file is generated </li></ul>|
+| -t, --filetype &lt;VALUE>| Can be one of the following values { UTF8CSV, UNICODECSV, JSON, TAB } if omitted the file extension is used <ul><li>.csv - UFT-8 csv file is generated</li><li>.txt - tab delimited file is generated</li><li>.json - a json file is generated </li></ul>|
+| -m, --parameter &lt;PARAMETER=VALUE> | Parameter values to be passed into the query (see [-m --parameter option](#-m---parameter-option) below)|
+
+### -m --parameter Option
+If you have a DAX query with parameters you can pass these in using the `-m, -parameter` option, if you have multiple parameters in your query you can provide multiple parameter values
+
+In the following example the query has 2 parameters **@myColor** and **@myCategory** which are passed in using 2 `-m` options
+
+eg.
+```
+dscmd csv c:\temp\myquery.csv -s localhost\tab19 -d "Adventure Works DW"  ^
+  -m myColor=Red ^
+  -m myCategory=Bikes ^
+  -q "EVALUATE FILTER('product', 'product[Color]=@myColor && 'product'[Category]=@myCategory)"
+```
 
 ## Examples
 

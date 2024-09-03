@@ -88,7 +88,7 @@ These setting control the bahaviour of the automatic metadata refresh
 | Prompt before refreshing Metadata | Controls whether DAX Studio will show a prompt before refreshing metadata | False |
 
 
-## Detect Metadata Changes
+### Detect Metadata Changes
 
 These settings control which connection types DAX Studio will automatically check for metadata changes
 
@@ -98,7 +98,7 @@ These settings control which connection types DAX Studio will automatically chec
 | Network Connections | For any connections to SSAS | true |
 | Cloud Connections | For any connections to data sources that start with asazure:// or powerbi:// | false |
 
-## Scrollbars
+### Scrollbars
 
 | **Setting** | **Description** | **Default** |
 | --- | --- | --- |
@@ -170,6 +170,7 @@ DAX Studio keeps a log of recently executed commands (both successful and failed
 
 ## Results
 
+### Results - Grid
 These settings change settings for the Results window
 
 | **Setting** | **Description** | **Default** |
@@ -179,6 +180,12 @@ These settings change settings for the Results window
 | Font Family | This sets the font for the results pane | Segoe UI |
 | Font Size | This is the default size for the results font | 11pt |
 | Scale Font with Editor | When this option is selected increasing the zoom factor on the editor will also increase the zoom for the results pane | true |
+
+### Results - Excel File
+| **Setting** | **Description** | **Default** |
+| --- | --- | --- |
+| Always write cell references| This setting adds extra metadata to the excel file which helps compatibility with more external applications that read xlsx data, but it does also increase the file size. | True |
+| Use Zip64 |  Enables writing xlsx files larger than 4Gb, but not all client applications may be able to read these files | False |
 
 
 ## Server Timings
@@ -221,3 +228,21 @@ This setting controls the behavours of the various tracing features.
 
 
 
+## Vertipaq Analyzer
+
+| **Setting** | **Description** | **Default** |
+| --- | --- | --- |
+|Include TOM| this option will include a copy of the current data model's .bim file (which is just metadata) in the .vpax file| True |
+|Read Statistics from data| This will cause Vertipaq Analyzer to issue more accurate, but more expensive queries to the data source | True |
+|Read statistics from DirectQuery tables| Specifies whether or not to gather statistics from Direct Query tables | False |
+|Direct Lake Behaviour| Determines how the Read statistics from data behaves for Direct Lake models [more details](/docs/features/model-metrics/#metric-options-dialog)| ResidentOnly |
+|Sample Referential Integrity| The number of example missing keys to display. Note: these are only shown when viewing metrics, when you save a vpax file this information is not included  | 3 |
+|Do not show options dialog| Specifies whether to show the Options dialog when viewing or exporting metrics. This setting can also be set when the user ticks the option to not show this dialog again | False |
+|Statistics Column Batch Size| The number of columns to include in each batch when collecting statistics. For large Direct Lake models it may be necessary to reduce this amount to avoid out of memory issues | 50 |
+|Table/Column name display in Columns tab| Specifies how the table & column names are shown in the Columns tab | combined as Table-Column|
+
+## Preview Features
+
+**Show Debug Commas** - turning this option on replaces the **Swap Delimiters** command in the ribbon with the **Debug Commas** command
+
+**Show XMLA Commands** - will show command events in the All Queries trace
