@@ -13,12 +13,27 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.e6fefb81.css">
-<link rel="preload" href="/assets/js/runtime~main.6d996dff.js" as="script">
-<link rel="preload" href="/assets/js/main.c78bbe9b.js" as="script">
+<link rel="preload" href="/assets/js/runtime~main.de07441c.js" as="script">
+<link rel="preload" href="/assets/js/main.17f8301a.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}return t}()||function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus">
-<div><div>The lastest release is: <!-- -->v3.2.0</div><div><div><h1>v3.2.0</h1><div><h2 id="updates">Updates</h2>
+<div><div>The lastest release is: <!-- -->v3.2.1</div><div><div><h1>v3.2.1</h1><div><h2 id="updates">Updates</h2>
+<ul>
+<li>Adding DAX parameter support to CSV &amp; XLSX commands</li>
+<li>Improved Jumplist integration</li>
+</ul>
+<h2 id="fixes">Fixes</h2>
+<ul>
+<li>#1292 grid output not binding results with &gt; or &amp; in the column name</li>
+<li>#1293 Vertipaq Options dialog learn more link broken</li>
+<li>#1298 Adding Advanced XLSX output settings in Options</li>
+<li>#1302 Fixing DirectLake mode option not working in View Metrics dialog</li>
+<li>#1305 All Queries not capturing events</li>
+<li>#1306 dscmd VPAX command not using default value for StatsColumnBatchSize</li>
+<li>fixing crash on exit</li>
+</ul>
+</div></div></div><div><div><h1>v3.2.0</h1><div><h2 id="updates">Updates</h2>
 <ul>
 <li>Improving <a href="https://daxstudio.org/docs/features/smart-paste/">Smart Paste</a></li>
 <li>#1288 Added Support for <a href="https://daxstudio.org/docs/features/model-metrics/#metric-options-dialog">View Metrics StatsColumnBatchSize</a></li>
@@ -534,18 +549,8 @@
 <li>Fixed crash when highlighting</li>
 <li>Fixed crash when closing last tab and connection had been lost</li>
 </ul>
-</div></div></div><div><div><h1>v2.11.1</h1><div><h2 id="fixes">Fixes</h2>
-<ul>
-<li>Filters on datetime columns where we cannot parse the date value now report the error rather than crashing when using the &quot;Edit Query&quot; button</li>
-<li>#343 Fixed spelling of KEEPFILTERS for IS NOT filters</li>
-<li>#345 Comma placement changed to match the style used by DaxFormatter</li>
-<li>#346 / #347 DaxFormatter now works in the Expression Editor</li>
-<li>#351 error while exporting tables to SQL Server</li>
-<li>#352 hierarchies in display folders not expanding</li>
-<li>#357 leading/trailing comments missing when doing &quot;define measure&quot;</li>
-</ul>
 </div></div></div></div></div>
-<script src="/assets/js/runtime~main.6d996dff.js"></script>
-<script src="/assets/js/main.c78bbe9b.js"></script>
+<script src="/assets/js/runtime~main.de07441c.js"></script>
+<script src="/assets/js/main.17f8301a.js"></script>
 </body>
 </html>
