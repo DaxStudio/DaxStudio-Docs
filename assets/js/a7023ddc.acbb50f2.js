@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdaxstudio_docusaurus=self.webpackChunkdaxstudio_docusaurus||[]).push([[1713],{53457:s=>{s.exports=JSON.parse('[{"label":"daxstudio","permalink":"/blog/tags/daxstudio","count":11}]')}}]);
