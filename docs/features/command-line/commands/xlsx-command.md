@@ -37,7 +37,7 @@ In the following example the query has 2 parameters **@myColor** and **@myCatego
 
 eg.
 ```
-dscmd csv c:\temp\myquery.csv -s localhost\tab19 -d "Adventure Works DW" ^
+dscmd xlsx c:\temp\myquery.xlsx -s localhost\tab19 -d "Adventure Works DW" ^
   -m myColor=Red ^
   -m myCategory=Bikes ^
   -q "EVALUATE FILTER('product', 'product[Color]=@myColor && 'product'[Category]=@myCategory)"
