@@ -2,7 +2,7 @@
 title: Define Measure
 ---
 
-When you right-click on a measure in the [metadata pane](./metadata-panes) there are a number of options available for defining measures
+When you right-click on a measure in the [metadata pane](../metadata-panes) there are a number of options available for defining measures
 
 ![](./define-measure.png)
 
@@ -19,7 +19,7 @@ As you can see in the example below, choosing the **Define Dependent Measures** 
 ![](./define-dependent-measure-example.png)
 
 :::info
-This is great when testing different variations of a measure for logic or performance improvements and also well when using the [EvaluateAndLog trace](./traces/evaluateandlog-trace)
+This is great when testing different variations of a measure for logic or performance improvements and also well when using the [EvaluateAndLog trace](../traces/evaluateandlog-trace)
 :::
 
 ## Define and Expand Measure
