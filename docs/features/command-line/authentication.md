@@ -24,7 +24,7 @@ There are 2 environment variables that dscmd is aware of:
 
 ## Authenticating as service principal
 
-To use the `ClientID` and `Secret` to login as a service principal you need to use the following format `app:<clientId>@<tenantId>` as the user value and the secret as the password value. 
+To use the `ClientID` and `Secret` to login as a service principal you need to use the following format `app:<clientId>@<tenantId>` as the user value and the `secret` or `cert:<thumbprint>` as the password value. 
 
 eg. *note: these are fake random values for illustration purposes only*
 ```
