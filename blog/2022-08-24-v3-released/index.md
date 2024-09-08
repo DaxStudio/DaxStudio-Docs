@@ -8,7 +8,7 @@ tags: [daxstudio]
 # DAX Studio version 3.0
 
 Today we are happy to announce the release of version 3 of DAX Studio
-
+<!-- truncate -->
 ## Dark Mode!
 
 This has been an outstanding request for a long time and finally we are happy to announce that we now support Dark Mode! You can switch between the 3 different mode settings using the button at the top of the ribbon
