@@ -82,7 +82,7 @@ const config = {
           {href: 'https://github.com/daxstudio/daxstudio/discussions', label:'Discussions',position:'right'  },
           {href: 'https://github.com/daxstudio/daxstudio/issues', label:'Issues / Requests',position:'right'  },
           {
-            to: '/Sponsors',
+            to: '/sponsors',
             label: 'Sponsor',
             position: 'right',
           },
