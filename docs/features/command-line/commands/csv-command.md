@@ -28,7 +28,7 @@ DSCMD CSV <OutputFile> [OPTIONS]
 | -c, --connectionstring &lt;CONNECTIONSTRING> | The connection string for the data source |
 | -f, --file &lt;FILE> | A file containing a DAX query to be executed. Could be a text file or .dax or .daxx |
 | -q, --query &lt;QUERY> | A string with the DAX query to be executed |
-| -t, --filetype &lt;VALUE>| Can be one of the following values { UTF8CSV, UNICODECSV, JSON, TAB } if omitted the file extension is used <ul><li>.csv - UFT-8 csv file is generated</li><li>.txt - tab delimited file is generated</li><li>.json - a json file is generated </li></ul>|
+| -t, --filetype &lt;VALUE>| Can be one of the following values ( UTF8CSV, UNICODECSV, JSON, TAB ) if omitted the file extension is used <ul><li>.csv - UFT-8 csv file is generated</li><li>.txt - tab delimited file is generated</li><li>.json - a json file is generated </li></ul>|
 | -m, --parameter &lt;PARAMETER=VALUE> | Parameter values to be passed into the query (see [-m --parameter option](#-m---parameter-option) below)|
 
 ### -m --parameter Option
