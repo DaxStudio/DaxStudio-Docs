@@ -7,7 +7,7 @@ DAX Studio can be installed and updated using [winget](https://learn.microsoft.c
 # Installing for all users 
 
 ```
-winget install daxstudio --scope machine
+winget install daxstudio.daxstudio --scope machine
 ```
 
 ::: note
@@ -17,17 +17,17 @@ Installing for All users requires admin rights. You need to install for All user
 # Installing for current user
 
 ```
-winget install daxstudio 
+winget install daxstudio.daxstudio 
 ```
 
 # Updating
 
 ```
-winget upgrade daxstudio
+winget upgrade daxstudio.daxstudio
 ```
 
 # Uninstalling
 
 ```
-winget uninstall daxstudio
+winget uninstall daxstudio.daxstudio
 ```
