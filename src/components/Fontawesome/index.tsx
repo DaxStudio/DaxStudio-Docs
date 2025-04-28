@@ -1,7 +1,7 @@
 import React from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 
+import faCircleCheck from '@fortawesome/free-solid-svg-icons/faCircleCheck';
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 
 export function Yes({children}) {
   return (
@@ -16,7 +16,7 @@ export function No({children}) {
 }
 
 export default function Checkmark({children, color}) {
-  const ico = solid('download');
+
   return (
     <span
       style={{

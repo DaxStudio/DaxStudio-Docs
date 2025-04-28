@@ -4,7 +4,9 @@ import moment from 'moment';
 import styles from './styles.module.css';
 import {usePluginData} from '@docusaurus/useGlobalData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
+import { faFloppyDisk } from '@fortawesome/free-solid-svg-icons';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarDays } from '@fortawesome/free-regular-svg-icons';
 import UpdateDownloads from '@site/src/components/UpdateDownloads'
 
 interface ReleaseItem  {
@@ -74,14 +76,14 @@ return (
     <div className="float-end" >
     <a href={rel.browser_download_url}>
       <div className="button button--lg button--success float-right"> 
-        <h3><span><FontAwesomeIcon icon={solid('download')} width="20px" height="20px" />&nbsp; {rel.download_name}</span></h3>
+        <h3><span><FontAwesomeIcon icon={faDownload} width="20px" height="20px" />&nbsp; {rel.download_name}</span></h3>
         <div>(installer)</div>
       </div>
     </a>
     <div className="download-info">
-    <FontAwesomeIcon icon={solid('floppy-disk')} width="16" height="16" />
+    <FontAwesomeIcon icon={faFloppyDisk} width="16" height="16" />
       <span>&nbsp;Size: {niceBytes(rel.download_size)} | </span>
-      <FontAwesomeIcon icon={regular('calendar-days')} width="16" height="16" />
+      <FontAwesomeIcon icon={faCalendarDays} width="16" height="16" />
       <span>&nbsp;{moment(rel.created_at).format('DD-MMM-YYYY')}</span>
       <UpdateDownloads type="exe"/>
     </div>
@@ -98,14 +100,14 @@ return (
   <div>
      <a href={rel.browser_download_url}>
       <div className="button button--lg button--secondary"> 
-        <h3><span><FontAwesomeIcon icon={solid('download')}  width="20px" height="20px" />&nbsp; {rel.download_name}</span></h3>
+        <h3><span><FontAwesomeIcon icon={faDownload}  width="20px" height="20px" />&nbsp; {rel.download_name}</span></h3>
         <div>(portable)</div>
       </div>
     </a>
 
     <div className="download-info">
-      <FontAwesomeIcon icon={solid('floppy-disk')} width="16" height="16"/> <span>Size: {niceBytes(rel.download_size)}  | </span>
-      <FontAwesomeIcon icon={regular('calendar-days')} width="16" height="16" />&nbsp;<span>{moment(rel.created_at).format('DD-MMM-YYYY')}</span>
+      <FontAwesomeIcon icon={faFloppyDisk} width="16" height="16"/> <span>Size: {niceBytes(rel.download_size)}  | </span>
+      <FontAwesomeIcon icon={faCalendarDays} width="16" height="16" />&nbsp;<span>{moment(rel.created_at).format('DD-MMM-YYYY')}</span>
       <UpdateDownloads type="zip"/> 
     </div>
   </div>
