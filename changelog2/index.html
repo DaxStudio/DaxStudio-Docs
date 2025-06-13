@@ -14,11 +14,63 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.1dc2ae01.css">
-<script src="/assets/js/runtime~main.1dd8b528.js" defer="defer"></script>
-<script src="/assets/js/main.f2fd2a8d.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.8b84fbcd.js" defer="defer"></script>
+<script src="/assets/js/main.21830ca0.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
-<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.2.1</div><div><div class=""><h1>v3.2.1</h1><div><h2>Updates</h2>
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.3.0</div><div><div class=""><h1>v3.3.0</h1><div><h2>New Features</h2>
+<ul>
+<li>DSCMD - added support for connecting to open Power BI Desktop files</li>
+<li>Added support for High Contrast Windows themes </li>
+<li>Added ObjectName to Server Timings</li>
+<li>Fixed #1361 displaying query errors in results area</li>
+<li>Fixed #1358 added line numbers to xmSQL pane</li>
+<li>Find/Replace in selection</li>
+</ul>
+<h2>Updates</h2>
+<ul>
+<li>#1359 saving error message in Server Timings and allowing copying of error</li>
+<li>Improved EntraID auth in dscmd</li>
+<li>improved responsiveness while refreshing metadata against slow sources</li>
+<li>improved code folding logic</li>
+<li>Find/Replace - pressing Enter key will trigger find next</li>
+<li>Find/Replace - search while user types</li>
+<li>#1369 added tooltips to ServerTimings columns</li>
+<li>#1368 added right click copy / select all to vertipaq analyzer</li>
+<li>#1370 added tooltip to View As button</li>
+<li>Updated dependencies</li>
+<li>Updated .Net framework version to 4.7.2</li>
+<li>Improved Server Timings debug logging</li>
+<li>Improved handling of embedded line breaks in linked Excel output</li>
+<li>Improved trace startup timeout checks</li>
+<li>Improved reliability of Benchmarking and Capture Diagnostics</li>
+<li>Improved insertion logic when defining measures</li>
+<li>Improved backward compatibility when loading Server Timings</li>
+<li>Improved error squiggle location</li>
+</ul>
+<h2>Fixes</h2>
+<ul>
+<li>Fixed #1332 Define Dependent Measure and Expand Measures not working reliably</li>
+<li>Fixed detection of FormatString property in results</li>
+<li>Fixed crash when launched from Excel but there is no active query window</li>
+<li>Fixed Server Timings timeline caching bug</li>
+<li>Removed duplicate Metadata Refreshed log messages</li>
+<li>Fixed #1324 All queries threading bug</li>
+<li>Fixed race condition in Benchmarking</li>
+<li>Fixed #1330 Improved Font zooming in editor</li>
+<li>Fixed bug setting query parameter values from XML </li>
+<li>Fixed #1336 trace start error when switching some connection types</li>
+<li>Fixed #1331 prevent code completion display for numbers</li>
+<li>Fixed #1323 adding support for <code>// Query</code> comments when pasting DQ queries</li>
+<li>Fixed opening daxx file from inside a zip file</li>
+<li>Fixed #1356 crash when defining measures from editor</li>
+<li>Fixed loading of daxx files from readonly locations </li>
+<li>Fixed incorrect validation error in Query Builder when loading non-string filters</li>
+<li>Fixed Find/Replace not working in QueryBuilder Measure Editor</li>
+<li>Fixed down arrow selecting from the database dialog</li>
+<li>Fixed #1371 File-Exit not triggering save changes dialog</li>
+</ul>
+</div></div></div><div><div class=""><h1>v3.2.1</h1><div><h2>Updates</h2>
 <ul>
 <li>Adding DAX parameter support to CSV &amp; XLSX commands</li>
 <li>Improved Jumplist integration</li>
@@ -536,18 +588,6 @@
 <li>#374 improved tooltip sampling to prevent full column materialization</li>
 <li>Fixed crash when attempting to export using invalid manual connection string</li>
 <li>#381 re-connecting to a pbix file that has been closed and re-opened after launching from External Tools does not work</li>
-</ul>
-</div></div></div><div><div class=""><h1>v2.11.2</h1><div><h2>Updates</h2>
-<ul>
-<li>Adds support for the &quot;External Tools&quot; ribbon in Power BI Desktop</li>
-</ul>
-<h2>Fixes</h2>
-<ul>
-<li>#373 Fixes &quot;Define Measure&quot; when connected to a SSAS instance without admin rights</li>
-<li>#372 Duplicate MyMeasures created when adding more than 1 custom measure in the Query Builder</li>
-<li>#367 Measure information duplicated in VPAX files</li>
-<li>Fixed crash when highlighting</li>
-<li>Fixed crash when closing last tab and connection had been lost</li>
 </ul>
 </div></div></div></div></div>
 </body>

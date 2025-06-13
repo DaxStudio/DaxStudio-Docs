@@ -2,11 +2,94 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daxstudio.org/blog/</id>
     <title>DAX Studio Blog</title>
-    <updated>2024-09-04T00:00:00.000Z</updated>
+    <updated>2025-06-04T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://daxstudio.org/blog/"/>
     <subtitle>DAX Studio Blog</subtitle>
     <icon>https://daxstudio.org/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[v3.3.0 Release]]></title>
+        <id>https://daxstudio.org/blog/v3_3_0-release/</id>
+        <link href="https://daxstudio.org/blog/v3_3_0-release/"/>
+        <updated>2025-06-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Today we are happy to announce the release of version 3.3.0 of DAX Studio which includes the following new features and fixes.]]></summary>
+        <content type="html"><![CDATA[<p>Today we are happy to announce the release of version 3.3.0 of DAX Studio which includes the following new features and fixes.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="new-features">New Features<a href="https://daxstudio.org/blog/v3_3_0-release/#new-features" class="hash-link" aria-label="Direct link to New Features" title="Direct link to New Features">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="dscmd---added-support-for-connecting-to-open-power-bi-desktop-files">DSCMD - added support for connecting to open Power BI Desktop files<a href="https://daxstudio.org/blog/v3_3_0-release/#dscmd---added-support-for-connecting-to-open-power-bi-desktop-files" class="hash-link" aria-label="Direct link to DSCMD - added support for connecting to open Power BI Desktop files" title="Direct link to DSCMD - added support for connecting to open Power BI Desktop files">​</a></h3>
+<p>When using <a href="https://daxstudio.org/docs/features/command-line/">dscmd</a> it is now possible to specify a connection to a file that is open in desktop.</p>
+<p>If the <code>--server</code> parameter ends in .pbix or .pbip then dscmd will scan the local machine for currently running instances using the same logic that the DAX Studio UI does and will connect to the model with the matching file name.</p>
+<p>eg.</p>
+<p><code>dscmd csv c:\temp\stores.csv --server "adventure works.pbix" --query "EVALUATE stores"</code></p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Note that dscmd cannot query a pbix/pbip file directly, the file needs to be already open in Power BI Desktop.</p></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="added-support-for-high-contrast-windows-themes">Added support for High Contrast Windows themes<a href="https://daxstudio.org/blog/v3_3_0-release/#added-support-for-high-contrast-windows-themes" class="hash-link" aria-label="Direct link to Added support for High Contrast Windows themes" title="Direct link to Added support for High Contrast Windows themes">​</a></h3>
+<p>DAX Studio now has support for High Contrast Windows themes. Prior to this version some parts of the application had support while others did not resulting in a crash relating to missing resources. We now have a separate theme that explicitly supports high contrast mode.</p>
+<p><img decoding="async" loading="lazy" src="https://daxstudio.org/assets/images/high_contrast-b16a6fcca1c1b8ddfc71dd8d41d6373d.png" width="1376" height="844" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="added-objectname-to-server-timings">Added ObjectName to Server Timings<a href="https://daxstudio.org/blog/v3_3_0-release/#added-objectname-to-server-timings" class="hash-link" aria-label="Direct link to Added ObjectName to Server Timings" title="Direct link to Added ObjectName to Server Timings">​</a></h3>
+<p>There is an option in the right-click menu on the Server Timings grid to turn on the display of the <strong>Object Name</strong> column. This column shows the main object that was referenced during a scan or DQ operation and can be useful for quickly seeing which scans reference a specific fact table.</p>
+<p><img decoding="async" loading="lazy" src="https://daxstudio.org/assets/images/objectname-8ade021f6b4304813904dd88831ffb35.png" width="1307" height="371" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="displaying-query-errors-in-the-results-pane">Displaying query errors in the results pane<a href="https://daxstudio.org/blog/v3_3_0-release/#displaying-query-errors-in-the-results-pane" class="hash-link" aria-label="Direct link to Displaying query errors in the results pane" title="Direct link to Displaying query errors in the results pane">​</a></h3>
+<p>From <a href="https://github.com/daxstudio/daxstudio/issues/1361" target="_blank" rel="noopener noreferrer">#<!-- -->1361</a>:  The results pane now has an improved error display with a number of user experience improvements.</p>
+<ul>
+<li>Before this the results of any prior valid query were retained which could have lead to confusion</li>
+<li>Large error messages often scroll out of view in the log pane and can be difficult to navigate to</li>
+<li>There is a <strong>Copy</strong> button if you need the error text for use in a search engine or support ticket</li>
+<li>There is a <strong>Goto Error</strong> button which will position your cursor at the error location if one is mentioned in the error message</li>
+</ul>
+<p><img decoding="async" loading="lazy" src="https://daxstudio.org/assets/images/results_error-5d8c66fa3cfdaae4140fd7dbd30843fe.png" width="1120" height="575" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="line-numbers-to-server-timings-query-pane">Line numbers to Server Timings query pane<a href="https://daxstudio.org/blog/v3_3_0-release/#line-numbers-to-server-timings-query-pane" class="hash-link" aria-label="Direct link to Line numbers to Server Timings query pane" title="Direct link to Line numbers to Server Timings query pane">​</a></h3>
+<p>From <a href="https://github.com/daxstudio/daxstudio/issues/1358" target="_blank" rel="noopener noreferrer">#<!-- -->1358</a>. The Query text in the Server Timings window now has line numbers to make it easier to reference parts of the query when doing presentations or screenshares.</p>
+<p><img decoding="async" loading="lazy" src="https://daxstudio.org/assets/images/xmsql_linenumbers-3acef79db929e40fe67d67c709ff7c32.png" width="553" height="328" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="findreplace-in-selection">Find/Replace in selection<a href="https://daxstudio.org/blog/v3_3_0-release/#findreplace-in-selection" class="hash-link" aria-label="Direct link to Find/Replace in selection" title="Direct link to Find/Replace in selection">​</a></h3>
+<p>There is a new toggle button in the <a href="https://daxstudio.org/docs/features/find-replace/">Find/Replace</a> window that allows the user to restrict the find and replace operations to a specific selection. When the selection mode is active the background of the selection is colored to show the scope that the find/replace operation is working inside. This scope can be cleared by toggling the button or by closing the find/replace dialog.</p>
+<p><img decoding="async" loading="lazy" src="https://daxstudio.org/assets/images/find_in_selection-871329b166d81638022d3b0e85c75bf4.png" width="1136" height="278" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="updates">Updates<a href="https://daxstudio.org/blog/v3_3_0-release/#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates">​</a></h2>
+<ul>
+<li><a href="https://github.com/daxstudio/daxstudio/issues/1359" target="_blank" rel="noopener noreferrer">#<!-- -->1359</a> saving error message in Server Timings and allowing copying of error</li>
+<li>Improved EntraID auth in dscmd</li>
+<li>Improved responsiveness while refreshing metadata against slow sources</li>
+<li>Improved code folding logic</li>
+<li>Find/Replace - pressing Enter key will trigger find next</li>
+<li>Find/Replace - search while user types</li>
+<li><a href="https://github.com/daxstudio/daxstudio/issues/1369" target="_blank" rel="noopener noreferrer">#<!-- -->1369</a> added tooltips to ServerTimings columns</li>
+<li><a href="https://github.com/daxstudio/daxstudio/issues/1368" target="_blank" rel="noopener noreferrer">#<!-- -->1368</a> added right click copy / select all to vertipaq analyzer</li>
+<li><a href="https://github.com/daxstudio/daxstudio/issues/1370" target="_blank" rel="noopener noreferrer">#<!-- -->1370</a> added tooltip to View As button</li>
+<li>Updated dependencies</li>
+<li>Updated .Net framework version to 4.7.2</li>
+<li>Improved Server Timings debug logging</li>
+<li>Improved trace startup timeout checks</li>
+<li>Improved reliability of Benchmarking and Capture Diagnostics</li>
+<li>Improved insertion logic when defining measures</li>
+<li>Improved backward compatibility when loading Server Timings</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_3_0-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes">​</a></h2>
+<ul>
+<li>Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1332" target="_blank" rel="noopener noreferrer">#<!-- -->1332</a> Define Dependent Measure and Expand Measures not working reliably</li>
+<li>Fixed detection of FormatString property in results</li>
+<li>Fixed crash when launched from Excel but there is no active query window</li>
+<li>Improved handling of embedded line breaks in linked Excel output</li>
+<li>Fixed Server Timings timeline caching bug</li>
+<li>Removed duplicate Metadata Refreshed log messages</li>
+<li>Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1324" target="_blank" rel="noopener noreferrer">#<!-- -->1324</a> All queries threading bug</li>
+<li>Fixed race condition in Benchmarking</li>
+<li>Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1330" target="_blank" rel="noopener noreferrer">#<!-- -->1330</a> Improved Font zooming in editor</li>
+<li>Fixed bug setting query parameter values from XML</li>
+<li>Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1336" target="_blank" rel="noopener noreferrer">#<!-- -->1336</a> trace start error when switching some connection types</li>
+<li>Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1331" target="_blank" rel="noopener noreferrer">#<!-- -->1331</a> prevent code completion display for numbers</li>
+<li>Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1323" target="_blank" rel="noopener noreferrer">#<!-- -->1323</a> adding support for <code>// Query</code> comments when pasting DQ queries</li>
+<li>Fixed opening daxx file from inside a zip file</li>
+<li>Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1356" target="_blank" rel="noopener noreferrer">#<!-- -->1356</a> crash when defining measures from editor</li>
+<li>Fixed loading of daxx files from readonly locations</li>
+<li>Fixed incorrect validation error in Query Builder when loading non-string filters</li>
+<li>Fixed Find/Replace not working in QueryBuilder Measure Editor</li>
+<li>Fixed down arrow selecting from the database dialog</li>
+<li>Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1371" target="_blank" rel="noopener noreferrer">#<!-- -->1371</a> File-Exit not triggering save changes dialog</li>
+</ul>]]></content>
+        <author>
+            <name>Darren Gosbell</name>
+            <uri>https://github.com/dgosbell</uri>
+        </author>
+        <category label="daxstudio" term="daxstudio"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[v3.2.1 Release]]></title>
         <id>https://daxstudio.org/blog/v3_2_1-release/</id>
