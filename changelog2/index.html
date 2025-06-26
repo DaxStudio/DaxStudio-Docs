@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" data-has-hydrated="false">
 <head>
 <meta charset="UTF-8">
-<meta name="generator" content="Docusaurus v3.7.0">
+<meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">DAX Studio</title><meta data-rh="true" property="og:title" content="DAX Studio"><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://daxstudio.org/changelog2/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://daxstudio.org/changelog2/"><link data-rh="true" rel="alternate" href="https://daxstudio.org/changelog2/" hreflang="en"><link data-rh="true" rel="alternate" href="https://daxstudio.org/changelog2/" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="DAX Studio RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="DAX Studio Atom Feed">
 
@@ -13,12 +13,22 @@
 
 
 
-<link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.1dc2ae01.css">
-<script src="/assets/js/runtime~main.8b84fbcd.js" defer="defer"></script>
-<script src="/assets/js/main.21830ca0.js" defer="defer"></script>
+<link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.3ae6d1a7.css">
+<script src="/assets/js/runtime~main.be294eb9.js" defer="defer"></script>
+<script src="/assets/js/main.06c8f2f0.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
-<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.3.0</div><div><div class=""><h1>v3.3.0</h1><div><h2>New Features</h2>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.3.1</div><div><div class=""><h1>v3.3.1</h1><div><h2>Fixes</h2>
+<ul>
+<li>Fix #1382 ServerTimings not working against PowerPivot</li>
+<li>Fix #1383 unable to connect to AzureAS (incorrect audience error)</li>
+<li>Fix #1381 renaming &quot;Exit&quot; to &quot;Close DAX Studio&quot; in File menu</li>
+<li>Fix #1385 removing sp_set_session_context calls when simplifying DQ query events</li>
+</ul>
+</div></div></div><div><div class=""><h1>v3.3.0</h1><div><h2>New Features</h2>
 <ul>
 <li>DSCMD - added support for connecting to open Power BI Desktop files</li>
 <li>Added support for High Contrast Windows themes </li>
@@ -571,23 +581,6 @@
 <li>#393 - application crashed if you attempted to open the Initial Catalog list before specifying a server</li>
 <li>#394 - output to text file was not working for multiple results sets</li>
 <li>#397 - &quot;All Queries&quot; trace was not working against PowerPivot connections</li>
-</ul>
-</div></div></div><div><div class=""><h1>v2.12.0</h1><div><h2>New Features</h2>
-<ul>
-<li>Installer now signed with an EV certificate (kindly funded by SQLBI) this should prevent/minimize warnings from <a href="https://daxstudio.org/documentation/installation/smart-screen/">SmartScreen</a></li>
-<li>Added &quot;Initial Catalog&quot; setting to the Advanced Options in the connection dialog, if you have a very large model or slow connection (like AzureAS or VPN) then you can now choose the initial database you are connected to.</li>
-<li>Added Roles and IsAdmin properties to Database tooltip</li>
-<li>#382 Changed &quot;Format Query&quot; to a split-button so that you can choose the style of formatting by clicking on the bottom half of the button</li>
-<li>Adding Portable build as a download option</li>
-</ul>
-<h2>Fixes</h2>
-<ul>
-<li>#378 Power BI External Tools - installer not correctly updating path in daxstudio.pbitools.json file if a non-default install location is used</li>
-<li>#377 exporting tables with no rows would throw an error</li>
-<li>#376 autosave not recovering open files for all types of crashes</li>
-<li>#374 improved tooltip sampling to prevent full column materialization</li>
-<li>Fixed crash when attempting to export using invalid manual connection string</li>
-<li>#381 re-connecting to a pbix file that has been closed and re-opened after launching from External Tools does not work</li>
 </ul>
 </div></div></div></div></div>
 </body>

@@ -4,10 +4,26 @@
         <title>DAX Studio Blog</title>
         <link>https://daxstudio.org/blog/</link>
         <description>DAX Studio Blog</description>
-        <lastBuildDate>Wed, 04 Jun 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 26 Jun 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[v3.3.1 Release]]></title>
+            <link>https://daxstudio.org/blog/v3_3_1-release/</link>
+            <guid>https://daxstudio.org/blog/v3_3_1-release/</guid>
+            <pubDate>Thu, 26 Jun 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Fixes]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_3_1-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes">​</a></h2>
+<ul>
+<li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1382" target="_blank" rel="noopener noreferrer">#<!-- -->1382</a> ServerTimings not working against PowerPivot</li>
+<li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1383" target="_blank" rel="noopener noreferrer">#<!-- -->1383</a> unable to connect to AzureAS (incorrect audience error)</li>
+<li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1381" target="_blank" rel="noopener noreferrer">#<!-- -->1381</a> renaming "Exit" to "Close DAX Studio" in File menu</li>
+<li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1385" target="_blank" rel="noopener noreferrer">#<!-- -->1385</a> removing sp_set_session_context calls when simplifying DQ query events</li>
+<li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1387" target="_blank" rel="noopener noreferrer">#<!-- -->1387</a> View/Export metrics not working with non-default Entra account</li>
+</ul>]]></content:encoded>
+            <category>daxstudio</category>
+        </item>
         <item>
             <title><![CDATA[v3.3.0 Release]]></title>
             <link>https://daxstudio.org/blog/v3_3_0-release/</link>
@@ -99,7 +115,7 @@
 <p>Both the <a href="https://daxstudio.org/docs/features/command-line/commands/csv-command/">CSV</a> and <a href="https://daxstudio.org/docs/features/command-line/commands/xlsx-command/">XLSX</a> commmands both support passing parameters using the <code>-m, --parameter</code> option.</p>
 <p>In the following example the query has 2 parameters <strong>@myColor</strong> and <strong>@myCategory</strong> which are passed in using 2 <code>-m</code> options</p>
 <p>eg.</p>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">dscmd csv c:\temp\myquery.csv -s localhost\tab19 -d "Adventure Works DW"  ^</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -m myColor=Red ^</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -m myCategory=Bikes ^</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -q "EVALUATE FILTER('product', 'product[Color]=@myColor &amp;&amp; 'product'[Category]=@myCategory)"</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">dscmd csv c:\temp\myquery.csv -s localhost\tab19 -d "Adventure Works DW"  ^</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -m myColor=Red ^</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -m myCategory=Bikes ^</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -q "EVALUATE FILTER('product', 'product[Color]=@myColor &amp;&amp; 'product'[Category]=@myCategory)"</span><br></span></code></pre></div></div>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="improved-jumplist-integration">Improved Jumplist Integration<a href="https://daxstudio.org/blog/v3_2_1-release/#improved-jumplist-integration" class="hash-link" aria-label="Direct link to Improved Jumplist Integration" title="Direct link to Improved Jumplist Integration">​</a></h2>
 <p>The Jumplist is a feature of Windows 10 &amp; 11 where right clicking on a program in your task bar would show you recently opened files.</p>
 <p><img decoding="async" loading="lazy" src="https://daxstudio.org/assets/images/jumplist-5228202262c712c79cdd5c2d090914ad.png" width="348" height="356" class="img_ev3q"></p>
