@@ -28,3 +28,17 @@ Sometimes a top level measure can look quite simple, but it may be referencing a
 This example is similar to the one above, but instead of defining each measure independently it inserts the expressions inline into one large expression. This helps you to see the impact of all the different measure references and gives more visibility on the work the DAX engine has to perform to resolve the original measure.
 
 ![](./define-and-expand-example.png)
+
+## Editor support
+The define measure features also work in the code editor you can right click on a measure in the editor and generate a define. 
+
+Or if you select an entire query and choose the option to **Define measures** or **Define dependent measures**
+![](./query_define_measures_start.png)
+
+DAX Studio will then inject all the measures reference in the query
+
+![](./query_define_measures_result.png)
+
+you can see that: 
+1. the measure that is referenced directly in the query has been defined
+2. the dependent measure has also been defined

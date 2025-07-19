@@ -64,6 +64,8 @@ These settings control the display and behaviour of the main editor window
 | Editor Font Family       | Sets the font used by the Query Editor pane | Lucida Console |
 | Editor Font Size         | Sets the default font size (in points) | 11pt |
 | Show Line Numbers | controls whether line numbers are displayed | true |
+| Show Whitespace | controls whether whitespace characters are displayed | false |
+| Show Control Characters | controls whether control characters are displayed | false |
 | Enable Intellisense | whether to display Intellisense options while typing in the query editor | true |
 | Enable Word Wrapping | whether to word wrap the query editor so that the horizontal scroll bar is not used | false |
 | Convert Tabs to Spaces | if this setting is TRUE hitting the tab key will insert spaces instead of a tab character. The number of spaces inserted is controlled by the **Indentation Size** setting. | False |
