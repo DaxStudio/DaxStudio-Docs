@@ -14,14 +14,33 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.3ae6d1a7.css">
-<script src="/assets/js/runtime~main.be294eb9.js" defer="defer"></script>
-<script src="/assets/js/main.06c8f2f0.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.730370d8.js" defer="defer"></script>
+<script src="/assets/js/main.4b264fd0.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.3.1</div><div><div class=""><h1>v3.3.1</h1><div><h2>Fixes</h2>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.3.2</div><div><div class=""><h1>v3.3.2</h1><div><h2>Updates</h2>
+<ul>
+<li>Added option to show whitespace and control characters in editor</li>
+<li>Added SQL and TabularQuery filter buttons to Server Timings</li>
+<li>Added the <a href="https://daxstudio.org/docs/features/command-line/commands/accesstoken-command">accesstoken</a> command to dscmd</li>
+<li>Right-click define measures / define dependent measures works when a query is selected and just defines the measures referenced in that query</li>
+</ul>
+<h2>Fixes</h2>
+<ul>
+<li>Fix #1388 Statusbar timer reseting to 0:00.0</li>
+<li>Fixed race condition when opening file from command line parameter</li>
+<li>Fix #1389 close dialog button not working consistently</li>
+<li>Fix #1390 error with authentication for B2B users</li>
+<li>Fix #1392 including table name when defining measures</li>
+<li>Fixed History pane filtering when connected to Power BI Desktop</li>
+<li>Fix #1394 allow for name sorting in all Metrics views</li>
+<li>Fix #1395 updated clipboard retries and error display when using clipboard output</li>
+<li>Fix View Metrics incorrectly opening a second pane</li>
+</ul>
+</div></div></div><div><div class=""><h1>v3.3.1</h1><div><h2>Fixes</h2>
 <ul>
 <li>Fix #1382 ServerTimings not working against PowerPivot</li>
 <li>Fix #1383 unable to connect to AzureAS (incorrect audience error)</li>
@@ -571,17 +590,6 @@
 </ul>
 </div></div></div><div><div class=""><h1>v2.12.2</h1><div><h2>Fixes</h2>
 <p>#398 Exception thrown on startup. Only occurs when there is no history of previous data sources.</p>
-</div></div></div><div><div class=""><h1>v2.12.1</h1><div><h2>New Features</h2>
-<ul>
-<li>Pasting a connection string into the server name will parse out the Data Source and Initial Catalog settings</li>
-</ul>
-<h2>Fixes</h2>
-<ul>
-<li>#391 - issues when copying Power BI Performance data and pasting into Excel</li>
-<li>#393 - application crashed if you attempted to open the Initial Catalog list before specifying a server</li>
-<li>#394 - output to text file was not working for multiple results sets</li>
-<li>#397 - &quot;All Queries&quot; trace was not working against PowerPivot connections</li>
-</ul>
 </div></div></div></div></div>
 </body>
 </html>
