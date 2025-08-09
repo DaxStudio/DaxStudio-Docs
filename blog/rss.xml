@@ -4,10 +4,28 @@
         <title>DAX Studio Blog</title>
         <link>https://daxstudio.org/blog/</link>
         <description>DAX Studio Blog</description>
-        <lastBuildDate>Fri, 18 Jul 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 09 Aug 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[v3.3.2 Release]]></title>
+            <link>https://daxstudio.org/blog/v3_3_2-release/</link>
+            <guid>https://daxstudio.org/blog/v3_3_2-release/</guid>
+            <pubDate>Sat, 09 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Updates]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="updates">Updates<a href="https://daxstudio.org/blog/v3_3_2-release/#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates">​</a></h2>
+<ul>
+<li>improved multi-threading when scanning for open Power BI Desktop files</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_3_2-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes">​</a></h2>
+<ul>
+<li><a href="https://github.com/daxstudio/daxstudio/issues/1396" target="_blank" rel="noopener noreferrer">#<!-- -->1396</a> Find/Replace dialogs not working</li>
+<li><a href="https://github.com/daxstudio/daxstudio/issues/1400" target="_blank" rel="noopener noreferrer">#<!-- -->1400</a> dscmd not showing logging messages for errors</li>
+<li>fixing crash when closing certain dialog boxes</li>
+</ul>]]></content:encoded>
+            <category>daxstudio</category>
+        </item>
         <item>
             <title><![CDATA[v3.3.2 Release]]></title>
             <link>https://daxstudio.org/blog/v3_3_2-release/</link>
@@ -16,31 +34,13 @@
             <description><![CDATA[Updates]]></description>
             <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="updates">Updates<a href="https://daxstudio.org/blog/v3_3_2-release/#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates">​</a></h2>
 <ul>
-<li>Added option to show whitespace and control characters in editor</li>
-<li>Added SQL and TabularQuery filter buttons to Server Timings</li>
-<li>Added the <a href="https://daxstudio.org/docs/features/command-line/commands/accesstoken-command/">accesstoken</a> command to dscmd</li>
-<li>Right-click define measures / define dependent measures works when a query is selected and just defines the measures referenced in that query</li>
+<li>improved multi-threading when scanning for open Power BI Desktop files</li>
 </ul>
-<p>If you select an entire query and choose the option to <strong>Define measures</strong> or <strong>Define dependent measures</strong>
-<img decoding="async" loading="lazy" src="https://daxstudio.org/assets/images/query_define_measures_start-3b666ec4087bda64aa391c4ee030993e.png" width="467" height="378" class="img_ev3q"></p>
-<p>DAX Studio will then inject all the measures reference in the query</p>
-<p><img decoding="async" loading="lazy" src="https://daxstudio.org/assets/images/query_define_measures_result-5e8ed9a06267415d0d8f82079e8f274d.png" width="554" height="197" class="img_ev3q"></p>
-<p>you can see that:</p>
-<ol>
-<li>the measure that is referenced directly in the query has been defined</li>
-<li>the dependent measure has also been defined</li>
-</ol>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_3_2-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes">​</a></h2>
 <ul>
-<li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1388" target="_blank" rel="noopener noreferrer">#<!-- -->1388</a> Statusbar timer reseting to 0:00.0</li>
-<li>Fixed race condition when opening file from command line parameter</li>
-<li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1389" target="_blank" rel="noopener noreferrer">#<!-- -->1389</a> close dialog button not working consistently</li>
-<li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1390" target="_blank" rel="noopener noreferrer">#<!-- -->1390</a> error with authentication for B2B users</li>
-<li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1392" target="_blank" rel="noopener noreferrer">#<!-- -->1392</a> including table name when defining measures</li>
-<li>Fixed History pane filtering when connected to Power BI Desktop</li>
-<li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1394" target="_blank" rel="noopener noreferrer">#<!-- -->1394</a> allow for name sorting in all Metrics views</li>
-<li>Fix <a href="https://github.com/daxstudio/daxstudio/issues/1395" target="_blank" rel="noopener noreferrer">#<!-- -->1395</a> updated clipboard retries and error display when using clipboard output</li>
-<li>Fix View Metrics incorrectly opening a second pane</li>
+<li><a href="https://github.com/daxstudio/daxstudio/issues/1396" target="_blank" rel="noopener noreferrer">#<!-- -->1396</a> Find/Replace dialogs not working</li>
+<li><a href="https://github.com/daxstudio/daxstudio/issues/1400" target="_blank" rel="noopener noreferrer">#<!-- -->1400</a> dscmd not showing logging messages for errors</li>
+<li>fixing crash when closing certain dialog boxes</li>
 </ul>]]></content:encoded>
             <category>daxstudio</category>
         </item>
