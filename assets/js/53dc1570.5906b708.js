@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdaxstudio_docusaurus=globalThis.webpackChunkdaxstudio_docusaurus||[]).push([[7227],{57952:u=>{u.exports=JSON.parse('{"name":"docusaurus-plugin-github-releases","id":"default"}')}}]);

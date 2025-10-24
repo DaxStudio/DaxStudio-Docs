@@ -13,15 +13,46 @@
 
 
 
-<link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.2586913a.css">
-<script src="/assets/js/runtime~main.b9c8090d.js" defer="defer"></script>
-<script src="/assets/js/main.d7239060.js" defer="defer"></script>
+<link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.d05a00b4.css">
+<script src="/assets/js/runtime~main.5a792e0b.js" defer="defer"></script>
+<script src="/assets/js/main.53f6fbba.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.3.3</div><div><div class=""><h1>v3.3.3</h1><div><h2>Updates</h2>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.4.0</div><div><div class=""><h1>v3.4.0</h1><div><h2>New</h2>
+<ul>
+<li>Adding support for UDFs in code completion and Functions tab</li>
+<li>Adding support for custom calendars in code completion</li>
+<li>#1376 Adding parquet file export support<ul>
+<li>File results output</li>
+<li>export data has a parquet option</li>
+<li>dscmd <code>FILE</code> output supports .parquet output</li>
+</ul>
+</li>
+</ul>
+<h2>Updated</h2>
+<ul>
+<li>Clipboard handling improvements with re-tries</li>
+<li>improvements to Find/Replace dialog layout</li>
+<li>Adding support for SSAS 2025</li>
+<li>Improving the styling of Power BI Performance data </li>
+<li>#1405 Adding totals to Power BI Performance Data</li>
+<li>Added RequestID to trace information</li>
+<li>added <code>FILE</code> option to dscmd - this is an alias for the &#39;CSV&#39; command, but the more generic name makes more sense now that we also support .parquet files</li>
+<li>Enhanced the ServerTimings tooltip to show event endtime and calculated duration (based on end - start)</li>
+</ul>
+<h2>Fixes</h2>
+<ul>
+<li>Fix #1402 adding table name when defining formatstring expressions</li>
+<li>Fix #1403 prevent crash due to special characters in table/column names</li>
+<li>Fix cancel button not working on Multiple Queries Detected dialog when pasting from Performance Analyzer</li>
+<li>Fixes to close logic for FE Benchmark</li>
+<li>Fixing View As not working with dynamic roles against Power BI Desktop</li>
+<li>Fixed #1399 authentication 403 error when connecting to Sovereign Clouds</li>
+</ul>
+</div></div></div><div><div class=""><h1>v3.3.3</h1><div><h2>Updates</h2>
 <ul>
 <li>Improved multi-threading when scanning for open Power BI Desktop files</li>
 </ul>
@@ -560,42 +591,6 @@
 <ul>
 <li>#442 Crash when opening New Measure or Edit Measure in Query Builder</li>
 <li>#440 Extended time out for clean up of temporary odc files</li>
-</ul>
-</div></div></div><div><div class=""><h1>v2.13</h1><div><h2>New / Enhanced</h2>
-<ul>
-<li>Added native Excel output so that the Dynamic and Static Excel outputs are always available (event when running outside of Excel) </li>
-<li>#340 Added &quot;Clipboard&quot; as an output target</li>
-<li>Re-write of the connection handling to incorporate a retry mechanism if the connection gets dropped</li>
-<li>View Metrics<ul>
-<li>Fixed Sorting in View Metrics table view to do a nested sort </li>
-<li>Changed Sorting in View Metrics to sort Descending on first click</li>
-<li>Added &quot;loading&quot; status to View Metrics</li>
-<li>View Metrics - Fixed KB/MB/GB (it was lowercase, which is for bits not bytes)</li>
-<li>Enhancement #403 View Metrics - added tooltips, loading indicator, fixed default sort</li>
-</ul>
-</li>
-<li>Query Builder<ul>
-<li>Improved the query patterns generated by the Query Builder</li>
-<li>Added Between/In/Not In filter types to Query Builder</li>
-</ul>
-</li>
-<li>New Options view with search and categories to make finding options easier</li>
-<li>Export Data now uses TOPNSKIP in million row batches allowing for the export of massive data sets</li>
-<li>Enhancement #385 added an option to prompt before refreshing metadata</li>
-<li>Changed default Text file output to UTF-8 csv</li>
-<li>Renamed &quot;Excel&quot; button to &quot;Analyze in Excel&quot; in External Tools</li>
-<li>Added a check that the portable version is not in a restricted folder</li>
-</ul>
-<h2>Fixes</h2>
-<ul>
-<li>Fixed #400 duplicate New option in customize Quick Access Toolbar</li>
-<li>Fixed #401 unable to re-show Power BI Performance window after hiding it</li>
-<li>Fixed #405 &amp; #415 incorrectly trying to write external tools file when doing a non-admin install</li>
-<li>Fixed crashes when right-clicking on certain tool windows</li>
-<li>Fixed #411 Export to csv not quoting strings</li>
-<li>Fixed #404 improved code completion interactions</li>
-<li>Fixed #424 Parameter parsing in table constructors</li>
-<li>Fixed #419 View Metrics error against PowerPivot models</li>
 </ul>
 </div></div></div></div></div>
 </body>
