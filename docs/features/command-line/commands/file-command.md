@@ -2,12 +2,12 @@
 title: CSV command
 ---
 
-This command will output a csv file based on the results of a DAX query
+This command will send output to a file based on the results of a DAX query
 
 ## Syntax
 
 ```
-DSCMD CSV <OutputFile> [OPTIONS]
+DSCMD FILE <OutputFile> [OPTIONS]
 ```
 
 ## Arguments

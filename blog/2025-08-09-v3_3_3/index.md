@@ -1,6 +1,6 @@
 ---
-slug: v3_3_2-release
-title: v3.3.2 Release
+slug: v3_3_3-release
+title: v3.3.3 Release
 authors: [dgosbell]
 tags: [daxstudio]
 ---
