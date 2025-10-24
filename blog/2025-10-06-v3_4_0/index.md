@@ -28,7 +28,7 @@ import Issue from '@site/src/components/Github-Issue';
 
 ## Fixes
 * Fix <Issue id="1402"/> adding table name when defining formatstring expressions
-* Fix <Issue id="1403/> prevent crash due to special characters in table/column names
+* Fix <Issue id="1403"/> prevent crash due to special characters in table/column names
 * Fix cancel button not working on Multiple Queries Detected dialog when pasting from Performance Analyzer
 * Fixes to close logic for FE Benchmark
 * Fixing View As not working with dynamic roles against Power BI Desktop
