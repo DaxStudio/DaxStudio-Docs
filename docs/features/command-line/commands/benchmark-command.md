@@ -4,7 +4,7 @@ title: BENCHMARK command
 
 This command runs a DAX query multiple times with cold and warm cache iterations, collecting detailed server timing information (Formula Engine / Storage Engine breakdown) and outputting the results to a CSV file. This is the command-line equivalent of the [Run Benchmark](/docs/features/run-benchmark) feature in the DAX Studio UI.
 
-The FE/SE timing breakdown uses the same `ServerTimesViewModel` trace processing as the desktop UI — no timing logic is reimplemented.
+The FE/SE timing breakdown uses the same trace processing as the desktop UI.
 
 ## Syntax
 
@@ -33,6 +33,8 @@ DSCMD BENCHMARK <OutputFile> [OPTIONS]
 | --cold &lt;COLD> | The number of cold cache iterations to run (default: 5). Before each cold run, the database cache is cleared using the XMLA ClearCache command. |
 | --warm &lt;WARM> | The number of warm cache iterations to run (default: 5). Warm runs execute without clearing the cache. |
 | --silent | Suppress all console output. Only the CSV file is written. Useful for scripted/CI usage. |
+| --role &lt;ROLE> | RLS role to test. Adds `Roles=` to the query connection string. |
+| --effective-user &lt;UPN> | User to impersonate for RLS testing. Adds `EffectiveUserName=` to the query connection string. |
 
 :::note
 
@@ -72,15 +74,21 @@ The CSV file contains two sections:
 |---|---|
 | Sequence | The run number (1-based) |
 | Cache | `Cold` or `Warm` |
-| TotalDuration_ms | Server-side total query duration in milliseconds |
+| TotalDuration_ms | Total query duration in milliseconds. Uses server trace timing when available; otherwise falls back to client wall-clock timing. |
 | FormulaEngineDuration_ms | Time spent in the Formula Engine (FE) |
 | StorageEngineDuration_ms | Time spent in the Storage Engine (SE) |
 | StorageEngineQueryCount | Number of SE queries issued |
 | StorageEngineCpu_ms | CPU time consumed by SE queries |
 | TotalCpu_ms | Total CPU time for the query |
 | VertipaqCacheMatches | Number of SE queries served from the VertiPaq cache |
-| RowCount | Number of rows returned by the query |
+| RowCount | Total number of rows returned across all result sets |
 | Error | Error message if the query failed (empty on success) |
+
+:::note
+
+If server trace cannot be started (for example due to permissions or endpoint limitations), FE/SE metrics remain `0` and `TotalDuration_ms` is wall-clock time measured by the client.
+
+:::
 
 **Summary Statistics** — appended after the detail rows:
 
@@ -109,6 +117,12 @@ Run silently for scripted usage (only CSV output, no console):
 
 ```
 dscmd benchmark c:\temp\results.csv -s localhost\tabular -d "Adventure Works" -q "EVALUATE SUMMARIZECOLUMNS('Date'[Year], ""Rev"", [Total Sales])" --cold 3 --warm 3 --silent
+```
+
+Benchmark with RLS role impersonation:
+
+```
+dscmd benchmark c:\temp\rls-results.csv -c "Data Source=powerbi://api.powerbi.com/v1.0/myorg/My Workspace;Initial Catalog=My Model" -f query.dax --cold 3 --warm 3 --role "Test E T1" --effective-user "jsmith@contoso.com"
 ```
 
 ### Sample CSV Output
