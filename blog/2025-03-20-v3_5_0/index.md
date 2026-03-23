@@ -9,7 +9,7 @@ import Issue from '@site/src/components/Github-Issue';
 # DAX Studio version 3.5.0
 
 ## New
-* Added support for expand/collapse in [query plans](../../docs/features/traces/query-plan-trace)
+* Added support for expand/collapse in [query plans](../../../docs/features/traces/query-plan-trace)
 ![](../../docs/features/traces/query_plan.png)
 * Added syntax highlighting to SE events
 ![](../../docs/features/traces/server-timings-tab.png)
