@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" data-has-hydrated="false">
 <head>
 <meta charset="UTF-8">
-<meta name="generator" content="Docusaurus v3.9.1">
+<meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">DAX Studio</title><meta data-rh="true" property="og:title" content="DAX Studio"><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://daxstudio.org/changelog2/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://daxstudio.org/changelog2/"><link data-rh="true" rel="alternate" href="https://daxstudio.org/changelog2/" hreflang="en"><link data-rh="true" rel="alternate" href="https://daxstudio.org/changelog2/" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="DAX Studio RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="DAX Studio Atom Feed">
 
@@ -13,15 +13,51 @@
 
 
 
-<link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.d05a00b4.css">
-<script src="/assets/js/runtime~main.5a792e0b.js" defer="defer"></script>
-<script src="/assets/js/main.53f6fbba.js" defer="defer"></script>
+<link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.2c54ed46.css">
+<script src="/assets/js/runtime~main.ea334233.js" defer="defer"></script>
+<script src="/assets/js/main.5ebcca8a.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.4.0</div><div><div class=""><h1>v3.4.0</h1><div><h2>New</h2>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.5.0</div><div><div class=""><h1>v3.5.0</h1><div><h1>DAX Studio version 3.5.0</h1>
+<h2>New</h2>
+<ul>
+<li>Added support for expand/collapse in query plans</li>
+<li>Added syntax highlighting to SE events</li>
+<li>Adding ctrl+r support to maximize editor view (#863)</li>
+<li>Adding support for UDFs in code completion and Functions tab</li>
+<li>Adding support for custom calendars in code completion</li>
+<li>Moved indent based code folding out of preview status</li>
+</ul>
+<h2>Updates</h2>
+<ul>
+<li>Updated dependencies including v19.113.2 of AMO / ADOMDClient</li>
+</ul>
+<h2>Fixes</h2>
+<ul>
+<li>Fixed #1414 Export data to parquet shows incorrect progress count</li>
+<li>Fixed #1415 export to parquet saving partial results</li>
+<li>Fixed #1417 update ODC name when exporting live connection to Excel</li>
+<li>Fixed #1421 allowing the use of guid or tenant name when establishing b2b connections</li>
+<li>Fixed #1434 updated code signing timestamp server</li>
+<li>Fixed #1427 EvaluateAndLog trace can break when logging tables</li>
+<li>Fixed #1424 typo in error message</li>
+<li>Fixed #1425 export to excel not able to be read by power query</li>
+<li>Fixed race condition that occasionally prevented metadata pane from loading when opening vpax file</li>
+<li>Fixed a rare startup crash</li>
+<li>Fixed async issue in benchmarks</li>
+</ul>
+<h2>TODO</h2>
+<p>[x] Test ERD arrow angles
+[x] field parameters in Diagram
+[x] Variations hidden in Diagram
+[x] fix colors for both themes on Diagrams
+[x] fix icons on light theme on Diagrams
+[x] add warning about UI changes to diagrams
+[x] remove env var</p>
+</div></div></div><div><div class=""><h1>v3.4.0</h1><div><h2>New</h2>
 <ul>
 <li>Adding support for UDFs in code completion and Functions tab</li>
 <li>Adding support for custom calendars in code completion</li>
@@ -586,11 +622,6 @@
 <li>Fixed #497 Define Measures not working when connected to a model with active translations</li>
 <li>Fixed #499 Added table name when querying for column references</li>
 <li>Fixed #501 avoiding bug with EXCEPT function in Query Builder</li>
-</ul>
-</div></div></div><div><div class=""><h1>v2.13.1</h1><div><p>Fixes</p>
-<ul>
-<li>#442 Crash when opening New Measure or Edit Measure in Query Builder</li>
-<li>#440 Extended time out for clean up of temporary odc files</li>
 </ul>
 </div></div></div></div></div>
 </body>
