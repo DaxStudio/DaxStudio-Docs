@@ -33,3 +33,5 @@ import Issue from '@site/src/components/Github-Issue';
 * Fixes to close logic for FE Benchmark
 * Fixing View As not working with dynamic roles against Power BI Desktop
 * Fixed <Issue id="1399"/> authentication 403 error when connecting to Sovereign Clouds
+
+<!-- truncate -->
