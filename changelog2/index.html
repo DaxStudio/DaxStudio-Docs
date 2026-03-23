@@ -14,14 +14,19 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.2c54ed46.css">
-<script src="/assets/js/runtime~main.ea334233.js" defer="defer"></script>
-<script src="/assets/js/main.5ebcca8a.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.1a59420b.js" defer="defer"></script>
+<script src="/assets/js/main.0795f3a2.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.5.0</div><div><div class=""><h1>v3.5.0</h1><div><h1>DAX Studio version 3.5.0</h1>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.5.1</div><div><div class=""><h1>v3.5.1</h1><div><h1>DAX Studio version 3.5.1</h1>
+<h2>Fixes</h2>
+<ul>
+<li>Fixed #1438 error authenticating to myorg</li>
+</ul>
+</div></div></div><div><div class=""><h1>v3.5.0</h1><div><h1>DAX Studio version 3.5.0</h1>
 <h2>New</h2>
 <ul>
 <li>Added support for expand/collapse in query plans</li>
@@ -568,60 +573,6 @@
 <h2>Fixes</h2>
 <ul>
 <li>Fixed #509 - critical issue with the Excel Addin that causes it to fail to load</li>
-</ul>
-</div></div></div><div><div class=""><h1>v2.14.0</h1><div><h2>Updates</h2>
-<ul>
-<li>Added help text when the edit control is empty</li>
-<li>Added privacy settings</li>
-<li>Added options for improving the readability of the xmSQL in Server Timings</li>
-<li>Added &quot;Multiple Queries Detected&quot; dialog when pasting in queries from Power BI Performance Analyzer that came from a Composite model </li>
-<li>Help Ribbon updates<ul>
-<li>Updating link in help ribbon to Analysis Services forum</li>
-<li>Adding link to Discussions <a href="https://github.com/daxstudio/daxstudio/discussions">https://github.com/daxstudio/daxstudio/discussions</a></li>
-</ul>
-</li>
-<li>Query Builder moved out of preview status</li>
-<li>Benchmarking moved out of preview status</li>
-<li>Enabled <a href="https://github.com/DaxStudio/DaxStudio/discussions">Discussions</a> on the github site</li>
-<li>Adding Query Builder documentation to daxstudio.org</li>
-<li>Updating AdomdClient and TOM references to v19.14</li>
-<li>Added retry logic when fetching Database and Model lists</li>
-<li>#450 Last Updated is now shown in local time instead of UTC</li>
-<li>Added keyboard short cuts in metadata pane to work with Query Builder</li>
-<li>#492 added description to function tooltip</li>
-</ul>
-<h2>Fixes</h2>
-<ul>
-<li>Fixed crash when doing Replace All with an invalid RegEx expression</li>
-<li>Fixed crash when clicking Refresh Metadata after connection has dropped</li>
-<li>Fixed #469 Server Timings busy spinner was activating incorrectly when doing Clear Cache</li>
-<li>Fixed #467 Database Name was being incorrectly injected into all new connections when DAX Studio was opened from External Tools in Power BI Desktop</li>
-<li>Fixed #466 PBI XMLA connections not being parsed correctly</li>
-<li>Fixed #457 crashing on startup after setting view hidden objects = false in options</li>
-<li>Fixed #356 Clear Cache throwing errors against PBI XMLA endpoint</li>
-<li>Fixed #449 Connection lost during Benchmarking</li>
-<li>Fixed a trace timeout issue when connecting to PBI XMLA endpoint (sometimes it is still necessary to increase the default timeout to 90 seconds or more)</li>
-<li>Query Builder<ul>
-<li>Fixed a bug when filtering dates that reported an error parsing an empty string</li>
-<li>Added the ability to drag KPI components into the Query Builder</li>
-<li>Fixed a crash when trying to alter the expression for a dynamic format string for a calculation group item</li>
-</ul>
-</li>
-<li>Fixed hang when pasting in code with extremely long lines (tens of thousands of characters)</li>
-<li>Fixed #451 up/down keys not work consistently </li>
-<li>Fixed #446 Aggregate rewrite events causing an error</li>
-<li>Fixed #444 to use correct culture in csv export</li>
-<li>Fixed #445 defaulting the selected model to the base model not the first perspective</li>
-<li>Fixed an issue with the trace layout options not displaying</li>
-<li>Fixed a bug with swap delimiters feature and block comments</li>
-<li>Apply a number of small fixes that should address some issues that came in via crash reports, but these reports were all submitted anonymously so for many of them it is impossible to verify that the fix has worked as we have no steps to reproduce the issue and the fix is based on assumptions of the cause of the issue.</li>
-<li>Fixed drag/drop of text not working within editor</li>
-<li>Fixed  #475 proxy auth error when entering AAD credentials</li>
-<li>Fixed #485 Swap delimiters incorrectly affecting functions with periods in the name</li>
-<li>Fixed #486 Define Measure not using Separator specified in Options</li>
-<li>Fixed #497 Define Measures not working when connected to a model with active translations</li>
-<li>Fixed #499 Added table name when querying for column references</li>
-<li>Fixed #501 avoiding bug with EXCEPT function in Query Builder</li>
 </ul>
 </div></div></div></div></div>
 </body>
