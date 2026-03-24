@@ -21,3 +21,9 @@ Once all of the queries are complete we show the timings results. The first tab 
 And there is also a detailed view which shows the detailed results of each individual query.
 
 ![](benchmark-details.png)
+
+:::tip Command Line
+
+The benchmarking feature is also available from the command line via the [`dscmd benchmark`](/docs/features/command-line/commands/benchmark-command) command, which enables automated and scripted benchmarking without the UI.
+
+:::
