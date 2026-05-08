@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" data-has-hydrated="false">
 <head>
 <meta charset="UTF-8">
-<meta name="generator" content="Docusaurus v3.9.2">
+<meta name="generator" content="Docusaurus v3.10.1">
 <title data-rh="true">DAX Studio</title><meta data-rh="true" property="og:title" content="DAX Studio"><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://daxstudio.org/changelog2/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://daxstudio.org/changelog2/"><link data-rh="true" rel="alternate" href="https://daxstudio.org/changelog2/" hreflang="en"><link data-rh="true" rel="alternate" href="https://daxstudio.org/changelog2/" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="DAX Studio RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="DAX Studio Atom Feed">
 
@@ -13,15 +13,34 @@
 
 
 
-<link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.2c54ed46.css">
-<script src="/assets/js/runtime~main.1a59420b.js" defer="defer"></script>
-<script src="/assets/js/main.0795f3a2.js" defer="defer"></script>
+<link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.ab93dd37.css">
+<script src="/assets/js/runtime~main.5f4bf97c.js" defer="defer"></script>
+<script src="/assets/js/main.a58dcda2.js" defer="defer"></script>
 </head>
-<body class="navigation-with-keyboard">
+<body>
 <svg style="display: none;"><defs>
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.5.1</div><div><div class=""><h1>v3.5.1</h1><div><h1>DAX Studio version 3.5.1</h1>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.5.2</div><div><div class=""><h1>v3.5.2</h1><div><h1>DAX Studio 3.5.2</h1>
+<h2>Updates</h2>
+<ul>
+<li>removed unneeded dependencies</li>
+<li>improved app startup performance</li>
+<li>improved performance when opening large daxx files</li>
+<li>improved server timings row highlighting</li>
+</ul>
+<h2>Fixes</h2>
+<ul>
+<li>Fix #1439 adding FUNCTION as a keyword</li>
+<li>Fix #1440 parquet export failing with method or operation not implemented</li>
+<li>Fix #1442 errors in dscmd when using special characters in connection string </li>
+<li>Fix #1443 hang on server timings with extremely long lines</li>
+<li>Fix #1444 Query Plan not updating after being hidden</li>
+<li>Fix #1445 SQL Profiler not detected when using SSMS 22</li>
+<li>Fix #1446 Repeat calls to Capture Diagnostics failing</li>
+<li>Fix crash when copying hyperlink in error logs</li>
+</ul>
+</div></div></div><div><div class=""><h1>v3.5.1</h1><div><h1>DAX Studio version 3.5.1</h1>
 <h2>Fixes</h2>
 <ul>
 <li>Fixed #1438 error authenticating to myorg</li>
@@ -568,11 +587,6 @@
 <li>Fixed #575 autocomplete sometimes stops working</li>
 <li>Disabled the Add Measure button when connected to a model with no tables</li>
 <li>Fixed #576 Editing an existing Measure in Query Builder against PowerPivot causes a crash</li>
-</ul>
-</div></div></div><div><div class=""><h1>v2.14.1</h1><div><p>Includes all the updates from <a href="https://github.com/DaxStudio/DaxStudio/releases/tag/v2.14.0">v2.14.0</a></p>
-<h2>Fixes</h2>
-<ul>
-<li>Fixed #509 - critical issue with the Excel Addin that causes it to fail to load</li>
 </ul>
 </div></div></div></div></div>
 </body>

@@ -4,10 +4,73 @@
         <title>DAX Studio Blog</title>
         <link>https://daxstudio.org/blog/</link>
         <description>DAX Studio Blog</description>
-        <lastBuildDate>Mon, 06 Oct 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 08 May 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[v3.5.2 Release]]></title>
+            <link>https://daxstudio.org/blog/v3_5_2-release/</link>
+            <guid>https://daxstudio.org/blog/v3_5_2-release/</guid>
+            <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Updates]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates">Updates<a href="https://daxstudio.org/blog/v3_5_2-release/#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h2>
+<ul>
+<li class="">removed unneeded dependencies</li>
+<li class="">improved app startup performance</li>
+<li class="">improved performance when opening large daxx files</li>
+<li class="">improved server timings row highlighting</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_5_2-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h2>
+<ul>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1439" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1439" data-type="issue" data-title="Add FUNCTION as a query keyword for Intellisense" data-body="Add FUNCTION as a query keyword for Intellisense">#1439</a> adding FUNCTION as a keyword</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1440" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1440" data-type="issue" data-title="Export to parquet getting error: method or operation is not implemented" data-body="Describe the bug I facing an issue with parquet export but only when export for second time. I run a query, export to excel first and next to that export to parquet, facing the error message: The method or operation is not implemented. This issue is…">#1440</a> parquet export failing with method or operation not implemented</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1442" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1442" data-type="issue" data-title="DSCMD.EXE vpax FAILS if the semantic model name contains an apostrophe" data-body="DSCMD.EXE vpax FAILS if the semantic model name contains an apostrophe Describe the bug If the semantic model name contains an apostrophe (ex. L'exposition), the error &quot;is an invalid key-value set.Parameter name: keyValueSet&quot; and the VPAX is not extr…">#1442</a> errors in dscmd when using special characters in connection string</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1443" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1443" data-type="issue" data-title="Trim DAX DQAS query in Server Timings" data-body="A simple DAX query that uses DQAS connection hangs DAX Studio for more than a minute, the event line for DQAS contains way too many tuples, if you click on such a query DAX Studio becomes unresponsive and once it is working, scrolling through that qu…">#1443</a> hang on server timings with extremely long lines</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1444" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1444" data-type="issue" data-title="Query Plan doesn't update after hiding the pane" data-body="Query Plan doesn't update once you hide the pane with CTRL + R a feature introduced in 863 Here is a demo of the bug: https://github.com/user-attachments/assets/2cd58371-1407-4c41-8eee-2dc2f1ae10b3 Version used - 3.5.1">#1444</a> Query Plan not updating after being hidden</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1445" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1445" data-type="issue" data-title="SQL Server Profiler v22.4.1 Greyed out" data-body="I have SQL Server Profiler v22.4.1 installed (under SQL Server Tools v22) and DAX Studio 3.5.1. When I go to Advanced - SQL Profiler, the icon is greyed out and I can't click it, even when I'm connected a Power BI Model in Power BI Desktop. I've foll…">#1445</a> SQL Profiler not detected when using SSMS 22</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1446" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1446" data-type="issue" data-title="Capture Diagnostics Bug for Subsequent Runs" data-body="Capture Diagnostics under Load Perf Data crashes DS if ran twice. DaxStudio-20260422.log PowerBIPerformanceData.json https://github.com/user-attachments/assets/99da07a8-cec9-4694-8ed0-567f438a40b8">#1446</a> Repeat calls to Capture Diagnostics failing</li>
+<li class="">Fix crash when copying hyperlink in error logs</li>
+</ul>]]></content:encoded>
+            <category>daxstudio</category>
+        </item>
+        <item>
+            <title><![CDATA[v3.5.0 Release]]></title>
+            <link>https://daxstudio.org/blog/v3_5_0-release/</link>
+            <guid>https://daxstudio.org/blog/v3_5_0-release/</guid>
+            <pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[New]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="new">New<a href="https://daxstudio.org/blog/v3_5_0-release/#new" class="hash-link" aria-label="Direct link to New" title="Direct link to New" translate="no">​</a></h2>
+<ul>
+<li class="">Added support for expand/collapse in <a class="" href="https://daxstudio.org/docs/features/traces/query-plan-trace/">query plans</a>
+<img decoding="async" loading="lazy" src="https://daxstudio.org/assets/images/query_plan-03f4458bbfec56153a6830a8a4e47782.png" width="1637" height="690" class="img_ev3q"></li>
+<li class="">Added syntax highlighting to SE events
+<img decoding="async" loading="lazy" src="https://daxstudio.org/assets/images/server-timings-tab-14506090732262e05bb90bbcf3539842.png" width="1637" height="453" class="img_ev3q"></li>
+<li class="">Adding ctrl+r support to maximize editor view (<a href="https://github.com/daxstudio/daxstudio/issues/863" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/863" data-type="issue">#863</a>)</li>
+<li class="">Adding support for UDFs in code completion and Functions tab</li>
+<li class="">Adding support for custom calendars in code completion</li>
+<li class="">Moved indent based code folding out of preview status</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates">Updates<a href="https://daxstudio.org/blog/v3_5_0-release/#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h2>
+<ul>
+<li class="">Updated dependencies including v19.113.2 of AMO / ADOMDClient</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_5_0-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h2>
+<ul>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1414" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1414" data-type="issue">#1414</a> Export data to parquet shows incorrect progress count</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1415" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1415" data-type="issue">#1415</a> export to parquet saving partial results</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1417" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1417" data-type="issue">#1417</a> update ODC name when exporting live connection to Excel</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1421" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1421" data-type="issue">#1421</a> allowing the use of guid or tenant name when establishing b2b connections</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1434" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1434" data-type="issue">#1434</a> updated code signing timestamp server</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1427" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1427" data-type="issue">#1427</a> EvaluateAndLog trace can break when logging tables</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1424" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1424" data-type="issue">#1424</a> typo in error message</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1425" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1425" data-type="issue">#1425</a> export to excel not able to be read by power query</li>
+<li class="">Fixed race condition that occasionally prevented metadata pane from loading when opening vpax file</li>
+<li class="">Fixed a rare startup crash</li>
+<li class="">Fixed async issue in benchmarks</li>
+</ul>]]></content:encoded>
+            <category>daxstudio</category>
+        </item>
         <item>
             <title><![CDATA[v3.4.0 Release]]></title>
             <link>https://daxstudio.org/blog/v3_4_0-release/</link>
@@ -18,7 +81,7 @@
 <ul>
 <li class="">Adding support for UDFs in code completion and Functions tab</li>
 <li class="">Adding support for custom calendars in code completion</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1376" target="_blank" rel="noopener noreferrer">#<!-- -->1376</a> Adding parquet file export support<!-- -->
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1376" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1376" data-type="issue" data-title="Export to Compressed Parquet File" data-body="Is your feature request related to a problem? Please describe. I want to save data from PBID to a compressed file, which can store a lot of data, which supports data types, which is popular. Describe the solution you'd like PBID can now import Parque…">#1376</a> Adding parquet file export support<!-- -->
 <ul>
 <li class="">File results output</li>
 <li class="">export data has a parquet option</li>
@@ -32,19 +95,19 @@
 <li class="">improvements to Find/Replace dialog layout</li>
 <li class="">Adding support for SSAS 2025</li>
 <li class="">Improving the styling of Power BI Performance data</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1405" target="_blank" rel="noopener noreferrer">#<!-- -->1405</a> Adding totals to Power BI Performance Data</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1405" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1405" data-type="issue" data-title="Add 'totals' to the PBI Performance panel" data-body="When I am comparing iterations of data model changes, I like to compare the total performance of all objects, combined, from clicking through each page. (This is a different use case than trying to improve a specific visual.) It is a surprising numbe…">#1405</a> Adding totals to Power BI Performance Data</li>
 <li class="">Added RequestID to trace information</li>
 <li class="">added <code>FILE</code> option to dscmd - this is an alias for the CSV command, but the more generic name makes more sense now that we also support .parquet files</li>
 <li class="">Enhanced the ServerTimings tooltip to show event endtime and calculated duration (based on end - start)</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_4_0-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h2>
 <ul>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1402" target="_blank" rel="noopener noreferrer">#<!-- -->1402</a> adding table name when defining formatstring expressions</li>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1403" target="_blank" rel="noopener noreferrer">#<!-- -->1403</a> prevent crash due to special characters in table/column names</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1402" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1402" data-type="issue" data-title="Define measures does not include the table name for format strings" data-body="When a measure is defined that includes a formatstring expression the measure name for the formatstring does not include the table name.">#1402</a> adding table name when defining formatstring expressions</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1403" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1403" data-type="issue" data-title="Column or Measure names with ^ characters cause a crash" data-body="If you have a column or measure name using the ^ character it crashes DAX Studio">#1403</a> prevent crash due to special characters in table/column names</li>
 <li class="">Fix cancel button not working on Multiple Queries Detected dialog when pasting from Performance Analyzer</li>
 <li class="">Fixes to close logic for FE Benchmark</li>
 <li class="">Fixing View As not working with dynamic roles against Power BI Desktop</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1399" target="_blank" rel="noopener noreferrer">#<!-- -->1399</a> authentication 403 error when connecting to Sovereign Clouds</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1399" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1399" data-type="issue" data-title="403 Error when connecting to Power BI Tabular Server" data-body="Describe the bug Using DAX Studio V 3.3.2, I receive the following error when attempting to connect to a Tabular Server: &quot;Error Connecting: The remote server returned an error: 403 Forbidden.&quot; This does not happen when using the 3.2 version on the sa…">#1399</a> authentication 403 error when connecting to Sovereign Clouds</li>
 </ul>]]></content:encoded>
             <category>daxstudio</category>
         </item>
@@ -60,8 +123,8 @@
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_3_3-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h2>
 <ul>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1396" target="_blank" rel="noopener noreferrer">#<!-- -->1396</a> Find/Replace dialogs not working</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1400" target="_blank" rel="noopener noreferrer">#<!-- -->1400</a> dscmd not showing logging messages for errors</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1396" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1396" data-type="issue" data-title="Cannot invoke search and Search and Replace" data-body="These functions cannot be invoked by the clicking on the ribbon or by keyboard shortcuts. DAX Studio v3.3.2.1107 Connection: PowerBIDesktop - 17.0.26.19 Summary of Issue Steps to Reproduce 1. Run from PBI external tools 2. search and define a measure…">#1396</a> Find/Replace dialogs not working</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1400" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1400" data-type="issue" data-title="dscmd stopped working" data-body="When I try to execute dscmd (which has been working fine until the last few days), it just puts up the banner and exits with no error. Even if I mess up one of the parms, it does not catch it. dscmd csv myfile.csv -s myserver -d mydb -q &quot;EVALUATE MAS…">#1400</a> dscmd not showing logging messages for errors</li>
 <li class="">fixing crash when closing certain dialog boxes</li>
 </ul>]]></content:encoded>
             <category>daxstudio</category>
@@ -90,14 +153,14 @@
 </ol>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_3_2-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h2>
 <ul>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1388" target="_blank" rel="noopener noreferrer">#<!-- -->1388</a> Statusbar timer reseting to 0:00.0</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1388" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1388" data-type="issue" data-title="Elpased Time resets to 00:00:0 after query execution" data-body="In the recent versions (3.3.1 and one before that) Elapsed Timer at the bottom right side resets to 0 after a query is executed, earlier the total duration used to stay until next execution.">#1388</a> Statusbar timer reseting to 0:00.0</li>
 <li class="">Fixed race condition when opening file from command line parameter</li>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1389" target="_blank" rel="noopener noreferrer">#<!-- -->1389</a> close dialog button not working consistently</li>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1390" target="_blank" rel="noopener noreferrer">#<!-- -->1390</a> error with authentication for B2B users</li>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1392" target="_blank" rel="noopener noreferrer">#<!-- -->1392</a> including table name when defining measures</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1389" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1389" data-type="issue" data-title="Unable to close program windows with the X/Close button" data-body="DAX Studio v3.3.1.1098 Connection: not connected Summary of Issue I'm unable to close e.g. the Connect window – which shows up automatically on program start up – or the About window by clicking on the X button in the top right of it. Nothing happens…">#1389</a> close dialog button not working consistently</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1390" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1390" data-type="issue" data-title="3.3.1 Error Connecting: The logged in tenant of the user does not match the expected tenant" data-body="Describe the bug Connecting using analysis services address fails to authenticate. To Reproduce Steps to reproduce the behavior: Go to AAS in azure example: asazure://westus.asazure.windows.net/ Choose account to log into Error: Error Connecting: The…">#1390</a> error with authentication for B2B users</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1392" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1392" data-type="issue" data-title="DEFINE ALL MEASURES (all tables) should include a table in Measure name -  v3.3.1" data-body="I wanted to dump all measures from all tables, and then re-use those measure definitions in an evaluate statement. DAX studio will provide the measure definition in the form of DEFINE ---- MODEL MEASURES BEGIN ---- MEASURE [measureone] = COUNTROWS(so…">#1392</a> including table name when defining measures</li>
 <li class="">Fixed History pane filtering when connected to Power BI Desktop</li>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1394" target="_blank" rel="noopener noreferrer">#<!-- -->1394</a> allow for name sorting in all Metrics views</li>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1395" target="_blank" rel="noopener noreferrer">#<!-- -->1395</a> updated clipboard retries and error display when using clipboard output</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1394" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1394" data-type="issue" data-title="Vertipaq Analyzer does not allow sorting on the name column in some views" data-body="In the Columns and Relationships tabs the name column does not currently support sorting by clicking on the column header like the other columns do">#1394</a> allow for name sorting in all Metrics views</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1395" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1395" data-type="issue" data-title="Copy results &amp; Output to Clipboard" data-body="DAX Studio v3.3.1.1098 Connection: PowerBIService - 17.0.29.21 Summary of Issue 1st issue - right clicking on the result to copy with headers, does not capture the details to the clipboard, till you repeat that action, additionally the previous clipb…">#1395</a> updated clipboard retries and error display when using clipboard output</li>
 <li class="">Fix View Metrics incorrectly opening a second pane</li>
 </ul>]]></content:encoded>
             <category>daxstudio</category>
@@ -110,11 +173,11 @@
             <description><![CDATA[Fixes]]></description>
             <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_3_1-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h2>
 <ul>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1382" target="_blank" rel="noopener noreferrer">#<!-- -->1382</a> ServerTimings not working against PowerPivot</li>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1383" target="_blank" rel="noopener noreferrer">#<!-- -->1383</a> unable to connect to AzureAS (incorrect audience error)</li>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1381" target="_blank" rel="noopener noreferrer">#<!-- -->1381</a> renaming "Exit" to "Close DAX Studio" in File menu</li>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1385" target="_blank" rel="noopener noreferrer">#<!-- -->1385</a> removing sp_set_session_context calls when simplifying DQ query events</li>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1387" target="_blank" rel="noopener noreferrer">#<!-- -->1387</a> View/Export metrics not working with non-default Entra account</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1382" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1382" data-type="issue" data-title="ServerTimings not working against PowerPivot" data-body="Trying to run ServerTimings against PowerPivot crashes DAX Studio">#1382</a> ServerTimings not working against PowerPivot</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1383" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1383" data-type="issue" data-title="3.3.0 Audience Validation Failed" data-body="Describe the bug Connecting using analysis services address fails to authenticate. To Reproduce Steps to reproduce the behavior: 1. Paste AAS address into Tabular Server prompt: example: asazure://westus.asazure.windows.net/<your environment 2. Click…">#1383</a> unable to connect to AzureAS (incorrect audience error)</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1381" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1381" data-type="issue" data-title="Change &quot;Exit&quot; to &quot;Close DAX Studio&quot; in the File menu" data-body="It is not clear if &quot;Exit&quot; means &quot;exit DAX Studio&quot; or &quot;exit the File screen&quot; (i.e. a similar behaviour to pressing the &quot;back&quot; arrow). Please change &quot;Exit&quot; to &quot;Close DAX Studio&quot; to clarify what this menu item does.">#1381</a> renaming "Exit" to "Close DAX Studio" in File menu</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1385" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1385" data-type="issue" data-title="ServerTimings - Remove session context calls when simplifying DQ queries" data-body="When running Server Timings against the Fabric service against a model with DQ storage there are now extra calls to sys.spsetsessioncontext which are not needed when performance tuning and should be removed when the option to simplify the scan querie…">#1385</a> removing sp_set_session_context calls when simplifying DQ query events</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1387" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1387" data-type="issue" data-title="Vertipaq Analzyer not working with non-default Entra account" data-body="When you connect to a model that requires Entra ID authentication and you use a non-default Entra account you will see an error about the database or workspace not being found when trying to run View or Export Metrics">#1387</a> View/Export metrics not working with non-default Entra account</li>
 </ul>]]></content:encoded>
             <category>daxstudio</category>
         </item>
@@ -139,7 +202,7 @@
 <p>There is an option in the right-click menu on the Server Timings grid to turn on the display of the <strong>Object Name</strong> column. This column shows the main object that was referenced during a scan or DQ operation and can be useful for quickly seeing which scans reference a specific fact table.</p>
 <p><img decoding="async" loading="lazy" src="https://daxstudio.org/assets/images/objectname-8ade021f6b4304813904dd88831ffb35.png" width="1307" height="371" class="img_ev3q"></p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="displaying-query-errors-in-the-results-pane">Displaying query errors in the results pane<a href="https://daxstudio.org/blog/v3_3_0-release/#displaying-query-errors-in-the-results-pane" class="hash-link" aria-label="Direct link to Displaying query errors in the results pane" title="Direct link to Displaying query errors in the results pane" translate="no">​</a></h3>
-<p>From <a href="https://github.com/daxstudio/daxstudio/issues/1361" target="_blank" rel="noopener noreferrer">#<!-- -->1361</a>:  The results pane now has an improved error display with a number of user experience improvements.</p>
+<p>From <a href="https://github.com/daxstudio/daxstudio/issues/1361" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1361" data-type="issue">#1361</a>:  The results pane now has an improved error display with a number of user experience improvements.</p>
 <ul>
 <li class="">Before this the results of any prior valid query were retained which could have lead to confusion</li>
 <li class="">Large error messages often scroll out of view in the log pane and can be difficult to navigate to</li>
@@ -148,22 +211,22 @@
 </ul>
 <p><img decoding="async" loading="lazy" src="https://daxstudio.org/assets/images/results_error-5d8c66fa3cfdaae4140fd7dbd30843fe.png" width="1120" height="575" class="img_ev3q"></p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="line-numbers-to-server-timings-query-pane">Line numbers to Server Timings query pane<a href="https://daxstudio.org/blog/v3_3_0-release/#line-numbers-to-server-timings-query-pane" class="hash-link" aria-label="Direct link to Line numbers to Server Timings query pane" title="Direct link to Line numbers to Server Timings query pane" translate="no">​</a></h3>
-<p>From <a href="https://github.com/daxstudio/daxstudio/issues/1358" target="_blank" rel="noopener noreferrer">#<!-- -->1358</a>. The Query text in the Server Timings window now has line numbers to make it easier to reference parts of the query when doing presentations or screenshares.</p>
+<p>From <a href="https://github.com/daxstudio/daxstudio/issues/1358" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1358" data-type="issue">#1358</a>. The Query text in the Server Timings window now has line numbers to make it easier to reference parts of the query when doing presentations or screenshares.</p>
 <p><img decoding="async" loading="lazy" src="https://daxstudio.org/assets/images/xmsql_linenumbers-3acef79db929e40fe67d67c709ff7c32.png" width="553" height="328" class="img_ev3q"></p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="findreplace-in-selection">Find/Replace in selection<a href="https://daxstudio.org/blog/v3_3_0-release/#findreplace-in-selection" class="hash-link" aria-label="Direct link to Find/Replace in selection" title="Direct link to Find/Replace in selection" translate="no">​</a></h3>
 <p>There is a new toggle button in the <a class="" href="https://daxstudio.org/docs/features/find-replace/">Find/Replace</a> window that allows the user to restrict the find and replace operations to a specific selection. When the selection mode is active the background of the selection is colored to show the scope that the find/replace operation is working inside. This scope can be cleared by toggling the button or by closing the find/replace dialog.</p>
 <p><img decoding="async" loading="lazy" src="https://daxstudio.org/assets/images/find_in_selection-871329b166d81638022d3b0e85c75bf4.png" width="1136" height="278" class="img_ev3q"></p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates">Updates<a href="https://daxstudio.org/blog/v3_3_0-release/#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h2>
 <ul>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1359" target="_blank" rel="noopener noreferrer">#<!-- -->1359</a> saving error message in Server Timings and allowing copying of error</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1359" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1359" data-type="issue">#1359</a> saving error message in Server Timings and allowing copying of error</li>
 <li class="">Improved EntraID auth in dscmd</li>
 <li class="">Improved responsiveness while refreshing metadata against slow sources</li>
 <li class="">Improved code folding logic</li>
 <li class="">Find/Replace - pressing Enter key will trigger find next</li>
 <li class="">Find/Replace - search while user types</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1369" target="_blank" rel="noopener noreferrer">#<!-- -->1369</a> added tooltips to ServerTimings columns</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1368" target="_blank" rel="noopener noreferrer">#<!-- -->1368</a> added right click copy / select all to vertipaq analyzer</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1370" target="_blank" rel="noopener noreferrer">#<!-- -->1370</a> added tooltip to View As button</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1369" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1369" data-type="issue">#1369</a> added tooltips to ServerTimings columns</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1368" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1368" data-type="issue">#1368</a> added right click copy / select all to vertipaq analyzer</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1370" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1370" data-type="issue">#1370</a> added tooltip to View As button</li>
 <li class="">Updated dependencies</li>
 <li class="">Updated .Net framework version to 4.7.2</li>
 <li class="">Improved Server Timings debug logging</li>
@@ -174,63 +237,26 @@
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_3_0-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h2>
 <ul>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1332" target="_blank" rel="noopener noreferrer">#<!-- -->1332</a> Define Dependent Measure and Expand Measures not working reliably</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1332" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1332" data-type="issue">#1332</a> Define Dependent Measure and Expand Measures not working reliably</li>
 <li class="">Fixed detection of FormatString property in results</li>
 <li class="">Fixed crash when launched from Excel but there is no active query window</li>
 <li class="">Improved handling of embedded line breaks in linked Excel output</li>
 <li class="">Fixed Server Timings timeline caching bug</li>
 <li class="">Removed duplicate Metadata Refreshed log messages</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1324" target="_blank" rel="noopener noreferrer">#<!-- -->1324</a> All queries threading bug</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1324" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1324" data-type="issue">#1324</a> All queries threading bug</li>
 <li class="">Fixed race condition in Benchmarking</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1330" target="_blank" rel="noopener noreferrer">#<!-- -->1330</a> Improved Font zooming in editor</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1330" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1330" data-type="issue">#1330</a> Improved Font zooming in editor</li>
 <li class="">Fixed bug setting query parameter values from XML</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1336" target="_blank" rel="noopener noreferrer">#<!-- -->1336</a> trace start error when switching some connection types</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1331" target="_blank" rel="noopener noreferrer">#<!-- -->1331</a> prevent code completion display for numbers</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1323" target="_blank" rel="noopener noreferrer">#<!-- -->1323</a> adding support for <code>// Query</code> comments when pasting DQ queries</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1336" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1336" data-type="issue">#1336</a> trace start error when switching some connection types</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1331" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1331" data-type="issue">#1331</a> prevent code completion display for numbers</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1323" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1323" data-type="issue">#1323</a> adding support for <code>// Query</code> comments when pasting DQ queries</li>
 <li class="">Fixed opening daxx file from inside a zip file</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1356" target="_blank" rel="noopener noreferrer">#<!-- -->1356</a> crash when defining measures from editor</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1356" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1356" data-type="issue">#1356</a> crash when defining measures from editor</li>
 <li class="">Fixed loading of daxx files from readonly locations</li>
 <li class="">Fixed incorrect validation error in Query Builder when loading non-string filters</li>
 <li class="">Fixed Find/Replace not working in QueryBuilder Measure Editor</li>
 <li class="">Fixed down arrow selecting from the database dialog</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1371" target="_blank" rel="noopener noreferrer">#<!-- -->1371</a> File-Exit not triggering save changes dialog</li>
-</ul>]]></content:encoded>
-            <category>daxstudio</category>
-        </item>
-        <item>
-            <title><![CDATA[v3.5.0 Release]]></title>
-            <link>https://daxstudio.org/blog/v3_5_0-release/</link>
-            <guid>https://daxstudio.org/blog/v3_5_0-release/</guid>
-            <pubDate>Thu, 20 Mar 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[New]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="new">New<a href="https://daxstudio.org/blog/v3_5_0-release/#new" class="hash-link" aria-label="Direct link to New" title="Direct link to New" translate="no">​</a></h2>
-<ul>
-<li class="">Added support for expand/collapse in <a class="" href="https://daxstudio.org/docs/features/traces/query-plan-trace/">query plans</a>
-<img decoding="async" loading="lazy" src="https://daxstudio.org/assets/images/query_plan-03f4458bbfec56153a6830a8a4e47782.png" width="1637" height="690" class="img_ev3q"></li>
-<li class="">Added syntax highlighting to SE events
-<img decoding="async" loading="lazy" src="https://daxstudio.org/assets/images/server-timings-tab-14506090732262e05bb90bbcf3539842.png" width="1637" height="453" class="img_ev3q"></li>
-<li class="">Adding ctrl+r support to maximize editor view (<a href="https://github.com/daxstudio/daxstudio/issues/863" target="_blank" rel="noopener noreferrer">#<!-- -->863</a>)</li>
-<li class="">Adding support for UDFs in code completion and Functions tab</li>
-<li class="">Adding support for custom calendars in code completion</li>
-<li class="">Moved indent based code folding out of preview status</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates">Updates<a href="https://daxstudio.org/blog/v3_5_0-release/#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h2>
-<ul>
-<li class="">Updated dependencies including v19.113.2 of AMO / ADOMDClient</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_5_0-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h2>
-<ul>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1414" target="_blank" rel="noopener noreferrer">#<!-- -->1414</a> Export data to parquet shows incorrect progress count</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1415" target="_blank" rel="noopener noreferrer">#<!-- -->1415</a> export to parquet saving partial results</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1417" target="_blank" rel="noopener noreferrer">#<!-- -->1417</a> update ODC name when exporting live connection to Excel</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1421" target="_blank" rel="noopener noreferrer">#<!-- -->1421</a> allowing the use of guid or tenant name when establishing b2b connections</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1434" target="_blank" rel="noopener noreferrer">#<!-- -->1434</a> updated code signing timestamp server</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1427" target="_blank" rel="noopener noreferrer">#<!-- -->1427</a> EvaluateAndLog trace can break when logging tables</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1424" target="_blank" rel="noopener noreferrer">#<!-- -->1424</a> typo in error message</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1425" target="_blank" rel="noopener noreferrer">#<!-- -->1425</a> export to excel not able to be read by power query</li>
-<li class="">Fixed race condition that occasionally prevented metadata pane from loading when opening vpax file</li>
-<li class="">Fixed a rare startup crash</li>
-<li class="">Fixed async issue in benchmarks</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1371" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1371" data-type="issue">#1371</a> File-Exit not triggering save changes dialog</li>
 </ul>]]></content:encoded>
             <category>daxstudio</category>
         </item>
@@ -246,7 +272,7 @@
 <p>Both the <a class="" href="https://daxstudio.org/docs/features/command-line/commands/csv-command/">CSV</a> and <a class="" href="https://daxstudio.org/docs/features/command-line/commands/xlsx-command/">XLSX</a> commmands both support passing parameters using the <code>-m, --parameter</code> option.</p>
 <p>In the following example the query has 2 parameters <strong>@myColor</strong> and <strong>@myCategory</strong> which are passed in using 2 <code>-m</code> options</p>
 <p>eg.</p>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">dscmd csv c:\temp\myquery.csv -s localhost\tab19 -d "Adventure Works DW"  ^</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -m myColor=Red ^</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -m myCategory=Bikes ^</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -q "EVALUATE FILTER('product', 'product[Color]=@myColor &amp;&amp; 'product'[Category]=@myCategory)"</span><br></span></code></pre></div></div>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">dscmd csv c:\temp\myquery.csv -s localhost\tab19 -d "Adventure Works DW"  ^</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">  -m myColor=Red ^</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">  -m myCategory=Bikes ^</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">  -q "EVALUATE FILTER('product', 'product[Color]=@myColor &amp;&amp; 'product'[Category]=@myCategory)"</span><br></div></code></pre></div></div>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="improved-jumplist-integration">Improved Jumplist Integration<a href="https://daxstudio.org/blog/v3_2_1-release/#improved-jumplist-integration" class="hash-link" aria-label="Direct link to Improved Jumplist Integration" title="Direct link to Improved Jumplist Integration" translate="no">​</a></h2>
 <p>The Jumplist is a feature of Windows 10 &amp; 11 where right clicking on a program in your task bar would show you recently opened files.</p>
 <p><img decoding="async" loading="lazy" src="https://daxstudio.org/assets/images/jumplist-5228202262c712c79cdd5c2d090914ad.png" width="348" height="356" class="img_ev3q"></p>
@@ -259,12 +285,12 @@
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_2_1-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h3>
 <ul>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1292" target="_blank" rel="noopener noreferrer">#<!-- -->1292</a> grid output not binding results with &gt; or &amp; in the column name</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1293" target="_blank" rel="noopener noreferrer">#<!-- -->1293</a> Vertipaq Options dialog learn more link broken</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1298" target="_blank" rel="noopener noreferrer">#<!-- -->1298</a> Adding Advanced XLSX output settings in Options</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1302" target="_blank" rel="noopener noreferrer">#<!-- -->1302</a> Fixing DirectLake mode option not working in View Metrics dialog</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1305" target="_blank" rel="noopener noreferrer">#<!-- -->1305</a> All Queries not capturing events</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1306" target="_blank" rel="noopener noreferrer">#<!-- -->1306</a> dscmd VPAX command not using default value for StatsColumnBatchSize</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1292" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1292" data-type="issue" data-title="Funtion SUMARIZECOLUMNS problem with &quot;<>&quot; character" data-body="DAX Studio v3.2.0.1036 Connection: PowerBIDesktop - 16.0.126.27 Summary of Issue When using &quot;<&quot; characters in the name parameter for SUMARIZECOLUMNS function doesnt show results in result table. Steps to Reproduce 1.Execute function with name column…">#1292</a> grid output not binding results with &gt; or &amp; in the column name</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1293" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1293" data-type="issue" data-title="Vertipaq Analyzer Metric Options &quot;Learn More&quot; error" data-body="Describe the bug When I click &quot;Learn More&quot; in the Metric options when trying to do the &quot;Vertipaq Analyzer&quot;... &quot;View Metrics&quot; window. I get taken to this URL which does not load &quot;http://localhost:3000/docs/features/model-metrics/metric-options-dialog&quot;…">#1293</a> Vertipaq Options dialog learn more link broken</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1298" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1298" data-type="issue" data-title="Excel Export File Size doubled Since version 3.0.11 !" data-body="Describe the bug Since upgrading to version 3.0.11, the file size of Excel exports has more than doubled for the same dataset. Default settings ScreenShot">#1298</a> Adding Advanced XLSX output settings in Options</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1302" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1302" data-type="issue" data-title="Non-Resident Columns When &quot;DirectLake Scan Statistics from Data option&quot; = &quot;Full&quot;" data-body="Describe the bug When viewing metrics with &quot;DirectLake Scan Statistics from Data option&quot; = &quot;Full&quot;, numerous columns are annotated with warnings about possible inaccurate statistics. To Reproduce Steps to reproduce the behavior: 1. In DAX Studio 3.2.0…">#1302</a> Fixing DirectLake mode option not working in View Metrics dialog</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1305" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1305" data-type="issue" data-title="All Queries error : CollectionView does not support changes from a thread different from the Dispatcher thread" data-body="Discussed in https://github.com/DaxStudio/DaxStudio/discussions/1304 <div type='discussions-op-text' <supOriginally posted by infostreambe September 1, 2024</sup Hello, When I start the All Queries option, the error &quot;This type of CollectionView does…">#1305</a> All Queries not capturing events</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1306" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1306" data-type="issue" data-title="Running DSCMD" data-body="i am running this command and i am getting this issue">#1306</a> dscmd VPAX command not using default value for StatsColumnBatchSize</li>
 <li class="">fixing crash on exit</li>
 </ul>]]></content:encoded>
             <category>daxstudio</category>
@@ -279,17 +305,17 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates--new-features">Updates / New Features<a href="https://daxstudio.org/blog/v3_2_0-release/#updates--new-features" class="hash-link" aria-label="Direct link to Updates / New Features" title="Direct link to Updates / New Features" translate="no">​</a></h2>
 <ul>
 <li class="">Improving <a href="https://daxstudio.org/docs/features/smart-paste/" target="_blank" rel="noopener noreferrer" class="">Smart Paste</a></li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1288" target="_blank" rel="noopener noreferrer">#<!-- -->1288</a> Added Support for <a href="https://daxstudio.org/docs/features/model-metrics/#metric-options-dialog" target="_blank" rel="noopener noreferrer" class="">View Metrics StatsColumnBatchSize</a></li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1288" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1288" data-type="issue" data-title="Add VertiPaq Analyzer `columnBatchSize` parameter to UI" data-body="Is your feature request related to a problem? Please describe. Hi Darren, Following the addition of the new columnBatchSize parameter in version 1.7.0 of the VertiPaq Analyzer library, I am opening this issue to track the request for supporting this…">#1288</a> Added Support for <a href="https://daxstudio.org/docs/features/model-metrics/#metric-options-dialog" target="_blank" rel="noopener noreferrer" class="">View Metrics StatsColumnBatchSize</a></li>
 <li class="">Added sorting to ViewAs roles</li>
 <li class="">Fixed styling so trace command bars are not blurred</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_2_0-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h2>
 <ul>
 <li class="">Fix caturing server timing events when Auto ClearCache is active against powerbi:// endpoints</li>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1284" target="_blank" rel="noopener noreferrer">#<!-- -->1284</a> dscmd CSV command not working with --connectionstring option</li>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1283" target="_blank" rel="noopener noreferrer">#<!-- -->1283</a> dscmd export command --tables option parsing</li>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1282" target="_blank" rel="noopener noreferrer">#<!-- -->1282</a> QueryBuilder measure renaming not working</li>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1289" target="_blank" rel="noopener noreferrer">#<!-- -->1289</a> dscmd CSV command error when exporting some queries</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1284" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1284" data-type="issue" data-title="dscmd is asking for server when the connection string is passed to it" data-body="Discussed in https://github.com/DaxStudio/DaxStudio/discussions/1281 <div type='discussions-op-text' <supOriginally posted by tnhurst57 August 3, 2024</sup Here is the dialog - Docs says server not required if passing connection string. Trying to que…">#1284</a> dscmd CSV command not working with --connectionstring option</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1283" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1283" data-type="issue" data-title="dscmd --tables parameter not working" data-body="In the and commands it should be possible to pass in a list of tables to export rather than exporting all tables. Currently this throws a parsing error.">#1283</a> dscmd export command --tables option parsing</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1282" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1282" data-type="issue" data-title="When I create a new measure in DAX Studio, I can't change the name.  Now my calculated measures are named &quot;MyMeasure&quot;, &quot;MyMeasure1&quot;, etc." data-body="Describe the bug A clear and concise description of what the bug is. To Reproduce Steps to reproduce the behavior: 1. Go to '...' 2. Click on '....' 3. Scroll down to '....' 4. See error Expected behavior A clear and concise description of what you e…">#1282</a> QueryBuilder measure renaming not working</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1289" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1289" data-type="issue" data-title="dscmd giving error when running csv command with over 1000 rows" data-body="Discussed in https://github.com/DaxStudio/DaxStudio/discussions/1287 <div type='discussions-op-text' <supOriginally posted by tnhurst57 August 6, 2024</sup Not sure what this error means. I am attempting to export a Power BI dataset to a file. C:\Use…">#1289</a> dscmd CSV command error when exporting some queries</li>
 <li class="">Fix sizing of status bar server name tooltip</li>
 </ul>]]></content:encoded>
             <category>daxstudio</category>
@@ -337,9 +363,9 @@ you can select the one you wish to connect to. The list is sorted alphabetically
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="improvements">Improvements<a href="https://daxstudio.org/blog/v3_1_0-release/#improvements" class="hash-link" aria-label="Direct link to Improvements" title="Direct link to Improvements" translate="no">​</a></h3>
 <ul>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1204" target="_blank" rel="noopener noreferrer">#<!-- -->1204</a> made listview selected row color lighter to improve the contrast</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1124" target="_blank" rel="noopener noreferrer">#<!-- -->1124</a> Improved labelling of the zoom level</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1241" target="_blank" rel="noopener noreferrer">#<!-- -->1241</a> Added "learn more" link to connection dialog</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1204" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1204" data-type="issue">#1204</a> made listview selected row color lighter to improve the contrast</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1124" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1124" data-type="issue">#1124</a> Improved labelling of the zoom level</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1241" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1241" data-type="issue">#1241</a> Added "learn more" link to connection dialog</li>
 <li class="">Added storage mode column to the Partitions tab in View Metrics</li>
 <li class="">updated TOM, ADOMD and other 3rd party dependencies</li>
 <li class="">Fixed the images for the Server Timings event type filters</li>
@@ -348,17 +374,17 @@ you can select the one you wish to connect to. The list is sorted alphabetically
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_1_0-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h3>
 <ul>
 <li class="">Fixed a crash trying to show fonts in the option dialog</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1213" target="_blank" rel="noopener noreferrer">#<!-- -->1213</a> Formatted file export not applying formatting</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1213" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1213" data-type="issue">#1213</a> Formatted file export not applying formatting</li>
 <li class="">Fixed loading of AggregateRewrite events in saved Server Timings</li>
 <li class="">Fixed occasional crash when using publish functions</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1228" target="_blank" rel="noopener noreferrer">#<!-- -->1228</a> Query Builder not respecting delimiter setting</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1179" target="_blank" rel="noopener noreferrer">#<!-- -->1179</a> reconnect active traces on connection retries</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1228" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1228" data-type="issue">#1228</a> Query Builder not respecting delimiter setting</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1179" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1179" data-type="issue">#1179</a> reconnect active traces on connection retries</li>
 <li class="">Fixed an issue in QueryBuilder when loading a saved query containing a hierarchy</li>
 <li class="">Fixed an issue in QueryBuilder when trying to filter on a query scoped measure</li>
 <li class="">Fixed an issue where the Ribbon buttons get stuck in a disabled state after an error while a trace is active</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1262" target="_blank" rel="noopener noreferrer">#<!-- -->1262</a> ViewAs not working with "Other User" option against the Power BI Service</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1264" target="_blank" rel="noopener noreferrer">#<!-- -->1264</a> Status bar timer stopped too early</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1268" target="_blank" rel="noopener noreferrer">#<!-- -->1268</a> where the View As dialog did not work properly with a large number of roles</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1262" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1262" data-type="issue">#1262</a> ViewAs not working with "Other User" option against the Power BI Service</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1264" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1264" data-type="issue">#1264</a> Status bar timer stopped too early</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1268" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1268" data-type="issue">#1268</a> where the View As dialog did not work properly with a large number of roles</li>
 </ul>]]></content:encoded>
             <category>daxstudio</category>
         </item>
@@ -373,20 +399,20 @@ you can select the one you wish to connect to. The list is sorted alphabetically
 <ul>
 <li class="">Improved Query Folding logic</li>
 <li class="">updated vpax libraries</li>
-<li class="">fixed <a href="https://github.com/daxstudio/daxstudio/issues/1189" target="_blank" rel="noopener noreferrer">#<!-- -->1189</a> no longer counting RowNumber as user column in vertipaq analyzer</li>
+<li class="">fixed <a href="https://github.com/daxstudio/daxstudio/issues/1189" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1189" data-type="issue" data-title="Vertipaq Analyzer Summary - Column count should exclude RowNumber columns" data-body="As per this issue https://github.com/tabulartools/dax-optimizer/issues/14 there is inconsistency between the way some tools that consume vpax files count the number of columns. The RowNumber columns should be excluded from the total column count sinc…">#1189</a> no longer counting RowNumber as user column in vertipaq analyzer</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_0_11-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h2>
 <ul>
-<li class="">fixed <a href="https://github.com/daxstudio/daxstudio/issues/1200" target="_blank" rel="noopener noreferrer">#<!-- -->1200</a> "An item with the same key has already been added" error when connecting to Power BI</li>
-<li class="">fixed <a href="https://github.com/daxstudio/daxstudio/issues/1188" target="_blank" rel="noopener noreferrer">#<!-- -->1188</a> error when testing roles on SSAS</li>
+<li class="">fixed <a href="https://github.com/daxstudio/daxstudio/issues/1200" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1200" data-type="issue" data-title="Error when opening any Power BI XMLA endpoint: &quot;The following error has occurred while updating the connection: An item with the same key has already been added&quot;" data-body="Describe the bug Opening any powerbi:// endpoint fails with &quot;The following error has occurred while updating the connection: An item with the same key has already been added.&quot; To Reproduce 1. Open DAX Studio v3.0.10 2. Connect.Tabular Server.enter en…">#1200</a> "An item with the same key has already been added" error when connecting to Power BI</li>
+<li class="">fixed <a href="https://github.com/daxstudio/daxstudio/issues/1188" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1188" data-type="issue" data-title="Testing RLS in one model (SASS), getting error about no access to dropdown default model" data-body="DAX Studio v3.0.8.945 Connection: not connected Summary of Issue Opening DAX Studio, connecting to on premisse SSAS environment, selecting another model than the default. When entering query, no problem, results. However when I want to test with anot…">#1188</a> error when testing roles on SSAS</li>
 <li class="">fixed bug in status bar for powerpivot connections</li>
-<li class="">fixed <a href="https://github.com/daxstudio/daxstudio/issues/1180" target="_blank" rel="noopener noreferrer">#<!-- -->1180</a> detection of multiple parameters on one line</li>
-<li class="">fixed <a href="https://github.com/daxstudio/daxstudio/issues/1178" target="_blank" rel="noopener noreferrer">#<!-- -->1178</a> Query Builder new measure showing permissions issue</li>
-<li class="">fixed <a href="https://github.com/daxstudio/daxstudio/issues/1172" target="_blank" rel="noopener noreferrer">#<!-- -->1172</a> vertipaq analyzer summary always shows unknown.pbix</li>
-<li class="">fixed <a href="https://github.com/daxstudio/daxstudio/issues/1171" target="_blank" rel="noopener noreferrer">#<!-- -->1171</a> error when loading perf data</li>
+<li class="">fixed <a href="https://github.com/daxstudio/daxstudio/issues/1180" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1180" data-type="issue" data-title="Problem with Dates Between when using Parameters" data-body="DAX Studio v3.0.10.962 Connection: PowerBIDesktop - 16.0.96.20 Summary of Issue Connected to Power BI Service data source. Want to have variable start and end dates. DAX Studio will not prompt for the @startdate which in turn leads to &quot;@startdate par…">#1180</a> detection of multiple parameters on one line</li>
+<li class="">fixed <a href="https://github.com/daxstudio/daxstudio/issues/1178" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1178" data-type="issue" data-title="DAX Studio Query Builder error: &quot;You do not have admin rights to the model&quot;" data-body="Describe the bug In DAX Studio, once connected to the PBI model and going to the Query Builder to create a new message, the following error pops up: &quot;The measure expression is blank. This can happen if you do not have admin rights to the data model&quot;.…">#1178</a> Query Builder new measure showing permissions issue</li>
+<li class="">fixed <a href="https://github.com/daxstudio/daxstudio/issues/1172" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1172" data-type="issue" data-title="The name of file of the model is always  &quot;Unknown.pbix&quot;" data-body="DAX Studio v3.0.10.962 Connection: PowerBIDesktop - 16.0.92.17 Summary of Issue model file name is always &quot;Unknown.pbix&quot; Steps to Reproduce I encountered this problem after July 2023. Before that, the Advanced-VertiPaq Analyzer-Summary menu section s…">#1172</a> vertipaq analyzer summary always shows unknown.pbix</li>
+<li class="">fixed <a href="https://github.com/daxstudio/daxstudio/issues/1171" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1171" data-type="issue" data-title="No results displayed on Load Perf Data" data-body="DAX Studio v3.0.10.962 Connection: PowerBIDesktop - 16.0.92.17 Summary of Issue After selecting the exported PowerBIPerformanceData.json file, Load Perf Data doesn't show any data. Error: Error Loading Power BI Performance Data: the value cannot be n…">#1171</a> error when loading perf data</li>
 <li class="">Fixed Query Folding crashes with certain regional settings</li>
-<li class="">fixed <a href="https://github.com/daxstudio/daxstudio/issues/1170" target="_blank" rel="noopener noreferrer">#<!-- -->1170</a> cancelling closing DAX Studio also cancels closing open documents</li>
-<li class="">fixed <a href="https://github.com/daxstudio/daxstudio/issues/1169" target="_blank" rel="noopener noreferrer">#<!-- -->1169</a> error when opening files with Query Builder open</li>
+<li class="">fixed <a href="https://github.com/daxstudio/daxstudio/issues/1170" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1170" data-type="issue" data-title="Cancelling close still closes open documents" data-body="When you close the application and you have a document with unsaved changes a dialog box appears. If you cancel the save changes dialog the documents should remain open, but the currently close without saving changes">#1170</a> cancelling closing DAX Studio also cancels closing open documents</li>
+<li class="">fixed <a href="https://github.com/daxstudio/daxstudio/issues/1169" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1169" data-type="issue" data-title="Query Builder files not loading with Object reference not set to instance of an object" data-body="Hello, My organization uses query builder files between teams. Version 3.08 fixed a glitch (1119) that was not allowing read only users to use Query Builder. Thank you @dgosbell!! With version 3.09, users are not able to open Query Builder files that…">#1169</a> error when opening files with Query Builder open</li>
 </ul>]]></content:encoded>
             <category>daxstudio</category>
         </item>
@@ -422,11 +448,11 @@ you can select the one you wish to connect to. The list is sorted alphabetically
 </ul>
 <h1>Fixes</h1>
 <ul>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1159" target="_blank" rel="noopener noreferrer">#<!-- -->1159</a> Saved Server Timings not loading</li>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1155" target="_blank" rel="noopener noreferrer">#<!-- -->1155</a> add escaping to find references</li>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1154" target="_blank" rel="noopener noreferrer">#<!-- -->1154</a> define measure in calculation groups</li>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1152" target="_blank" rel="noopener noreferrer">#<!-- -->1152</a> typo in Query Builder</li>
-<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1146" target="_blank" rel="noopener noreferrer">#<!-- -->1146</a> Sorting by Translated Names</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1159" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1159" data-type="issue" data-title="Saved Server Timings information not loading " data-body="When opening a .daxx file or a .dax file that was saved with ServerTimings data the ServerTimings information is not being loaded correctly by DAX Studio 3.0.8 it reports an error opening the file and the correct number of events is loaded, but all t…">#1159</a> Saved Server Timings not loading</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1155" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1155" data-type="issue" data-title="Generating query for referenced objects results in syntax error if name contains apostrophe" data-body="Describe the bug When showing objects that reference a measure with a name that contains an apostrophe (Char 39), the generated SQL does not escape the apostrophe, causing a syntax error. To Reproduce Steps to reproduce the behavior: 1. Create a meas…">#1155</a> add escaping to find references</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1154" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1154" data-type="issue" data-title="Define Measures in combination with Calculation Group format strings" data-body="Describe the bug I have been working with calculation groups a lot lately and noticed that im unable to define measures in Dax Studio after introducing format string expressions in one of my calculation groups. I understand that when introducing form…">#1154</a> define measure in calculation groups</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1152" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1152" data-type="issue" data-title="Typo in Version 3.08" data-body="DAX Studio v3.0.8.945 Connection: PowerBIDesktop - 16.0.87.16 Summary of Issue When trying to create a new measure, using the Query Builder, the tooltip has a typo. &quot;The Measure Expression is blank. This can happen if uou do not....&quot; uou should be -…">#1152</a> typo in Query Builder</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1146" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1146" data-type="issue" data-title="Translations - Sort by Translationed name" data-body="Discussed in https://github.com/DaxStudio/DaxStudio/discussions/1144 <div type='discussions-op-text' <supOriginally posted by bluehenve July 8, 2023</sup Hi I see translated names in the explorer section on the left side of Dax Studio: - The translat…">#1146</a> Sorting by Translated Names</li>
 <li class="">Improved DQ formatting</li>
 </ul>]]></content:encoded>
             <category>daxstudio</category>
@@ -444,21 +470,21 @@ you can select the one you wish to connect to. The list is sorted alphabetically
 <li class="">Improved metadata refresh against Fabric Direct Lake models</li>
 <li class="">Include dynamic format string in Define Measure</li>
 <li class="">Added winget publishing to release pipeline</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1130" target="_blank" rel="noopener noreferrer">#<!-- -->1130</a> added hierarchy support to Query Builder</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1135" target="_blank" rel="noopener noreferrer">#<!-- -->1135</a> allows for dragging entire tables to Query Builder</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1130" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1130" data-type="issue" data-title="Add columns from a hierarchy when adding a hierarchy to query builder" data-body="Is your feature request related to a problem? Please describe. As per the title. It's frustrating having to add them one by one. Describe the solution you'd like Have not only the hierarchy parent object added, but also all the child columns as well…">#1130</a> added hierarchy support to Query Builder</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1135" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1135" data-type="issue" data-title="Add all columns from a table to the Query Builder" data-body="Add the ability to drag a table to the QueryBuilder. Dropping a table object on the Query Builder will expand out to add all the columns from that table. After that individual columns can be removed if required. If there are existing columns from the…">#1135</a> allows for dragging entire tables to Query Builder</li>
 </ul>
 <h1>Fixes</h1>
 <ul>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1099" target="_blank" rel="noopener noreferrer">#<!-- -->1099</a> Rendering issues in View Metrics</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1104" target="_blank" rel="noopener noreferrer">#<!-- -->1104</a> assembly signing in automated build process</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1105" target="_blank" rel="noopener noreferrer">#<!-- -->1105</a> bracket highlighting for CallbackDataID in Server Timings</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1111" target="_blank" rel="noopener noreferrer">#<!-- -->1111</a> prevented multiple trace windows when opening files</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1119" target="_blank" rel="noopener noreferrer">#<!-- -->1119</a> Query Builder not saving if user has read-only access</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1120" target="_blank" rel="noopener noreferrer">#<!-- -->1120</a> clear any previous errors at the start of Server Timings trace</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1123" target="_blank" rel="noopener noreferrer">#<!-- -->1123</a> corrected spelling of Power Pivot</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1126" target="_blank" rel="noopener noreferrer">#<!-- -->1126</a> recovering multiple documents can set the wrong active document</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1128" target="_blank" rel="noopener noreferrer">#<!-- -->1128</a> right-click copy in results was incorrectly copying all cells</li>
-<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1136" target="_blank" rel="noopener noreferrer">#<!-- -->1136</a> error when using data export to SQL and column name has square brackets</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1099" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1099" data-type="issue" data-title="VertiPaq analyzer rendering glitches" data-body="Describe the bug The column headers displayed in the VertiPaq Analyzer tab can become out of sync with the column data. To Reproduce Steps to reproduce the behavior: 1. Open DAX Studio 2. Open VPAX (exported from TE 3.6.0) 3. Observe column alignment…">#1099</a> Rendering issues in View Metrics</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1104" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1104" data-type="issue" data-title="Missing Digital Signature in DaxStudio.exe after 3.0.5" data-body="3.0.6 and 3.0.7 without Digital Signature in DaxStudio.exe in portable and installer version. https://daxstudio.org/docs/installation/smart-screen/">#1104</a> assembly signing in automated build process</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1105" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1105" data-type="issue" data-title="Terminating &quot;)&quot; of CallbackDataID is not highlighted" data-body="In the xmSQL queries, the call to CallbackDataID is highlighted in yellow except for the terminating &quot;)&quot;. This &quot;)&quot; should be highlighted in yellow as well especially since the &quot;(&quot; is already highlighted in yellow.">#1105</a> bracket highlighting for CallbackDataID in Server Timings</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1111" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1111" data-type="issue" data-title="Tripple Query Plan &amp; Server Timings panes" data-body="1. Open DAX Studio Connect to model and Check Server Timings &amp; Query Plans 2. Save the file and close DS 3. Open DAX Studio Connect to model and Check Server Timings &amp; Query Plans 4. Load the saved file and you will see tripple Query Plan and Server…">#1111</a> prevented multiple trace windows when opening files</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1119" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1119" data-type="issue" data-title="Query Builder does not save if you have read-only access to the data source" data-body="Discussed in https://github.com/DaxStudio/DaxStudio/discussions/1115 DAX Studio throws an error trying to access the measure expression if the current user only has read-only access to the data source. A user should be able to save the current state…">#1119</a> Query Builder not saving if user has read-only access</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1120" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1120" data-type="issue" data-title="Syntax Error Message should be removed from Server Timings if the Check is passed" data-body="There should be a timeout on the &quot;Query Running + Spinning Wheel&quot; when there is syntax issue, currently it keeps spinning endlessly. Another thing is if on the subsequent executions the code works then the yellow error message should disappear, curre…">#1120</a> clear any previous errors at the start of Server Timings trace</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1123" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1123" data-type="issue" data-title="Rename &quot;PowerPivot&quot; to &quot;Power Pivot&quot;" data-body="&quot;PowerPivot&quot; refers to the Excel 2010 version of Power Pivot, which is no longer supported and which most people would not be using. The name given to current versions of Power Pivot is &quot;Power Pivot&quot;. Please replace &quot;PowerPivot&quot; with &quot;Power Pivot&quot; wh…">#1123</a> corrected spelling of Power Pivot</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1126" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1126" data-type="issue" data-title="Recovered queries execute different query" data-body="We have VMs which are shut down each evening, when I reopen DAX Studio the following day and recovery my queries and then create a new query it will attempt to execute one of the recovered queries instead, so the result set can be totally unrelated t…">#1126</a> recovering multiple documents can set the wrong active document</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1128" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1128" data-type="issue" data-title="Selected cell copy improvement in result table" data-body="Is your feature request related to a problem? Please describe. Whenever I right click on the results grid and select copy, it always copies the whole table even when only one cell is selected. This makes it hard to easily add filters to the query bui…">#1128</a> right-click copy in results was incorrectly copying all cells</li>
+<li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/1136" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1136" data-type="issue" data-title="exporting data to sql server table: the given columnmapping does not match up with any column in the source or destination." data-body="exporting data to sql server table: the given columnmapping does not match up with any column in the source or destination.">#1136</a> error when using data export to SQL and column name has square brackets</li>
 <li class="">Fixed crash in hierarchy tooltip</li>
 <li class="">Fixed crash reports</li>
 <li class="">Improved autosave clean-up</li>
@@ -475,7 +501,7 @@ you can select the one you wish to connect to. The list is sorted alphabetically
             <description><![CDATA[Today we are happy to announce the release of version 3.0.7 of DAX Studio]]></description>
             <content:encoded><![CDATA[<p>Today we are happy to announce the release of version 3.0.7 of DAX Studio</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="metadata-loading-improvements">Metadata loading improvements<a href="https://daxstudio.org/blog/v3_0_7-release/#metadata-loading-improvements" class="hash-link" aria-label="Direct link to Metadata loading improvements" title="Direct link to Metadata loading improvements" translate="no">​</a></h2>
-<p>DAX Studio uses an asynchronous, lazy loading strategy to populate the metadata which has worked reasonably well over the years, but we occassionaly see some strange errors due about reader objects being already in use (such as those in issue <a href="https://github.com/daxstudio/daxstudio/issues/1076" target="_blank" rel="noopener noreferrer">#<!-- -->1076</a> ) or responses containing unexpected data. There are actually a number of small tweaks in the previous verion (3.0.6) which were meant to help avoid these issues, but there was also one minor improvement to the formatting of query results which made this worse.</p>
+<p>DAX Studio uses an asynchronous, lazy loading strategy to populate the metadata which has worked reasonably well over the years, but we occassionaly see some strange errors due about reader objects being already in use (such as those in issue <a href="https://github.com/daxstudio/daxstudio/issues/1076" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1076" data-type="issue">#1076</a> ) or responses containing unexpected data. There are actually a number of small tweaks in the previous verion (3.0.6) which were meant to help avoid these issues, but there was also one minor improvement to the formatting of query results which made this worse.</p>
 <p>This sort of issue was extremely hard to isolate because I rarely saw it myself and it was very hard to come up with consistent scenarios to reproduce the issue. And if you cannot reproduce an issue you can make changes, but you don't know if you've fixed the problem or if you've just been lucky. It turns out that with some help from some log files from users I was able to isolate and reproduce this issue and confirm that it was a multi-threading bug.</p>
 <p>Starting with this version we now internally use a separate connection object for metadata and running queries so this should prevent this issue entirely going forward.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="delete-entries-from-the-recent-server-list">Delete entries from the recent server list<a href="https://daxstudio.org/blog/v3_0_7-release/#delete-entries-from-the-recent-server-list" class="hash-link" aria-label="Direct link to Delete entries from the recent server list" title="Direct link to Delete entries from the recent server list" translate="no">​</a></h2>
@@ -491,20 +517,20 @@ you can select the one you wish to connect to. The list is sorted alphabetically
 <p><em>Below is the full list of all the new features and fixes.</em></p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates">Updates<a href="https://daxstudio.org/blog/v3_0_7-release/#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h3>
 <ul>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1094" target="_blank" rel="noopener noreferrer">#<!-- -->1094</a> delete items from server list</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/491" target="_blank" rel="noopener noreferrer">#<!-- -->491</a> Clear Log and Clear Results context menu options</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1094" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1094" data-type="issue">#1094</a> delete items from server list</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/491" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/491" data-type="issue">#491</a> Clear Log and Clear Results context menu options</li>
 <li class="">Added a preview option for exporting</li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_0_7-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h3>
 <ul>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1092" target="_blank" rel="noopener noreferrer">#<!-- -->1092</a> fix for spelling mistake in installer option</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1076" target="_blank" rel="noopener noreferrer">#<!-- -->1076</a> fix for xmlReader in use errors</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1077" target="_blank" rel="noopener noreferrer">#<!-- -->1077</a> incorrect hash calculation</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1080" target="_blank" rel="noopener noreferrer">#<!-- -->1080</a> fixed issue with line comments when using linked Excel output</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1081" target="_blank" rel="noopener noreferrer">#<!-- -->1081</a> min/max not populating in tooltips for some DQ models</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1083" target="_blank" rel="noopener noreferrer">#<!-- -->1083</a> fixed linked Excel output not working with AAD authentication</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1084" target="_blank" rel="noopener noreferrer">#<!-- -->1084</a> fixed crash on ctrl+shift+c</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/851" target="_blank" rel="noopener noreferrer">#<!-- -->851</a> fixed Object not set error in Query Builder</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1092" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1092" data-type="issue">#1092</a> fix for spelling mistake in installer option</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1076" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1076" data-type="issue">#1076</a> fix for xmlReader in use errors</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1077" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1077" data-type="issue">#1077</a> incorrect hash calculation</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1080" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1080" data-type="issue">#1080</a> fixed issue with line comments when using linked Excel output</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1081" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1081" data-type="issue">#1081</a> min/max not populating in tooltips for some DQ models</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1083" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1083" data-type="issue">#1083</a> fixed linked Excel output not working with AAD authentication</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1084" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1084" data-type="issue">#1084</a> fixed crash on ctrl+shift+c</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/851" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/851" data-type="issue">#851</a> fixed Object not set error in Query Builder</li>
 <li class="">Fixed an issue loading older versions of ServerTimings data</li>
 <li class="">Fixed issues relating to a couple of reported crashes</li>
 </ul>]]></content:encoded>
@@ -552,12 +578,12 @@ you can select the one you wish to connect to. The list is sorted alphabetically
 <p><em>Below is the full list of all the new features and fixes.</em></p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-features">New Features<a href="https://daxstudio.org/blog/v3_0_6-release/#new-features" class="hash-link" aria-label="Direct link to New Features" title="Direct link to New Features" translate="no">​</a></h3>
 <ul>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/861" target="_blank" rel="noopener noreferrer">#<!-- -->861</a> adding SHA256 hashes for downloads</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/866" target="_blank" rel="noopener noreferrer">#<!-- -->866</a> added copy with/without headers option for query results</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/973" target="_blank" rel="noopener noreferrer">#<!-- -->973</a> Added Duplicate option to tab right-click menu</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1016" target="_blank" rel="noopener noreferrer">#<!-- -->1016</a> open a .dax file by dragging it onto DAX Studio</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1031" target="_blank" rel="noopener noreferrer">#<!-- -->1031</a> adding encoding option for custom CSV output</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1051" target="_blank" rel="noopener noreferrer">#<!-- -->1051</a> added Formatted File as an output option</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/861" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/861" data-type="issue" data-title="Make downloads more secure" data-body="Can you please Provide SHA-256 hashes for the downloads, to make them more secure Thanks">#861</a> adding SHA256 hashes for downloads</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/866" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/866" data-type="issue" data-title="Add 'Copy with Headers' as an option in the Results tab" data-body="Describe the solution you'd like Within the 'Results' tab, add an option (as is available in SSMS) to copy the results with the header row. In SSMS there's also a shortcut (Ctrl+Shift+C)">#866</a> added copy with/without headers option for query results</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/973" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/973" data-type="issue" data-title="'Duplicate Tab' option when right clicking a query tab" data-body="It would be great if I could duplicate a query tab with all the connections and built queries carried across into the new query tab. This would save time when working on creating variations of the same query; especially when using query builder 👍">#973</a> Added Duplicate option to tab right-click menu</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1016" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1016" data-type="issue">#1016</a> open a .dax file by dragging it onto DAX Studio</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1031" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1031" data-type="issue">#1031</a> adding encoding option for custom CSV output</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1051" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1051" data-type="issue">#1051</a> added Formatted File as an output option</li>
 <li class="">added json option when outputting to a file</li>
 <li class="">FE Benchmarks</li>
 <li class="">Updated Timeline/Waterfall visualization in Server Timings</li>
@@ -566,21 +592,21 @@ you can select the one you wish to connect to. The list is sorted alphabetically
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_0_6-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h3>
 <ul>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1062" target="_blank" rel="noopener noreferrer">#<!-- -->1062</a> fix vertipaq analyzer showing &gt;unknown&lt; in summary pane for AAS / PBIP</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1060" target="_blank" rel="noopener noreferrer">#<!-- -->1060</a> enabling Shift+Enter to be used as a custom hotkey</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1052" target="_blank" rel="noopener noreferrer">#<!-- -->1052</a> disabled re-ordering of columns in vertipaq analyzer</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1036" target="_blank" rel="noopener noreferrer">#<!-- -->1036</a> fix location of desktop shortcut file for Current User installs</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1030" target="_blank" rel="noopener noreferrer">#<!-- -->1030</a> QueryBuilder measures missing table references when loading from file</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1029" target="_blank" rel="noopener noreferrer">#<!-- -->1029</a> QueryBuilder IN filters not loading from file correctly</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1026" target="_blank" rel="noopener noreferrer">#<!-- -->1026</a> improving VertiPaq Analyzer tooltips</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1025" target="_blank" rel="noopener noreferrer">#<!-- -->1025</a> fixing spelling / capitalization errors</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/968" target="_blank" rel="noopener noreferrer">#<!-- -->968</a> Tool Window incorrectly docking</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/967" target="_blank" rel="noopener noreferrer">#<!-- -->967</a> permission error on non-admin install</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/979" target="_blank" rel="noopener noreferrer">#<!-- -->979</a> improved color contrast in dark mode</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/994" target="_blank" rel="noopener noreferrer">#<!-- -->994</a> adjusted measure icon position when vertical scrollbars are always displayed</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/997" target="_blank" rel="noopener noreferrer">#<!-- -->997</a> adding support for measure filters in Query Builder</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/999" target="_blank" rel="noopener noreferrer">#<!-- -->999</a> fixed display of columns with open parenthesis as first character</li>
-<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/951" target="_blank" rel="noopener noreferrer">#<!-- -->951</a> moved Swap Delimiters / Debug Commas to advanced</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1062" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1062" data-type="issue">#1062</a> fix vertipaq analyzer showing &gt;unknown&lt; in summary pane for AAS / PBIP</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1060" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1060" data-type="issue">#1060</a> enabling Shift+Enter to be used as a custom hotkey</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1052" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1052" data-type="issue">#1052</a> disabled re-ordering of columns in vertipaq analyzer</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1036" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1036" data-type="issue">#1036</a> fix location of desktop shortcut file for Current User installs</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1030" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1030" data-type="issue">#1030</a> QueryBuilder measures missing table references when loading from file</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1029" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1029" data-type="issue">#1029</a> QueryBuilder IN filters not loading from file correctly</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1026" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1026" data-type="issue">#1026</a> improving VertiPaq Analyzer tooltips</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/1025" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1025" data-type="issue">#1025</a> fixing spelling / capitalization errors</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/968" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/968" data-type="issue">#968</a> Tool Window incorrectly docking</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/967" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/967" data-type="issue">#967</a> permission error on non-admin install</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/979" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/979" data-type="issue">#979</a> improved color contrast in dark mode</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/994" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/994" data-type="issue">#994</a> adjusted measure icon position when vertical scrollbars are always displayed</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/997" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/997" data-type="issue">#997</a> adding support for measure filters in Query Builder</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/999" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/999" data-type="issue">#999</a> fixed display of columns with open parenthesis as first character</li>
+<li class=""><a href="https://github.com/daxstudio/daxstudio/issues/951" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/951" data-type="issue">#951</a> moved Swap Delimiters / Debug Commas to advanced</li>
 <li class="">fixed metadata display for multi-dimensional models</li>
 <li class="">skip showing crash dialog if app is shutting down</li>
 <li class="">Improved generation of Define Measure and Define Dependent Measures</li>
