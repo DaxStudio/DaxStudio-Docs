@@ -49,6 +49,7 @@ type Cache = Record<string, CachedMeta>;
 
 let cache: Cache | null = null;
 let cacheLoadedFrom: string | null = null;
+let missingTokenWarned = false;
 
 function loadCache(file: string): Cache {
   if (cache && cacheLoadedFrom === file) return cache;
@@ -285,6 +286,17 @@ export default function autolinkGithub(options: Options) {
     }
 
     if (toFetch.length === 0) return;
+
+    if (!token && !missingTokenWarned) {
+      missingTokenWarned = true;
+      // eslint-disable-next-line no-console
+      console.warn(
+        '[github-autolink] GH_API_TOKEN env var is not set. ' +
+          `Falling back to unauthenticated GitHub API requests (60/hr limit). ` +
+          `${toFetch.length} issue reference(s) need to be fetched. ` +
+          'Set GH_API_TOKEN to raise the limit to 5000/hr.'
+      );
+    }
 
     let dirty = false;
     await Promise.all(

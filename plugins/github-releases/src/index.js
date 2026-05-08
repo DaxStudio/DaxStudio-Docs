@@ -4,6 +4,13 @@ module.exports = async function myPlugin(context, options) {
   const marked = require('marked');
 
   const token = process.env.GH_API_TOKEN;
+  if (!token) {
+    console.warn(
+      '[github-releases] GH_API_TOKEN env var is not set. ' +
+        'Falling back to unauthenticated GitHub API requests (60/hr limit). ' +
+        'Set GH_API_TOKEN to raise the limit to 5000/hr.'
+    );
+  }
   const headers = {
     Accept: 'application/vnd.github+json',
     'X-GitHub-Api-Version': '2022-11-28',
