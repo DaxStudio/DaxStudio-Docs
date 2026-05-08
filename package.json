@@ -15,10 +15,10 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.8.1",
-    "@docusaurus/plugin-client-redirects": "^3.8.1",
-    "@docusaurus/preset-classic": "^3.8.1",
-    "@docusaurus/theme-search-algolia": "^3.8.1",
+    "@docusaurus/core": "^3.10.1",
+    "@docusaurus/plugin-client-redirects": "^3.10.1",
+    "@docusaurus/preset-classic": "^3.10.1",
+    "@docusaurus/theme-search-algolia": "^3.10.1",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
@@ -35,10 +35,11 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-helmet": "^6.1.0",
+    "unist-util-visit": "^5.1.0",
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.8.1",
+    "@docusaurus/module-type-aliases": "^3.10.1",
     "@tsconfig/docusaurus": "^2.0.3",
     "@types/marked": "^6.0.0",
     "typescript": "^5.8.3"
@@ -57,5 +58,8 @@
   },
   "engines": {
     "node": ">=18.0"
+  },
+  "overrides": {
+    "webpack": "5.105.0"
   }
 }
