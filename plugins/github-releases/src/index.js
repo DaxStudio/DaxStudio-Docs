@@ -3,7 +3,7 @@ module.exports = async function myPlugin(context, options) {
   const Axios = require('axios');
   const marked = require('marked');
 
-  const token = process.env.GITHUB_TOKEN;
+  const token = process.env.GH_API_TOKEN;
   const headers = {
     Accept: 'application/vnd.github+json',
     'X-GitHub-Api-Version': '2022-11-28',
@@ -29,7 +29,7 @@ module.exports = async function myPlugin(context, options) {
           err.response && err.response.headers && err.response.headers['x-ratelimit-remaining'];
         console.warn(
           `[github-releases] Failed to load releases (status=${status}, rate-limit-remaining=${remaining}). ` +
-            `${token ? '' : 'Set the GITHUB_TOKEN env var to raise the rate limit from 60/hr to 5000/hr. '}` +
+            `${token ? '' : 'Set the GH_API_TOKEN env var to raise the rate limit from 60/hr to 5000/hr. '}` +
             'Continuing with an empty release list.'
         );
         return [];

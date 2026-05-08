@@ -14,7 +14,7 @@ interface Options {
    * immutable for documentation purposes.
    */
   cacheMaxAgeDays?: number;
-  /** Optional GitHub token. Defaults to GITHUB_TOKEN env var. */
+  /** Optional GitHub token. Defaults to the GH_API_TOKEN env var. */
   token?: string;
 }
 
@@ -123,7 +123,7 @@ export default function autolinkGithub(options: Options) {
     mode,
     cacheFile = path.resolve(__dirname, '..', '.cache', 'issues.json'),
     cacheMaxAgeDays = Infinity,
-    token = process.env.GITHUB_TOKEN,
+    token = process.env.GH_API_TOKEN,
   } = options;
 
   const maxAgeMs = cacheMaxAgeDays * 24 * 60 * 60 * 1000;
