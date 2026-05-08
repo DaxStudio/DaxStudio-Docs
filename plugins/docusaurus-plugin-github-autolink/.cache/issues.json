@@ -1,1 +1,217 @@
-{}
+{
+  "daxstudio/daxstudio#issue#1119": {
+    "title": "Query Builder does not save if you have read-only access to the data source",
+    "body": "Discussed in https://github.com/DaxStudio/DaxStudio/discussions/1115 DAX Studio throws an error trying to access the measure expression if the current user only has read-only access to the data source. A user should be able to save the current state…",
+    "fetchedAt": 1778235029434
+  },
+  "daxstudio/daxstudio#issue#1136": {
+    "title": "exporting data to sql server table: the given columnmapping does not match up with any column in the source or destination.",
+    "body": "exporting data to sql server table: the given columnmapping does not match up with any column in the source or destination.",
+    "fetchedAt": 1778235029435
+  },
+  "daxstudio/daxstudio#issue#1135": {
+    "title": "Add all columns from a table to the Query Builder",
+    "body": "Add the ability to drag a table to the QueryBuilder. Dropping a table object on the Query Builder will expand out to add all the columns from that table. After that individual columns can be removed if required. If there are existing columns from the…",
+    "fetchedAt": 1778235029462
+  },
+  "daxstudio/daxstudio#issue#1126": {
+    "title": "Recovered queries execute different query",
+    "body": "We have VMs which are shut down each evening, when I reopen DAX Studio the following day and recovery my queries and then create a new query it will attempt to execute one of the recovered queries instead, so the result set can be totally unrelated t…",
+    "fetchedAt": 1778235029464
+  },
+  "daxstudio/daxstudio#issue#1385": {
+    "title": "ServerTimings - Remove session context calls when simplifying DQ queries",
+    "body": "When running Server Timings against the Fabric service against a model with DQ storage there are now extra calls to sys.spsetsessioncontext which are not needed when performance tuning and should be removed when the option to simplify the scan querie…",
+    "fetchedAt": 1778235029464
+  },
+  "daxstudio/daxstudio#issue#1381": {
+    "title": "Change \"Exit\" to \"Close DAX Studio\" in the File menu",
+    "body": "It is not clear if \"Exit\" means \"exit DAX Studio\" or \"exit the File screen\" (i.e. a similar behaviour to pressing the \"back\" arrow). Please change \"Exit\" to \"Close DAX Studio\" to clarify what this menu item does.",
+    "fetchedAt": 1778235029464
+  },
+  "daxstudio/daxstudio#issue#1405": {
+    "title": "Add 'totals' to the PBI Performance panel",
+    "body": "When I am comparing iterations of data model changes, I like to compare the total performance of all objects, combined, from clicking through each page. (This is a different use case than trying to improve a specific visual.) It is a surprising numbe…",
+    "fetchedAt": 1778235029464
+  },
+  "daxstudio/daxstudio#issue#1111": {
+    "title": "Tripple Query Plan & Server Timings panes",
+    "body": "1. Open DAX Studio Connect to model and Check Server Timings & Query Plans 2. Save the file and close DS 3. Open DAX Studio Connect to model and Check Server Timings & Query Plans 4. Load the saved file and you will see tripple Query Plan and Server…",
+    "fetchedAt": 1778235029464
+  },
+  "daxstudio/daxstudio#issue#1387": {
+    "title": "Vertipaq Analzyer not working with non-default Entra account",
+    "body": "When you connect to a model that requires Entra ID authentication and you use a non-default Entra account you will see an error about the database or workspace not being found when trying to run View or Export Metrics",
+    "fetchedAt": 1778235029465
+  },
+  "daxstudio/daxstudio#issue#1403": {
+    "title": "Column or Measure names with ^ characters cause a crash",
+    "body": "If you have a column or measure name using the ^ character it crashes DAX Studio",
+    "fetchedAt": 1778235029465
+  },
+  "daxstudio/daxstudio#issue#1298": {
+    "title": "Excel Export File Size doubled Since version 3.0.11 !",
+    "body": "Describe the bug Since upgrading to version 3.0.11, the file size of Excel exports has more than doubled for the same dataset. Default settings ScreenShot",
+    "fetchedAt": 1778235029465
+  },
+  "daxstudio/daxstudio#issue#1099": {
+    "title": "VertiPaq analyzer rendering glitches",
+    "body": "Describe the bug The column headers displayed in the VertiPaq Analyzer tab can become out of sync with the column data. To Reproduce Steps to reproduce the behavior: 1. Open DAX Studio 2. Open VPAX (exported from TE 3.6.0) 3. Observe column alignment…",
+    "fetchedAt": 1778235029489
+  },
+  "daxstudio/daxstudio#issue#1376": {
+    "title": "Export to Compressed Parquet File",
+    "body": "Is your feature request related to a problem? Please describe. I want to save data from PBID to a compressed file, which can store a lot of data, which supports data types, which is popular. Describe the solution you'd like PBID can now import Parque…",
+    "fetchedAt": 1778235029490
+  },
+  "daxstudio/daxstudio#issue#1383": {
+    "title": "3.3.0 Audience Validation Failed",
+    "body": "Describe the bug Connecting using analysis services address fails to authenticate. To Reproduce Steps to reproduce the behavior: 1. Paste AAS address into Tabular Server prompt: example: asazure://westus.asazure.windows.net/<your environment 2. Click…",
+    "fetchedAt": 1778235029490
+  },
+  "daxstudio/daxstudio#issue#1302": {
+    "title": "Non-Resident Columns When \"DirectLake Scan Statistics from Data option\" = \"Full\"",
+    "body": "Describe the bug When viewing metrics with \"DirectLake Scan Statistics from Data option\" = \"Full\", numerous columns are annotated with warnings about possible inaccurate statistics. To Reproduce Steps to reproduce the behavior: 1. In DAX Studio 3.2.0…",
+    "fetchedAt": 1778235029490
+  },
+  "daxstudio/daxstudio#issue#1395": {
+    "title": "Copy results & Output to Clipboard",
+    "body": "DAX Studio v3.3.1.1098 Connection: PowerBIService - 17.0.29.21 Summary of Issue 1st issue - right clicking on the result to copy with headers, does not capture the details to the clipboard, till you repeat that action, additionally the previous clipb…",
+    "fetchedAt": 1778235029490
+  },
+  "daxstudio/daxstudio#issue#1169": {
+    "title": "Query Builder files not loading with Object reference not set to instance of an object",
+    "body": "Hello, My organization uses query builder files between teams. Version 3.08 fixed a glitch (1119) that was not allowing read only users to use Query Builder. Thank you @dgosbell!! With version 3.09, users are not able to open Query Builder files that…",
+    "fetchedAt": 1778235029528
+  },
+  "daxstudio/daxstudio#issue#1200": {
+    "title": "Error when opening any Power BI XMLA endpoint: \"The following error has occurred while updating the connection: An item with the same key has already been added\"",
+    "body": "Describe the bug Opening any powerbi:// endpoint fails with \"The following error has occurred while updating the connection: An item with the same key has already been added.\" To Reproduce 1. Open DAX Studio v3.0.10 2. Connect.Tabular Server.enter en…",
+    "fetchedAt": 1778235029588
+  },
+  "daxstudio/daxstudio#issue#1104": {
+    "title": "Missing Digital Signature in DaxStudio.exe after 3.0.5",
+    "body": "3.0.6 and 3.0.7 without Digital Signature in DaxStudio.exe in portable and installer version. https://daxstudio.org/docs/installation/smart-screen/",
+    "fetchedAt": 1778235029588
+  },
+  "daxstudio/daxstudio#issue#1128": {
+    "title": "Selected cell copy improvement in result table",
+    "body": "Is your feature request related to a problem? Please describe. Whenever I right click on the results grid and select copy, it always copies the whole table even when only one cell is selected. This makes it hard to easily add filters to the query bui…",
+    "fetchedAt": 1778235029601
+  },
+  "daxstudio/daxstudio#issue#1382": {
+    "title": "ServerTimings not working against PowerPivot",
+    "body": "Trying to run ServerTimings against PowerPivot crashes DAX Studio",
+    "fetchedAt": 1778235029605
+  },
+  "daxstudio/daxstudio#issue#1130": {
+    "title": "Add columns from a hierarchy when adding a hierarchy to query builder",
+    "body": "Is your feature request related to a problem? Please describe. As per the title. It's frustrating having to add them one by one. Describe the solution you'd like Have not only the hierarchy parent object added, but also all the child columns as well…",
+    "fetchedAt": 1778235029607
+  },
+  "daxstudio/daxstudio#issue#1105": {
+    "title": "Terminating \")\" of CallbackDataID is not highlighted",
+    "body": "In the xmSQL queries, the call to CallbackDataID is highlighted in yellow except for the terminating \")\". This \")\" should be highlighted in yellow as well especially since the \"(\" is already highlighted in yellow.",
+    "fetchedAt": 1778235029607
+  },
+  "daxstudio/daxstudio#issue#1123": {
+    "title": "Rename \"PowerPivot\" to \"Power Pivot\"",
+    "body": "\"PowerPivot\" refers to the Excel 2010 version of Power Pivot, which is no longer supported and which most people would not be using. The name given to current versions of Power Pivot is \"Power Pivot\". Please replace \"PowerPivot\" with \"Power Pivot\" wh…",
+    "fetchedAt": 1778235029607
+  },
+  "daxstudio/daxstudio#issue#1402": {
+    "title": "Define measures does not include the table name for format strings",
+    "body": "When a measure is defined that includes a formatstring expression the measure name for the formatstring does not include the table name.",
+    "fetchedAt": 1778235029613
+  },
+  "daxstudio/daxstudio#issue#1120": {
+    "title": "Syntax Error Message should be removed from Server Timings if the Check is passed",
+    "body": "There should be a timeout on the \"Query Running + Spinning Wheel\" when there is syntax issue, currently it keeps spinning endlessly. Another thing is if on the subsequent executions the code works then the yellow error message should disappear, curre…",
+    "fetchedAt": 1778235029610
+  },
+  "daxstudio/daxstudio#issue#1399": {
+    "title": "403 Error when connecting to Power BI Tabular Server",
+    "body": "Describe the bug Using DAX Studio V 3.3.2, I receive the following error when attempting to connect to a Tabular Server: \"Error Connecting: The remote server returned an error: 403 Forbidden.\" This does not happen when using the 3.2 version on the sa…",
+    "fetchedAt": 1778235029619
+  },
+  "daxstudio/daxstudio#issue#1305": {
+    "title": "All Queries error : CollectionView does not support changes from a thread different from the Dispatcher thread",
+    "body": "Discussed in https://github.com/DaxStudio/DaxStudio/discussions/1304 <div type='discussions-op-text' <supOriginally posted by infostreambe September 1, 2024</sup Hello, When I start the All Queries option, the error \"This type of CollectionView does…",
+    "fetchedAt": 1778235029622
+  },
+  "daxstudio/daxstudio#issue#1293": {
+    "title": "Vertipaq Analyzer Metric Options \"Learn More\" error",
+    "body": "Describe the bug When I click \"Learn More\" in the Metric options when trying to do the \"Vertipaq Analyzer\"... \"View Metrics\" window. I get taken to this URL which does not load \"http://localhost:3000/docs/features/model-metrics/metric-options-dialog\"…",
+    "fetchedAt": 1778235029628
+  },
+  "daxstudio/daxstudio#issue#1292": {
+    "title": "Funtion SUMARIZECOLUMNS problem with \"<>\" character",
+    "body": "DAX Studio v3.2.0.1036 Connection: PowerBIDesktop - 16.0.126.27 Summary of Issue When using \"<\" characters in the name parameter for SUMARIZECOLUMNS function doesnt show results in result table. Steps to Reproduce 1.Execute function with name column…",
+    "fetchedAt": 1778235029634
+  },
+  "daxstudio/daxstudio#issue#1389": {
+    "title": "Unable to close program windows with the X/Close button",
+    "body": "DAX Studio v3.3.1.1098 Connection: not connected Summary of Issue I'm unable to close e.g. the Connect window – which shows up automatically on program start up – or the About window by clicking on the X button in the top right of it. Nothing happens…",
+    "fetchedAt": 1778235029699
+  },
+  "daxstudio/daxstudio#issue#1392": {
+    "title": "DEFINE ALL MEASURES (all tables) should include a table in Measure name -  v3.3.1",
+    "body": "I wanted to dump all measures from all tables, and then re-use those measure definitions in an evaluate statement. DAX studio will provide the measure definition in the form of DEFINE ---- MODEL MEASURES BEGIN ---- MEASURE [measureone] = COUNTROWS(so…",
+    "fetchedAt": 1778235029706
+  },
+  "daxstudio/daxstudio#issue#1394": {
+    "title": "Vertipaq Analyzer does not allow sorting on the name column in some views",
+    "body": "In the Columns and Relationships tabs the name column does not currently support sorting by clicking on the column header like the other columns do",
+    "fetchedAt": 1778235029708
+  },
+  "daxstudio/daxstudio#issue#1306": {
+    "title": "Running DSCMD",
+    "body": "i am running this command and i am getting this issue",
+    "fetchedAt": 1778235029719
+  },
+  "daxstudio/daxstudio#issue#1390": {
+    "title": "3.3.1 Error Connecting: The logged in tenant of the user does not match the expected tenant",
+    "body": "Describe the bug Connecting using analysis services address fails to authenticate. To Reproduce Steps to reproduce the behavior: Go to AAS in azure example: asazure://westus.asazure.windows.net/ Choose account to log into Error: Error Connecting: The…",
+    "fetchedAt": 1778235029722
+  },
+  "daxstudio/daxstudio#issue#1388": {
+    "title": "Elpased Time resets to 00:00:0 after query execution",
+    "body": "In the recent versions (3.3.1 and one before that) Elapsed Timer at the bottom right side resets to 0 after a query is executed, earlier the total duration used to stay until next execution.",
+    "fetchedAt": 1778235029728
+  },
+  "daxstudio/daxstudio#issue#1172": {
+    "title": "The name of file of the model is always  \"Unknown.pbix\"",
+    "body": "DAX Studio v3.0.10.962 Connection: PowerBIDesktop - 16.0.92.17 Summary of Issue model file name is always \"Unknown.pbix\" Steps to Reproduce I encountered this problem after July 2023. Before that, the Advanced-VertiPaq Analyzer-Summary menu section s…",
+    "fetchedAt": 1778235029750
+  },
+  "daxstudio/daxstudio#issue#1170": {
+    "title": "Cancelling close still closes open documents",
+    "body": "When you close the application and you have a document with unsaved changes a dialog box appears. If you cancel the save changes dialog the documents should remain open, but the currently close without saving changes",
+    "fetchedAt": 1778235029750
+  },
+  "daxstudio/daxstudio#issue#1188": {
+    "title": "Testing RLS in one model (SASS), getting error about no access to dropdown default model",
+    "body": "DAX Studio v3.0.8.945 Connection: not connected Summary of Issue Opening DAX Studio, connecting to on premisse SSAS environment, selecting another model than the default. When entering query, no problem, results. However when I want to test with anot…",
+    "fetchedAt": 1778235029752
+  },
+  "daxstudio/daxstudio#issue#1171": {
+    "title": "No results displayed on Load Perf Data",
+    "body": "DAX Studio v3.0.10.962 Connection: PowerBIDesktop - 16.0.92.17 Summary of Issue After selecting the exported PowerBIPerformanceData.json file, Load Perf Data doesn't show any data. Error: Error Loading Power BI Performance Data: the value cannot be n…",
+    "fetchedAt": 1778235029956
+  },
+  "daxstudio/daxstudio#issue#1189": {
+    "title": "Vertipaq Analyzer Summary - Column count should exclude RowNumber columns",
+    "body": "As per this issue https://github.com/tabulartools/dax-optimizer/issues/14 there is inconsistency between the way some tools that consume vpax files count the number of columns. The RowNumber columns should be excluded from the total column count sinc…",
+    "fetchedAt": 1778235030142
+  },
+  "daxstudio/daxstudio#issue#1178": {
+    "title": "DAX Studio Query Builder error: \"You do not have admin rights to the model\"",
+    "body": "Describe the bug In DAX Studio, once connected to the PBI model and going to the Query Builder to create a new message, the following error pops up: \"The measure expression is blank. This can happen if you do not have admin rights to the data model\".…",
+    "fetchedAt": 1778235030174
+  },
+  "daxstudio/daxstudio#issue#1180": {
+    "title": "Problem with Dates Between when using Parameters",
+    "body": "DAX Studio v3.0.10.962 Connection: PowerBIDesktop - 16.0.96.20 Summary of Issue Connected to Power BI Service data source. Want to have variable start and end dates. DAX Studio will not prompt for the @startdate which in turn leads to \"@startdate par…",
+    "fetchedAt": 1778235030175
+  }
+}
