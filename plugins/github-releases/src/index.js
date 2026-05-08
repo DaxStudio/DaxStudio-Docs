@@ -32,14 +32,16 @@ module.exports = async function myPlugin(context, options) {
         return releases.data;
       } catch (err) {
         const status = err.response && err.response.status;
-        const remaining =
-          err.response && err.response.headers && err.response.headers['x-ratelimit-remaining'];
-        console.warn(
-          `[github-releases] Failed to load releases (status=${status}, rate-limit-remaining=${remaining}). ` +
-            `${token ? '' : 'Set the GH_API_TOKEN env var to raise the rate limit from 60/hr to 5000/hr. '}` +
-            'Continuing with an empty release list.'
+        const headersOut = (err.response && err.response.headers) || {};
+        const remaining = headersOut['x-ratelimit-remaining'];
+        const reset = headersOut['x-ratelimit-reset'];
+        const resetIso = reset ? new Date(Number(reset) * 1000).toISOString() : 'unknown';
+        const hint = !token
+          ? 'Set the GH_API_TOKEN env var to raise the rate limit from 60/hr to 5000/hr.'
+          : 'GH_API_TOKEN is set but the request still failed — verify the token is valid and not expired.';
+        throw new Error(
+          `[github-releases] Failed to load releases (status=${status}, rate-limit-remaining=${remaining}, reset=${resetIso}). ${hint}`
         );
-        return [];
       }
     },
     async contentLoaded({content, actions}) {
@@ -51,7 +53,7 @@ module.exports = async function myPlugin(context, options) {
         JSON.stringify(content)
       );
 
-      setGlobalData({'latest_release': content[0] || null,'all_releases': content});
+      setGlobalData({'latest_release': content[0],'all_releases': content});
       
       // Add the '/friends' routes, and ensure it receives the friends props
       addRoute({

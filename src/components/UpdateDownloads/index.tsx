@@ -11,6 +11,17 @@ class UpdateDownloads extends React.Component<UpdateDownloadsProps> {
     render() {
         const {type} = this.props;
 
+        // This component depends on localStorage and the GitHub API, neither of
+        // which should be touched during server-side rendering. Bail out early
+        // on the server to avoid hitting the GitHub API rate limit (60/hr per
+        // IP unauthenticated) during the static build.
+        if (typeof window === 'undefined') {
+            return (
+                <span>&nbsp;|&nbsp;downloads: <span id="download_cnt" className='badge badge-info'>0</span>
+                </span>
+            );
+        }
+
         //console.log('onload executed (' + type + ")");
         var install_cnt = 0;
         if (typeof(Storage) !== "undefined") {
