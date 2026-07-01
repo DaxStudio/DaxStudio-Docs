@@ -14,14 +14,32 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.ab93dd37.css">
-<script src="/assets/js/runtime~main.5f4bf97c.js" defer="defer"></script>
-<script src="/assets/js/main.a58dcda2.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e11bd8a0.js" defer="defer"></script>
+<script src="/assets/js/main.d630f4b3.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.5.2</div><div><div class=""><h1>v3.5.2</h1><div><h1>DAX Studio 3.5.2</h1>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.6.0.1211</div><div><div class=""><h1>v3.6.0.1211</h1><div><h1>DAX Studio 3.6.0 Preview release</h1>
+<h2>Updates</h2>
+<ul>
+<li>#1437 Added benchmark command to dscmd (thanks @savoy9)</li>
+<li>added support for preview release notifications</li>
+<li>added search to File &gt; Open</li>
+</ul>
+<h2>Fixes</h2>
+<ul>
+<li>fixed search in database dialog</li>
+<li>improved opening SQL Profiler</li>
+<li>updated SqlClient</li>
+<li>updated HttpClient to WebRequest</li>
+<li>updated daxformatter endpoint</li>
+<li>consolidated cmdline parsing to use SpectreConsole.CLI for both the UI and commandline projcts</li>
+<li>enabled .net framework and .net core builds</li>
+<li>fixed various crash reports</li>
+</ul>
+</div></div></div><div><div class=""><h1>v3.5.2</h1><div><h1>DAX Studio 3.5.2</h1>
 <h2>Updates</h2>
 <ul>
 <li>removed unneeded dependencies</li>
@@ -546,47 +564,6 @@
 <li>#613 DMV and Function drag/drop not working</li>
 <li>#647 Hiding hidden objects was not working correctly with items in display folders</li>
 <li>#643 fixing issue with code completion window &quot;sticking&quot;</li>
-</ul>
-</div></div></div><div><div class=""><h1>v2.15.0</h1><div><h2>New Features</h2>
-<ul>
-<li>#559 Added a toolbar button and right-click menu to copy Server Timing metrics</li>
-<li>#556 Added an option to play a sound after long running operations</li>
-<li>Added &quot;Duplicate Measure&quot; right-click menu to Query Builder</li>
-<li>Added Error events to All Queries trace</li>
-<li>#568 Added right-click menu option in the editor to go to dax.guide for functions</li>
-<li>#569 Added Function tooltip display when hovering the mouse over functions in the editor</li>
-<li>Added setup cmdline parameter docs</li>
-<li>Added SQLBI videos to docs</li>
-<li>Added discussions link to website navigation</li>
-<li>Updated Multiple Query Detection to work with <code>// Dax Query</code> in addition to <code>// SQL Query</code> comments</li>
-</ul>
-<h2>Fixes</h2>
-<ul>
-<li>Adding extra checks around QueryEnd timeout in Server Timings</li>
-<li>Close the Trace Layout ribbon tab when all documents are closed</li>
-<li>Made &#39;Add New&#39; disabled in the Query Builder if the current model has no tables</li>
-<li>Fixed #458 added docs and tooltip to explain memory sizes</li>
-<li>Fixed #517 updated clipboard bindings to allow for copying from the View Metrics tabs</li>
-<li>Fixed #539 error starting traces when using Roles or EffectiveUserName</li>
-<li>Fixed bug in retry for ViewMetrics when there is an error reading statistical information.</li>
-<li>Added configuration to read statistical data for VertiPaq Analyzer. Disable reading statistical data for legacy versions of SSAS. Added retry logic and log of warning if there is an error reading statistical data.</li>
-<li>Fixed #525 F1 and Context Menu to open dax.guide for functions</li>
-<li>Fixed server timings trace for PowerPivot</li>
-<li>Fixed drag drop issues with QueryBuilder</li>
-<li>Fixed #514 Server Trace not working in Excel</li>
-<li>Fixed #520 option to not truncate tables was not working when exporting to SQL Server</li>
-<li>Fixed #511 Excessive metadata refreshes was causing metadata pane to collapse</li>
-<li>Fixed #512 fixed Table tooltip warnings and added measure count</li>
-<li>Fixed #546 corrected wording in error message</li>
-<li>Fixed #549 correctly escape connection string values containing special characters</li>
-<li>Fixed #557 delimiter error on Clear Cache when using non-US delimiter style</li>
-<li>Fixed a bug with the Roles parameter in the advanced connection properties not accepting spaces</li>
-<li>Fixed #563 metadata incorrectly resetting when using a combination of mouse selection and query builder hotkeys</li>
-<li>Fixed #564 Application crashes when clicking on a ribbon tab while the ribbon is collapsed</li>
-<li>Fixed crash when resetting key bindings</li>
-<li>Fixed #575 autocomplete sometimes stops working</li>
-<li>Disabled the Add Measure button when connected to a model with no tables</li>
-<li>Fixed #576 Editing an existing Measure in Query Builder against PowerPivot causes a crash</li>
 </ul>
 </div></div></div></div></div>
 </body>
