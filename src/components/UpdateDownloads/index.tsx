@@ -4,12 +4,14 @@ import Axios from 'axios'
 interface UpdateDownloadsProps
 {
     type : string
+    releaseTag?: string
+    cacheBucket?: 'main' | 'preview'
 }
 
 class UpdateDownloads extends React.Component<UpdateDownloadsProps> {
     //handleOnFocus() { console.log("hello from updateDownloads");}
     render() {
-        const {type} = this.props;
+        const {type, releaseTag, cacheBucket = 'main'} = this.props;
 
         // This component depends on localStorage and the GitHub API, neither of
         // which should be touched during server-side rendering. Bail out early
@@ -24,10 +26,12 @@ class UpdateDownloads extends React.Component<UpdateDownloadsProps> {
 
         //console.log('onload executed (' + type + ")");
         var install_cnt = 0;
+        const storageKey = cacheBucket === 'preview' ? 'release_preview' : 'release';
+
         if (typeof(Storage) !== "undefined") {
             // Code for localStorage/sessionStorage.
-            if (localStorage.release) {
-                var release = JSON.parse(localStorage.release);
+            if (localStorage[storageKey]) {
+                var release = JSON.parse(localStorage[storageKey]);
             }
         } else {
             // Sorry! No Web Storage support..
@@ -49,38 +53,40 @@ class UpdateDownloads extends React.Component<UpdateDownloadsProps> {
         
         // we only refresh the download count if it's older than 1 hour to try
         // and prevent errors from github rate limiting the api
-        if (!release || hoursSinceDownloadRefresh > 1 || !release.downloadCnt)
+        const releaseTagMismatch = !!releaseTag && release && release.tagName !== releaseTag;
+        if (!release || hoursSinceDownloadRefresh > 1 || !release.downloadCnt || releaseTagMismatch)
         {
 
             //var request = new XMLHttpRequest();
             var zipCnt = 0;
             var exeCnt = 0;
 
-            const releases = Axios.get('https://api.github.com/repos/daxstudio/daxstudio/releases/latest');
+            const requestUrl = releaseTag
+                ? `https://api.github.com/repos/daxstudio/daxstudio/releases/tags/${encodeURIComponent(releaseTag)}`
+                : 'https://api.github.com/repos/daxstudio/daxstudio/releases/latest';
+            const releases = Axios.get(requestUrl);
             releases.then((response) => {
 
                 //console.log(response.data);
                 var data = response.data;
-                data.assets.forEach(function(asset){
+                data.assets.forEach(function(asset: { name: string; download_count: number; }){
                     if (asset.name.endsWith(".zip")) {zipCnt = asset.download_count}
                     if (asset.name.endsWith(".exe")) {exeCnt = asset.download_count}    
-
-                    var localData = {
-                        refreshDate: new Date(),
-                        downloadCnt: exeCnt,
-                        downloadCntZip: zipCnt,
-                        tagName: data.tag_name
-                    }
-            
-                    if (typeof(Storage) !== "undefined") {
-                        
-                        localStorage.release = JSON.stringify(localData);
-                    }
-                    
-                    //console.log('downloads: ' + data.assets[0].download_count);
-                    install_cnt =  type == 'zip' ? localData.downloadCntZip : localData.downloadCnt ;
-
                 });
+
+                var localData = {
+                    refreshDate: new Date(),
+                    downloadCnt: exeCnt,
+                    downloadCntZip: zipCnt,
+                    tagName: data.tag_name
+                }
+        
+                if (typeof(Storage) !== "undefined") {
+                    localStorage[storageKey] = JSON.stringify(localData);
+                }
+                
+                //console.log('downloads: ' + data.assets[0].download_count);
+                install_cnt =  type == 'zip' ? localData.downloadCntZip : localData.downloadCnt ;
    
             });
 

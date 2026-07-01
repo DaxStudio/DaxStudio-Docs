@@ -213,5 +213,415 @@
     "title": "Problem with Dates Between when using Parameters",
     "body": "DAX Studio v3.0.10.962 Connection: PowerBIDesktop - 16.0.96.20 Summary of Issue Connected to Power BI Service data source. Want to have variable start and end dates. DAX Studio will not prompt for the @startdate which in turn leads to \"@startdate par…",
     "fetchedAt": 1778235030175
+  },
+  "daxstudio/daxstudio#issue#1400": {
+    "title": "dscmd stopped working",
+    "body": "When I try to execute dscmd (which has been working fine until the last few days), it just puts up the banner and exits with no error. Even if I mess up one of the parms, it does not catch it. dscmd csv myfile.csv -s myserver -d mydb -q \"EVALUATE MAS…",
+    "fetchedAt": 1779751228696
+  },
+  "daxstudio/daxstudio#issue#1288": {
+    "title": "Add VertiPaq Analyzer `columnBatchSize` parameter to UI",
+    "body": "Is your feature request related to a problem? Please describe. Hi Darren, Following the addition of the new columnBatchSize parameter in version 1.7.0 of the VertiPaq Analyzer library, I am opening this issue to track the request for supporting this…",
+    "fetchedAt": 1779751228696
+  },
+  "daxstudio/daxstudio#issue#1439": {
+    "title": "Add FUNCTION as a query keyword for Intellisense",
+    "body": "Add FUNCTION as a query keyword for Intellisense",
+    "fetchedAt": 1779751228697
+  },
+  "daxstudio/daxstudio#issue#1284": {
+    "title": "dscmd is asking for server when the connection string is passed to it",
+    "body": "Discussed in https://github.com/DaxStudio/DaxStudio/discussions/1281 <div type='discussions-op-text' <supOriginally posted by tnhurst57 August 3, 2024</sup Here is the dialog - Docs says server not required if passing connection string. Trying to que…",
+    "fetchedAt": 1779751228697
+  },
+  "daxstudio/daxstudio#issue#1283": {
+    "title": "dscmd --tables parameter not working",
+    "body": "In the and commands it should be possible to pass in a list of tables to export rather than exporting all tables. Currently this throws a parsing error.",
+    "fetchedAt": 1779751228697
+  },
+  "daxstudio/daxstudio#issue#1396": {
+    "title": "Cannot invoke search and Search and Replace",
+    "body": "These functions cannot be invoked by the clicking on the ribbon or by keyboard shortcuts. DAX Studio v3.3.2.1107 Connection: PowerBIDesktop - 17.0.26.19 Summary of Issue Steps to Reproduce 1. Run from PBI external tools 2. search and define a measure…",
+    "fetchedAt": 1779751228703
+  },
+  "daxstudio/daxstudio#issue#1444": {
+    "title": "Query Plan doesn't update after hiding the pane",
+    "body": "Query Plan doesn't update once you hide the pane with CTRL + R a feature introduced in 863 Here is a demo of the bug: https://github.com/user-attachments/assets/2cd58371-1407-4c41-8eee-2dc2f1ae10b3 Version used - 3.5.1",
+    "fetchedAt": 1779751228710
+  },
+  "daxstudio/daxstudio#issue#1446": {
+    "title": "Capture Diagnostics Bug for Subsequent Runs",
+    "body": "Capture Diagnostics under Load Perf Data crashes DS if ran twice. DaxStudio-20260422.log PowerBIPerformanceData.json https://github.com/user-attachments/assets/99da07a8-cec9-4694-8ed0-567f438a40b8",
+    "fetchedAt": 1779751228711
+  },
+  "daxstudio/daxstudio#issue#1289": {
+    "title": "dscmd giving error when running csv command with over 1000 rows",
+    "body": "Discussed in https://github.com/DaxStudio/DaxStudio/discussions/1287 <div type='discussions-op-text' <supOriginally posted by tnhurst57 August 6, 2024</sup Not sure what this error means. I am attempting to export a Power BI dataset to a file. C:\\Use…",
+    "fetchedAt": 1779751228719
+  },
+  "daxstudio/daxstudio#issue#1282": {
+    "title": "When I create a new measure in DAX Studio, I can't change the name.  Now my calculated measures are named \"MyMeasure\", \"MyMeasure1\", etc.",
+    "body": "Describe the bug A clear and concise description of what the bug is. To Reproduce Steps to reproduce the behavior: 1. Go to '...' 2. Click on '....' 3. Scroll down to '....' 4. See error Expected behavior A clear and concise description of what you e…",
+    "fetchedAt": 1779751228719
+  },
+  "daxstudio/daxstudio#issue#1442": {
+    "title": "DSCMD.EXE vpax FAILS if the semantic model name contains an apostrophe",
+    "body": "DSCMD.EXE vpax FAILS if the semantic model name contains an apostrophe Describe the bug If the semantic model name contains an apostrophe (ex. L'exposition), the error \"is an invalid key-value set.Parameter name: keyValueSet\" and the VPAX is not extr…",
+    "fetchedAt": 1779751228724
+  },
+  "daxstudio/daxstudio#issue#1443": {
+    "title": "Trim DAX DQAS query in Server Timings",
+    "body": "A simple DAX query that uses DQAS connection hangs DAX Studio for more than a minute, the event line for DQAS contains way too many tuples, if you click on such a query DAX Studio becomes unresponsive and once it is working, scrolling through that qu…",
+    "fetchedAt": 1779751228724
+  },
+  "daxstudio/daxstudio#issue#1445": {
+    "title": "SQL Server Profiler v22.4.1 Greyed out",
+    "body": "I have SQL Server Profiler v22.4.1 installed (under SQL Server Tools v22) and DAX Studio 3.5.1. When I go to Advanced - SQL Profiler, the icon is greyed out and I can't click it, even when I'm connected a Power BI Model in Power BI Desktop. I've foll…",
+    "fetchedAt": 1779751228731
+  },
+  "daxstudio/daxstudio#issue#1440": {
+    "title": "Export to parquet getting error: method or operation is not implemented",
+    "body": "Describe the bug I facing an issue with parquet export but only when export for second time. I run a query, export to excel first and next to that export to parquet, facing the error message: The method or operation is not implemented. This issue is…",
+    "fetchedAt": 1779751228737
+  },
+  "daxstudio/daxstudio#issue#1415": {
+    "title": "Exporting to Parquet file type",
+    "body": "When I try to export to Parquet I see the \"counting bug\" mentioned in an earlier issue. When the export is completed appears: \"11/8/2025 8:09:01 PM Exported 1,205 rows to 'dimRetro Games Log'.csv,\" 1 Not all the table rows get exported. - For example…",
+    "fetchedAt": 1779751228811
+  },
+  "daxstudio/daxstudio#issue#1417": {
+    "title": "Update ODC name in OdcHelper.cs",
+    "body": "When using Analyze in Excel, the connection name was set to \"mtbsql608v-devmssqlinst01 PRS Model\", which is confusing and sounds like the name of a local model from our appreciated DaxStudio devs. Suggesting to change it to \"DAX Studio Analyze in Exc…",
+    "fetchedAt": 1779751229269
+  },
+  "daxstudio/daxstudio#issue#1425": {
+    "title": "Export data with excel format",
+    "body": "DAX Studio v3.4.0.1135 Connection: not connected Summary of Issue: After you export data in excel format, and tries to import that data in power query, it crashes issuing data format error. You have to open the xlsx file in excel, save as rewriting t…",
+    "fetchedAt": 1779751229269
+  },
+  "daxstudio/daxstudio#issue#1331": {
+    "title": "Typing 1 or 2 opens intellisense",
+    "body": "If you type 1 or 2 tthen that opens up intellisense, it isn't a problem in some situations but if the cursor is over the region of the Intellisense then even after removing the numbers the intellisense stays on the screen covering the code. https://g…",
+    "fetchedAt": 1779751229269
+  },
+  "daxstudio/daxstudio#issue#1359": {
+    "title": "ServerTimings - include error message when saving",
+    "body": "If you run server timings, but get an error it does not currently get captured when you save. It would be handy to have this information saved. It is also not possible to copy from the error message which can make it hard to share things like the Req…",
+    "fetchedAt": 1779751229269
+  },
+  "daxstudio/daxstudio#issue#1370": {
+    "title": "Add a tooltip to \"View As\" in the \"Advanced\" tab",
+    "body": "It is currently the only button in the Ribbon that does not have a tooltip.",
+    "fetchedAt": 1779751229270
+  },
+  "daxstudio/daxstudio#issue#863": {
+    "title": "CTRL + R to show hide the panes",
+    "body": "I think a shortcut CTRL + R like SSMS would be useful in hiding/unhiding the Output/Result/Query History/ Server Timings panes, so instead of resizing it continuously we can temporarly hide them while writing long code.",
+    "fetchedAt": 1779751229271
+  },
+  "daxstudio/daxstudio#issue#1368": {
+    "title": "Add a right-click menu, with \"Copy\" and \"Select All\", to the VertiPaq Analyzer",
+    "body": "Go to the \"Advanced\" tab and click on \"View Metrics\" to bring up the VertiPaq Analyzer. You can select data just fine with the mouse, but, to copy the data, you must use a keyboard shortcut (Ctrl + C for most people). It would be nice if you could ri…",
+    "fetchedAt": 1779751229271
+  },
+  "daxstudio/daxstudio#issue#1336": {
+    "title": "Switching connection from PBI to SSAS On premise doesn't allow ST to activate",
+    "body": "If you launch DS from PBI Desktop and run queries while ST and QP are active and then switch to SSAS on premise then ST stops working while QP works just fine. This doesn't happen when you do the same process but start with SSAS and then move to PBI…",
+    "fetchedAt": 1779751229271
+  },
+  "daxstudio/daxstudio#issue#1424": {
+    "title": "Typo in error message",
+    "body": "DAX Studio v3.4.0.1135 Connection: PowerBIService - 17.0.47.18 Summary of Issue Error message says :\"12/5/2025 11:41:05 AM You do not sufficient permission to clear the cache\" Should say:\"12/5/2025 11:41:05 AM You do not have sufficient permission to…",
+    "fetchedAt": 1779751229284
+  },
+  "daxstudio/daxstudio#issue#1323": {
+    "title": "DAX & DQ both are shown when Selecting DAX Query Only",
+    "body": "When working with DQ, if you paste the performance analyzer export in DS and choose the option DAX Query only, it pastes both DAX and SQL. https://github.com/user-attachments/assets/3e60b266-5b40-4366-9c0c-f9a483debcc7",
+    "fetchedAt": 1779751229283
+  },
+  "daxstudio/daxstudio#issue#1414": {
+    "title": "Export Data to Parquet Progress not reporting correctly",
+    "body": "When using Export Data to Parquet files the progress bounces between 5,000 and 10,000 even when there are lots more rows in the source table",
+    "fetchedAt": 1779751229284
+  },
+  "daxstudio/daxstudio#issue#1358": {
+    "title": "Add line numbers to xmSQL in ServerTimings",
+    "body": "When helping people do performance tuning remotely or via screenshare it would be helpful to have line numbers in the xmSQL pane.",
+    "fetchedAt": 1779751229284
+  },
+  "daxstudio/daxstudio#issue#1371": {
+    "title": "\"File\" → \"Exit\" exits DAX Studio without bringing up the \"Unsaved Changes\" window",
+    "body": "If you try to close out of DAX Studio using the \"X\" in the top right corner of the window and you have unsaved changes in your queries, the \"Unsaved Changes\" window will appear to ask you if you want to save or not save your queries or if you want to…",
+    "fetchedAt": 1779751229302
+  },
+  "daxstudio/daxstudio#issue#1421": {
+    "title": "Can't connect to Power BI models without tenant ID in URL in versions 3.3.0+",
+    "body": "DAX Studio v3.4.0.1135 Connection: not connected Summary of Issue Normally we connect to our PBI models using an XMLA connection string like powerbi://api.powerbi.com/v1.0/ourdomain.com/QACust However, starting in version 3.3.0 this stopped working.…",
+    "fetchedAt": 1779751229302
+  },
+  "daxstudio/daxstudio#issue#1332": {
+    "title": "Define Dependent Measures feature doesn’t work",
+    "body": "Define Dependent Measures feature doesn’t work in Power BI reports that were developed in an older version of PBI. To Reproduce Steps to reproduce the behavior: 1. Open DAX Studio via a PBI report that was developed in an older version, preferably a…",
+    "fetchedAt": 1779751229302
+  },
+  "daxstudio/daxstudio#issue#1434": {
+    "title": "Update GlobalSign Code Signing Timestamp URL",
+    "body": "Hi, GlobalSign is migrating to a new CA hierarchy for Code Signing timestamps effective March 4, 2026. As part of this migration, they are recommending to move to the new endpoint: References: Official timestamp URL https://support.globalsign.com/cod…",
+    "fetchedAt": 1779751229302
+  },
+  "daxstudio/daxstudio#issue#1369": {
+    "title": "Add tooltips to the column headers of \"Server Timings\"",
+    "body": "Go to the \"Home\" tab and click on \"Server Timings\". If you hover over the column headers, nothing happens. Instead, a tooltip with additional information about the column should appear, similar to what happens in the \"Log\", \"History\", and \"VertiPaq A…",
+    "fetchedAt": 1779751229302
+  },
+  "daxstudio/daxstudio#issue#1356": {
+    "title": "Crashes when defining a measure within a query",
+    "body": "DAX Studio v3.2.2.1066 Connection: PowerBIDesktop - 17.0.14.21 Summary of Issue Steps to Reproduce 1. Twice (two sessions) I right-clicked on a measure and selected Define Measure. Both times it crashed. The second time I tried to report it and it sa…",
+    "fetchedAt": 1779751229303
+  },
+  "daxstudio/daxstudio#issue#1427": {
+    "title": "EVALUATEANDLOG Trace stops when used over a Table.",
+    "body": "When using Evaluate & Log if you wrap a table inside EVALUATEANDLOG function, instead of throwing error or showing the LOG the trace completely stops. Demo: https://github.com/user-attachments/assets/a520a108-e75e-4e78-8f2f-da96051d9342 Log: DaxStudi…",
+    "fetchedAt": 1779751229309
+  },
+  "daxstudio/daxstudio#issue#1324": {
+    "title": "Error \"This type of CollectionView does not support changes to its SourceCollection from a thread different from the Dispatcher thread\" when starting \"All Queries\" trace",
+    "body": "Hi there! I'm having a problem when trying to execute an All Queries trace. When I try to start it, Dax Studio gives me an error saying \"This type of CollectionView does not support changes to its SourceCollection from a thread different from the Dis…",
+    "fetchedAt": 1779751229320
+  },
+  "daxstudio/daxstudio#issue#1361": {
+    "title": "Display Query errors in the results area",
+    "body": "Query errors should display in the results pane to make them easier to find and read. This will also mitigate the issue of looking at previous results when the error has failed and the difficulty scrolling to long errors in the Log pane",
+    "fetchedAt": 1779751229320
+  },
+  "daxstudio/daxstudio#issue#1268": {
+    "title": "View As - not usable",
+    "body": "DAX Studio v3.0.11.982 Connection: AzureAnalysisServices - 16.0.138.22 Summary of Issue View As - window does not allow resize, is not displaying all items, window is too big to enable us to click buttons at the bottom of the window. As a result unab…",
+    "fetchedAt": 1782216266131
+  },
+  "daxstudio/daxstudio#issue#1213": {
+    "title": "Formatted files and results grid not showing correct formats",
+    "body": "I experienced the exact error described in the bug report on this link. https://github.com/DaxStudio/DaxStudio/issues/1209 I followed advice and updated my Dax Studio. It had the desired result and the error disappeared. Unfortunately it affected the…",
+    "fetchedAt": 1782216266132
+  },
+  "daxstudio/daxstudio#issue#1262": {
+    "title": "\"View As\" Does Not Work Properly when Connected to a Power BI XMLA Endpoint",
+    "body": "DAX Studio v3.0.11.982 Connection: PowerBIService - 16.0.134.24 Summary of Issue When connected to a Power BI (workspace) XMLA endpoint, using View As -- Other User, the value provided for the impersonation does not work. The service appears to think…",
+    "fetchedAt": 1782216266132
+  },
+  "daxstudio/daxstudio#issue#1228": {
+    "title": "default seperator/delimiter is not taken into account by query builder",
+    "body": "DAX Studio v3.0.11.982 Connection: PowerPivot - 13.0.1700.1119 Summary of Issue a) If default delimiter/seperator is set to semicolon \";\" query builder ignore this and use comma \",\" instead b) in some cases (not always) swap delimiter will replace th…",
+    "fetchedAt": 1782216266132
+  },
+  "daxstudio/daxstudio#issue#1241": {
+    "title": "Using DAX Studio for first time- need help with connecting",
+    "body": "Describe the bug Install DAX Studio for first time. When I open it I get the screen in the screen shot I attached since this is my first time using it I'll need an explanation on the following why are the options for Power BI and Power Pivot Model Gr…",
+    "fetchedAt": 1782216266132
+  },
+  "daxstudio/daxstudio#issue#1179": {
+    "title": "Trace Stopped: QueryEnd event not received - End Event Timeout exceeded.",
+    "body": "If you switch on Query Plan and Server Timings and then run any query 26 times then DAX Studio disconnects from server and throws this error: Query: EVALUATE { COUNTROWS ( Sales ) } Live Example: https://github.com/DaxStudio/DaxStudio/assets/73054674…",
+    "fetchedAt": 1782216266133
+  },
+  "daxstudio/daxstudio#issue#1264": {
+    "title": "Incorrect Total Time in bottom right side",
+    "body": "For a very specific query that I wrote I have noticed DS is reporting incorrect time on the bottom right. For example if I run this: It reports 3 seconds, which is correct: But if I run this query it always shows 00:00:5 Customer[First Letter A] = LE…",
+    "fetchedAt": 1782216266133
+  },
+  "daxstudio/daxstudio#issue#1124": {
+    "title": "Label the zoom level more clearly",
+    "body": "The zoom level is indicated in a dropdown box in the bottom right corner of the DAX query pane. However, the function of this dropdown box is not immediately obvious. Please make it clearer that this is the zoom level by: - Labelling the dropdown box…",
+    "fetchedAt": 1782216266133
+  },
+  "daxstudio/daxstudio#issue#1204": {
+    "title": "Change Font or Background color of error messages",
+    "body": "When using Windows Night Light (to prevent strain on eyes) the error message's appearance is very taxing on eyes and after spending 2-5 seconds it becomes difficult to read the text, can you please change it to a color that's easier to read. I would…",
+    "fetchedAt": 1782216266133
+  },
+  "daxstudio/daxstudio#issue#1330": {
+    "title": "Font Zoom",
+    "body": "DAX Studio v3.2.1.1046 Connection: PowerBIDesktop - 16.0.156.25 Summary of Issue When I hold the Ctrl Button and scroll the mousewheel, I expect the font to gradually change size. Instead it makes very large jumps from one size to the next. Can you m…",
+    "fetchedAt": 1782216266166
+  },
+  "daxstudio/daxstudio#issue#951": {
+    "title": "Swap Delimiters Missing in Dax 3.0",
+    "body": "Hello Community, An important feature for me is the swap delimiters (, for ;) and I've found that it went missing in the new update (3.0). The \"debug commas\" took it's place. I've tried to use the replace function but it didn't work for me and i've f…",
+    "fetchedAt": 1782216266555
+  },
+  "daxstudio/daxstudio#issue#861": {
+    "title": "Make downloads more secure",
+    "body": "Can you please Provide SHA-256 hashes for the downloads, to make them more secure Thanks",
+    "fetchedAt": 1782216266556
+  },
+  "daxstudio/daxstudio#issue#866": {
+    "title": "Add 'Copy with Headers' as an option in the Results tab",
+    "body": "Describe the solution you'd like Within the 'Results' tab, add an option (as is available in SSMS) to copy the results with the header row. In SSMS there's also a shortcut (Ctrl+Shift+C)",
+    "fetchedAt": 1782216266556
+  },
+  "daxstudio/daxstudio#issue#1094": {
+    "title": "Remove unwanted addresses in recent server list",
+    "body": "Discussed in https://github.com/DaxStudio/DaxStudio/discussions/1093 <div type='discussions-op-text' <supOriginally posted by kamilsoszka April 8, 2023</sup Is it possible to remove the unused address for the tabular server ? The following image indi…",
+    "fetchedAt": 1782216266557
+  },
+  "daxstudio/daxstudio#issue#1060": {
+    "title": "Enable hotkey support for Shift+Enter",
+    "body": "A number of other products in the data space such as python notebooks support Shift+Enter as a way of executing the current query/statement. This currently does not work in DAX Studio and Shift+Enter just adds a new line in the editor. It would be gr…",
+    "fetchedAt": 1782216266557
+  },
+  "daxstudio/daxstudio#issue#1084": {
+    "title": "Copy with Headers hotkey throws an error",
+    "body": "using the Ctrl-Shift+C hotkey on the results grid causes an error Expected behavior The selected results cells should be copied to the clipboard with the header row",
+    "fetchedAt": 1782216266557
+  },
+  "daxstudio/daxstudio#issue#1016": {
+    "title": "Request - Drag a .dax file to Dax Studio to open in a new tab",
+    "body": "In SSMS, I can drag a sql file from Windows Explorer onto SSMS and it'll open the file in a new tab. I'd like the same functionality for DAX Studio. Drag a .dax file to Dax Studio",
+    "fetchedAt": 1782216266558
+  },
+  "daxstudio/daxstudio#issue#1076": {
+    "title": "after installing version 3.06 : error: The connection cannot be used while an XmlReader object is open.",
+    "body": "Connecting to Azure Analysis Services. open a DAX query (worked well on 3.05) able to select database. when running the query i get error The connection cannot be used while an XmlReader object is open. tried connecting to other database. simplified…",
+    "fetchedAt": 1782216266558
+  },
+  "daxstudio/daxstudio#issue#1159": {
+    "title": "Saved Server Timings information not loading ",
+    "body": "When opening a .daxx file or a .dax file that was saved with ServerTimings data the ServerTimings information is not being loaded correctly by DAX Studio 3.0.8 it reports an error opening the file and the correct number of events is loaded, but all t…",
+    "fetchedAt": 1782216266558
+  },
+  "daxstudio/daxstudio#issue#973": {
+    "title": "'Duplicate Tab' option when right clicking a query tab",
+    "body": "It would be great if I could duplicate a query tab with all the connections and built queries carried across into the new query tab. This would save time when working on creating variations of the same query; especially when using query builder 👍",
+    "fetchedAt": 1782216266633
+  },
+  "daxstudio/daxstudio#issue#994": {
+    "title": "Measure blue icons partially hidden",
+    "body": "DAX Studio v3.0.5.767 Connection: PowerBIDesktop - 15.1.110.21 Summary of Issue When metadata left panel vertical scrollbars is visible, all measure icons are partially hidden. See Picture. Steps to Reproduce 1. Set OptionsStandardMetadata PaneScroll…",
+    "fetchedAt": 1782216266633
+  },
+  "daxstudio/daxstudio#issue#1051": {
+    "title": "Support time format type between PowerBi and SQL Server exporting.",
+    "body": "I recently installed Dax Studio for our company's Power BI to export data to SQL server. There is a column called \"starttime\" set in a time format type that needs to be exported to our SQL table in a time format type. Dax Studio currently exports the…",
+    "fetchedAt": 1782216266636
+  },
+  "daxstudio/daxstudio#issue#1025": {
+    "title": "Spelling mistakes in DAX Studio",
+    "body": "Here is a list of spelling mistakes in DAX Studio: - If you right-click on DaxStudio.exe and go to Properties → Details tab → File description, it says \"Dax Studio\", but it should be \"DAX Studio\" - If I pin DaxStudio.exe to the Taskbar and hover over…",
+    "fetchedAt": 1782216266636
+  },
+  "daxstudio/daxstudio#issue#997": {
+    "title": "Query Builder Filtering on Measure Error",
+    "body": "Describe the bug When using Query Builder to create a DAX query, adding a measure to the Filter pane results in a DAX query that produces an error. To Reproduce Steps to reproduce the behavior: 1. Connect to a Tabular dataset 2. Click on Query Builde…",
+    "fetchedAt": 1782216266637
+  },
+  "daxstudio/daxstudio#issue#1081": {
+    "title": "Column profile doesn't show min and max of numeric values ",
+    "body": "Hover a decimal column and the min / max values are not shown To Reproduce Steps to reproduce the behavior: 1. Use Fact Sales and hover on SalesAmount 2. The column profile show sample values but not min and max 3. String values do show min and max w…",
+    "fetchedAt": 1782216266637
+  },
+  "daxstudio/daxstudio#issue#1036": {
+    "title": "Installer issue: Access denied creating c:\\users\\public\\desktop\\DAX Studio.lnk",
+    "body": "Describe the bug Running DAXStudio305Setup.exe and selecting \"just for me\" and to create an icon on the desktop, it shows an error messagebox \"IPersistFile::Save failed; code 0x80070005. Access is denied\". The installer window shows \"Creating shortcu…",
+    "fetchedAt": 1782216266637
+  },
+  "daxstudio/daxstudio#issue#1026": {
+    "title": "Add detail to the names and tooltips of columns in the VertiPaq Analyzer",
+    "body": "Under Advanced → View Metrics → VertiPaq Analyzer, many of the column names, and even some of the tooltips that appear when you hover over them, need more detail. 2 particular types of improvements come to mind: - Expand any abbreviations, acronyms,…",
+    "fetchedAt": 1782216266637
+  },
+  "daxstudio/daxstudio#issue#999": {
+    "title": "DAX Studio does not return identical result as a same query via pbix. Potentially due to high values",
+    "body": "DAX Studio v3.0.5.767 Connection: AzureAnalysisServices - 16.0.51.25 Summary of Issue on a pbix i built a small table from calculated table. it has 4 rows with 3 columns. 3rd column has a high value of hundreds of millions. When using performance ana…",
+    "fetchedAt": 1782216266637
+  },
+  "daxstudio/daxstudio#issue#1062": {
+    "title": "Vertipaq Analyzer showing <unknown> as the model name for AAS and PBI XMLA connections",
+    "body": "When Connected to AAS or PBIP XMLA endpoints the summary page for View Metrics (Vertipaq Analyzer) shows <unknown as the model name To Reproduce Steps to reproduce the behavior: 1. Connect to a data model in either AAS or the Power BI Premium service…",
+    "fetchedAt": 1782216266637
+  },
+  "daxstudio/daxstudio#issue#1077": {
+    "title": "Wrong Setup hash - for release 3.0.6",
+    "body": "get-fileHash -Algorithm SHA256 '.\\DaxStudio306setup.exe' produces this hash: 498FD9D749D25F9C6B2FA3BE77315E40F0A14C97F00D0D186CCAA50F33E5046E Setup hash file in https://github.com/DaxStudio/DaxStudio/releases/download/v3.0.6/SetupHash.txt has this ha…",
+    "fetchedAt": 1782216266637
+  },
+  "daxstudio/daxstudio#issue#1080": {
+    "title": "Linked excel export dont work if there are single line comment the beginning of the query",
+    "body": "Describe the bug When you try to export to xls linked, if the query was pasted from the performance analyzer of Power BI Desktop or with the \"Preview Data\" option of the metadata pane, having a single line comment at the beginning, excel shows an err…",
+    "fetchedAt": 1782216266637
+  },
+  "daxstudio/daxstudio#issue#968": {
+    "title": "UI - Tool Window loses header after positioning causing lost access to window after nesting.",
+    "body": "I've been trying to move the Log separate to the Results window, showing the log vertically beside the Query and Result - but doing this seems to remove the 'header' of a window, and I've found that it's possible to lose access to the results (or any…",
+    "fetchedAt": 1782216266637
+  },
+  "daxstudio/daxstudio#issue#1029": {
+    "title": "issue with IN operator in filters after loading .dax file",
+    "body": "DAX Studio v3.0.5.767 Connection: PowerBIService - 16.0.59.21 Summary of Issue issue with filters, after loading .dax file IN operator changes to IS operator Steps to Reproduce 1. use filter with IN operator and at least two members 2. save .dax file…",
+    "fetchedAt": 1782216266637
+  },
+  "daxstudio/daxstudio#issue#1092": {
+    "title": "\"dax\" spelling mistake in the installer",
+    "body": "At a certain point when using the DAX Studio installer, there will be a check box that says: \"[NOT RECOMMENDED] Blocks all features requiring internet access including version checks, dax formatting and crash reporting. This setting requires a re-ins…",
+    "fetchedAt": 1782216266637
+  },
+  "daxstudio/daxstudio#issue#967": {
+    "title": "Installing as none admin gives registry key error",
+    "body": "Describe the bug When installing (using only for me), I get an error when the installer tries to register a key, see screenshot below To Reproduce Steps to reproduce the behavior: 1. Install the application an my Cooperate PC 2. Choose to install onl…",
+    "fetchedAt": 1782216266637
+  },
+  "daxstudio/daxstudio#issue#1052": {
+    "title": "Reordering columns in VertiPaq Analyzer changes column header order but not column contents order",
+    "body": "DAX Studio v3.0.5.767 Connection: PowerBIDesktop - 16.0.48.19 Summary of Issue Dragging a column header in the VertiPaq Analyzer output window moves the column headers to a new position, but the column contents don't reorder, so the columns become mi…",
+    "fetchedAt": 1782216266637
+  },
+  "daxstudio/daxstudio#issue#1083": {
+    "title": "DAX Studio - Export Measure Metadata (DMV) to Linked Excel.",
+    "body": "Describe the bug We have been trying to import all the metadata for measures in one of our models to a linked Excel with no success. To Reproduce Steps to reproduce the behavior: 1. Open any PowerBI model dataset via XMLA on DAX Studio. 2. Run the DM…",
+    "fetchedAt": 1782216266637
+  },
+  "daxstudio/daxstudio#issue#1152": {
+    "title": "Typo in Version 3.08",
+    "body": "DAX Studio v3.0.8.945 Connection: PowerBIDesktop - 16.0.87.16 Summary of Issue When trying to create a new measure, using the Query Builder, the tooltip has a typo. \"The Measure Expression is blank. This can happen if uou do not....\" uou should be -…",
+    "fetchedAt": 1782216266637
+  },
+  "daxstudio/daxstudio#issue#1146": {
+    "title": "Translations - Sort by Translationed name",
+    "body": "Discussed in https://github.com/DaxStudio/DaxStudio/discussions/1144 <div type='discussions-op-text' <supOriginally posted by bluehenve July 8, 2023</sup Hi I see translated names in the explorer section on the left side of Dax Studio: - The translat…",
+    "fetchedAt": 1782216266637
+  },
+  "daxstudio/daxstudio#issue#1154": {
+    "title": "Define Measures in combination with Calculation Group format strings",
+    "body": "Describe the bug I have been working with calculation groups a lot lately and noticed that im unable to define measures in Dax Studio after introducing format string expressions in one of my calculation groups. I understand that when introducing form…",
+    "fetchedAt": 1782216266685
+  },
+  "daxstudio/daxstudio#issue#979": {
+    "title": "Names of hidden objects hardly readable in Dark Mode",
+    "body": "Describe the bug Not sure if this can be classified as a bug but there doesn't seem to be a better place to describe it. The problem is that in Dark Mode the names of the hidden objects can hardly be read. The font's color is just a tad too dark. To…",
+    "fetchedAt": 1782216266701
+  },
+  "daxstudio/daxstudio#issue#1031": {
+    "title": "saving .csv file with semicolon separator and Unicode encoding",
+    "body": "I've used since always unicode encoding in Excel and semicolon separator for csv files or semicolon for formulas. Tried all combinations of saving .csv file but missing right one for me, For me additional one could be enough but maybe should be addit…",
+    "fetchedAt": 1782216266701
+  },
+  "daxstudio/daxstudio#issue#1155": {
+    "title": "Generating query for referenced objects results in syntax error if name contains apostrophe",
+    "body": "Describe the bug When showing objects that reference a measure with a name that contains an apostrophe (Char 39), the generated SQL does not escape the apostrophe, causing a syntax error. To Reproduce Steps to reproduce the behavior: 1. Create a meas…",
+    "fetchedAt": 1782216266701
+  },
+  "daxstudio/daxstudio#issue#1030": {
+    "title": "missing table reference in measure after loading .dax file",
+    "body": "DAX Studio v3.0.5.767 Connection: PowerBIService - 16.0.59.21 Summary of Issue missing table reference in measures after loading .dax file, missing table reference refers to measures created in DAX Studio, mainly issue refers to execute query after l…",
+    "fetchedAt": 1782216266845
+  },
+  "daxstudio/daxstudio#issue#491": {
+    "title": "Clear Output Button",
+    "body": "Is your feature request related to a problem? Please describe. Not a problem, just a preference. Describe the solution you'd like Add the ability to clear the output, result, and query history without closing and reopening the product or creating a n…",
+    "fetchedAt": 1782216266865
+  },
+  "daxstudio/daxstudio#issue#851": {
+    "title": "Query builder stops auto generating or running query being defined",
+    "body": "DAX Studio v2.17.3.683 Connection: AnalysisServices - 16.0.26.19 Summary of Issue Query Builder fails to update or run queries after adding columns below a defined measure in the Columns/Measures pane with \"Error generating query: Object reference no…",
+    "fetchedAt": 1782216266987
   }
 }

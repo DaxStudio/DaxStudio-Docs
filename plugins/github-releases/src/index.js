@@ -74,6 +74,15 @@ module.exports = async function myPlugin(context, options) {
         exact: true,
       });
 
+      addRoute({
+        path: '/preview-downloads',
+        component: '@site/src/components/preview-download-list.tsx',
+        modules: {
+          releases: releasesJsonPath,
+        },
+        exact: true,
+      });
+
     },
     /* other lifecycle API */
   };
