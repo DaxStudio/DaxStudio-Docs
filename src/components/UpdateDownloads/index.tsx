@@ -88,6 +88,8 @@ class UpdateDownloads extends React.Component<UpdateDownloadsProps> {
                 //console.log('downloads: ' + data.assets[0].download_count);
                 install_cnt =  type == 'zip' ? localData.downloadCntZip : localData.downloadCnt ;
    
+            }).catch((err) => {
+                console.warn(`[UpdateDownloads] Could not fetch download count for ${requestUrl}: ${err?.response?.status ?? err?.message}`);
             });
 
         }

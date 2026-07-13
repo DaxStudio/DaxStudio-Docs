@@ -4,6 +4,8 @@ import {Installer, Portable} from '@site/src/components/Downloads';
 import Layout from '@theme/Layout';
 import {marked} from 'marked';
 import moment from 'moment';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const units = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
 
@@ -37,19 +39,17 @@ function Asset(asset: GithubAsset) {
   );
 }
 
-function PreviousPreview({tag_name, assets, body}) {
+function PreviousPreview({tag_name, html_url, assets}) {
+  const releaseUrl = html_url || `https://github.com/daxstudio/daxstudio/releases/tag/${tag_name}`;
   const installer = assets.filter(function (asset) { return asset.browser_download_url.endsWith('.exe'); })[0];
   const portable = assets.filter(function (asset) { return asset.browser_download_url.endsWith('.zip'); })[0];
-  const notesHtml = body ? fixGithubIssueLinks(marked.parse(body) as string) : '';
   return (
     <div className='row'>
       <div className='col'>
         <h2>{tag_name}</h2>
+        <p><a href={releaseUrl}>view on GitHub&nbsp;<FontAwesomeIcon icon={faArrowUpRightFromSquare} width="12" height="12" /></a></p>
         {installer && <Asset {...installer} />}
         {portable && <Asset {...portable} />}
-        {body && (
-          <div style={{marginTop: '0.5rem'}} dangerouslySetInnerHTML={{__html: notesHtml}} />
-        )}
       </div>
     </div>
   );
@@ -88,6 +88,9 @@ export default function PreviewDownloadsComponent() {
           </div>
           <div className='col col--4'></div>
         </div>
+        {latestPreview.body && (
+          <div style={{marginTop: '1rem'}} dangerouslySetInnerHTML={{__html: fixGithubIssueLinks(marked.parse(latestPreview.body) as string)}} />
+        )}
       </div>
       <div className='container'>
         <br />
