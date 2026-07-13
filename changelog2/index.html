@@ -14,14 +14,39 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.ab93dd37.css">
-<script src="/assets/js/runtime~main.e11bd8a0.js" defer="defer"></script>
-<script src="/assets/js/main.d630f4b3.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.335bd95a.js" defer="defer"></script>
+<script src="/assets/js/main.78766b94.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.6.0.1211</div><div><div class=""><h1>v3.6.0.1211</h1><div><h1>DAX Studio 3.6.0 Preview release</h1>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.6.0.1224</div><div><div class=""><h1>v3.6.0.1224</h1><div><h1>DAX Studio 3.6.0 Preview release</h1>
+<h2>Updates</h2>
+<ul>
+<li>added Delta Analyzer preview</li>
+<li>added Browse Workspaces preview</li>
+<li>#1437 Added benchmark command to dscmd (thanks @savoy9)</li>
+<li>added support for preview release notifications</li>
+<li>added search to File &gt; Open </li>
+<li>updated Fluent Ribbon to v11</li>
+<li>moved version update notifications into the main UI (removed NotifyIcon dependency)</li>
+</ul>
+<h2>Fixes</h2>
+<ul>
+<li>fixed #1460 callbacks not highlighted</li>
+<li>fixed #1456 enable multi-row copy in query plans</li>
+<li>fixed #1453 code completion for object names with numeric digits</li>
+<li>fixed search in database dialog</li>
+<li>improved opening SQL Profiler</li>
+<li>updated SqlClient</li>
+<li>updated WebRequest to HttpClient </li>
+<li>updated daxformatter endpoint</li>
+<li>consolidated cmdline parsing to use SpectreConsole.CLI for both the UI and commandline projcts</li>
+<li>enabled .net framework and .net core builds</li>
+<li>fixed various crash reports</li>
+</ul>
+</div></div></div><div><div class=""><h1>v3.6.0.1211</h1><div><h1>DAX Studio 3.6.0 Preview release</h1>
 <h2>Updates</h2>
 <ul>
 <li>#1437 Added benchmark command to dscmd (thanks @savoy9)</li>
@@ -33,7 +58,7 @@
 <li>fixed search in database dialog</li>
 <li>improved opening SQL Profiler</li>
 <li>updated SqlClient</li>
-<li>updated HttpClient to WebRequest</li>
+<li>updated WebRequest to HttpClient </li>
 <li>updated daxformatter endpoint</li>
 <li>consolidated cmdline parsing to use SpectreConsole.CLI for both the UI and commandline projcts</li>
 <li>enabled .net framework and .net core builds</li>
@@ -524,46 +549,6 @@
 <li>#657 Unable to open a new query tab either with a new connection or with a copied connection</li>
 <li>#658 passing the database name on the command line </li>
 <li>#647 hidden objects not hidden correctly when show hidden objects option was turned off (this was partially fixed in 2.16.0 but should work in all scenarios now)</li>
-</ul>
-</div></div></div><div><div class=""><h1>v2.16.0</h1><div><h2>New Features</h2>
-<ul>
-<li>Added &quot;Preview Data&quot; right-click option for tables and columns</li>
-<li>#580 extended Parameter support to include data types other than text</li>
-<li>Added &quot;New Version&quot; notification in the title bar</li>
-<li>Updated xmSQL cleanup to also fix table names</li>
-<li>added sponsor page to github <a href="https://github.com/sponsors/daxstudio">https://github.com/sponsors/daxstudio</a></li>
-<li>#612 supporting all of the /f /s /d command line parameters at the same time</li>
-<li>Query Builder Improvements<ul>
-<li>Adding Auto-Generate to Query Builder</li>
-<li>Clicking Edit Query from the Query Builder will now update any previously generated query text</li>
-<li>#570 Adding ORDER BY support to the Query Builder</li>
-</ul>
-</li>
-<li>Custom Key-Bindings moved out of preview</li>
-<li>#620 Adding Ctrl+W to select current word</li>
-<li>#584 Extending Hover tooltip to work with Keywords</li>
-<li>#636 Show PBIX filename in the database dropdown instead of database ID</li>
-<li>#638 Adding encoding option when using Exporting Data to CSV files</li>
-<li>#632 extending installer support for Windows ARM64</li>
-<li>updating ADOMD / AMO references to 19.22</li>
-</ul>
-<h2>Preview Features</h2>
-<ul>
-<li>Debug Commas - moves commas in formated queries to the start of the line</li>
-<li>Show XMLA Commands in All Queries trace - shows commands sent by other tools like SSDT and Tabular Editor</li>
-</ul>
-<h2>Fixes</h2>
-<ul>
-<li>#578 Analyze in Excel not working with PBI XMLA or AzureAS</li>
-<li>#579 Server Timings Layout Tab not appearing</li>
-<li>Improved error message when no query text is specified</li>
-<li>#581 All Queries Trace against PowerPivot caused crash</li>
-<li>Fixed a crash when attempting to add a display folder to the Query Builder</li>
-<li>Fixed a crash when attempting to use the query builder against a model with an invalid calculation script</li>
-<li>#592 datatypes not syntax highlighted and not in code completion</li>
-<li>#613 DMV and Function drag/drop not working</li>
-<li>#647 Hiding hidden objects was not working correctly with items in display folders</li>
-<li>#643 fixing issue with code completion window &quot;sticking&quot;</li>
 </ul>
 </div></div></div></div></div>
 </body>
