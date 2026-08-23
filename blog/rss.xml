@@ -4,10 +4,171 @@
         <title>DAX Studio Blog</title>
         <link>https://daxstudio.org/blog/</link>
         <description>DAX Studio Blog</description>
-        <lastBuildDate>Fri, 08 May 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 23 Aug 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[v3.6.0 Release]]></title>
+            <link>https://daxstudio.org/blog/v3_6_0-release/</link>
+            <guid>https://daxstudio.org/blog/v3_6_0-release/</guid>
+            <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Version 3.6.0 is one of the larger releases in a while. As well as a long list of fixes and]]></description>
+            <content:encoded><![CDATA[<p>Version 3.6.0 is one of the larger releases in a while. As well as a long list of fixes and
+performance work, it introduces the <strong>Delta Analyzer</strong> - a new preview tool for looking at the
+Delta table metadata sitting behind a Direct Lake model. This post also covers the two diagramming
+features that arrived in v3.5.0 but have not been written up until now.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="delta-analyzer-preview">Delta Analyzer (Preview)<a href="https://daxstudio.org/blog/v3_6_0-release/#delta-analyzer-preview" class="hash-link" aria-label="Direct link to Delta Analyzer (Preview)" title="Direct link to Delta Analyzer (Preview)" translate="no">​</a></h2>
+<p>When you are troubleshooting a Direct Lake model, the performance you see in DAX Studio is often
+driven by things that live outside the semantic model. How many parquet files a Delta table is
+spread across, how large the row groups are, whether V-Order was applied when the files were
+written, and whether rows have been soft deleted with deletion vectors all affect how quickly
+Direct Lake can transcode and scan a column.</p>
+<p>The new <strong>Delta Analyzer</strong> reads that metadata directly from OneLake and presents it per table and
+per column, so you can see file counts, small file counts, row group sizing, compressed and
+uncompressed sizes, encoding and codec, V-Order, deletion vectors and liquid clustering all in one
+place - right next to the query timings you are already collecting.</p>
+<p>It also raises a set of <strong>considerations</strong> for each table, such as flagging tables that would
+benefit from compacting small files or from having their deletion vectors purged. These are
+deliberately framed as guidance rather than hard rules, since the right answer always depends on
+your data volumes and query patterns. You can copy them to the clipboard as Markdown or export
+them to a file.</p>
+<p>Because it is a preview feature you need to switch it on first via
+<strong>Options &gt; Preview &gt; Delta Analyzer &gt; Show Delta Analyzer</strong>. Once enabled, the <strong>Delta Analyzer</strong>
+button appears in the <strong>Metrics</strong> group on the <strong>Advanced</strong> ribbon tab.</p>
+<p>Note that the UI may still change before this feature comes out of preview - feedback is welcome.</p>
+<p><a class="" href="https://daxstudio.org/docs/features/delta-analyzer/">Read more about the Delta Analyzer</a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="two-diagramming-features-you-may-have-missed">Two diagramming features you may have missed<a href="https://daxstudio.org/blog/v3_6_0-release/#two-diagramming-features-you-may-have-missed" class="hash-link" aria-label="Direct link to Two diagramming features you may have missed" title="Direct link to Two diagramming features you may have missed" translate="no">​</a></h2>
+<p>These two are not new in 3.6.0 - they quietly appeared in v3.5.0 - but they have never been
+documented, so if you have not turned them on yet this is a good time to take a look. Both live
+under <strong>Options &gt; Preview &gt; Diagrams</strong> and both are off by default.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="model-diagram">Model Diagram<a href="https://daxstudio.org/blog/v3_6_0-release/#model-diagram" class="hash-link" aria-label="Direct link to Model Diagram" title="Direct link to Model Diagram" translate="no">​</a></h3>
+<p>The <strong>Model Diagram</strong> draws the connected model on a single canvas, showing tables, columns and
+relationships, with cardinality and filter direction markers on each relationship line. It is handy
+when you are working with a model you did not build and you want to see how the tables hang
+together, or when you want to isolate just the tables involved in the query you are tuning.</p>
+<p>If you have run <strong>View Metrics</strong> first, the diagram can also show column cardinality or column size
+beside each column and sort the columns in each table by those values, which makes it easy to spot
+the expensive columns at a glance. It also works offline against a <code>.daxx</code> file that has VertiPaq
+Analyzer data in it.</p>
+<p>Tables can be dragged around and the layout is remembered per model, there are five layout
+algorithms to choose from, and you can add text annotations before exporting the diagram to a PNG
+file or copying it to the clipboard.</p>
+<p>Enable <strong>Show Model Diagram</strong> and the <strong>Model Diagram</strong> button appears in the <strong>Model</strong> group on the
+<strong>Advanced</strong> ribbon tab.</p>
+<p><a class="" href="https://daxstudio.org/docs/features/model-diagram/">Read more about the Model Diagram</a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="storage-engine-dependencies">Storage Engine Dependencies<a href="https://daxstudio.org/blog/v3_6_0-release/#storage-engine-dependencies" class="hash-link" aria-label="Direct link to Storage Engine Dependencies" title="Direct link to Storage Engine Dependencies" translate="no">​</a></h3>
+<p><strong>Storage Engine Dependencies</strong> takes a different approach. Instead of diagramming the model, it
+parses the xmSQL captured by the Server Timings trace and diagrams only what the Storage Engine
+actually touched for the query you just ran.</p>
+<p>Each table box lists the columns the parser found, badged with how they were used - join key,
+filter, selected, expression, callback or aggregate - and the lines between the tables show the
+joins that the Storage Engine performed, along with their hit counts. The table headers are coloured
+as a heat map so the hot spots stand out, and you can switch the heat metric between CPU time, row
+count and hit count.</p>
+<p>Enable <strong>Show Storage Engine Dependencies</strong> and a <strong>Dependencies</strong> button appears on the Server
+Timings pane once you have run a query with the trace enabled.</p>
+<p><a class="" href="https://daxstudio.org/docs/features/traces/se-dependencies/">Read more about Storage Engine Dependencies</a></p>
+<p>Both of these are still preview features, so the user interface may change before they are finished</p>
+<ul>
+<li class="">feedback on either of them is very welcome.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="benchmarking-from-the-command-line">Benchmarking from the command line<a href="https://daxstudio.org/blog/v3_6_0-release/#benchmarking-from-the-command-line" class="hash-link" aria-label="Direct link to Benchmarking from the command line" title="Direct link to Benchmarking from the command line" translate="no">​</a></h2>
+<p><code>dscmd.exe</code> has gained a <strong>benchmark</strong> command, so the cold and warm cache benchmarking that has
+been available in the UI for a while can now be scripted or run as part of a build pipeline.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">dscmd.exe benchmark c:\temp\results.csv -s localhost\tabular -d "Adventure Works" -f query.dax --cold 5 --warm 5</span><br></div></code></pre></div></div>
+<p>It writes per-iteration detail rows plus summary statistics to a CSV file, prints a summary table
+with the Formula Engine / Storage Engine split and row counts to the console, and supports
+<code>--silent</code> for unattended use. There are also <code>--role</code> and <code>--effective-user</code> options for
+benchmarking a query under row level security.</p>
+<p><a class="" href="https://daxstudio.org/docs/features/command-line/commands/benchmark-command/">Read more about the benchmark command</a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="dax-user-defined-function-support">DAX user-defined function support<a href="https://daxstudio.org/blog/v3_6_0-release/#dax-user-defined-function-support" class="hash-link" aria-label="Direct link to DAX user-defined function support" title="Direct link to DAX user-defined function support" translate="no">​</a></h2>
+<p>DAX Studio now understands model-defined DAX user-defined functions when expanding measures and
+their dependencies. If a measure references a user-defined function, DAX Studio adds the required
+<code>FUNCTION</code> definition to the query before the measure definitions, including any functions on
+which it depends.</p>
+<p>This also works when expanding a measure inline. Existing function definitions are detected so
+that they are not added to the query more than once.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="more-reliable-command-line-authentication">More reliable command-line authentication<a href="https://daxstudio.org/blog/v3_6_0-release/#more-reliable-command-line-authentication" class="hash-link" aria-label="Direct link to More reliable command-line authentication" title="Direct link to More reliable command-line authentication" translate="no">​</a></h2>
+<p>Authentication in <code>dscmd.exe</code> has been updated to make unattended execution more predictable,
+especially on machines where multiple Entra accounts are available. Use <code>-u</code> or <code>--userid</code> to
+select the account explicitly and <code>--non-interactive</code> to prevent a sign-in prompt. If the selected
+account cannot authenticate silently, the command exits with a non-zero exit code instead of
+waiting for user input.</p>
+<p>The new <code>auth</code> command lets you sign in and cache an account without printing its access token. It
+can also list the accounts available from Windows and the DAX Studio cache, or act as a pre-flight
+check before an unattended job.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">dscmd auth -u user@contoso.com --non-interactive</span><br></div></code></pre></div></div>
+<p><a class="" href="https://daxstudio.org/docs/features/command-line/commands/auth-command/">Read more about the auth command</a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="a-more-consistent-command-line">A more consistent command line<a href="https://daxstudio.org/blog/v3_6_0-release/#a-more-consistent-command-line" class="hash-link" aria-label="Direct link to A more consistent command line" title="Direct link to A more consistent command line" translate="no">​</a></h2>
+<p>The command line parsing for both <code>daxstudio.exe</code> and <code>dscmd.exe</code> has been rebuilt on top of
+Spectre.Console.Cli. Arguments and command names are now <strong>case-insensitive</strong>, <code>--option=value</code>
+syntax works, and the DOS style <code>/option</code> form as well as legacy single dash long options like
+<code>-file</code> are still accepted so existing shortcuts and scripts keep working. Values that need their
+casing preserved - file paths, uri values and base64 payloads - are left exactly as you typed them.</p>
+<p>The startup parameters for <code>daxstudio.exe</code> are now documented too.</p>
+<p><a class="" href="https://daxstudio.org/docs/features/startup-parameters/">Read more about the startup parameters</a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="version-notifications-have-moved-into-the-app">Version notifications have moved into the app<a href="https://daxstudio.org/blog/v3_6_0-release/#version-notifications-have-moved-into-the-app" class="hash-link" aria-label="Direct link to Version notifications have moved into the app" title="Direct link to Version notifications have moved into the app" translate="no">​</a></h2>
+<p>The old notification tray icon has been removed, and new version notifications are now shown as a
+pill in the DAX Studio title bar instead. There is also a new opt-in <strong>Show Pre-Release
+Notifications</strong> setting for anyone who wants to hear about preview builds as well as stable
+releases.</p>
+<p><a class="" href="https://daxstudio.org/docs/features/version-notification/">Read more about version notifications</a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates">Updates<a href="https://daxstudio.org/blog/v3_6_0-release/#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h2>
+<ul>
+<li class="">Added the Delta Analyzer preview feature for Direct Lake models</li>
+<li class="">Added a <code>benchmark</code> command to dscmd for scripted cold and warm cache benchmarking</li>
+<li class="">Added support for including DAX user-defined functions when expanding measures and dependencies</li>
+<li class="">Added a secure <code>auth</code> command and non-interactive Entra authentication support to dscmd</li>
+<li class="">Command line arguments for both daxstudio.exe and dscmd.exe are now case-insensitive</li>
+<li class="">Version notifications now appear in the main window instead of the notification tray</li>
+<li class="">Added an option to be notified about pre-release builds</li>
+<li class="">Added bulk Order By controls to the Query Builder so you can toggle sorting, and flip the sort
+direction, for all columns at once</li>
+<li class="">Added multi row copy support to the Physical and Logical Query Plan panes</li>
+<li class="">Added a search box to the recent files list in the File menu</li>
+<li class="">Improved the Browse Workspaces experience</li>
+<li class="">The Entra ID sign-in prompt now attaches to the correct window</li>
+<li class="">Added zoom support to the Server Timings and Custom Trace panes</li>
+<li class="">Updated to the new DAX Formatter endpoint</li>
+<li class="">Updated to Fluent.Ribbon v11, which refreshes the ribbon styling across the light, dark and high
+contrast themes</li>
+<li class="">Switched to Microsoft.Data.SqlClient and to a shared HttpClient</li>
+<li class="">Added ApplicationContext to QueryEnd trace events</li>
+<li class="">Converted the solution to SDK style projects with central package management, and updated a large
+number of dependencies</li>
+<li class="">Improved application startup and general performance, including loading query history without
+blocking startup</li>
+<li class="">The installer now overwrites all files when upgrading</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_6_0-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h2>
+<ul>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1453" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1453" data-type="issue" data-title="For Alphanumeric Table name DS appends everything before Number in full reference." data-body="Table name - You write a query If you write and press tab then no issues, if you write the word till the number then it appends everything before the number in the full name. https://github.com/user-attachments/assets/1c6b6c06-250c-45a3-bd99-f7e49f97…">#1453</a> Incorrect code completion for object names containing numeric digits</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1456" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1456" data-type="issue" data-title="Can't copy Physical or Logical Query plan rows" data-body="Earlier we could copy paste an excerpt from the whole tree now we can only copy a single line and nothing more than that.">#1456</a> Unable to copy Physical or Logical Query Plan rows</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1458" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1458" data-type="issue" data-title="Mass options in Query Builder to adjust order by" data-body="Is your feature request related to a problem? Please describe. Time consuming clicks Describe the solution you'd like Allow a remove all options for the order by(or other mass changes to ascending/decending) Describe alternatives you've considered Ma…">#1458</a> Bulk options in the Query Builder to adjust the Order By</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1460" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1460" data-type="issue" data-title="Callbacks appearing as string rather than higlighted text" data-body="Some of the CALLBACKS are getting printed as string in xmSQL instead of being higlighted in Yellow. MinMaxColumnPositionCallback: <img width=&quot;1153&quot; height=&quot;317&quot; alt=&quot;Image&quot; src=&quot;https://github.com/user-attachments/assets/2fc465ab-c1c3-4c5a-974a-b1837…">#1460</a> Callbacks without parameters were not being detected, so they appeared as plain strings
+rather than highlighted text</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1477" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1477" data-type="issue" data-title="Use the proper &quot;≤&quot; and &quot;≥&quot; symbols in the comparison operator dropdown menu for the &quot;Record&quot; column when the physical query plan filter is enabled" data-body="In the Ribbon, in the &quot;Home&quot; tab, click on &quot;Query Plan&quot;. In the &quot;Query Plan&quot; tab below, ensure that the physical query plan is visible and click on the funnel icon within the &quot;Physical Query Plan&quot; button. This will cause a row of search boxes to appe…">#1477</a> Use the correct less-than-or-equal and greater-than-or-equal symbols in data grid filters</li>
+<li class="">Fix handling of escaped callback names in the xmSQL parser</li>
+<li class="">Fix search not working in the database dialog</li>
+<li class="">Fix the trace column cache not being refreshed on reconnect</li>
+<li class="">Fix expired access tokens when reusing trace connections</li>
+<li class="">Fix View As reconnect races, remap caching, and stale busy states</li>
+<li class="">Fix group column alignment</li>
+<li class="">Fix an edge case with Server Timings and Clear Cache on Run when events arrive out of order</li>
+<li class="">Fix the save prompt when closing modified document tabs</li>
+<li class="">Fix a race condition when building the options list</li>
+<li class="">Fix a crash when validating hotkeys</li>
+<li class="">Fix invalid window handle crashes</li>
+<li class="">Fix a crash in DaxStudio.Checker</li>
+<li class="">Fix assembly binding errors in dscmd</li>
+<li class="">Harden opening SQL Profiler</li>
+<li class="">Handle WPF render thread COM errors and a shutdown race condition</li>
+<li class="">Fix a minor bug in the query history server filter</li>
+<li class="">Improve the robustness of the Excel version check</li>
+</ul>]]></content:encoded>
+            <category>daxstudio</category>
+        </item>
         <item>
             <title><![CDATA[v3.5.2 Release]]></title>
             <link>https://daxstudio.org/blog/v3_5_2-release/</link>

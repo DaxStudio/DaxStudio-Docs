@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" data-has-hydrated="false">
 <head>
 <meta charset="UTF-8">
-<meta name="generator" content="Docusaurus v3.10.1">
+<meta name="generator" content="Docusaurus v3.10.2">
 <title data-rh="true">DAX Studio</title><meta data-rh="true" property="og:title" content="DAX Studio"><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://daxstudio.org/changelog2/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://daxstudio.org/changelog2/"><link data-rh="true" rel="alternate" href="https://daxstudio.org/changelog2/" hreflang="en"><link data-rh="true" rel="alternate" href="https://daxstudio.org/changelog2/" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="DAX Studio RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="DAX Studio Atom Feed">
 
@@ -14,14 +14,58 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="DAX Studio" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.ab93dd37.css">
-<script src="/assets/js/runtime~main.cbd914c6.js" defer="defer"></script>
-<script src="/assets/js/main.27349632.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.fa5ebfa7.js" defer="defer"></script>
+<script src="/assets/js/main.6c03296f.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.6.0.1224</div><div><div class=""><h1>v3.6.0.1224</h1><div><h1>DAX Studio 3.6.0 Preview release</h1>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div><div>The lastest release is: <!-- -->v3.6.0</div><div><div class=""><h1>v3.6.0</h1><div><h1>DAX Studio 3.6.0</h1>
+<h2>Updates</h2>
+<ul>
+<li>added the Delta Analyzer preview for inspecting Delta table metadata behind Direct Lake models</li>
+<li>added the Browse Workspaces preview</li>
+<li>added the benchmark command to dscmd (thanks @savoy9)</li>
+<li>added support for DAX user-defined functions when expanding measures and dependencies</li>
+<li>added secure, deterministic Entra account selection and non-interactive authentication to dscmd</li>
+<li>added the dscmd auth command for caching, listing, and validating Entra accounts without exposing access tokens</li>
+<li>made daxstudio and dscmd command-line arguments case-insensitive and consolidated parsing on Spectre.Console.Cli</li>
+<li>moved version notifications into the main window and added opt-in preview release notifications</li>
+<li>added search to File &gt; Open and improved the Browse Workspaces experience</li>
+<li>added bulk Order By controls to the Query Builder</li>
+<li>added multi-row copy support to the Physical and Logical Query Plan panes</li>
+<li>added zoom support to the Server Timings and Custom Trace panes</li>
+<li>updated Fluent.Ribbon to v11</li>
+<li>updated the DAX Formatter endpoint, migrated to Microsoft.Data.SqlClient, and replaced WebRequest/WebClient with a shared HttpClient</li>
+<li>improved startup responsiveness by loading query history asynchronously</li>
+<li>improved View As reconnect and trace handling</li>
+<li>converted the solution to SDK-style projects with .NET Framework and .NET 8 builds</li>
+<li>updated the installer to overwrite all files during upgrades</li>
+</ul>
+<h2>Fixes</h2>
+<ul>
+<li>Fix #1453 code completion for object names containing numeric digits</li>
+<li>Fix #1456 multi-row copy in query plans</li>
+<li>Fix #1458 bulk sorting adjustments in the Query Builder</li>
+<li>Fix #1460 callbacks without parameters not being highlighted</li>
+<li>Fix #1477 incorrect less-than-or-equal and greater-than-or-equal symbols in data grid filters</li>
+<li>fixed escaped callback names in the xmSQL parser</li>
+<li>fixed search in the database dialog</li>
+<li>fixed expired Entra access tokens and silent refresh behavior for ADOMD and trace connections</li>
+<li>fixed View As reconnect races, remap caching, and stale busy states</li>
+<li>fixed the save prompt when closing modified document tabs</li>
+<li>fixed the trace column cache not refreshing after reconnecting</li>
+<li>fixed an edge case with Server Timings and Clear Cache on Run when events arrive out of order</li>
+<li>fixed group column alignment</li>
+<li>fixed benchmark authentication to use the shared dscmd Entra flow</li>
+<li>fixed dscmd dependency binding errors</li>
+<li>fixed crashes in DAX Studio Checker, hotkey validation, and invalid window handling</li>
+<li>fixed WPF render-thread COM errors and a shutdown race</li>
+<li>fixed a race condition when building the options list</li>
+<li>improved opening SQL Profiler and Excel version detection</li>
+</ul>
+</div></div></div><div><div class=""><h1>v3.6.0.1224</h1><div><h1>DAX Studio 3.6.0 Preview release</h1>
 <h2>Updates</h2>
 <ul>
 <li>added Delta Analyzer preview</li>
@@ -543,12 +587,6 @@
 <li>#663 Debug commas not handling lines with indented comments correctly</li>
 <li>#664 Traces fail to start with a timeout error</li>
 <li>#670 View Metrics - Last Refreshed date was incorrectly adjusting from UTC time</li>
-</ul>
-</div></div></div><div><div class=""><h1>v2.16.1</h1><div><h2>Fixes</h2>
-<ul>
-<li>#657 Unable to open a new query tab either with a new connection or with a copied connection</li>
-<li>#658 passing the database name on the command line </li>
-<li>#647 hidden objects not hidden correctly when show hidden objects option was turned off (this was partially fixed in 2.16.0 but should work in all scenarios now)</li>
 </ul>
 </div></div></div></div></div>
 </body>
