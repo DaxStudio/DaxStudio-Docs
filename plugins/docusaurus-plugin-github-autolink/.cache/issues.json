@@ -623,5 +623,30 @@
     "title": "Query builder stops auto generating or running query being defined",
     "body": "DAX Studio v2.17.3.683 Connection: AnalysisServices - 16.0.26.19 Summary of Issue Query Builder fails to update or run queries after adding columns below a defined measure in the Columns/Measures pane with \"Error generating query: Object reference no…",
     "fetchedAt": 1782216266987
+  },
+  "daxstudio/daxstudio#issue#1458": {
+    "title": "Mass options in Query Builder to adjust order by",
+    "body": "Is your feature request related to a problem? Please describe. Time consuming clicks Describe the solution you'd like Allow a remove all options for the order by(or other mass changes to ascending/decending) Describe alternatives you've considered Ma…",
+    "fetchedAt": 1786882000926
+  },
+  "daxstudio/daxstudio#issue#1456": {
+    "title": "Can't copy Physical or Logical Query plan rows",
+    "body": "Earlier we could copy paste an excerpt from the whole tree now we can only copy a single line and nothing more than that.",
+    "fetchedAt": 1786882000928
+  },
+  "daxstudio/daxstudio#issue#1453": {
+    "title": "For Alphanumeric Table name DS appends everything before Number in full reference.",
+    "body": "Table name - You write a query If you write and press tab then no issues, if you write the word till the number then it appends everything before the number in the full name. https://github.com/user-attachments/assets/1c6b6c06-250c-45a3-bd99-f7e49f97…",
+    "fetchedAt": 1786882001019
+  },
+  "daxstudio/daxstudio#issue#1460": {
+    "title": "Callbacks appearing as string rather than higlighted text",
+    "body": "Some of the CALLBACKS are getting printed as string in xmSQL instead of being higlighted in Yellow. MinMaxColumnPositionCallback: <img width=\"1153\" height=\"317\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/2fc465ab-c1c3-4c5a-974a-b1837…",
+    "fetchedAt": 1786882001019
+  },
+  "daxstudio/daxstudio#issue#1477": {
+    "title": "Use the proper \"≤\" and \"≥\" symbols in the comparison operator dropdown menu for the \"Record\" column when the physical query plan filter is enabled",
+    "body": "In the Ribbon, in the \"Home\" tab, click on \"Query Plan\". In the \"Query Plan\" tab below, ensure that the physical query plan is visible and click on the funnel icon within the \"Physical Query Plan\" button. This will cause a row of search boxes to appe…",
+    "fetchedAt": 1787483241273
   }
 }

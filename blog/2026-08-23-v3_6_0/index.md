@@ -1,0 +1,205 @@
+---
+slug: v3_6_0-release
+title: v3.6.0 Release
+authors: [dgosbell]
+tags: [daxstudio]
+---
+
+# DAX Studio version 3.6.0
+
+Version 3.6.0 is one of the larger releases in a while. As well as a long list of fixes and
+performance work, it introduces the **Delta Analyzer** - a new preview tool for looking at the
+Delta table metadata sitting behind a Direct Lake model. This post also covers the two diagramming
+features that arrived in v3.5.0 but have not been written up until now.
+
+<!-- truncate -->
+
+## Delta Analyzer (Preview)
+
+When you are troubleshooting a Direct Lake model, the performance you see in DAX Studio is often
+driven by things that live outside the semantic model. How many parquet files a Delta table is
+spread across, how large the row groups are, whether V-Order was applied when the files were
+written, and whether rows have been soft deleted with deletion vectors all affect how quickly
+Direct Lake can transcode and scan a column.
+
+The new **Delta Analyzer** reads that metadata directly from OneLake and presents it per table and
+per column, so you can see file counts, small file counts, row group sizing, compressed and
+uncompressed sizes, encoding and codec, V-Order, deletion vectors and liquid clustering all in one
+place - right next to the query timings you are already collecting.
+
+It also raises a set of **considerations** for each table, such as flagging tables that would
+benefit from compacting small files or from having their deletion vectors purged. These are
+deliberately framed as guidance rather than hard rules, since the right answer always depends on
+your data volumes and query patterns. You can copy them to the clipboard as Markdown or export
+them to a file.
+
+Because it is a preview feature you need to switch it on first via
+**Options > Preview > Delta Analyzer > Show Delta Analyzer**. Once enabled, the **Delta Analyzer**
+button appears in the **Metrics** group on the **Advanced** ribbon tab.
+
+Note that the UI may still change before this feature comes out of preview - feedback is welcome.
+
+[Read more about the Delta Analyzer](/docs/features/delta-analyzer)
+
+## Two diagramming features you may have missed
+
+These two are not new in 3.6.0 - they quietly appeared in v3.5.0 - but they have never been
+documented, so if you have not turned them on yet this is a good time to take a look. Both live
+under **Options > Preview > Diagrams** and both are off by default.
+
+### Model Diagram
+
+The **Model Diagram** draws the connected model on a single canvas, showing tables, columns and
+relationships, with cardinality and filter direction markers on each relationship line. It is handy
+when you are working with a model you did not build and you want to see how the tables hang
+together, or when you want to isolate just the tables involved in the query you are tuning.
+
+If you have run **View Metrics** first, the diagram can also show column cardinality or column size
+beside each column and sort the columns in each table by those values, which makes it easy to spot
+the expensive columns at a glance. It also works offline against a `.daxx` file that has VertiPaq
+Analyzer data in it.
+
+Tables can be dragged around and the layout is remembered per model, there are five layout
+algorithms to choose from, and you can add text annotations before exporting the diagram to a PNG
+file or copying it to the clipboard.
+
+Enable **Show Model Diagram** and the **Model Diagram** button appears in the **Model** group on the
+**Advanced** ribbon tab.
+
+[Read more about the Model Diagram](/docs/features/model-diagram)
+
+### Storage Engine Dependencies
+
+**Storage Engine Dependencies** takes a different approach. Instead of diagramming the model, it
+parses the xmSQL captured by the Server Timings trace and diagrams only what the Storage Engine
+actually touched for the query you just ran.
+
+Each table box lists the columns the parser found, badged with how they were used - join key,
+filter, selected, expression, callback or aggregate - and the lines between the tables show the
+joins that the Storage Engine performed, along with their hit counts. The table headers are coloured
+as a heat map so the hot spots stand out, and you can switch the heat metric between CPU time, row
+count and hit count.
+
+Enable **Show Storage Engine Dependencies** and a **Dependencies** button appears on the Server
+Timings pane once you have run a query with the trace enabled.
+
+[Read more about Storage Engine Dependencies](/docs/features/traces/se-dependencies)
+
+Both of these are still preview features, so the user interface may change before they are finished
+- feedback on either of them is very welcome.
+
+## Benchmarking from the command line
+
+`dscmd.exe` has gained a **benchmark** command, so the cold and warm cache benchmarking that has
+been available in the UI for a while can now be scripted or run as part of a build pipeline.
+
+```
+dscmd.exe benchmark c:\temp\results.csv -s localhost\tabular -d "Adventure Works" -f query.dax --cold 5 --warm 5
+```
+
+It writes per-iteration detail rows plus summary statistics to a CSV file, prints a summary table
+with the Formula Engine / Storage Engine split and row counts to the console, and supports
+`--silent` for unattended use. There are also `--role` and `--effective-user` options for
+benchmarking a query under row level security.
+
+[Read more about the benchmark command](/docs/features/command-line/commands/benchmark-command)
+
+## DAX user-defined function support
+
+DAX Studio now understands model-defined DAX user-defined functions when expanding measures and
+their dependencies. If a measure references a user-defined function, DAX Studio adds the required
+`FUNCTION` definition to the query before the measure definitions, including any functions on
+which it depends.
+
+This also works when expanding a measure inline. Existing function definitions are detected so
+that they are not added to the query more than once.
+
+## More reliable command-line authentication
+
+Authentication in `dscmd.exe` has been updated to make unattended execution more predictable,
+especially on machines where multiple Entra accounts are available. Use `-u` or `--userid` to
+select the account explicitly and `--non-interactive` to prevent a sign-in prompt. If the selected
+account cannot authenticate silently, the command exits with a non-zero exit code instead of
+waiting for user input.
+
+The new `auth` command lets you sign in and cache an account without printing its access token. It
+can also list the accounts available from Windows and the DAX Studio cache, or act as a pre-flight
+check before an unattended job.
+
+```
+dscmd auth -u user@contoso.com --non-interactive
+```
+
+[Read more about the auth command](/docs/features/command-line/commands/auth-command)
+
+## A more consistent command line
+
+The command line parsing for both `daxstudio.exe` and `dscmd.exe` has been rebuilt on top of
+Spectre.Console.Cli. Arguments and command names are now **case-insensitive**, `--option=value`
+syntax works, and the DOS style `/option` form as well as legacy single dash long options like
+`-file` are still accepted so existing shortcuts and scripts keep working. Values that need their
+casing preserved - file paths, uri values and base64 payloads - are left exactly as you typed them.
+
+The startup parameters for `daxstudio.exe` are now documented too.
+
+[Read more about the startup parameters](/docs/features/startup-parameters)
+
+## Version notifications have moved into the app
+
+The old notification tray icon has been removed, and new version notifications are now shown as a
+pill in the DAX Studio title bar instead. There is also a new opt-in **Show Pre-Release
+Notifications** setting for anyone who wants to hear about preview builds as well as stable
+releases.
+
+[Read more about version notifications](/docs/features/version-notification)
+
+## Updates
+* Added the Delta Analyzer preview feature for Direct Lake models
+* Added a `benchmark` command to dscmd for scripted cold and warm cache benchmarking
+* Added support for including DAX user-defined functions when expanding measures and dependencies
+* Added a secure `auth` command and non-interactive Entra authentication support to dscmd
+* Command line arguments for both daxstudio.exe and dscmd.exe are now case-insensitive
+* Version notifications now appear in the main window instead of the notification tray
+* Added an option to be notified about pre-release builds
+* Added bulk Order By controls to the Query Builder so you can toggle sorting, and flip the sort
+  direction, for all columns at once
+* Added multi row copy support to the Physical and Logical Query Plan panes
+* Added a search box to the recent files list in the File menu
+* Improved the Browse Workspaces experience
+* The Entra ID sign-in prompt now attaches to the correct window
+* Added zoom support to the Server Timings and Custom Trace panes
+* Updated to the new DAX Formatter endpoint
+* Updated to Fluent.Ribbon v11, which refreshes the ribbon styling across the light, dark and high
+  contrast themes
+* Switched to Microsoft.Data.SqlClient and to a shared HttpClient
+* Added ApplicationContext to QueryEnd trace events
+* Converted the solution to SDK style projects with central package management, and updated a large
+  number of dependencies
+* Improved application startup and general performance, including loading query history without
+  blocking startup
+* The installer now overwrites all files when upgrading
+
+## Fixes
+* Fix #1453 Incorrect code completion for object names containing numeric digits
+* Fix #1456 Unable to copy Physical or Logical Query Plan rows
+* Fix #1458 Bulk options in the Query Builder to adjust the Order By
+* Fix #1460 Callbacks without parameters were not being detected, so they appeared as plain strings
+  rather than highlighted text
+* Fix #1477 Use the correct less-than-or-equal and greater-than-or-equal symbols in data grid filters
+* Fix handling of escaped callback names in the xmSQL parser
+* Fix search not working in the database dialog
+* Fix the trace column cache not being refreshed on reconnect
+* Fix expired access tokens when reusing trace connections
+* Fix View As reconnect races, remap caching, and stale busy states
+* Fix group column alignment
+* Fix an edge case with Server Timings and Clear Cache on Run when events arrive out of order
+* Fix the save prompt when closing modified document tabs
+* Fix a race condition when building the options list
+* Fix a crash when validating hotkeys
+* Fix invalid window handle crashes
+* Fix a crash in DaxStudio.Checker
+* Fix assembly binding errors in dscmd
+* Harden opening SQL Profiler
+* Handle WPF render thread COM errors and a shutdown race condition
+* Fix a minor bug in the query history server filter
+* Improve the robustness of the Excel version check

@@ -40,3 +40,19 @@ As of July 2024 only the XMLA endpoint on the Fabric / Power BI cloud service ex
 :::
 
 ![](server-timings-executionmetrics.png)
+
+### Zooming
+
+:::info New in 3.6.0
+The Server Timings pane supports zooming from version 3.6.0.
+:::
+
+Hold down <kbd>Ctrl</kbd> and scroll the mouse wheel while the pointer is over the Server Timings pane to zoom in and out. This is handy when the xmSQL for a scan event is long and you want to fit more of it on screen, or when you are presenting and need to make the timings easier to read.
+
+The zoom level is per pane, so it does not affect the query editor or the results grid.
+
+### Storage Engine Dependencies
+
+If you enable the **Show Storage Engine Dependencies** preview option, a **Dependencies** button appears on the Server Timings toolbar. This opens a diagram of the tables, columns and joins that the Storage Engine queries touched, built from the captured xmSQL.
+
+See [Storage Engine Dependencies](/docs/features/traces/se-dependencies) for more details.

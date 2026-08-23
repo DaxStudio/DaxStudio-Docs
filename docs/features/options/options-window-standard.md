@@ -49,6 +49,12 @@ Or you can use the search box to find specific settings
 | Show Username in Titlebar | This option will show the current windows login in the title bar | False |
 
 
+### Notifications
+
+| **Setting** | **Description** | **Default** |
+| --- | --- | --- |
+| Show Pre-Release Notifications | When enabled, DAX Studio will notify you when a new pre-release (preview) build is available, in addition to stable releases. Pre-release builds may contain new features that are still being tested. See [Version notifications](/docs/features/version-notification) | False |
+
 ### Theme
 | **Setting** | **Description** | **Default** |
 | --- | --- | --- |
@@ -248,3 +254,27 @@ This setting controls the behavours of the various tracing features.
 **Show Debug Commas** - turning this option on replaces the **Swap Delimiters** command in the ribbon with the **Debug Commas** command
 
 **Show XMLA Commands** - will show command events in the All Queries trace
+
+**Show Delta Analyzer** - enables the [Delta Analyzer](/docs/features/delta-analyzer) tool window, which reads Delta table metadata from OneLake for Direct Lake models. Once enabled the **Delta Analyzer** button appears in the **Metrics** group on the **Advanced** ribbon tab.
+
+:::caution
+The Delta Analyzer is a preview feature, so its user interface may change before the final release.
+:::
+
+### Diagrams
+
+These preview options control the two diagram features. Both are turned off by default, and turning one on makes its button appear in the ribbon.
+
+| **Setting** | **Description** | **Default** |
+| --- | --- | --- |
+| Show Storage Engine Dependencies | Shows the **Dependencies** button in Server Timings, which opens the [Storage Engine Dependencies](/docs/features/traces/se-dependencies) diagram of the table and column relationships used by the Storage Engine queries | False |
+| Show Model Diagram | Enables the [Model Diagram](/docs/features/model-diagram), which visualises the data model structure including tables, columns and relationships. Adds a **Model Diagram** button to the **Model** group on the **Advanced** ribbon tab | False |
+| Model Diagram Column Stat | Which statistic to show against columns in the Model Diagram. One of **None**, **Cardinality** or **Size**. Requires [Model Metrics](/docs/features/model-metrics) data, so you need to run **View Metrics** first | Cardinality |
+| Model Diagram Column Sort | How columns are sorted within each table in the Model Diagram. One of **Name**, **Cardinality &#8595;** or **Size &#8595;**. Sorting by cardinality or size requires **View Metrics** data | Name |
+| Model Diagram Layout | The algorithm used to arrange the tables. One of **Auto**, **Hierarchy**, **Grid**, **Clustered** or **Force Directed**. **Auto** picks one based on the number of tables - Hierarchy for 15 or fewer, Grid for 16-50, and Clustered for more than 50 | Auto |
+| SE Dependencies Heat Map Mode | The metric used to colour the table headers in the Storage Engine Dependencies view. One of **CPU Time**, **Hit Count** or **Row Count**. CPU Time is usually the most useful for finding performance bottlenecks | CPU Time |
+| Show Diagram Debug Button | Shows a **Debug** button in both diagram views for exporting diagnostic information. This is mainly useful when reporting an issue with one of the diagrams | False |
+
+:::caution
+Both diagram features are preview features, so their user interfaces may change before the final release.
+:::

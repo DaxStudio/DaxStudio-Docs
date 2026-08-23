@@ -23,6 +23,13 @@ You cannot turn off both plans, when you toggle one of the plans off the button 
 :::
 ![](query_plan_toggle_display.png)
 
+## Copying Rows
+The Physical and Logical Query Plan grids support selecting multiple rows. Use shift-click to select a range of rows (or ctrl-click to select individual rows) and then press <kbd>Ctrl</kbd>+<kbd>C</kbd> to copy them to the clipboard.
+
+:::info
+Only the query plan text is copied. The **Line** and **Records** columns are excluded so that the copied text is easier to paste into an email or an issue report.
+:::
+
 ## Descendant Rowcounts
 When you click on a row in the Physical Plan that has a row count the rowcounts of any descendant items will be highlighted and will have an up/down/equals indicator. This can help you see if the particular item has a descendant operation that is iterating or filtering over a much larger dataframe.
 
