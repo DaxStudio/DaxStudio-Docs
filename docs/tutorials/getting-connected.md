@@ -5,7 +5,7 @@ sidebar_position: 1
 
 There are a number of different connection options in DAX Studio the following guide will run through all the different data sources that you can connect to.
 
-- [Power Pivot](#connecting-to-powerpivot-in-excel)
+- [Power Pivot](#connecting-to-power-pivot-in-excel)
 - [Power BI Desktop](#connecting-to-power-bi-desktop) 
 - [SSDT](#connecting-to-ssdt-sql-server-developer-tools)
 - [Analysis Services](#connecting-to-analysis-services)

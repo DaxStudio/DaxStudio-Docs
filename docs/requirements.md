@@ -2,7 +2,7 @@
 title: Requirements
 ---
 
-The following are the operating system requirements for running DAX Studio
+The following are the operating system requirements for running DAX Studio.
 
 ## Operating System
 
@@ -34,6 +34,6 @@ eg.
 
 ::: Warning 
 
-Windows 11 is only supported in 64-bit and DAX Studio is not longer tested on 32-bit platforms
+Windows 11 is only supported in 64-bit and DAX Studio is not longer tested on 32-bit platforms.
 
 :::

@@ -59,4 +59,4 @@ Regex expressions can get very complex and you can not only use these in find ex
 
 | Example | Description |
 | :--- | :--- |
-| (?<='Product'\[)([^\s]*?)(?=\]) | This matches text that has a prefix of 'Product'[ and a suffix of ] but does not have any whitespace. This will match Color in 'Product'[Color]But will not match Product Category in 'Product'[Product Category] (since it has a space in the column name)|
+| `(?<='Product'\[)([^\s]*?)(?=\])` | This matches text that has a prefix of 'Product'[ and a suffix of ] but does not have any whitespace. This will match Color in 'Product'[Color]But will not match Product Category in 'Product'[Product Category] (since it has a space in the column name)|
