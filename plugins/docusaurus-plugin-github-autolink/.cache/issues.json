@@ -100,8 +100,8 @@
     "fetchedAt": 1778235029601
   },
   "daxstudio/daxstudio#issue#1382": {
-    "title": "ServerTimings not working against PowerPivot",
-    "body": "Trying to run ServerTimings against PowerPivot crashes DAX Studio",
+    "title": "ServerTimings not working against Power Pivot",
+    "body": "Trying to run ServerTimings against Power Pivot crashes DAX Studio",
     "fetchedAt": 1778235029605
   },
   "daxstudio/daxstudio#issue#1130": {
@@ -115,8 +115,8 @@
     "fetchedAt": 1778235029607
   },
   "daxstudio/daxstudio#issue#1123": {
-    "title": "Rename \"PowerPivot\" to \"Power Pivot\"",
-    "body": "\"PowerPivot\" refers to the Excel 2010 version of Power Pivot, which is no longer supported and which most people would not be using. The name given to current versions of Power Pivot is \"Power Pivot\". Please replace \"PowerPivot\" with \"Power Pivot\" wh…",
+    "title": "Rename \"Power Pivot\" to \"Power Pivot\"",
+    "body": "\"Power Pivot\" refers to the Excel 2010 version of Power Pivot, which is no longer supported and which most people would not be using. The name given to current versions of Power Pivot is \"Power Pivot\". Please replace \"Power Pivot\" with \"Power Pivot\" wh…",
     "fetchedAt": 1778235029607
   },
   "daxstudio/daxstudio#issue#1402": {
@@ -386,7 +386,7 @@
   },
   "daxstudio/daxstudio#issue#1324": {
     "title": "Error \"This type of CollectionView does not support changes to its SourceCollection from a thread different from the Dispatcher thread\" when starting \"All Queries\" trace",
-    "body": "Hi there! I'm having a problem when trying to execute an All Queries trace. When I try to start it, Dax Studio gives me an error saying \"This type of CollectionView does not support changes to its SourceCollection from a thread different from the Dis…",
+    "body": "Hi there! I'm having a problem when trying to execute an All Queries trace. When I try to start it, DAX Studio gives me an error saying \"This type of CollectionView does not support changes to its SourceCollection from a thread different from the Dis…",
     "fetchedAt": 1779751229320
   },
   "daxstudio/daxstudio#issue#1361": {
@@ -401,7 +401,7 @@
   },
   "daxstudio/daxstudio#issue#1213": {
     "title": "Formatted files and results grid not showing correct formats",
-    "body": "I experienced the exact error described in the bug report on this link. https://github.com/DaxStudio/DaxStudio/issues/1209 I followed advice and updated my Dax Studio. It had the desired result and the error disappeared. Unfortunately it affected the…",
+    "body": "I experienced the exact error described in the bug report on this link. https://github.com/DaxStudio/DaxStudio/issues/1209 I followed advice and updated my DAX Studio. It had the desired result and the error disappeared. Unfortunately it affected the…",
     "fetchedAt": 1782216266132
   },
   "daxstudio/daxstudio#issue#1262": {
@@ -411,7 +411,7 @@
   },
   "daxstudio/daxstudio#issue#1228": {
     "title": "default seperator/delimiter is not taken into account by query builder",
-    "body": "DAX Studio v3.0.11.982 Connection: PowerPivot - 13.0.1700.1119 Summary of Issue a) If default delimiter/seperator is set to semicolon \";\" query builder ignore this and use comma \",\" instead b) in some cases (not always) swap delimiter will replace th…",
+    "body": "DAX Studio v3.0.11.982 Connection: Power Pivot - 13.0.1700.1119 Summary of Issue a) If default delimiter/seperator is set to semicolon \";\" query builder ignore this and use comma \",\" instead b) in some cases (not always) swap delimiter will replace th…",
     "fetchedAt": 1782216266132
   },
   "daxstudio/daxstudio#issue#1241": {
@@ -445,7 +445,7 @@
     "fetchedAt": 1782216266166
   },
   "daxstudio/daxstudio#issue#951": {
-    "title": "Swap Delimiters Missing in Dax 3.0",
+    "title": "Swap Delimiters Missing in DAX 3.0",
     "body": "Hello Community, An important feature for me is the swap delimiters (, for ;) and I've found that it went missing in the new update (3.0). The \"debug commas\" took it's place. I've tried to use the replace function but it didn't work for me and i've f…",
     "fetchedAt": 1782216266555
   },
@@ -475,8 +475,8 @@
     "fetchedAt": 1782216266557
   },
   "daxstudio/daxstudio#issue#1016": {
-    "title": "Request - Drag a .dax file to Dax Studio to open in a new tab",
-    "body": "In SSMS, I can drag a sql file from Windows Explorer onto SSMS and it'll open the file in a new tab. I'd like the same functionality for DAX Studio. Drag a .dax file to Dax Studio",
+    "title": "Request - Drag a .dax file to DAX Studio to open in a new tab",
+    "body": "In SSMS, I can drag a sql file from Windows Explorer onto SSMS and it'll open the file in a new tab. I'd like the same functionality for DAX Studio. Drag a .dax file to DAX Studio",
     "fetchedAt": 1782216266558
   },
   "daxstudio/daxstudio#issue#1076": {
@@ -501,12 +501,12 @@
   },
   "daxstudio/daxstudio#issue#1051": {
     "title": "Support time format type between PowerBi and SQL Server exporting.",
-    "body": "I recently installed Dax Studio for our company's Power BI to export data to SQL server. There is a column called \"starttime\" set in a time format type that needs to be exported to our SQL table in a time format type. Dax Studio currently exports the…",
+    "body": "I recently installed DAX Studio for our company's Power BI to export data to SQL server. There is a column called \"starttime\" set in a time format type that needs to be exported to our SQL table in a time format type. DAX Studio currently exports the…",
     "fetchedAt": 1782216266636
   },
   "daxstudio/daxstudio#issue#1025": {
     "title": "Spelling mistakes in DAX Studio",
-    "body": "Here is a list of spelling mistakes in DAX Studio: - If you right-click on DaxStudio.exe and go to Properties → Details tab → File description, it says \"Dax Studio\", but it should be \"DAX Studio\" - If I pin DaxStudio.exe to the Taskbar and hover over…",
+    "body": "Here is a list of spelling mistakes in DAX Studio: - If you right-click on DaxStudio.exe and go to Properties → Details tab → File description, it says \"DAX Studio\", but it should be \"DAX Studio\" - If I pin DaxStudio.exe to the Taskbar and hover over…",
     "fetchedAt": 1782216266636
   },
   "daxstudio/daxstudio#issue#997": {
@@ -586,12 +586,12 @@
   },
   "daxstudio/daxstudio#issue#1146": {
     "title": "Translations - Sort by Translationed name",
-    "body": "Discussed in https://github.com/DaxStudio/DaxStudio/discussions/1144 <div type='discussions-op-text' <supOriginally posted by bluehenve July 8, 2023</sup Hi I see translated names in the explorer section on the left side of Dax Studio: - The translat…",
+    "body": "Discussed in https://github.com/DaxStudio/DaxStudio/discussions/1144 <div type='discussions-op-text' <supOriginally posted by bluehenve July 8, 2023</sup Hi I see translated names in the explorer section on the left side of DAX Studio: - The translat…",
     "fetchedAt": 1782216266637
   },
   "daxstudio/daxstudio#issue#1154": {
     "title": "Define Measures in combination with Calculation Group format strings",
-    "body": "Describe the bug I have been working with calculation groups a lot lately and noticed that im unable to define measures in Dax Studio after introducing format string expressions in one of my calculation groups. I understand that when introducing form…",
+    "body": "Describe the bug I have been working with calculation groups a lot lately and noticed that im unable to define measures in DAX Studio after introducing format string expressions in one of my calculation groups. I understand that when introducing form…",
     "fetchedAt": 1782216266685
   },
   "daxstudio/daxstudio#issue#979": {

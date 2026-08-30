@@ -10,7 +10,7 @@ Tracing requires server admin rights, if you do not have admin rights the trace 
 It is not possible to get query plans from a Power Pivot connection.
 :::
 
-Dax Studio supports capturing the query plan trace events from a SSAS Tabular server and displaying them.
+DAX Studio supports capturing the query plan trace events from a SSAS Tabular server and displaying them.
 
 The events are displayed in a tree view that allows you to expand and collapse to help with navigating around large query plans
 ![](query_plan.png)

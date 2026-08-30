@@ -5,7 +5,7 @@ title: Output Modes
 ![output modes](output-modes_output_targets.png)
 
 ### Grid
-This is the default mode. Results are displayed in a grid within the Dax Studio Results tab.
+This is the default mode. Results are displayed in a grid within the DAX Studio Results tab.
 
 :::info
 By default the results returned from a DAX query are unformatted. DAX Studio incorporates additional logic to scan through the model metadata looking for format string information which it then attempts to match up with the column names in the resultset. So if you create measures or use functions like SUMMARIZE to provide alternate names for your output columns the formatting will not flow through to the results.
@@ -32,7 +32,7 @@ Results can be sent directly to a file, but unlike the **File** mode above the F
 Results will be sent to the Windows clipboard in a csv data format suitable for pasting into an application like Excel.
 
 ### Linked
-When the results are output using the Linked mode a table is created in the active Excel workbook which has the connection to the tabular data source and the DAX query embedded in it. What this means is that users without Dax Studio could refresh the data in this table.
+When the results are output using the Linked mode a table is created in the active Excel workbook which has the connection to the tabular data source and the DAX query embedded in it. What this means is that users without DAX Studio could refresh the data in this table.
 
 If you are running from the **Excel Add-in** you will be given a choice of which sheet in the active workbook the results will appear in.
 

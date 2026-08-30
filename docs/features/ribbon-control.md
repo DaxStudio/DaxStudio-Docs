@@ -32,7 +32,7 @@ The ribbon in DAX Studio is split into a number of functional groups
 ## Traces
 - **Query Plan** - turns on the display of query plan information (requires admin rights on the data source)
 - **Server Timings** - turns on the display of detailed timing information (requires admin rights on the data source)
-- **All Queries** - traces all queries against the given data source. This lets you capture queries from other client tools like Excel or Power BI in order to assist in tuning them or learning about how a particular client tool constructs it's queries
+- **All Queries** - traces all queries against the given data source. This lets you capture queries from other client tools like Excel or Power BI in order to assist in tuning them or learning about how a particular client tool constructs its queries
 
 ## Server Timings
 - **Scan** - displays information on storage engine scan events

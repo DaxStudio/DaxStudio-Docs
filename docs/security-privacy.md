@@ -17,7 +17,7 @@ All communication with Analysis Services instances or Power BI Premium workspace
 When DAX Studio connects to an instance of Analysis Services (local network or cloud) or a Power BI Premium workspace (cloud), this connection is performed through the client libraries mentioned above. By design, the ADOMD/AMO libraries handles the authentication and authorization of the user. All the permissions and roles are defined on the dataset itself, DAX Studio does not provide any access to data which the user could not do through other means (such as through other client tools like Excel or SQL Server Management Studio).
 
 ## Model metadata
-Once the ADOMD client library establishes connection, DAX Studio will request the full CSDL metadata for the specific Analysis Services database or Power BI dataset that the user wants to connect to. This is the same metadata call that Power BI Desktop uses to populate it's metadata pane. 
+Once the ADOMD client library establishes connection, DAX Studio will request the full CSDL metadata for the specific Analysis Services database or Power BI dataset that the user wants to connect to. This is the same metadata call that Power BI Desktop uses to populate its metadata pane. 
 
 DAX Studio does not collect, publish, share, transfer or otherwise make public any model metadata obtained through the ADOMD client libraries unless the user specifically initiates an action to do so (for example by saving a vpax file to a shared network location).
 

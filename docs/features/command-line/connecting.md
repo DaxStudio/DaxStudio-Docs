@@ -2,7 +2,7 @@
 title: Connecting
 ---
 
-DSCMD supports all the same [connection types](/tutorials/getting-connected/) as the DAX Studio User Interface does with the exception of PowerPivot. PowerPivot does not support external tools connecting in, you can only connect when using the Excel add-in for the DAX Studio user interface.
+DSCMD supports all the same [connection types](/tutorials/getting-connected/) as the DAX Studio User Interface does with the exception of Power Pivot. Power Pivot does not support external tools connecting in, you can only connect when using the Excel add-in for the DAX Studio user interface.
 
 There are 2 main ways of connecting for most commands. 
 
@@ -18,7 +18,7 @@ All commands support using `--server` or `-s` for connecting to an endpoint that
 | Fabric / Power BI Premium XMLA Endpoint |  `powerbi://` |
 | Azure AS | `asazure:// ` |
 | Power BI Desktop | `localhost:1234` <br/> `"My Report.pbix"` <br/> `"Adventure Works.pbip"`|
-| PowerPivot | _Not supported_ |
+| Power Pivot | _Not supported_ |
 
 #### Power BI Desktop 
 You can connect to Power BI Desktop in 2 different ways

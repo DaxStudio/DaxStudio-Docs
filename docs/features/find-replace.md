@@ -3,7 +3,8 @@ title: Find/Replace
 ---
 
 ## Find
-The editor in Dax Studio supports Find (Ctrl+F)
+
+The editor in DAX Studio supports Find (Ctrl+F)
 
 ![](find_dialog.png)
 
@@ -30,6 +31,7 @@ This option allows for the find/replace operations to be constrained to a select
 ![replace in selection](replace_in_selection.png)
 
 ## Replace
+
 Replace (Ctrl+H) allows for the replacement of the search text with the specified replacement text
 
 ![](replace.png) replace just the current match
@@ -42,14 +44,14 @@ Replace (Ctrl+H) allows for the replacement of the search text with the specifie
 
 When using the wildcard option there are 2 supported wildcards
 
-* **\*** matches 1 or more of any character
-* **?** matches any single character
+- ***** matches 1 or more of any character
+- **?** matches any single character
 
 | Example | Description |
 | :--- | :--- |
-| F\*R | this matches any text that has an F followed by any number of characters and then an R<br/>eg. FILTER, FOR, FEAR  |
-| F?R | this matches any text that has an F followed by a single character and then an R<br/> eg. FOR, FAR, FIR |
-| [\*] | this matches any text between square brackets<br/> eg. [Color], [Total Sales] |
+| F*R | this matches any text that has an F followed by any number of characters and then an Reg. FILTER, FOR, FEAR  |
+| F?R | this matches any text that has an F followed by a single character and then an R eg. FOR, FAR, FIR |
+| [*] | this matches any text between square brackets eg. [Color], [Total Sales] |
 
 ### Regex
 
@@ -57,4 +59,4 @@ Regex expressions can get very complex and you can not only use these in find ex
 
 | Example | Description |
 | :--- | :--- |
-| ```(?<='Product'\[)([^\s]*?)(?=\])``` | This matches text that has a prefix of `'Product'[` and a suffix of `]` but does not have any whitespace. <br/>This will match `Color` in `'Product'[Color]`<br/>But will not match `Product Category` in `'Product'[Product Category]` (since it has a space in the column name)|
+| (?<='Product'\[)([^\s]*?)(?=\]) | This matches text that has a prefix of 'Product'[ and a suffix of ] but does not have any whitespace. This will match Color in 'Product'[Color]But will not match Product Category in 'Product'[Product Category] (since it has a space in the column name)|

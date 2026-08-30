@@ -102,7 +102,7 @@ These settings control which connection types DAX Studio will automatically chec
 
 | **Setting** | **Description** | **Default** |
 | --- | --- | --- |
-| Local Connections | For any connections to localhost (eg. PowerPivot, Power BI Desktop, SSDT)| true |
+| Local Connections | For any connections to localhost (eg. Power Pivot, Power BI Desktop, SSDT)| true |
 | Network Connections | For any connections to SSAS | true |
 | Cloud Connections | For any connections to data sources that start with asazure:// or powerbi:// | false |
 
@@ -221,7 +221,7 @@ These settings control the length of various timeouts for potentially long runni
 | **Setting** | **Description** | **Default** |
 | --- | --- | --- |
 | DAX Formatter Request Timeout | DAX Studio sends a background request https://daxformatter.com this setting controls how long we wait before we consider the request as failed and log an error  | 10 sec |
-| PowerPivot model detection Timeoue (sec) | This is the number of seconds DAX Studio will wait for a response from Excel while trying to determine if the active workbook has a data model | 30 sec|
+| Power Pivot model detection Timeoue (sec) | This is the number of seconds DAX Studio will wait for a response from Excel while trying to determine if the active workbook has a data model | 30 sec|
 | Server Timings End Event Timeout | The trace events in the tabular engine are raised on a low priority background thread and occasionally if the server is very busy some events can be discarded. This setting controls how long DAX Studio will wait for a queries final QueryEnd event before it gives up and logs a warning. _For high latency connections (such as Azure AS and the Power BI XMLA endpoint) you may need to increase this setting._ | 15 sec |
 | Trace Startup Timeout | When DAX Studio starts a trace it periodically "pings" the server with an empty command. It then waits until the trace captures one of these requests before it considers the trace to be fully active. This setting controls how long DAX Studio will wait to see one of these "ping" requests before it stops waiting and logs and error.  _For high latency connections (such as Azure AS and the Power BI XMLA endpoint) you may need to increase this setting._| 30 sec |
 
@@ -242,7 +242,7 @@ This setting controls the behavours of the various tracing features.
 | --- | --- | --- |
 |Include TOM| this option will include a copy of the current data model's .bim file (which is just metadata) in the .vpax file| True |
 |Read Statistics from data| This will cause Vertipaq Analyzer to issue more accurate, but more expensive queries to the data source | True |
-|Read statistics from DirectQuery tables| Specifies whether or not to gather statistics from Direct Query tables | False |
+|Read statistics from DirectQuery tables| Specifies whether or not to gather statistics from DirectQuery tables | False |
 |Direct Lake Behaviour| Determines how the Read statistics from data behaves for Direct Lake models [more details](/docs/features/model-metrics/#metric-options-dialog)| ResidentOnly |
 |Sample Referential Integrity| The number of example missing keys to display. Note: these are only shown when viewing metrics, when you save a vpax file this information is not included  | 3 |
 |Do not show options dialog| Specifies whether to show the Options dialog when viewing or exporting metrics. This setting can also be set when the user ticks the option to not show this dialog again | False |

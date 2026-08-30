@@ -5,22 +5,22 @@ sidebar_position: 1
 
 There are a number of different connection options in DAX Studio the following guide will run through all the different data sources that you can connect to.
 
-- [PowerPivot](#connecting-to-powerpivot-in-excel)
+- [Power Pivot](#connecting-to-powerpivot-in-excel)
 - [Power BI Desktop](#connecting-to-power-bi-desktop) 
 - [SSDT](#connecting-to-ssdt-sql-server-developer-tools)
 - [Analysis Services](#connecting-to-analysis-services)
 - [Azure Analysis Services](#connecting-to-azure-analysis-services)
 - [Power BI XMLA endpoint](#connecting-to-power-bi-premium-xmla-endpoint)
 
-## Connecting to PowerPivot in Excel
+## Connecting to Power Pivot in Excel
 
-This is the only data source which has a requirement on the way in which DAX Studio is launched. In order to be able to connect to a PowerPivot data model in Excel you **must** have the DAX Studio Excel Addin installed and you **must** launch DAX Studio from the Addin ribbon in Excel. 
+This is the only data source which has a requirement on the way in which DAX Studio is launched. In order to be able to connect to a Power Pivot data model in Excel you **must** have the DAX Studio Excel Addin installed and you **must** launch DAX Studio from the Addin ribbon in Excel. 
 
-When you launch DAX Studio from the Excel addin and the active workbook contains a PowerPivot model you will see the following option enabled and selected by default
+When you launch DAX Studio from the Excel addin and the active workbook contains a Power Pivot model you will see the following option enabled and selected by default
 
 ![](connect-powerpivot.png)
 
-When you launch DAX Studio any other way the PowerPivot option will be disabled
+When you launch DAX Studio any other way the Power Pivot option will be disabled
 
 
 ## Connecting to Power BI Desktop
