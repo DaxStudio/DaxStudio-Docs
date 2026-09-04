@@ -648,5 +648,25 @@
     "title": "Use the proper \"≤\" and \"≥\" symbols in the comparison operator dropdown menu for the \"Record\" column when the physical query plan filter is enabled",
     "body": "In the Ribbon, in the \"Home\" tab, click on \"Query Plan\". In the \"Query Plan\" tab below, ensure that the physical query plan is visible and click on the funnel icon within the \"Physical Query Plan\" button. This will cause a row of search boxes to appe…",
     "fetchedAt": 1787483241273
+  },
+  "daxstudio/daxstudio#issue#1488": {
+    "title": "Spacing and sizing issues in the Simplified Ribbon",
+    "body": "The spacing between buttons and dividers in the Simplified Ribbon is inconsistent. This is especially noticeable when you hover over a button that is beside a divider and notice the space between the divider and the rectangle around the button. In pa…",
+    "fetchedAt": 1788538467757
+  },
+  "daxstudio/daxstudio#issue#1486": {
+    "title": "Text improvements for Server Timings",
+    "body": "Listed below: - Use the proper \"×\" sign instead of \"x\" when showing parallelism (e.g. \"×4.0\" instead of \"x4.0). This applies to the \"Par.\" column and to the parallelism number, off to the left, 2 lines below the \"SE CPU\" heading. - If the numbers in…",
+    "fetchedAt": 1788538467756
+  },
+  "daxstudio/daxstudio#issue#1481": {
+    "title": "Preview \"Delta Analyser\" for Warehouses",
+    "body": "Is your feature request related to a problem? Please describe. The newly introduced Delta Analyser super valueable. It exactly shows the issue I am trying to fight with MSFT support for weeks. However, it seems as if Warehouse DirectLake tables are c…",
+    "fetchedAt": 1788538467716
+  },
+  "daxstudio/daxstudio#issue#1479": {
+    "title": "UI inconsistencies in 3.6.0",
+    "body": "Looks like 3.6.0 removed the theme and notification buttons? Icons are also appearing way too close to the edges. This exercise also made me think, is it possible to let a user run different versions of DS on same machine? That way it is easier to ve…",
+    "fetchedAt": 1788538467713
   }
 }
