@@ -2,8 +2,7 @@
 title: EvaluateAndLog Trace
 ---
 
-:::info
-The `EVALUATEANDLOG()` function only works in models hosted in **Power BI Desktop** if a model is hosted in the Power BI service this function will not produce any output.
+:::info[The `EVALUATEANDLOG()` function only works in models hosted in **Power BI Desktop** if a model is hosted in the Power BI service this function will not produce any output.]
 :::
 
 This function is useful for viewing intermediate values and tables that are involved in evaluating DAX expressions. This trace captures the output from the [`EVALUATEANDLOG()`](https://learn.microsoft.com/en-us/dax/evaluateandlog-function-dax) function. The output of this function will show you **input** values coming from the filter context and the resulting **output** values. The output can be a scalar value or a table.

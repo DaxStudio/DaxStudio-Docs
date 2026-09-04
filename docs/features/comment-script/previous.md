@@ -3,8 +3,8 @@ title: PREVIOUS
 sidebar_position: 14
 ---
 
-:::warning Preview Feature
-Comment Script is a **preview** feature and is only available in the DAX Studio preview build. Its syntax and behavior may change before the final release.
+:::warning[Preview Feature]
+Comment Script is a **preview** feature and is only available in the DAX Studio [preview build](/preview-downloads). Its syntax and behavior may change before the final release.
 :::
 
 `PREVIOUS` is an assertion operand that refers to the preceding batch that executed a query. DAX Studio automatically captures that batch's result set and Server Timings, so no [`BASELINE`](/docs/features/comment-script/baseline) command or name is needed.

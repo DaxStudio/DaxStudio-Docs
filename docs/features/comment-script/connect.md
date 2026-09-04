@@ -3,8 +3,8 @@ title: CONNECT
 sidebar_position: 2
 ---
 
-:::warning Preview Feature
-Comment Script is a **preview** feature and is only available in the DAX Studio preview build. Its syntax and behavior may change before the final release.
+:::warning[Preview Feature]
+Comment Script is a **preview** feature and is only available in the DAX Studio [preview build](/preview-downloads). Its syntax and behavior may change before the final release.
 :::
 
 `CONNECT` connects without opening the connection dialog.

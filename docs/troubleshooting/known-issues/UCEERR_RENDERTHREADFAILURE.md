@@ -9,8 +9,7 @@ UCEERR_RENDERTHREADFAILURE (Exception from HRESULT: 0x88980406)
 
 This appears to be a problem with Graphics Hardware acceleration. You can turn off the hardware acceleration by changing a setting in the config file.
 
-:::info
-DAX Studio 3.6.0 added hardening for WPF render-thread COM errors and removed the legacy Aero2 theme dependency, so this error should be less common from 3.6.0 onwards.
+:::info[DAX Studio 3.6.0 added hardening for WPF render-thread COM errors and removed the legacy Aero2 theme dependency, so this error should be less common from 3.6.0 onwards.]
 :::
 
 In the folder where DAX Studio is installed there is a file called `daxstudio.exe.config`

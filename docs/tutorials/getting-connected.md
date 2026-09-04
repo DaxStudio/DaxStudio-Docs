@@ -31,8 +31,7 @@ There are a couple of different ways of connecting to Power BI Desktop.
 
 2. Or if you launch DAX Studio while Power BI Desktop is running you can see a list of the open pbix files in the PBI / SSDT option and connect to your file that way.
 
-:::info
-You cannot connect to reports using **Live Connections** when using option 2. When you use Option 1 the **External Tools** option knows about the Live Connection and sends through the connection details for the underlying Live Connection.
+:::info[You cannot connect to reports using **Live Connections** when using option 2. When you use Option 1 the **External Tools** option knows about the Live Connection and sends through the connection details for the underlying Live Connection.]
 :::
 
 ![](connect-powerbi.png)

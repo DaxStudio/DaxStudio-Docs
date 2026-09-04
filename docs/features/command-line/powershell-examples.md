@@ -7,8 +7,7 @@ When you combine `dscmd.exe` with powershell you can do some really powerful thi
 # Example 1
 The following example loops through an array of characters and export rows where the 'Product'[Color] value starts with the specified letter. This shows how you can insert a variable from Powershell into your query and filename dynamically.
 
-:::tip
-Note that double quote characters `"` inside 'here strings' `@"..."@` need to be double escaping using a backslash and a backtick eg  `` \`" ``
+:::tip[Note that double quote characters `"` inside 'here strings' `@"..."@` need to be double escaping using a backslash and a backtick eg  `` \`" ``]
 :::
 
 ```

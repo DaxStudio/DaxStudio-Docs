@@ -3,8 +3,8 @@ title: ASSERT
 sidebar_position: 11
 ---
 
-:::warning Preview Feature
-Comment Script is a **preview** feature and is only available in the DAX Studio preview build. Its syntax and behavior may change before the final release.
+:::warning[Preview Feature]
+Comment Script is a **preview** feature and is only available in the DAX Studio [preview build](/preview-downloads). Its syntax and behavior may change before the final release.
 :::
 
 `ASSERT` verifies the row count or a Server Timings metric after the batch query runs.

@@ -6,8 +6,7 @@ title: Options Window - Advanced
 
 ## Publish Functions
 
-:::info
-These functions are mainly used to help maintain dax.guide and most users will not need to use them.
+:::info[These functions are mainly used to help maintain dax.guide and most users will not need to use them.]
 :::
 
 **Publish Functions** - will send a list of functions to dax.guide.

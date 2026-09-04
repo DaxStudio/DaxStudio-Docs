@@ -3,8 +3,8 @@ title: BASELINE
 sidebar_position: 13
 ---
 
-:::warning Preview Feature
-Comment Script is a **preview** feature and is only available in the DAX Studio preview build. Its syntax and behavior may change before the final release.
+:::warning[Preview Feature]
+Comment Script is a **preview** feature and is only available in the DAX Studio [preview build](/preview-downloads). Its syntax and behavior may change before the final release.
 :::
 
 `BASELINE` captures a batch's result set and Server Timings metrics for assertions in a later batch.

@@ -3,8 +3,8 @@ title: CLEARCACHE
 sidebar_position: 7
 ---
 
-:::warning Preview Feature
-Comment Script is a **preview** feature and is only available in the DAX Studio preview build. Its syntax and behavior may change before the final release.
+:::warning[Preview Feature]
+Comment Script is a **preview** feature and is only available in the DAX Studio [preview build](/preview-downloads). Its syntax and behavior may change before the final release.
 :::
 
 `CLEARCACHE` clears the model cache before the query in its batch runs. It is equivalent to using **Clear Cache** on the ribbon.

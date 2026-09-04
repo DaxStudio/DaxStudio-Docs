@@ -1,8 +1,7 @@
 ---
 title: All Queries Trace
 ---
-:::tip
-Tracing requires server admin rights, if you do not have these the trace buttons will be disabled
+:::tip[Tracing requires server admin rights, if you do not have these the trace buttons will be disabled]
 :::
 
 The All Queries trace in DAX Studio supports capturing the query events from all client tools (not just queries sent from DAX Studio like the [Query Plan](../query-plan-trace) and [Server Timings](../server-timings-trace) features do). 

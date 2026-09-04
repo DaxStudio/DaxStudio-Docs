@@ -48,8 +48,7 @@ To capture a detailed application log perform the following steps:
 
 _Same as above except the config file is called Daxstudio.**dll**.config_
 
-:::info
- The start-up *fusion* logging detailed below can now be more easily enabled and disabled using the [DAX Studio Checker](../daxstudio-checker) tool
+:::info[The start-up *fusion* logging detailed below can now be more easily enabled and disabled using the [DAX Studio Checker](../daxstudio-checker) tool]
 :::
 
 ## Start up Logging
@@ -85,6 +84,5 @@ And then rename the extension from .txt to .reg and double click the file
 
 You can then zip up the contents of the log folder and add it as an attachment to an issue.
 
-:::note
- Note that there should always be some output from the Fusion log as there is an optional theme that the AvalonDock component looks for which is not used in DaxStudio.
+:::note[Note that there should always be some output from the Fusion log as there is an optional theme that the AvalonDock component looks for which is not used in DaxStudio.]
 :::

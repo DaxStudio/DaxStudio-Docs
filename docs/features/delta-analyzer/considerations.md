@@ -5,8 +5,7 @@ title: Considerations
 When the [Delta Analyzer](/docs/features/delta-analyzer) finishes an analysis it looks at the metadata it collected and
 raises a set of **considerations** for each table.
 
-:::info
-These are *potential* considerations - guidance based on the metadata that was read, rather than
+:::info[These are *potential* considerations - guidance based on the metadata that was read, rather than]
 hard best practices. Whether any of them are worth acting on depends on your data volumes, your
 refresh patterns and your query patterns.
 :::
@@ -35,8 +34,7 @@ Rewriting the table with V-Order enabled (for example running `OPTIMIZE` with V-
 improve Direct Lake performance. It does add some cost when writing, so it is worth weighing
 against how often the table is refreshed.
 
-:::note
-This consideration can only be raised when the **Read parquet footers** option was enabled for the
+:::note[This consideration can only be raised when the **Read parquet footers** option was enabled for the]
 analysis, since that is where the V-Order metadata is read from.
 :::
 

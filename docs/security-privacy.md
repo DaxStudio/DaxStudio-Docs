@@ -43,7 +43,9 @@ DAX Studio may perform requests to online resources (web URLs) only in the follo
 - **Error reports** When an unexpected error occurs, we transmit the stack trace and (anonymized) error message, along with an optional description provided by the user. If a user opts out of sending telemetry data, error reports will also not be sent.
 - **Using DAX formatter** A DAX expression may be formatted by clicking a button in DAX Studio. In this case, the DAX expression (and some anonymous information about the datasource version) is sent to the [www.daxformatter.com](http://www.daxformatter.com) webservice.
 
-:::info System administrators may choose to turn all these web requests off at install time. Or users can choose to switch off individual categories in the File > Options window. :::
+:::info
+System administrators may choose to turn all these web requests off at install time. Or users can choose to switch off individual categories in the File > Options window.
+:::
 
 ## Application Security
 

@@ -11,8 +11,7 @@ The **View As** dialog will show a list of the roles in your model and you can c
 
 ![](./view-as-dialog.png)
 
-:::info
-If you are testing a role with dynamic security. (ie. one that references the USERNAME() or USERPRINCIPALNAME() functions) then you need to tick the role you want to test _and_ tick the **Other User** option to impersonate a different user
+:::info[If you are testing a role with dynamic security. (ie. one that references the USERNAME() or USERPRINCIPALNAME() functions) then you need to tick the role you want to test _and_ tick the **Other User** option to impersonate a different user]
 :::
 
 

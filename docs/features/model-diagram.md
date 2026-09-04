@@ -2,7 +2,7 @@
 title: Model Diagram
 ---
 
-:::caution Preview Feature
+:::caution[Preview Feature]
 The Model Diagram is a **preview** feature. You need to turn it on in
 [Options > Preview > Diagrams > **Show Model Diagram**](/docs/features/options/options-window-standard#preview-features)
 before the ribbon button appears.

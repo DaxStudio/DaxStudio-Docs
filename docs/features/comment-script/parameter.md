@@ -3,8 +3,8 @@ title: PARAMETER
 sidebar_position: 4
 ---
 
-:::warning Preview Feature
-Comment Script is a **preview** feature and is only available in the DAX Studio preview build. Its syntax and behavior may change before the final release.
+:::warning[Preview Feature]
+Comment Script is a **preview** feature and is only available in the DAX Studio [preview build](/preview-downloads). Its syntax and behavior may change before the final release.
 :::
 
 `PARAMETER` supplies a query parameter value so that the script can run without prompting for it.

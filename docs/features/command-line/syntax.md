@@ -24,6 +24,5 @@ If you need to pass a value with spaces, for example if you have a database call
 
 eg. `--database "Adventure Works"`
 
-:::info
-Using an invalid combination of options should generate a meaningful error message explaining what the problem is
+:::info[Using an invalid combination of options should generate a meaningful error message explaining what the problem is]
 :::

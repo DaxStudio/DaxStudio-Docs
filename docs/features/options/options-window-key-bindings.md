@@ -24,6 +24,5 @@ DAX Studio has a number of custom key bindings which can be set using this windo
 
 ^ OemQuestion is the key code for the comma (,) key
 
-:::info
-Note that there are also some global key bindings which cannot be changed. (eg. Ctrl+C for copy, Ctrl+A to select all, etc)
+:::info[Note that there are also some global key bindings which cannot be changed. (eg. Ctrl+C for copy, Ctrl+A to select all, etc)]
 :::

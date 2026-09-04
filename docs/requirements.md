@@ -12,7 +12,9 @@ The following are the operating system requirements for running DAX Studio.
 - Windows 7
 - Windows Server 2012 R2 or later
 
-:::info The primary requirement for the operating system is that it supports the .Net Framework 4.7.2 or later :::
+:::info
+The primary requirement for the operating system is that it supports the .Net Framework 4.7.2 or later
+:::
 
 ## Excel Versions (for Excel Add-in)
 

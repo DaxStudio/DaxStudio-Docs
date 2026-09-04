@@ -3,8 +3,8 @@ title: USE
 sidebar_position: 3
 ---
 
-:::warning Preview Feature
-Comment Script is a **preview** feature and is only available in the DAX Studio preview build. Its syntax and behavior may change before the final release.
+:::warning[Preview Feature]
+Comment Script is a **preview** feature and is only available in the DAX Studio [preview build](/preview-downloads). Its syntax and behavior may change before the final release.
 :::
 
 `USE` selects a database on the current connection. It is equivalent to changing the database in the Metadata pane.
