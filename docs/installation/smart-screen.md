@@ -3,8 +3,7 @@ title: Windows 10 Smartscreen
 ---
 ## What is SmartScreen?
 
-:::tip
- With the release of version 2.12 the DAX Studio installer is now signed with an EV certificate kindly donated by SQLBI Corp so Windows Smart Screen should no longer falsely flag it as potentially harmful.  
+:::tip[With the release of version 2.12 the DAX Studio installer is now signed with an EV certificate kindly donated by SQLBI Corp so Windows Smart Screen should no longer falsely flag it as potentially harmful.]
 :::
 
 [SmartScreen](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) is a set of technologies from Microsoft that is designed to protect your pc from malicious software. Unfortunately for specialty products like DAX Studio, one of the criteria that Smart Screen uses to determine if a given download is safe:
@@ -68,8 +67,7 @@ The installer is now running and you can choose to installer for All Users or ju
 
 ![](install-mode.png)
 
-:::info
-this prompt only appears the **first** time DAX Studio is installed. If you are upgrading the installer will use the option that you installed with the first time. So to change between All Users and Current User you need to do a full uninstall first.
+:::info[this prompt only appears the **first** time DAX Studio is installed. If you are upgrading the installer will use the option that you installed with the first time. So to change between All Users and Current User you need to do a full uninstall first.]
 :::
 
 The install of DAX Studio should now proceed normally.

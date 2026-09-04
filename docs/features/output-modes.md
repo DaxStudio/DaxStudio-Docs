@@ -7,8 +7,7 @@ title: Output Modes
 ### Grid
 This is the default mode. Results are displayed in a grid within the DAX Studio Results tab.
 
-:::info
-By default the results returned from a DAX query are unformatted. DAX Studio incorporates additional logic to scan through the model metadata looking for format string information which it then attempts to match up with the column names in the resultset. So if you create measures or use functions like SUMMARIZE to provide alternate names for your output columns the formatting will not flow through to the results.
+:::info[By default the results returned from a DAX query are unformatted. DAX Studio incorporates additional logic to scan through the model metadata looking for format string information which it then attempts to match up with the column names in the resultset. So if you create measures or use functions like SUMMARIZE to provide alternate names for your output columns the formatting will not flow through to the results.]
 :::
 
 ### Timer
@@ -17,8 +16,7 @@ In this mode the query is run, but the results are discarded. This is mainly use
 ### File
 Results can be sent directly to a tab separated (.txt) file or to a comma separated (.csv) file.
 
-:::info 
-The query results are written to the file without formatting. Numbers are written out with their full precision and datetimes columns are written out using an ISO 8601 format. This is because this option writes text based files, so there is no facility to include metadata about the column's data type or formatting. 
+:::info[The query results are written to the file without formatting. Numbers are written out with their full precision and datetimes columns are written out using an ISO 8601 format. This is because this option writes text based files, so there is no facility to include metadata about the column's data type or formatting.]
 
 Datetimes can be particularly problematic as the different regional formats mean that it can be possible to write a file on one computer that either cannot be parsed on a computer with different regional settings or in a worst case scenario you can get "corruption" where some records may get the day and month swapped without error leading to incorrect results. 
 
@@ -38,8 +36,7 @@ If you are running from the **Excel Add-in** you will be given a choice of which
 
 If you are running DAX Studio outside of Excel we generate a .odc file with your selected query and this will open in a new Excel document.
 
-:::tip
- if you get an error or do not see any results using the **Linked Excel** output trying using the **Grid** output target to test your query to make sure that it works as expected. 
+:::tip[if you get an error or do not see any results using the **Linked Excel** output trying using the **Grid** output target to test your query to make sure that it works as expected.]
 :::
 
 ### Static

@@ -257,8 +257,7 @@ This setting controls the behavours of the various tracing features.
 
 **Show Delta Analyzer** - enables the [Delta Analyzer](/docs/features/delta-analyzer) tool window, which reads Delta table metadata from OneLake for Direct Lake models. Once enabled the **Delta Analyzer** button appears in the **Metrics** group on the **Advanced** ribbon tab.
 
-:::caution
-The Delta Analyzer is a preview feature, so its user interface may change before the final release.
+:::caution[The Delta Analyzer is a preview feature, so its user interface may change before the final release.]
 :::
 
 ### Diagrams
@@ -275,6 +274,5 @@ These preview options control the two diagram features. Both are turned off by d
 | SE Dependencies Heat Map Mode | The metric used to colour the table headers in the Storage Engine Dependencies view. One of **CPU Time**, **Hit Count** or **Row Count**. CPU Time is usually the most useful for finding performance bottlenecks | CPU Time |
 | Show Diagram Debug Button | Shows a **Debug** button in both diagram views for exporting diagnostic information. This is mainly useful when reporting an issue with one of the diagrams | False |
 
-:::caution
-Both diagram features are preview features, so their user interfaces may change before the final release.
+:::caution[Both diagram features are preview features, so their user interfaces may change before the final release.]
 :::

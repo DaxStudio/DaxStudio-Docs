@@ -6,12 +6,10 @@ This command will output an access token for the specified connection settings. 
 
 Typically this command will not be used on its own. Instead it is designed to be used in scripts with loops. If you don't have access to a Service Principal and you need to login to Power BI or Azure AS interactively you can use this command to log in once. This can be achieved by passing in the accesstoken as the password.
 
-:::tip
-When passing the access token using the `-p|-password` parameter it is important not to also pass the username (the token has already been generated)
+:::tip[When passing the access token using the `-p|-password` parameter it is important not to also pass the username (the token has already been generated)]
 :::
 
-:::info
-The access token is like a one time password, it is usually only valid for 60-90 minutes. You can also see these tokens in the browser dev tools when accessing websites using Entra authentication so having access to one locally is not an issue, but they should not be shared with any other person and you should avoid using them on share computers.
+:::info[The access token is like a one time password, it is usually only valid for 60-90 minutes. You can also see these tokens in the browser dev tools when accessing websites using Entra authentication so having access to one locally is not an issue, but they should not be shared with any other person and you should avoid using them on share computers.]
 :::
 
 ## Syntax

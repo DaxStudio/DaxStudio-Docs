@@ -18,8 +18,7 @@ As you can see in the example below, choosing the **Define Dependent Measures** 
 
 ![](./define-dependent-measure-example.png)
 
-:::info
-This is great when testing different variations of a measure for logic or performance improvements and also well when using the [EvaluateAndLog trace](../traces/evaluateandlog-trace)
+:::info[This is great when testing different variations of a measure for logic or performance improvements and also well when using the [EvaluateAndLog trace](../traces/evaluateandlog-trace)]
 :::
 
 ## Define and Expand Measure

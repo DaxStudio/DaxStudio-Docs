@@ -5,8 +5,7 @@ title: Startup Parameters
 This page documents the command line parameters accepted by `daxstudio.exe` itself when you launch
 it.
 
-:::info
-There are two other sets of command line options documented elsewhere on this site:
+:::info[There are two other sets of command line options documented elsewhere on this site:]
 
 * [dscmd.exe](/docs/features/command-line) - the separate DAX Studio command line utility
 * [the installer](/docs/installation/command-line-install) - options for scripted or automated installs
@@ -54,7 +53,7 @@ daxstudio.exe --reset
 
 ## Argument parsing
 
-:::tip New in 3.6.0
+:::tip[New in 3.6.0]
 The command line parsing for both `daxstudio.exe` and `dscmd.exe` was rebuilt in version 3.6.0,
 which makes the two consistent with each other and more forgiving about how options are written.
 :::
@@ -71,8 +70,7 @@ The following are all accepted and mean the same thing:
 
 Option names are **case-insensitive**, so `--file`, `--File` and `--FILE` are equivalent.
 
-:::note
-While the option *names* are case-insensitive, the *values* you pass are not - the casing of file
+:::note[While the option *names* are case-insensitive, the *values* you pass are not - the casing of file]
 paths, uri values and base64 payloads is always preserved exactly as you typed it.
 :::
 

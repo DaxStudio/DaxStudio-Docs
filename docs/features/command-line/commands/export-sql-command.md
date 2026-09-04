@@ -33,8 +33,7 @@ DSCMD EXPORT SQL <OutputFolder> [OPTIONS]
 ### -t --tables Option
 This option is a comma separate list of table names
 
-:::info
-If you need to include tables with spaces the whole parameter needs to be quoted eg. `-t "Table 1,Table 2"`
+:::info[If you need to include tables with spaces the whole parameter needs to be quoted eg. `-t "Table 1,Table 2"`]
 
 If you need to include `"` characters these need to be escaped with a leading backslash eg. `-t "My \"Table\" 1,Table2`
 

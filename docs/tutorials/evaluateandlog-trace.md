@@ -12,16 +12,14 @@ If you want to follow along and try out these queries yourself all you need is:
 
 The simplest way to get started after installing both DAX Studio and Power BI Desktop is to open the **Adventure Works 2020.pbix** file, then click on External Tools and launch DAX Studio from there. 
 
-:::tip
-For more details on how you can connect to your particular data model check out the tutorial on [Getting Connected](../getting-connected/)
+:::tip[For more details on how you can connect to your particular data model check out the tutorial on [Getting Connected](../getting-connected/)]
 :::
 
 ## About the EvalauteAndLog function
 
 The EvaluateAndLog trace is a great tool for helping debug logic issues with DAX measures since it helps provide insights into the context of your calculations.
 
-:::info
-The `EVALUATEANDLOG()` function is only enabled in Power BI Desktop, in order for it to work it sometimes has to disable some internal engine optimizations. DAX Studio is aware of this and will only enable the trace button when you are connected to a model hosted in Power BI Desktop 
+:::info[The `EVALUATEANDLOG()` function is only enabled in Power BI Desktop, in order for it to work it sometimes has to disable some internal engine optimizations. DAX Studio is aware of this and will only enable the trace button when you are connected to a model hosted in Power BI Desktop]
 :::
 
 The `EvaluateAndLog()` function takes 3 arguments, the last 2 of which are optional using the following syntax
@@ -36,8 +34,7 @@ Where:
 
 The full documentation for this function can be found on [Microsoft Learn](https://learn.microsoft.com/en-us/dax/evaluateandlog-function-dax) 
 
-:::note
-The output from the `EVALUATEANDLOG()` function can potentially get very large so the engine will truncate any results over 1 million characters
+:::note[The output from the `EVALUATEANDLOG()` function can potentially get very large so the engine will truncate any results over 1 million characters]
 :::
 
 ## Scalar Values

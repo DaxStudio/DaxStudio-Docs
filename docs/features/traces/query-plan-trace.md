@@ -2,12 +2,10 @@
 title: Query Plan Tracing
 ---
 
-:::tip
-Tracing requires server admin rights, if you do not have admin rights the trace buttons will be _disabled_
+:::tip[Tracing requires server admin rights, if you do not have admin rights the trace buttons will be _disabled_]
 :::
 
-:::info
-It is not possible to get query plans from a Power Pivot connection.
+:::info[It is not possible to get query plans from a Power Pivot connection.]
 :::
 
 DAX Studio supports capturing the query plan trace events from a SSAS Tabular server and displaying them.
@@ -18,16 +16,14 @@ The events are displayed in a tree view that allows you to expand and collapse t
 
 ## Toggling Visibility
 You can use the buttons in the top right to turn off one of the plans (Physical or Logical)
-:::info
-You cannot turn off both plans, when you toggle one of the plans off the button for the other plan becomes disabled
+:::info[You cannot turn off both plans, when you toggle one of the plans off the button for the other plan becomes disabled]
 :::
 ![](query_plan_toggle_display.png)
 
 ## Copying Rows
 The Physical and Logical Query Plan grids support selecting multiple rows. Use shift-click to select a range of rows (or ctrl-click to select individual rows) and then press <kbd>Ctrl</kbd>+<kbd>C</kbd> to copy them to the clipboard.
 
-:::info
-Only the query plan text is copied. The **Line** and **Records** columns are excluded so that the copied text is easier to paste into an email or an issue report.
+:::info[Only the query plan text is copied. The **Line** and **Records** columns are excluded so that the copied text is easier to paste into an email or an issue report.]
 :::
 
 ## Descendant Rowcounts
@@ -56,8 +52,7 @@ If you want to focus on a particular subset of the plan you can right click and 
 ![](query_plan_drill_in.png)
 
 This will limit the display to just that row and any descedant rows. DAX Studio maintains a stack of drill-in operations so you can repeat the **Drill in** multiple times and then step back out using the **Drill out** option
-:::info
-The drill in/out will work regardless of the sort order. So you can do things like find an operation that runs over a large amount of rows, then drill-in, then re-sort
+:::info[The drill in/out will work regardless of the sort order. So you can do things like find an operation that runs over a large amount of rows, then drill-in, then re-sort]
 :::
 ![](query_plan_drilled_in.png)
 

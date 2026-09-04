@@ -7,8 +7,7 @@ The page details the installation pre-requisites for DAX Studio
 
 **Installation Instructions**
 
-:::info
-NOTE: Office 2016 and later should have this enabled by default
+:::info[NOTE: Office 2016 and later should have this enabled by default]
 :::
 
 DAX Studio requires Office Primary Interop Assemblies. Currently, the Office 2013 Primary Interop Assemblies Redistributable is not yet available. However, you can install the Primary Interop Assemblies for Office 2013 (also known as .NET Programmability Support) as follows:

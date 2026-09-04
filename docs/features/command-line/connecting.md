@@ -26,12 +26,10 @@ You can connect to Power BI Desktop in 2 different ways
 1. you can either use the `--server localhost:<port>` format where you would get the `<port>` number by running a script or copying it from the DAX Studio UI. 
 2. You can use the `--server filename.pbix` or `--server filename.pbip` where `filename` is the name of the file excluding the path
 
-:::info
-DSCMD can only connect to _running_ instances of Power BI Desktop. If you wanted fully automated scripts you would need to incorporate the opening and closing logic for Power BI desktop into your script. 
+:::info[DSCMD can only connect to _running_ instances of Power BI Desktop. If you wanted fully automated scripts you would need to incorporate the opening and closing logic for Power BI desktop into your script.]
 :::
 
-:::tip
-You will also need to factor in a delay to allow Power BI Desktop to load the report and data model. DSCMD connects to the in-memory data model so you need to allow time for Power BI Desktop to load the data from the file into memory. The amount of time will depend on how large your data model is. You can estimate this delay by seeing how long it takes Power BI desktop to open the Data pane on the right hand side with the list of tables, columns and measures.
+:::tip[You will also need to factor in a delay to allow Power BI Desktop to load the report and data model. DSCMD connects to the in-memory data model so you need to allow time for Power BI Desktop to load the data from the file into memory. The amount of time will depend on how large your data model is. You can estimate this delay by seeing how long it takes Power BI desktop to open the Data pane on the right hand side with the list of tables, columns and measures.]
 :::
 
 ### Database Name

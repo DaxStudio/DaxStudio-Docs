@@ -4,8 +4,7 @@ title: Model Metrics
 
 DAX Studio has the ability to analyze your data model and report on the memory usage. This can be extremely helpful when performance tuning as the more memory your data structures require, the slower they are to both process and query.
 
-:::info
- all the metrics relate to the memory used by the model when it is loaded into memory. When the model is saved to disk extra compression is applied which may result in a smaller size than the total size reported by the view metrics screen (although we have seen some unusual cases where the size is larger)
+:::info[all the metrics relate to the memory used by the model when it is loaded into memory. When the model is saved to disk extra compression is applied which may result in a smaller size than the total size reported by the view metrics screen (although we have seen some unusual cases where the size is larger)]
 :::
 
 The metrics features can be found on the **Advanced** tab in the DAX Studio ribbon. There are 3 buttons in the metrics section these are:
@@ -94,8 +93,7 @@ When you save as a `.ovpax` file there will actually be 2 files produced
 
 The main reason you may want to use a `.ovpax` file is if you want to send this file to an external service such as https://daxoptimizer.com but you are concerned that you do not want to share potentially identifiable information.
 
-:::info
-**DAX Studio** never overwrites `.dict` file. If a file with the default name already exists **DAX Studio** will add a numeric suffix to the file name.
+:::info[**DAX Studio** never overwrites `.dict` file. If a file with the default name already exists **DAX Studio** will add a numeric suffix to the file name.]
 :::
 
 There are 2 options when creating a `.ovpax` file. 
@@ -107,8 +105,7 @@ When you attemtpt to open a `.ovpax` file DAX Studio checks a couple of things
 1. If there is a `.dict` file in the same folder as the `.ovapx` with the same filename that file will be used.
 2. If there is no matching `.dict` file or if there are multiple matching `.dict` files DAX Studio will prompt for which one to use.
 
-:::note
-If a `.dict` file is not found and one is not provided the obfuscated file will open and you will be able to see all the statistics, but the object names will be the obfuscated ones.
+:::note[If a `.dict` file is not found and one is not provided the obfuscated file will open and you will be able to see all the statistics, but the object names will be the obfuscated ones.]
 :::
 
 **Example 1.** If there is a single `.dict` file with the same name as the `.ovpax` DAX Studio will use that `.dict` file to deobfuscate the data.

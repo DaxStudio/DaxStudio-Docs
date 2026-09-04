@@ -57,6 +57,5 @@ dscmd csv c:\temp\myquery.csv -s localhost\tab19 -d "Adventure Works DW" ^
   -q "EVALUATE FILTER('product', 'product[Color]=@myColor && 'product'[Category]='Bikes')"
 ```
 
-:::warning
-Store the client ID and secret in environment variables instead of embedding them in scripts whenever possible.
+:::warning[Store the client ID and secret in environment variables instead of embedding them in scripts whenever possible.]
 :::

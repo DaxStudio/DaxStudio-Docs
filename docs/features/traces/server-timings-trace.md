@@ -2,8 +2,7 @@
 title: Server Timing Trace
 ---
 
-:::tip
-Tracing requires server admin rights, if you do not have admin rights the trace buttons will be _disabled_
+:::tip[Tracing requires server admin rights, if you do not have admin rights the trace buttons will be _disabled_]
 :::
 
 The standard timings reported in the output window is the elapsed time for the query recorded by DAX Studio, but that can be impacted by network speeds and the size of the result set. If you want to see the query timing from the server perspective you can do this with the server timing trace button.
@@ -35,15 +34,14 @@ Some data sources like the XMLA endpoint for the Fabric / Power BI service can n
 
 These events were announced in the following [blog post](https://powerbi.microsoft.com/en-in/blog/new-executionmetrics-event-in-azure-log-analytics-for-power-bi-semantic-models/)
 
-:::note
-As of July 2024 only the XMLA endpoint on the Fabric / Power BI cloud service exposes these events
+:::note[As of July 2024 only the XMLA endpoint on the Fabric / Power BI cloud service exposes these events]
 :::
 
 ![](server-timings-executionmetrics.png)
 
 ### Zooming
 
-:::info New in 3.6.0
+:::info[New in 3.6.0]
 The Server Timings pane supports zooming from version 3.6.0.
 :::
 

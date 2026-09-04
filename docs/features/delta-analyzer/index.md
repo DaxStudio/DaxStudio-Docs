@@ -2,7 +2,7 @@
 title: Delta Analyzer
 ---
 
-:::caution Preview Feature
+:::caution[Preview Feature]
 The Delta Analyzer is a **preview** feature. You need to turn it on in
 [Options > Preview > Delta Analyzer > **Show Delta Analyzer**](/docs/features/options/options-window-standard#preview-features)
 before the ribbon button appears.
@@ -95,8 +95,7 @@ to see the individual columns (and the row groups, if you enabled that option).
 | Last Modified | Table | When the table was last written to |
 | Error | Table | Any error encountered while reading the metadata for the table |
 
-:::info
-V-Order can only be reported when **Read parquet footers** is enabled. If the analyzer cannot
+:::info[V-Order can only be reported when **Read parquet footers** is enabled. If the analyzer cannot]
 positively identify V-Order in the file footers it reports it as *Unknown* rather than *No*.
 :::
 

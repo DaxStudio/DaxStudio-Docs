@@ -40,6 +40,13 @@ DSCMD BENCHMARK <OutputFile> [OPTIONS]
 
 You must specify either `--file` or `--query`, but not both.
 
+### --cold and --warm Options
+
+The `--cold` and `--warm` options must be greater than or equal to zero, and at least one cold or warm iteration must be run.
+
+For cold iterations the command clears the cache before each query execution. Warm iterations run without clearing the cache. The command captures Formula Engine and Storage Engine timings from a server timings trace, writes per-iteration detail rows and summary statistics to the CSV file, and prints a summary table including FE, SE and row count information to the console. If a trace cannot be started the command falls back gracefully to wall-clock timing.
+
+:::info[The BENCHMARK command is new in version 3.6.0.]
 :::
 
 ## Output

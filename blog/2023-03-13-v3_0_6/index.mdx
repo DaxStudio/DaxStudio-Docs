@@ -8,7 +8,7 @@ tags: [daxstudio]
 # DAX Studio version 3.0.6
 
 Today we are happy to announce the release of version 3.0.6 of DAX Studio
-<!-- truncate -->
+{/* truncate */}
 ## Updated Timeline/Waterfall visualization in Server Timings
 The old Waterfall column has been replaced by the new Timeline column. This column contains the same information as the old waterfall column, but includes a new background image to help visualise times during the execution of a query when either the formula engine (denoted by yellow sections) or the storage engine (denoted by blue sections) was active.
 
@@ -20,8 +20,7 @@ Below is an annotated example of the new **Timeline** column.
 1. Any batch events are represented by a lighter blue rectangle. You can see in this example that 3 preceeding scans are part of the batch
 1. Finally we can see that the query has a block of Formula engine work at the end of the query
 
-:::info
-Note that the time that is allocated to the Formula Engine (denoted by the yellow portions of the Timeline) are simply those times during the query when no Storage Engine events were taking place. We do not have separate events for the formula engine activity. 
+:::info[Note that the time that is allocated to the Formula Engine (denoted by the yellow portions of the Timeline) are simply those times during the query when no Storage Engine events were taking place. We do not have separate events for the formula engine activity.]
 :::
 
 ## xmSQL / DirectQuery formatting improvements
@@ -47,8 +46,7 @@ There is now a "Formatted File" output option. The standard "File" output is the
 
 ## FE Benchmarks (Preview)
 
-:::tip
-This feature is not visible by default you need to turn it on in the Options - Preview settings
+:::tip[This feature is not visible by default you need to turn it on in the Options - Preview settings]
 :::
 
 The FE Benchmark feature runs a standard formula engine only query against the current data source. It produces a FE Benchmark number that should help in estimating the expected performance in production.

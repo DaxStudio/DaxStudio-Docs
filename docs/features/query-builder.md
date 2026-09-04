@@ -36,8 +36,7 @@ Clicking the **New** button in the top right corner will open the measure editor
 
 In addition to creating new measures you can use the pencil icon next to an existing measure to override the expression for that measure. 
 
-:::info
- DAX Studio does not make any changes to your model, if you look at the generated query with the **Edit Query** option you will see that it is just generating a `DEFINE` block with the updated measure expression. If you want to put any of the expressions you have altered back into your data model you need to copy/paste them manually.
+:::info[DAX Studio does not make any changes to your model, if you look at the generated query with the **Edit Query** option you will see that it is just generating a `DEFINE` block with the updated measure expression. If you want to put any of the expressions you have altered back into your data model you need to copy/paste them manually.]
 :::
 
 ## Running your query
@@ -52,8 +51,7 @@ If you have both text in the edit window and selections in the Query Builder you
 
 ![](run-styles.png)
 
-:::info
-DAX Studio attempts to automatically select the correct run mode for you based on the item you last edited. And if you either just have text in the edit window and no selections in the Query Builder or if you only have selections in the Query Builder and no text in the edit window then DAX Studio will automatically switch the run mode
+:::info[DAX Studio attempts to automatically select the correct run mode for you based on the item you last edited. And if you either just have text in the edit window and no selections in the Query Builder or if you only have selections in the Query Builder and no text in the edit window then DAX Studio will automatically switch the run mode]
 :::
 
 ## Editing your query

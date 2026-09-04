@@ -2,8 +2,7 @@
 title: Indent Based Code Folding
 ---
 
-:::info
-This is a preview feature an needs to be enabled using the setting under Options > Preview
+:::info[This is a preview feature an needs to be enabled using the setting under Options > Preview]
 :::
 
 DAX Studio does not have a fully featured DAX parser making some features like code folding impossible to implement correctly, but this feature provides an interesting work around which works for "well formatted" DAX code by allowing the code to be collapsed based on indentation levels. This does allow for some interesting use cases where you can indent a block of code from a long query and collapse it so that you can view just the portions of code that are of interest to you in a single screen.

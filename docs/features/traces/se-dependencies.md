@@ -2,7 +2,7 @@
 title: Storage Engine Dependencies
 ---
 
-:::caution Preview Feature
+:::caution[Preview Feature]
 Storage Engine Dependencies is a **preview** feature. You need to turn it on in
 [Options > Preview > Diagrams > **Show Storage Engine Dependencies**](/docs/features/options/options-window-standard#preview-features)
 before the **Dependencies** button appears in [Server Timings](/docs/features/traces/server-timings-trace).
@@ -57,8 +57,7 @@ queries. Hover over a line to see the source column, target column, join type an
 the parser can determine it, the diagram also shows cardinality and bi-directional or many-to-many
 indicators.
 
-:::note
-The diagram is based on the xmSQL captured for the query run. It is not a full model diagram and it
+:::note[The diagram is based on the xmSQL captured for the query run. It is not a full model diagram and it]
 does not show tables or relationships that were not involved in the captured Storage Engine work.
 Use the **Model Diagram** button if you want to send the referenced tables to the
 [Model Diagram](/docs/features/model-diagram).

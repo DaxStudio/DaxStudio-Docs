@@ -14,6 +14,5 @@ DAX Studio allows you import the performance data and loads into to grid where y
 
 ![DAX Studio Load Performance Data](dax-studio-powerbi-perf-data.png)
 
-:::info
-DAX Studio does not import the _Other_ duration from Power BI as this is largely made up of time where the visual was queued up waiting to be processed. This is due to the fact that the javascript engine which does the rendering in Power BI is single threaded.
+:::info[DAX Studio does not import the _Other_ duration from Power BI as this is largely made up of time where the visual was queued up waiting to be processed. This is due to the fact that the javascript engine which does the rendering in Power BI is single threaded.]
 :::

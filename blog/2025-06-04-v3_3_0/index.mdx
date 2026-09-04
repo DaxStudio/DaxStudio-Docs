@@ -8,7 +8,7 @@ tags: [daxstudio]
 # DAX Studio version 3.3.0
 
 Today we are happy to announce the release of version 3.3.0 of DAX Studio which includes the following new features and fixes.
-<!-- truncate -->
+{/* truncate */}
 
 ## New Features
 ### DSCMD - added support for connecting to open Power BI Desktop files 
@@ -21,8 +21,7 @@ eg.
 
 `dscmd csv c:\temp\stores.csv --server "adventure works.pbix" --query "EVALUATE stores"`
 
-:::info
-Note that dscmd cannot query a pbix/pbip file directly, the file needs to be already open in Power BI Desktop.
+:::info[Note that dscmd cannot query a pbix/pbip file directly, the file needs to be already open in Power BI Desktop.]
 :::
 
 ### Added support for High Contrast Windows themes
@@ -101,6 +100,3 @@ There is a new toggle button in the [Find/Replace](/docs/features/find-replace/)
 * Fixed Find/Replace not working in QueryBuilder Measure Editor
 * Fixed down arrow selecting from the database dialog
 * Fixed #1371 File-Exit not triggering save changes dialog
-
-
-<!-- truncate -->

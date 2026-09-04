@@ -6,8 +6,7 @@ The FE Benchmark feature runs a standard formula engine only query against the c
 
 If your laptop runs a query in 2 seconds and its index is 200, then if you run the same query on a server that has an index 100 we should expect roughly 4 seconds ie. the query will take twice as long since the benchmark score was half.
 
-:::note
-This assumes that the queries are largely bound by CPU time, differences in performance could also be impacted by things like:
+:::note[This assumes that the queries are largely bound by CPU time, differences in performance could also be impacted by things like:]
 * memory access speed
 * other processes consuming resources on the machine
 :::
