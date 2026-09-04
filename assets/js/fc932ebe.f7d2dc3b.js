@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdaxstudio_docusaurus=self.webpackChunkdaxstudio_docusaurus||[]).push([["783"],{20329(u,s,d){d.r(s),d.d(s,{default:()=>a});var r=d(74848),t=d(56347);function a(){return(0,r.jsx)(t.rd,{to:"/docs/tutorials/writing-dax-queries"})}d(96540)}}]);
