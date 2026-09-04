@@ -23,7 +23,9 @@ function Release({tag_name, body}) {
 
 export default function Home(): JSX.Element {
     const data: any = usePluginData('docusaurus-plugin-github-releases');
-    const releases = data.all_releases;
+    const releases = data.all_releases.filter(function (r) {
+      return r && r.prerelease === false && r.draft !== true;
+    });
     return(
         <Layout>
             <main>

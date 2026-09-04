@@ -1,7 +1,7 @@
 ---
 title: Installation Pre-Requisites
 ---
-The page details the installation pre-requisites for Dax Studio
+The page details the installation pre-requisites for DAX Studio
 
 ## Office 2013 Primary Interop Assemblies
 

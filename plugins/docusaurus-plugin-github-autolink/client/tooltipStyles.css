@@ -1,0 +1,18 @@
+.gh-tooltip {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: var(--ifm-global-shadow-lw);
+  z-index: 9999;
+  max-width: 320px;
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+.gh-tooltip-body {
+  margin-top: 6px;
+  color: var(--ifm-color-emphasis-700);
+  white-space: normal;
+  word-wrap: break-word;
+}

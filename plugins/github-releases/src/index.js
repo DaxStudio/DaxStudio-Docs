@@ -2,13 +2,47 @@ module.exports = async function myPlugin(context, options) {
 
   const Axios = require('axios');
   const marked = require('marked');
-  
+
+  const token = process.env.GH_API_TOKEN;
+  if (!token) {
+    console.warn(
+      '[github-releases] GH_API_TOKEN env var is not set. ' +
+        'Falling back to unauthenticated GitHub API requests (60/hr limit). ' +
+        'Set GH_API_TOKEN to raise the limit to 5000/hr.'
+    );
+  }
+  const headers = {
+    Accept: 'application/vnd.github+json',
+    'X-GitHub-Api-Version': '2022-11-28',
+    'User-Agent': 'docusaurus-plugin-github-releases',
+  };
+  if (token) headers.Authorization = `Bearer ${token}`;
+
   return {
     name: 'docusaurus-plugin-github-releases',
     async loadContent() {
-      const releases = await Axios.get('https://api.github.com/repos/daxstudio/daxstudio/releases');
-      console.log('Github Releases Loaded');
-      return releases.data;
+      try {
+        const releases = await Axios.get(
+          'https://api.github.com/repos/daxstudio/daxstudio/releases',
+          { headers }
+        );
+        console.log(
+          `Github Releases Loaded (${releases.data.length}${token ? ', authenticated' : ', unauthenticated'})`
+        );
+        return releases.data;
+      } catch (err) {
+        const status = err.response && err.response.status;
+        const headersOut = (err.response && err.response.headers) || {};
+        const remaining = headersOut['x-ratelimit-remaining'];
+        const reset = headersOut['x-ratelimit-reset'];
+        const resetIso = reset ? new Date(Number(reset) * 1000).toISOString() : 'unknown';
+        const hint = !token
+          ? 'Set the GH_API_TOKEN env var to raise the rate limit from 60/hr to 5000/hr.'
+          : 'GH_API_TOKEN is set but the request still failed — verify the token is valid and not expired.';
+        throw new Error(
+          `[github-releases] Failed to load releases (status=${status}, rate-limit-remaining=${remaining}, reset=${resetIso}). ${hint}`
+        );
+      }
     },
     async contentLoaded({content, actions}) {
       /* ... */
@@ -34,6 +68,15 @@ module.exports = async function myPlugin(context, options) {
       addRoute({
         path: '/downloads',
         component: '@site/src/components/download-list.tsx',
+        modules: {
+          releases: releasesJsonPath,
+        },
+        exact: true,
+      });
+
+      addRoute({
+        path: '/preview-downloads',
+        component: '@site/src/components/preview-download-list.tsx',
         modules: {
           releases: releasesJsonPath,
         },

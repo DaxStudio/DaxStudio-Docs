@@ -49,6 +49,12 @@ Or you can use the search box to find specific settings
 | Show Username in Titlebar | This option will show the current windows login in the title bar | False |
 
 
+### Notifications
+
+| **Setting** | **Description** | **Default** |
+| --- | --- | --- |
+| Show Pre-Release Notifications | When enabled, DAX Studio will notify you when a new pre-release (preview) build is available, in addition to stable releases. Pre-release builds may contain new features that are still being tested. See [Version notifications](/docs/features/version-notification) | False |
+
 ### Theme
 | **Setting** | **Description** | **Default** |
 | --- | --- | --- |
@@ -96,7 +102,7 @@ These settings control which connection types DAX Studio will automatically chec
 
 | **Setting** | **Description** | **Default** |
 | --- | --- | --- |
-| Local Connections | For any connections to localhost (eg. PowerPivot, Power BI Desktop, SSDT)| true |
+| Local Connections | For any connections to localhost (eg. Power Pivot, Power BI Desktop, SSDT)| true |
 | Network Connections | For any connections to SSAS | true |
 | Cloud Connections | For any connections to data sources that start with asazure:// or powerbi:// | false |
 
@@ -215,7 +221,7 @@ These settings control the length of various timeouts for potentially long runni
 | **Setting** | **Description** | **Default** |
 | --- | --- | --- |
 | DAX Formatter Request Timeout | DAX Studio sends a background request https://daxformatter.com this setting controls how long we wait before we consider the request as failed and log an error  | 10 sec |
-| PowerPivot model detection Timeoue (sec) | This is the number of seconds DAX Studio will wait for a response from Excel while trying to determine if the active workbook has a data model | 30 sec|
+| Power Pivot model detection Timeoue (sec) | This is the number of seconds DAX Studio will wait for a response from Excel while trying to determine if the active workbook has a data model | 30 sec|
 | Server Timings End Event Timeout | The trace events in the tabular engine are raised on a low priority background thread and occasionally if the server is very busy some events can be discarded. This setting controls how long DAX Studio will wait for a queries final QueryEnd event before it gives up and logs a warning. _For high latency connections (such as Azure AS and the Power BI XMLA endpoint) you may need to increase this setting._ | 15 sec |
 | Trace Startup Timeout | When DAX Studio starts a trace it periodically "pings" the server with an empty command. It then waits until the trace captures one of these requests before it considers the trace to be fully active. This setting controls how long DAX Studio will wait to see one of these "ping" requests before it stops waiting and logs and error.  _For high latency connections (such as Azure AS and the Power BI XMLA endpoint) you may need to increase this setting._| 30 sec |
 
@@ -236,7 +242,7 @@ This setting controls the behavours of the various tracing features.
 | --- | --- | --- |
 |Include TOM| this option will include a copy of the current data model's .bim file (which is just metadata) in the .vpax file| True |
 |Read Statistics from data| This will cause Vertipaq Analyzer to issue more accurate, but more expensive queries to the data source | True |
-|Read statistics from DirectQuery tables| Specifies whether or not to gather statistics from Direct Query tables | False |
+|Read statistics from DirectQuery tables| Specifies whether or not to gather statistics from DirectQuery tables | False |
 |Direct Lake Behaviour| Determines how the Read statistics from data behaves for Direct Lake models [more details](/docs/features/model-metrics/#metric-options-dialog)| ResidentOnly |
 |Sample Referential Integrity| The number of example missing keys to display. Note: these are only shown when viewing metrics, when you save a vpax file this information is not included  | 3 |
 |Do not show options dialog| Specifies whether to show the Options dialog when viewing or exporting metrics. This setting can also be set when the user ticks the option to not show this dialog again | False |
@@ -248,3 +254,27 @@ This setting controls the behavours of the various tracing features.
 **Show Debug Commas** - turning this option on replaces the **Swap Delimiters** command in the ribbon with the **Debug Commas** command
 
 **Show XMLA Commands** - will show command events in the All Queries trace
+
+**Show Delta Analyzer** - enables the [Delta Analyzer](/docs/features/delta-analyzer) tool window, which reads Delta table metadata from OneLake for Direct Lake models. Once enabled the **Delta Analyzer** button appears in the **Metrics** group on the **Advanced** ribbon tab.
+
+:::caution
+The Delta Analyzer is a preview feature, so its user interface may change before the final release.
+:::
+
+### Diagrams
+
+These preview options control the two diagram features. Both are turned off by default, and turning one on makes its button appear in the ribbon.
+
+| **Setting** | **Description** | **Default** |
+| --- | --- | --- |
+| Show Storage Engine Dependencies | Shows the **Dependencies** button in Server Timings, which opens the [Storage Engine Dependencies](/docs/features/traces/se-dependencies) diagram of the table and column relationships used by the Storage Engine queries | False |
+| Show Model Diagram | Enables the [Model Diagram](/docs/features/model-diagram), which visualises the data model structure including tables, columns and relationships. Adds a **Model Diagram** button to the **Model** group on the **Advanced** ribbon tab | False |
+| Model Diagram Column Stat | Which statistic to show against columns in the Model Diagram. One of **None**, **Cardinality** or **Size**. Requires [Model Metrics](/docs/features/model-metrics) data, so you need to run **View Metrics** first | Cardinality |
+| Model Diagram Column Sort | How columns are sorted within each table in the Model Diagram. One of **Name**, **Cardinality &#8595;** or **Size &#8595;**. Sorting by cardinality or size requires **View Metrics** data | Name |
+| Model Diagram Layout | The algorithm used to arrange the tables. One of **Auto**, **Hierarchy**, **Grid**, **Clustered** or **Force Directed**. **Auto** picks one based on the number of tables - Hierarchy for 15 or fewer, Grid for 16-50, and Clustered for more than 50 | Auto |
+| SE Dependencies Heat Map Mode | The metric used to colour the table headers in the Storage Engine Dependencies view. One of **CPU Time**, **Hit Count** or **Row Count**. CPU Time is usually the most useful for finding performance bottlenecks | CPU Time |
+| Show Diagram Debug Button | Shows a **Debug** button in both diagram views for exporting diagnostic information. This is mainly useful when reporting an issue with one of the diagrams | False |
+
+:::caution
+Both diagram features are preview features, so their user interfaces may change before the final release.
+:::

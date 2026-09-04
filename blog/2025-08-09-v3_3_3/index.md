@@ -4,7 +4,6 @@ title: v3.3.3 Release
 authors: [dgosbell]
 tags: [daxstudio]
 ---
-import Issue from '@site/src/components/Github-Issue';
 
 # DAX Studio version 3.3.3
 
@@ -12,6 +11,8 @@ import Issue from '@site/src/components/Github-Issue';
 * improved multi-threading when scanning for open Power BI Desktop files
 
 ## Fixes
-* <Issue id="1396"/> Find/Replace dialogs not working
-* <Issue id="1400"/> dscmd not showing logging messages for errors
+* #1396 Find/Replace dialogs not working
+* #1400 dscmd not showing logging messages for errors
 * fixing crash when closing certain dialog boxes
+
+<!-- truncate -->

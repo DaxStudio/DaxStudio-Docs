@@ -1,5 +1,5 @@
 ---
-title: CSV command
+title: FILE command
 ---
 
 This command will send output to a file based on the results of a DAX query

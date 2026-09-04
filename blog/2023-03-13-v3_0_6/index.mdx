@@ -4,7 +4,6 @@ title: v3.0.6 Release
 authors: [dgosbell]
 tags: [daxstudio]
 ---
-import Issue from '@site/src/components/Github-Issue';
 
 # DAX Studio version 3.0.6
 
@@ -54,7 +53,7 @@ This feature is not visible by default you need to turn it on in the Options - P
 
 The FE Benchmark feature runs a standard formula engine only query against the current data source. It produces a FE Benchmark number that should help in estimating the expected performance in production.
 
-If your laptop runs a query in 2 seconds and it's index is 200, then if you run the same query on a server that has an index 100 we should expect roughly 4 seconds ie. the query will take twice as long since the benchmark score was half.
+If your laptop runs a query in 2 seconds and its index is 200, then if you run the same query on a server that has an index 100 we should expect roughly 4 seconds ie. the query will take twice as long since the benchmark score was half.
 
 This option is currently in preview so that we can start testing this across a wider range of real world scenarios. There are a lot of other factors that can influence query performance such concurrent load, CPU cache size and type and the memory and memory bus speeds to name a few. So we may need to look at adjusting this as we gather more real information.
 
@@ -65,12 +64,12 @@ This option is currently in preview so that we can start testing this across a w
 _Below is the full list of all the new features and fixes._
 
 ### New Features
-* <Issue id="861"/> adding SHA256 hashes for downloads
-* <Issue id="866"/> added copy with/without headers option for query results
-* <Issue id="973"/> Added Duplicate option to tab right-click menu
-* <Issue id="1016"/> open a .dax file by dragging it onto DAX Studio
-* <Issue id="1031"/> adding encoding option for custom CSV output
-* <Issue id="1051"/> added Formatted File as an output option
+* #861 adding SHA256 hashes for downloads
+* #866 added copy with/without headers option for query results
+* #973 Added Duplicate option to tab right-click menu
+* #1016 open a .dax file by dragging it onto DAX Studio
+* #1031 adding encoding option for custom CSV output
+* #1051 added Formatted File as an output option
 * added json option when outputting to a file
 * FE Benchmarks
 * Updated Timeline/Waterfall visualization in Server Timings
@@ -78,21 +77,21 @@ _Below is the full list of all the new features and fixes._
 * moved preview and vertipaq analyzer settings from the advanced to the standard options page
 
 ### Fixes
-* <Issue id="1062"/> fix vertipaq analyzer showing &gt;unknown&lt; in summary pane for AAS / PBIP
-* <Issue id="1060"/> enabling Shift+Enter to be used as a custom hotkey
-* <Issue id="1052"/> disabled re-ordering of columns in vertipaq analyzer
-* <Issue id="1036"/> fix location of desktop shortcut file for Current User installs
-* <Issue id="1030"/> QueryBuilder measures missing table references when loading from file
-* <Issue id="1029"/> QueryBuilder IN filters not loading from file correctly
-* <Issue id="1026"/> improving VertiPaq Analyzer tooltips
-* <Issue id="1025"/> fixing spelling / capitalization errors
-* <Issue id="968"/> Tool Window incorrectly docking
-* <Issue id="967"/> permission error on non-admin install
-* <Issue id="979"/> improved color contrast in dark mode
-* <Issue id="994"/> adjusted measure icon position when vertical scrollbars are always displayed
-* <Issue id="997"/> adding support for measure filters in Query Builder
-* <Issue id="999"/> fixed display of columns with open parenthesis as first character
-* <Issue id="951"/> moved Swap Delimiters / Debug Commas to advanced
+* #1062 fix vertipaq analyzer showing &gt;unknown&lt; in summary pane for AAS / PBIP
+* #1060 enabling Shift+Enter to be used as a custom hotkey
+* #1052 disabled re-ordering of columns in vertipaq analyzer
+* #1036 fix location of desktop shortcut file for Current User installs
+* #1030 QueryBuilder measures missing table references when loading from file
+* #1029 QueryBuilder IN filters not loading from file correctly
+* #1026 improving VertiPaq Analyzer tooltips
+* #1025 fixing spelling / capitalization errors
+* #968 Tool Window incorrectly docking
+* #967 permission error on non-admin install
+* #979 improved color contrast in dark mode
+* #994 adjusted measure icon position when vertical scrollbars are always displayed
+* #997 adding support for measure filters in Query Builder
+* #999 fixed display of columns with open parenthesis as first character
+* #951 moved Swap Delimiters / Debug Commas to advanced
 * fixed metadata display for multi-dimensional models
 * skip showing crash dialog if app is shutting down
 * Improved generation of Define Measure and Define Dependent Measures

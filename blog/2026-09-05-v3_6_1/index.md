@@ -1,0 +1,22 @@
+---
+slug: v3_6_1-release
+title: v3.6.1 Release
+authors: [dgosbell]
+tags: [daxstudio]
+---
+
+# DAX Studio version 3.6.1
+
+This patch release addresses several issues introduced or identified following the 3.6.0 release.
+
+## Fixes
+* Fix #1479 Fluent.Ribbon v11 theming and UI inconsistencies
+* Fix #1481 OneLake path handling for table names containing special characters and paths copied from Warehouse table properties
+* Fix #1486 Server Timings labels and tooltips
+* Fix #1488 Simplified Ribbon spacing and sizing
+* fixed OneLake authentication token scopes
+* fixed stale column and table names in ERD diagrams
+* fixed query trace completion and query plan capture
+* improved Excel add-in launch and logging compatibility
+
+<!-- truncate -->

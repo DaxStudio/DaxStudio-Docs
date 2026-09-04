@@ -4,6 +4,12 @@
 const lightCodeTheme = require('prism-react-renderer').themes.github;
 const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
+const githubAutolinkRemark = require('./plugins/docusaurus-plugin-github-autolink/remark/autolinkGithub').default;
+const githubAutolinkRemarkOptions = {
+  defaultRepo: 'daxstudio/daxstudio',
+  mode: 'build',
+};
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'DAX Studio',
@@ -11,7 +17,11 @@ const config = {
   url: 'https://daxstudio.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
   favicon: 'img/favicon.ico',
 
   // GitHub pages deployment config.
@@ -36,6 +46,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          remarkPlugins: [[githubAutolinkRemark, githubAutolinkRemarkOptions]],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           //editUrl:
@@ -43,6 +54,7 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          remarkPlugins: [[githubAutolinkRemark, githubAutolinkRemarkOptions]],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           //editUrl:
@@ -172,7 +184,13 @@ const config = {
     }),
   plugins:[
     './plugins/github-releases/src',
-
+    [
+    require.resolve('./plugins/docusaurus-plugin-github-autolink/index.ts'),
+    {
+      defaultRepo: 'daxstudio/daxstudio',
+      mode: 'build', // or 'runtime'
+    },
+  ],
     ['@docusaurus/plugin-client-redirects',
       {
 

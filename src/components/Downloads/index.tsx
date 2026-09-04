@@ -22,8 +22,12 @@ interface ReleaseItem  {
 
 interface Release  {
     tag_name: string;
-    installer: ReleaseItem;
-    portable: ReleaseItem;
+    installer: ReleaseItem | null;
+    portable: ReleaseItem | null;
+}
+
+interface DownloadProps {
+    release?: any;
 }
 
 
@@ -41,37 +45,46 @@ function niceBytes(x){
   return(n.toFixed(n < 10 && l > 0 ? 1 : 0) + ' ' + units[l]);
 }
 
-function  getRelease(): Release {
+function getLatestStableRelease(allReleases: any[]) {
+    return allReleases.find(function(r){ return r && r.prerelease === false && r.draft !== true; });
+}
+
+function  getRelease(override?: any): Release | null {
     const data: any = usePluginData('docusaurus-plugin-github-releases');
-    const latest = data.all_releases[0];
+    const latest = override ?? getLatestStableRelease(data.all_releases);
+    if (!latest) return null;
     const installer = latest.assets.filter(function(asset){ return asset.browser_download_url.endsWith('.exe') })[0];
     const portable = latest.assets.filter(function(asset){ return asset.browser_download_url.endsWith('.zip') })[0];
+    if (!installer && !portable) return null;
     const release:Release = {'tag_name': (latest.tag_name), 
-                        'installer': {
+                        'installer': installer ? {
                           'browser_download_url': (installer.browser_download_url.toString()),
                           'download_size': (installer.size),
                           'download_cnt': (installer.download_cnt),
                           'created_at': installer.created_at, 
                           'download_name': installer.name
-                        }, 
-                        'portable': {
+                        } : null, 
+                        'portable': portable ? {
                           'browser_download_url': (portable.browser_download_url.toString()),
                           'download_size': (portable.size),
                           'download_cnt': (portable.download_cnt),
                           'created_at': portable.created_at,
                           'download_name': portable.name
-                        }
+                        } : null
                     };
     return release;
 } 
 
 
 
-export function Installer() {
-  const rel = getRelease().installer;
+export function Installer({release}: DownloadProps = {}) {
+  const resolvedRelease = getRelease(release);
+  const rel = resolvedRelease?.installer;
+  const cacheBucket = release?.prerelease ? 'preview' : 'main';
   const handleOnFocus = () => {
     console.log('onFocus event was handled');
   }
+  if (!rel) return null;
 return (
     <div className="float-end" >
     <a href={rel.browser_download_url}>
@@ -85,7 +98,7 @@ return (
       <span>&nbsp;Size: {niceBytes(rel.download_size)} | </span>
       <FontAwesomeIcon icon={faCalendarDays} width="16" height="16" />
       <span>&nbsp;{moment(rel.created_at).format('DD-MMM-YYYY')}</span>
-      <UpdateDownloads type="exe"/>
+      <UpdateDownloads type="exe" releaseTag={resolvedRelease?.tag_name} cacheBucket={cacheBucket}/>
     </div>
     
   </div>
@@ -93,9 +106,12 @@ return (
 );
 }
 
-export function Portable() {
+export function Portable({release}: DownloadProps = {}) {
 //<!-- Portable Version download link -->
-const rel = getRelease().portable;
+const resolvedRelease = getRelease(release);
+const rel = resolvedRelease?.portable;
+const cacheBucket = release?.prerelease ? 'preview' : 'main';
+if (!rel) return null;
 return (
   <div>
      <a href={rel.browser_download_url}>
@@ -108,7 +124,7 @@ return (
     <div className="download-info">
       <FontAwesomeIcon icon={faFloppyDisk} width="16" height="16"/> <span>Size: {niceBytes(rel.download_size)}  | </span>
       <FontAwesomeIcon icon={faCalendarDays} width="16" height="16" />&nbsp;<span>{moment(rel.created_at).format('DD-MMM-YYYY')}</span>
-      <UpdateDownloads type="zip"/> 
+      <UpdateDownloads type="zip" releaseTag={resolvedRelease?.tag_name} cacheBucket={cacheBucket}/> 
     </div>
   </div>
 );

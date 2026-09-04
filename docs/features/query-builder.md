@@ -20,6 +20,12 @@ For filters like **In** and **Not in** where you can supply a list of values you
 
 ![](in-filters.png)
 
+## Order By
+
+The expandable **Order By** section lists the sortable columns for your query. Individual columns can still be configured one at a time, but DAX Studio 3.6.0 added bulk controls beside the **Order By** header when there is at least one sortable column.
+
+Use the toggle switch to turn **Order By** on or off for every column at once. Use the button next to it to flip the sort direction for all columns at once; its tooltip shows the action that will be performed.
+
 ## Creating new Measures
 
 Clicking the **New** button in the top right corner will open the measure editor where you can enter the name and expression for a brand new measure. The measure editor uses the same editor as the main query window so you can use the code completion feature or drag and drop objects from the metadata pane to build up your expression

@@ -6,7 +6,7 @@ title: Logging Settings
 As of v2.7.0 you can enable diagnostic logging in DAX Studio by holding down the left SHIFT key while starting the application. If you are having issues with the Excel addin you need to hold down the SHIFT key while Excel is starting up. 
 
 ## Enabling Diagnostic Logging - Excel Addin
-The Excel addin can create it's own separate log file. If you are having issues with the Excel addin you need to hold down the SHIFT key while Excel is starting up. So if you have any Excel windows open you need to close all of those then hold the SHIFT key down while Excel starts up until you see the main Excel window open. If you watch the Excel splash screen carefully you should see a message as it loads the DAX Studio addin - it is at this point that the addin checks to see if the SHIFT key is being held down.  
+The Excel addin can create its own separate log file. If you are having issues with the Excel addin you need to hold down the SHIFT key while Excel is starting up. So if you have any Excel windows open you need to close all of those then hold the SHIFT key down while Excel starts up until you see the main Excel window open. If you watch the Excel splash screen carefully you should see a message as it loads the DAX Studio addin - it is at this point that the addin checks to see if the SHIFT key is being held down.  
 
 ## Log Folder Location
 Logs are stored in the ```%LOCALAPPDATA%\DaxStudio\log``` folder. You can either paste this address into the Windows Explorer address bar or the Help - About window also has a link to this location.
@@ -53,7 +53,7 @@ _Same as above except the config file is called Daxstudio.**dll**.config_
 :::
 
 ## Start up Logging
-If Dax Studio fails to even start up this often points to a problem with the dependencies. If this is the case the application crash happens before the application logging above is initialized so it is not able to trap the error. To capture these issues we need to enable a feature of the .Net called "Fusion" logging. Fusion is the part of the .Net framework that finds and load dependencies.
+If DAX Studio fails to even start up this often points to a problem with the dependencies. If this is the case the application crash happens before the application logging above is initialized so it is not able to trap the error. To capture these issues we need to enable a feature of the .Net called "Fusion" logging. Fusion is the part of the .Net framework that finds and load dependencies.
 
 Start by creating a text file on your desktop called FusionLogOn.txt and paste the following code in
 

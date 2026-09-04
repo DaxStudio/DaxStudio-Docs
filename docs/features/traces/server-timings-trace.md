@@ -3,10 +3,10 @@ title: Server Timing Trace
 ---
 
 :::tip
-Tracing requires server admin rights, if you do not have these the trace buttons will be disabled_
+Tracing requires server admin rights, if you do not have admin rights the trace buttons will be _disabled_
 :::
 
-The standard timings reported in the output window is the elapsed time for the query recorded by Dax Studio, but that can be impacted by network speeds and the size of the result set. If you want to see the query timing from the server perspective you can do this with the server timing trace button.
+The standard timings reported in the output window is the elapsed time for the query recorded by DAX Studio, but that can be impacted by network speeds and the size of the result set. If you want to see the query timing from the server perspective you can do this with the server timing trace button.
 
 ![](server-timings-tab.png)
 
@@ -22,7 +22,7 @@ This button causes an extra tab to be displayed which shows the total time the s
 | SE Queries | this is the number of Storage Engine queries that were performed during the processing of the query |
 | SE Cache | this is the number of Storage Engine cache hits |
 
-You may also wonder what that “SQL like” query is that captured by the scan event when running a query against an import mode model. This is called xmSQL and is textual representation of the requests that the Formula Engine sent to the Storage Engine. There is no way of executing these queries, they are merely a textual representation of the requests sent to the Storage Engine to enable people to understand what operations the storage engine was performing. When your data model is in Direct Query mode you will see a generic T-SQL query which may be transformed into a more data source specific query before it is executed against the actual data source.
+You may also wonder what that “SQL like” query is that captured by the scan event when running a query against an import mode model. This is called xmSQL and is textual representation of the requests that the Formula Engine sent to the Storage Engine. There is no way of executing these queries, they are merely a textual representation of the requests sent to the Storage Engine to enable people to understand what operations the storage engine was performing. When your data model is in DirectQuery mode you will see a generic T-SQL query which may be transformed into a more data source specific query before it is executed against the actual data source.
 
 ### Execution Metrics events
 
@@ -40,3 +40,19 @@ As of July 2024 only the XMLA endpoint on the Fabric / Power BI cloud service ex
 :::
 
 ![](server-timings-executionmetrics.png)
+
+### Zooming
+
+:::info New in 3.6.0
+The Server Timings pane supports zooming from version 3.6.0.
+:::
+
+Hold down <kbd>Ctrl</kbd> and scroll the mouse wheel while the pointer is over the Server Timings pane to zoom in and out. This is handy when the xmSQL for a scan event is long and you want to fit more of it on screen, or when you are presenting and need to make the timings easier to read.
+
+The zoom level is per pane, so it does not affect the query editor or the results grid.
+
+### Storage Engine Dependencies
+
+If you enable the **Show Storage Engine Dependencies** preview option, a **Dependencies** button appears on the Server Timings toolbar. This opens a diagram of the tables, columns and joins that the Storage Engine queries touched, built from the captured xmSQL.
+
+See [Storage Engine Dependencies](/docs/features/traces/se-dependencies) for more details.

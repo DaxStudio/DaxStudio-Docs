@@ -95,7 +95,7 @@ When you tick the option to do a second pass the benchmark results will include 
 The following lists other minor fixes and improvements that have been added since the previous release
 
 ## Updates
-* [#826](https://github.com/daxstudio/daxstudio/issues/826) added PowerPivot model detection timeout in options
+* [#826](https://github.com/daxstudio/daxstudio/issues/826) added Power Pivot model detection timeout in options
 * Updating syntax highlighting to handle multi-line strings
 * Added highlighting of cache nodes in physical query plans
 * Improved state tracking for trace windows

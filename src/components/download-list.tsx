@@ -61,7 +61,7 @@ export default function DownloadsComponent() {
   
   const data: any = usePluginData('docusaurus-plugin-github-releases');
   const all_releases = data.all_releases;
-  const releases = [...all_releases]
+  const releases = all_releases.filter(function(r){ return r && r.prerelease === false && r.draft !== true; });
   //console.log(data);
   releases.shift();
   return <div>

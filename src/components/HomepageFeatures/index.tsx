@@ -25,7 +25,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         DAX Studio can connect to all the different 'flavours' of tabular models
-        PowerPivot for Excel,  Power BI Desktop, Azure Analysis Services and 
+        Power Pivot for Excel,  Power BI Desktop, Azure Analysis Services and 
         Power BI Premium XMLA endpoints
       </>
     ),

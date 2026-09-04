@@ -17,6 +17,6 @@ However there is now an extremely wide variety of versions of the tabular engine
 * at least 5 versions of SSAS on-prem (2012/2014/2016/2017/2019)
 * Power BI Premium XMLA endpoint
 * Azure Analysis Services
-* at least 4 major versions of PowerPivot (Excel 2010/2013/2016/O365)
+* at least 4 major versions of Power Pivot (Excel 2010/2013/2016/O365)
 
 And then there are different service packs and cummulative updates for all of the above plus beta versions and preview releases. So with all this variation it was decided that these buttons should be publically available. So should anyone notice a new function in the code completion that was not listed on dax.guide this gives them an easy way of sending the details of the functions and the engine version to dax.guide.

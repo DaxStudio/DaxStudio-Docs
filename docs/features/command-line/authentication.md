@@ -2,40 +2,61 @@
 title: Authentication
 ---
 
-The way that dscmd authenticates to the data source depends on the which set of options are passed to the specific command
+How `dscmd` authenticates depends on the data source and the options passed to the command.
 
-By default the identity running the dscmd process will be used for authentication. In the case of connections requiring an Entra ID a popup window will be displayed
+For sources that use Windows authentication, such as Power BI Desktop and SQL Server Analysis Services, `dscmd` uses the identity of the process running the command.
 
-## Using Options
+## Entra authentication
 
-### if the --connectionString option is set
-When you set the --connectionString property none of the other --UserID --Password --Server or --Database options are used, the connection string parameter overrides all of these. So if the connection string has a `User ID=` or `Password=` options then those are used otherwise the identity running the dscmd process will be used 
+For data sources that require Microsoft Entra ID, `dscmd` first attempts to authenticate silently. An interactive sign-in prompt may still be required when the account is unclear, the account is not cached, or policies such as MFA or Conditional Access require user interaction.
 
-### if the  --UserID or --Password options are set
-Then these parameters are used to authenticate to the data source.
+Account selection works as follows:
 
-## Using the Authentication environment variables
-The values from those will be injected into the User ID= and Password= values in the connection string. This allows you to avoid hard coding credentials into scripts that use dscmd.
+- If no accounts are available, `dscmd` prompts for an account.
+- If one account is available, `dscmd` attempts to use it silently.
+- If multiple accounts are available, specify `-u` or `--userid` to select one. Otherwise, `dscmd` prompts for an account.
+- If the specified user ID does not match an available account, `dscmd` prompts to authenticate that account.
 
-There are 2 environment variables that dscmd is aware of:
+Use `--non-interactive` for unattended execution. If authentication would require a prompt, the command fails with a non-zero exit code instead of waiting for user input. `dscmd` also enables this behavior automatically when the process has no interactive window, such as when it runs as a service.
 
-* **`DSCMD_USER`** - this is passed as the User ID
-* **`DSCMD_PASSWORD`** - this is passed as the Password
+You can use [`dscmd auth`](/docs/features/command-line/commands/auth-command) to cache an account before an unattended job or to check whether an account can authenticate without prompting.
 
-## Authenticating as service principal
+## Authentication options
 
-To use the `ClientID` and `Secret` to login as a service principal you need to use the following format `app:<clientId>@<tenantId>` as the user value and the `secret` or `cert:<thumbprint>` as the password value. 
+### Connection string
 
-eg. *note: these are fake random values for illustration purposes only*
+Use `-c` or `--connectionstring` to supply the data source connection string. You cannot combine it with `--server` or `--database`.
+
+For Entra authentication without a password, `User ID` selects the cached account to use. It can be supplied in the connection string, with `-u` or `--userid`, or through `DSCMD_USER`.
+
+### User ID and password
+
+When a password is supplied, the user ID and password are added to the connection string as credentials. When no password is supplied for an Entra data source, the user ID selects the account that `dscmd` should authenticate.
+
+## Authentication environment variables
+
+Environment variables let you avoid hard-coding authentication settings in scripts. A command-line option takes precedence over the corresponding environment variable.
+
+`dscmd` supports these authentication environment variables:
+
+- **`DSCMD_USER`** - supplies the user ID or selects an Entra account
+- **`DSCMD_PASSWORD`** - supplies the password
+- **`DSCMD_NON_INTERACTIVE`** - prevents interactive sign-in when set to `1`, `true`, or `yes`
+
+## Authenticate as a service principal
+
+To authenticate as a service principal, use `app:<clientId>@<tenantId>` as the user ID. Use the client secret as the password, or use `cert:<thumbprint>` to authenticate with a certificate.
+
+The following example uses placeholder values:
+
 ```
-dscmd csv c:\temp\myquery.csv -s localhost\tab19 -d "Adventure Works DW"  ^
+dscmd csv c:\temp\myquery.csv -s localhost\tab19 -d "Adventure Works DW" ^
   -m myColor=Red ^
   -u app:XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXX@YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYY ^
-  -p ARandomStringForClientSecretHere
+  -p ARandomStringForClientSecretHere ^
   -q "EVALUATE FILTER('product', 'product[Color]=@myColor && 'product'[Category]='Bikes')"
 ```
 
 :::warning
-It is recommended to store the clientId/secret in environment variables if possible rather than embedding these in your scripts
+Store the client ID and secret in environment variables instead of embedding them in scripts whenever possible.
 :::
-

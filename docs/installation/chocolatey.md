@@ -3,7 +3,13 @@ title: Install from Chocolatey
 ---
 
 
-DAX Studio can be installed and updated using [chocolatey](https://community.chocolatey.org/courses/getting-started)
+---
+
+title: Install from Chocolatey
+
+---
+
+DAX Studio can be installed and updated using [Chocolatey](https://community.chocolatey.org/courses/getting-started)
 
 # Installing
 
