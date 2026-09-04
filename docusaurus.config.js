@@ -17,6 +17,12 @@ const config = {
   url: 'https://daxstudio.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
+  future: {
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true,
+      siteStorageNamespacing: true,
+    },
+  },
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: 'warn',
