@@ -2,11 +2,35 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daxstudio.org/blog/</id>
     <title>DAX Studio Blog</title>
-    <updated>2026-08-23T00:00:00.000Z</updated>
+    <updated>2026-09-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://daxstudio.org/blog/"/>
     <subtitle>DAX Studio Blog</subtitle>
     <icon>https://daxstudio.org/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[v3.6.1 Release]]></title>
+        <id>https://daxstudio.org/blog/v3_6_1-release/</id>
+        <link href="https://daxstudio.org/blog/v3_6_1-release/"/>
+        <updated>2026-09-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This patch release addresses several issues introduced or identified following the 3.6.0 release.]]></summary>
+        <content type="html"><![CDATA[<p>This patch release addresses several issues introduced or identified following the 3.6.0 release.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_6_1-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h2>
+<ul>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1479" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1479" data-type="issue" data-title="UI inconsistencies in 3.6.0" data-body="Looks like 3.6.0 removed the theme and notification buttons? Icons are also appearing way too close to the edges. This exercise also made me think, is it possible to let a user run different versions of DS on same machine? That way it is easier to ve…">#1479</a> Fluent.Ribbon v11 theming and UI inconsistencies</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1481" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1481" data-type="issue" data-title="Preview &quot;Delta Analyser&quot; for Warehouses" data-body="Is your feature request related to a problem? Please describe. The newly introduced Delta Analyser super valueable. It exactly shows the issue I am trying to fight with MSFT support for weeks. However, it seems as if Warehouse DirectLake tables are c…">#1481</a> OneLake path handling for table names containing special characters and paths copied from Warehouse table properties</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1486" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1486" data-type="issue" data-title="Text improvements for Server Timings" data-body="Listed below: - Use the proper &quot;×&quot; sign instead of &quot;x&quot; when showing parallelism (e.g. &quot;×4.0&quot; instead of &quot;x4.0). This applies to the &quot;Par.&quot; column and to the parallelism number, off to the left, 2 lines below the &quot;SE CPU&quot; heading. - If the numbers in…">#1486</a> Server Timings labels and tooltips</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1488" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1488" data-type="issue" data-title="Spacing and sizing issues in the Simplified Ribbon" data-body="The spacing between buttons and dividers in the Simplified Ribbon is inconsistent. This is especially noticeable when you hover over a button that is beside a divider and notice the space between the divider and the rectangle around the button. In pa…">#1488</a> Simplified Ribbon spacing and sizing</li>
+<li class="">fixed OneLake authentication token scopes</li>
+<li class="">fixed stale column and table names in ERD diagrams</li>
+<li class="">fixed query trace completion and query plan capture</li>
+<li class="">improved Excel add-in launch and logging compatibility</li>
+</ul>]]></content>
+        <author>
+            <name>Darren Gosbell</name>
+            <uri>https://github.com/dgosbell</uri>
+        </author>
+        <category label="daxstudio" term="daxstudio"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[v3.6.0 Release]]></title>
         <id>https://daxstudio.org/blog/v3_6_0-release/</id>
