@@ -37,23 +37,23 @@ The Setup program accepts optional command line parameters which can be useful f
 | /CURRENTUSER | Instructs Setup to install in non administrative install mode. |
 
 
-The DAX Studio installer uses InnoSetup. For more detailed information, please visit https://jrsoftware.org/ishelp/index.php?topic=setupcmdline
+The DAX Studio installer uses InnoSetup. For more detailed information, please visit https://jrsoftware.org/ishelp/index.php?topic=setupcmdline.
 
 ## Components
 
-The following are DAX Studio specific options that can be used in the `/COMPONENTS=` parameter. By default all components are installed
+The following are DAX Studio specific options that can be used in the `/COMPONENTS=` parameter. By default all components are installed.
 
 | Task | Default | Description |
 |---|---|---|
 | Core | Yes | [Required] This is the core DAX Studio program |
-| Excel | Yes | [Optional] This component installs the Excel Addin |
+| Excel | Yes | [Optional] This component installs the Excel add-in |
 
 
 ## Tasks
 
-The following are DAX Studio specific options that can be used in the `/TASKS=` or `/MERGETASKS=`
+The following are DAX Studio specific options that can be used in the `/TASKS=` or `/MERGETASKS=`.
 
 | Task | Default | Description |
 |---|---|---|
-| desktopicon | Yes | Creates an Icon on the Desktop |
-| blockallinternetaccess | No | [NOT RECOMMENDED] Blocks all features requiring internet access including version checks, dax formatting and crash reporting. This setting requires a re-install to change. |
+| desktopicon | Yes | Creates an icon on the Desktop |
+| blockallinternetaccess | No | [NOT RECOMMENDED] Blocks all features requiring internet access including version checks, DAX formatting and crash reporting. This setting requires a re-install to change. |

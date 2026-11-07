@@ -1,0 +1,48 @@
+---
+slug: v3_6_2-release
+title: v3.6.2 Release
+authors: [dgosbell]
+tags: [daxstudio]
+---
+
+# DAX Studio version 3.6.2
+
+This patch release improves the Delta Analyzer preview, fixes issues with discovering local
+Power BI Desktop instances, and includes several editor and tracing fixes.
+
+{/* truncate */}
+
+## More reliable Power BI Desktop discovery
+
+Local instance discovery now uses a thread-safe cache and refreshes it when the port for a
+connection is not found. A missing Power BI file name no longer causes an error when resolving
+the connection's file name.
+
+:::info
+**6-Nov-2026** This release also fixes discovery on Windows 11 systems that report Power BI Desktop's listening
+sockets with an unexpected TCP state. This would cause the connection dialog to not find running instances of Power BI Desktop. This appears to be a change introduced in a recent Windows 11 patch.
+:::
+
+## Delta Analyzer improvements
+
+The **Delta Analyzer (Preview)** now handles column mapping stored in Delta checkpoints,
+so columns can be displayed using their logical names rather than their internal physical
+names. This addresses #1492.
+
+Checkpoint support also covers multipart V1 checkpoints and V2 JSON or Parquet checkpoints,
+including their sidecar files. The analyzer reconstructs the table snapshot from the checkpoint
+and subsequent commits. If required checkpoint files or transaction history are missing or
+invalid, it reports an error rather than displaying an incomplete set of active files.
+
+[Read more about the Delta Analyzer](/docs/features/delta-analyzer)
+
+## Fixes
+
+* Fix #1492: support Delta column mapping and checkpoint formats in the Delta Analyzer
+* Fix #1494: allow **Alt+Enter** to insert a new line in the query editor
+* Fix #1496: update external help links to the current Microsoft community and Analysis Services Q&A pages
+* Fix #1497: display the percent sign in the editor zoom dropdown options
+* Fix #1499: close the code completion popup when clicking elsewhere in the editor
+* Fix #1507: discover Power BI Desktop instances when Windows reports their listening sockets with TCP state 0
+* Fix local Power BI instance caching and file-name lookup
+* Fix the timestamp used when capturing error trace events

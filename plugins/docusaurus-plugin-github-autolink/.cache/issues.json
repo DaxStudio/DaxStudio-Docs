@@ -668,5 +668,35 @@
     "title": "UI inconsistencies in 3.6.0",
     "body": "Looks like 3.6.0 removed the theme and notification buttons? Icons are also appearing way too close to the edges. This exercise also made me think, is it possible to let a user run different versions of DS on same machine? That way it is easier to ve…",
     "fetchedAt": 1788538467713
+  },
+  "daxstudio/daxstudio#issue#1499": {
+    "title": "Close the IntelliSense menu when the user clicks on a different part of the code",
+    "body": "The IntelliSense menu remains even when I click on a different part of the code. If I press Tab or Enter while this menu is open, the selected IntelliSense suggestion will apply to the original text, which is not where my cursor is anymore, so I migh…",
+    "fetchedAt": 1793944133490
+  },
+  "daxstudio/daxstudio#issue#1497": {
+    "title": "Add \"%\" to the end of the values in the zoom dropdown menu of the DAX editor",
+    "body": "This just makes it a bit clearer what the values mean and doesn't add significant visual clutter since the addition of the unit adds just a single character to each line. Also, Microsoft labels its preset zoom values with \"%\" at the end, and since DA…",
+    "fetchedAt": 1793944133502
+  },
+  "daxstudio/daxstudio#issue#1496": {
+    "title": "Update the URLs in DaxStudio/src/DaxStudio.UI/ViewModels/RibbonViewModel.cs to avoid redirects where reasonable",
+    "body": "By avoiding the redirects, the pages should load faster. I am reporting this as a bug since the links for \"DAX Forum\" and \"Power BI Desktop Forum\" in the \"Help\" tab of the Ribbon currently redirect incorrectly, and so the links are effectively broken…",
+    "fetchedAt": 1793944133502
+  },
+  "daxstudio/daxstudio#issue#1492": {
+    "title": "Show Column Names in Delta Analyzer",
+    "body": "Is your feature request related to a problem? Please describe. Delta Analyzer gives highly useful and new information about DeltaLake/DirectLake Memory consumption. While Table Names are visible in a human readable format, column names show as \"col-[…",
+    "fetchedAt": 1793944133510
+  },
+  "daxstudio/daxstudio#issue#1494": {
+    "title": "Make Alt + Enter add a new line in DAX queries, just like Power Pivot and Power BI Desktop",
+    "body": "In Power Pivot and Power BI Desktop, you must press Alt + Enter to add a new line to the DAX expression of a measure, calculated column, or user-defined function. However, in DAX Studio, you must use Enter to add a new line, and Alt + Enter does not…",
+    "fetchedAt": 1793944133518
+  },
+  "daxstudio/daxstudio#issue#1507": {
+    "title": "Find Power BI Desktop instances whose listeners Windows reports in TCP state 0",
+    "body": "Problem On Windows 11 builds 26200.9818 / 26300.9818 (KB5127936, the October 28 preview update, whose changes reach everyone with the November 10 Patch Tuesday), reports the listening sockets of with state 0 instead of (2). The rows still have remote…",
+    "fetchedAt": 1793944133545
   }
 }
