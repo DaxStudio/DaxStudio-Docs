@@ -63,5 +63,9 @@
   },
   "overrides": {
     "webpack": "5.105.0"
+  },
+  "allowScripts": {
+    "@swc/core@1.16.20": true,
+    "core-js@3.51.0": true
   }
 }
