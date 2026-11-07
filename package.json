@@ -62,7 +62,10 @@
     "npm": ">=11.10.0 <12"
   },
   "overrides": {
-    "webpack": "5.105.0"
+    "webpack": "5.105.0",
+    "@docusaurus/core": {
+      "tinypool": "2.2.0"
+    }
   },
   "allowScripts": {
     "@swc/core@1.16.20": true,
