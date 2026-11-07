@@ -4,10 +4,47 @@
         <title>DAX Studio Blog</title>
         <link>https://daxstudio.org/blog/</link>
         <description>DAX Studio Blog</description>
-        <lastBuildDate>Sat, 05 Sep 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 06 Nov 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[v3.6.2 Release]]></title>
+            <link>https://daxstudio.org/blog/v3_6_2-release/</link>
+            <guid>https://daxstudio.org/blog/v3_6_2-release/</guid>
+            <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[This patch release improves the Delta Analyzer preview, fixes issues with discovering local]]></description>
+            <content:encoded><![CDATA[<p>This patch release improves the Delta Analyzer preview, fixes issues with discovering local
+Power BI Desktop instances, and includes several editor and tracing fixes.</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="more-reliable-power-bi-desktop-discovery">More reliable Power BI Desktop discovery<a href="https://daxstudio.org/blog/v3_6_2-release/#more-reliable-power-bi-desktop-discovery" class="hash-link" aria-label="Direct link to More reliable Power BI Desktop discovery" title="Direct link to More reliable Power BI Desktop discovery" translate="no">​</a></h2>
+<p>Local instance discovery now uses a thread-safe cache and refreshes it when the port for a
+connection is not found. A missing Power BI file name no longer causes an error when resolving
+the connection's file name.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p><strong>6-Nov-2026</strong> This release also fixes discovery on Windows 11 systems that report Power BI Desktop's listening
+sockets with an unexpected TCP state. This would cause the connection dialog to not find running instances of Power BI Desktop. This appears to be a change introduced in a recent Windows 11 patch.</p></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="delta-analyzer-improvements">Delta Analyzer improvements<a href="https://daxstudio.org/blog/v3_6_2-release/#delta-analyzer-improvements" class="hash-link" aria-label="Direct link to Delta Analyzer improvements" title="Direct link to Delta Analyzer improvements" translate="no">​</a></h2>
+<p>The <strong>Delta Analyzer (Preview)</strong> now handles column mapping stored in Delta checkpoints,
+so columns can be displayed using their logical names rather than their internal physical
+names. This addresses <a href="https://github.com/daxstudio/daxstudio/issues/1492" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1492" data-type="issue" data-title="Show Column Names in Delta Analyzer" data-body="Is your feature request related to a problem? Please describe. Delta Analyzer gives highly useful and new information about DeltaLake/DirectLake Memory consumption. While Table Names are visible in a human readable format, column names show as &quot;col-[…">#1492</a>.</p>
+<p>Checkpoint support also covers multipart V1 checkpoints and V2 JSON or Parquet checkpoints,
+including their sidecar files. The analyzer reconstructs the table snapshot from the checkpoint
+and subsequent commits. If required checkpoint files or transaction history are missing or
+invalid, it reports an error rather than displaying an incomplete set of active files.</p>
+<p><a class="" href="https://daxstudio.org/docs/features/delta-analyzer/">Read more about the Delta Analyzer</a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://daxstudio.org/blog/v3_6_2-release/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h2>
+<ul>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1492" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1492" data-type="issue" data-title="Show Column Names in Delta Analyzer" data-body="Is your feature request related to a problem? Please describe. Delta Analyzer gives highly useful and new information about DeltaLake/DirectLake Memory consumption. While Table Names are visible in a human readable format, column names show as &quot;col-[…">#1492</a>: support Delta column mapping and checkpoint formats in the Delta Analyzer</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1494" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1494" data-type="issue" data-title="Make Alt + Enter add a new line in DAX queries, just like Power Pivot and Power BI Desktop" data-body="In Power Pivot and Power BI Desktop, you must press Alt + Enter to add a new line to the DAX expression of a measure, calculated column, or user-defined function. However, in DAX Studio, you must use Enter to add a new line, and Alt + Enter does not…">#1494</a>: allow <strong>Alt+Enter</strong> to insert a new line in the query editor</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1496" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1496" data-type="issue" data-title="Update the URLs in DaxStudio/src/DaxStudio.UI/ViewModels/RibbonViewModel.cs to avoid redirects where reasonable" data-body="By avoiding the redirects, the pages should load faster. I am reporting this as a bug since the links for &quot;DAX Forum&quot; and &quot;Power BI Desktop Forum&quot; in the &quot;Help&quot; tab of the Ribbon currently redirect incorrectly, and so the links are effectively broken…">#1496</a>: update external help links to the current Microsoft community and Analysis Services Q&amp;A pages</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1497" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1497" data-type="issue" data-title="Add &quot;%&quot; to the end of the values in the zoom dropdown menu of the DAX editor" data-body="This just makes it a bit clearer what the values mean and doesn't add significant visual clutter since the addition of the unit adds just a single character to each line. Also, Microsoft labels its preset zoom values with &quot;%&quot; at the end, and since DA…">#1497</a>: display the percent sign in the editor zoom dropdown options</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1499" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1499" data-type="issue" data-title="Close the IntelliSense menu when the user clicks on a different part of the code" data-body="The IntelliSense menu remains even when I click on a different part of the code. If I press Tab or Enter while this menu is open, the selected IntelliSense suggestion will apply to the original text, which is not where my cursor is anymore, so I migh…">#1499</a>: close the code completion popup when clicking elsewhere in the editor</li>
+<li class="">Fix <a href="https://github.com/daxstudio/daxstudio/issues/1507" target="_blank" rel="noopener noreferrer" class="gh-ref" data-url="https://github.com/daxstudio/daxstudio/issues/1507" data-type="issue" data-title="Find Power BI Desktop instances whose listeners Windows reports in TCP state 0" data-body="Problem On Windows 11 builds 26200.9818 / 26300.9818 (KB5127936, the October 28 preview update, whose changes reach everyone with the November 10 Patch Tuesday), reports the listening sockets of with state 0 instead of (2). The rows still have remote…">#1507</a>: discover Power BI Desktop instances when Windows reports their listening sockets with TCP state 0</li>
+<li class="">Fix local Power BI instance caching and file-name lookup</li>
+<li class="">Fix the timestamp used when capturing error trace events</li>
+</ul>]]></content:encoded>
+            <category>daxstudio</category>
+        </item>
         <item>
             <title><![CDATA[v3.6.1 Release]]></title>
             <link>https://daxstudio.org/blog/v3_6_1-release/</link>
@@ -894,28 +931,6 @@ you can select the one you wish to connect to. The list is sorted alphabetically
 <li class="">Fixed <a href="https://github.com/daxstudio/daxstudio/issues/841" target="_blank" rel="noopener noreferrer" class="">#841</a> allowed for loading of performance data where component information was missing</li>
 </ul>]]></content:encoded>
             <category>daxstudio</category>
-        </item>
-        <item>
-            <title><![CDATA[Videos]]></title>
-            <link>https://daxstudio.org/blog/2022/08/20/welcome/</link>
-            <guid>https://daxstudio.org/blog/2022/08/20/welcome/</guid>
-            <pubDate>Sat, 20 Aug 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[The SQLBI youtube channel is a great place to learn about all sorts of DAX and Tabular engine topics. They also have a playlist of short videos dedicated to DAX Studio as part of their DAX Tools courses.]]></description>
-            <content:encoded><![CDATA[<p>The <a href="https://www.youtube.com/user/sqlbitv" target="_blank" rel="noopener noreferrer" class="">SQLBI youtube channel</a> is a great place to learn about all sorts of DAX and Tabular engine topics. They also have a playlist of short videos dedicated to <a href="https://www.youtube.com/watch?v=gZ4JcqFwJfg&amp;list=PLU6II7MW-aiJ3Z-wbUQ0tkqSbAkyiB3uy" target="_blank" rel="noopener noreferrer" class="">DAX Studio</a> as part of their DAX Tools courses.</p>
-<p>The following 4 videos are from a series produced by <a href="https://powerbi.tips/" target="_blank" rel="noopener noreferrer" class="">PowerBi.tips</a> in 2020. You can checkout these videos and more great Power BI content on their <a href="https://www.youtube.com/channel/UCPwPrIpZwlfIKcoUpRwl9OQ" target="_blank" rel="noopener noreferrer" class="">youtube channel</a>.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-of-4-powerbitips---tutorial---introduction-to-dax-studio---darren-gosbell">1 of 4 PowerBI.Tips - Tutorial - Introduction to DAX Studio - Darren Gosbell<a href="https://daxstudio.org/blog/2022/08/20/welcome/#1-of-4-powerbitips---tutorial---introduction-to-dax-studio---darren-gosbell" class="hash-link" aria-label="Direct link to 1 of 4 PowerBI.Tips - Tutorial - Introduction to DAX Studio - Darren Gosbell" title="Direct link to 1 of 4 PowerBI.Tips - Tutorial - Introduction to DAX Studio - Darren Gosbell" translate="no">​</a></h2>
-<p>An introduction to DAX Studio, from downloading and installing to running basic queries.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-of-4-powerbitips---tutorial---model-performance-tuning-in-dax-studio---marco-russo">2 of 4 PowerBI.Tips - Tutorial - Model Performance Tuning in DAX Studio - Marco Russo<a href="https://daxstudio.org/blog/2022/08/20/welcome/#2-of-4-powerbitips---tutorial---model-performance-tuning-in-dax-studio---marco-russo" class="hash-link" aria-label="Direct link to 2 of 4 PowerBI.Tips - Tutorial - Model Performance Tuning in DAX Studio - Marco Russo" title="Direct link to 2 of 4 PowerBI.Tips - Tutorial - Model Performance Tuning in DAX Studio - Marco Russo" translate="no">​</a></h2>
-<p>An overview of using DAX Studio to optimize your tabular models.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-of-4-powerbitips---tutorial---dax-studio-full-feature-review---darren-gosbell">3 of 4 PowerBI.Tips - Tutorial - DAX Studio Full Feature Review - Darren Gosbell<a href="https://daxstudio.org/blog/2022/08/20/welcome/#3-of-4-powerbitips---tutorial---dax-studio-full-feature-review---darren-gosbell" class="hash-link" aria-label="Direct link to 3 of 4 PowerBI.Tips - Tutorial - DAX Studio Full Feature Review - Darren Gosbell" title="Direct link to 3 of 4 PowerBI.Tips - Tutorial - DAX Studio Full Feature Review - Darren Gosbell" translate="no">​</a></h2>
-<p>A full feature review of all the important features in DAX Studio (as of the 2.10.2 release).</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-of-4-powerbitips---tutorial---dax-studio-query-performance-tuning---marco-russo">4 of 4 PowerBI.Tips - Tutorial - DAX Studio Query Performance Tuning - Marco Russo<a href="https://daxstudio.org/blog/2022/08/20/welcome/#4-of-4-powerbitips---tutorial---dax-studio-query-performance-tuning---marco-russo" class="hash-link" aria-label="Direct link to 4 of 4 PowerBI.Tips - Tutorial - DAX Studio Query Performance Tuning - Marco Russo" title="Direct link to 4 of 4 PowerBI.Tips - Tutorial - DAX Studio Query Performance Tuning - Marco Russo" translate="no">​</a></h2>
-<p>A tutorial on how to tune your DAX queries and measures using DAX Studio.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="dax-studio-27---improved-debug-experience">DAX Studio 2.7 - improved debug experience<a href="https://daxstudio.org/blog/2022/08/20/welcome/#dax-studio-27---improved-debug-experience" class="hash-link" aria-label="Direct link to DAX Studio 2.7 - improved debug experience" title="Direct link to DAX Studio 2.7 - improved debug experience" translate="no">​</a></h2>
-<p>This video introduces new features that improves the debug experience in DAX Studio: tooltips for columns statistics, capture trace of all queries, and definition of dependent measures.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="dax-studio-21---analyze-query-plans-and-find-bottlenecks">DAX Studio 2.1 - analyze query plans and find bottlenecks<a href="https://daxstudio.org/blog/2022/08/20/welcome/#dax-studio-21---analyze-query-plans-and-find-bottlenecks" class="hash-link" aria-label="Direct link to DAX Studio 2.1 - analyze query plans and find bottlenecks" title="Direct link to DAX Studio 2.1 - analyze query plans and find bottlenecks" translate="no">​</a></h2>
-<p>DAX Studio introduced important features to analyze the query plan and find bottlenecks in your DAX code.</p>
-]]></content:encoded>
         </item>
     </channel>
 </rss>
